@@ -23,9 +23,9 @@ $MESS["parser_act_copy"] = "Копировать";
 $MESS["parser_act_export"] = "Экспортировать";
 $MESS["PARSER_ADD_TITLE"] = "Добавить";
 $MESS["post_title"] = "Профили экспорта на торговые площадки";
-$MESS["ACRIT_EXPORTPRO_LIST_IMPORT_SUCCESS"] = "Профили успешно экспортированы<br><a href=\"/upload/kit_exportpro/#FILENAME#\">/upload/kit_exportpro/#FILENAME#</a>";
-$MESS["ACRIT_EXPORTPRO_LIST_IMPORT_FAIL"] = "Экспорт профилей завершился неудачей";
-$MESS["ACRIT_EXPORTPRO_PROFILE_EXPORT_SHORT"] = "экспорт";
-$MESS["ACRIT_EXPORTPRO_RUN_TYPE_COMPONENT"] = "Компонент";
-$MESS["ACRIT_EXPORTPRO_RUN_TYPE_CRON"] = "Cron";
+$MESS["KIT_EXPORTPRO_LIST_IMPORT_SUCCESS"] = "Профили успешно экспортированы<br><a href=\"/upload/kit_exportpro/#FILENAME#\">/upload/kit_exportpro/#FILENAME#</a>";
+$MESS["KIT_EXPORTPRO_LIST_IMPORT_FAIL"] = "Экспорт профилей завершился неудачей";
+$MESS["KIT_EXPORTPRO_PROFILE_EXPORT_SHORT"] = "экспорт";
+$MESS["KIT_EXPORTPRO_RUN_TYPE_COMPONENT"] = "Компонент";
+$MESS["KIT_EXPORTPRO_RUN_TYPE_CRON"] = "Cron";
 ?>

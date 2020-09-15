@@ -66,23 +66,23 @@ class CExportproInformer{
             $arAdminList = self::GetAdminList();
             
             if( !empty( $arProcessSite ) ){
-                $messageTitle = GetMessage( "ACRIT_INFORMER_LICENSE_EXPRIRE_TITLE" ).$arProcessSite["DOMAIN_NAME"];
-                $messageBlock = GetMessage( "ACRIT_INFORMER_LICENSE_REGISTERED" ).htmlspecialcharsback( $arUpdateList["CLIENT"][0]["@"]["NAME"] )."\n".
-                GetMessage( "ACRIT_INFORMER_LICENSE_TYPE" ).$arUpdateList["CLIENT"][0]["@"]["LICENSE"]."\n".
-                GetMessage( "ACRIT_INFORMER_LICENSE_EXPIRE_DATE" ).$arUpdateList["CLIENT"][0]["@"]["DATE_TO"]."\n";
+                $messageTitle = GetMessage( "KIT_INFORMER_LICENSE_EXPRIRE_TITLE" ).$arProcessSite["DOMAIN_NAME"];
+                $messageBlock = GetMessage( "KIT_INFORMER_LICENSE_REGISTERED" ).htmlspecialcharsback( $arUpdateList["CLIENT"][0]["@"]["NAME"] )."\n".
+                GetMessage( "KIT_INFORMER_LICENSE_TYPE" ).$arUpdateList["CLIENT"][0]["@"]["LICENSE"]."\n".
+                GetMessage( "KIT_INFORMER_LICENSE_EXPIRE_DATE" ).$arUpdateList["CLIENT"][0]["@"]["DATE_TO"]."\n";
                 
                 if( !empty( $arAdminList ) ){
-                    $messageBlock .= "\n".GetMessage( "ACRIT_INFORMER_ADMIN_LIST" )."\n\n";
+                    $messageBlock .= "\n".GetMessage( "KIT_INFORMER_ADMIN_LIST" )."\n\n";
                                 
                     foreach( $arAdminList as $arAdminListItem ){
                         $messageBlock .= "ID: ".$arAdminListItem["ID"].": ".$arAdminListItem["FULL_NAME"].", email: ".$arAdminListItem["EMAIL"]."\n";
                     }
                 }
                 
-                $messageBlock .= GetMessage( "ACRIT_INFORMER_LICENSE_SITE" ).$arProcessSite["SITE_PROTOCOL"]."://".$arProcessSite["DOMAIN_NAME"]."/bitrix/admin/update_system.php";            
+                $messageBlock .= GetMessage( "KIT_INFORMER_LICENSE_SITE" ).$arProcessSite["SITE_PROTOCOL"]."://".$arProcessSite["DOMAIN_NAME"]."/bitrix/admin/update_system.php";            
 
                 $headers = "Content-type: text/plain; charset=".LANG_CHARSET;
-                if( bxmail( GetMessage( "ACRIT_INFORMER_LICENSE_ADMIN_EMAIL" ), $messageTitle, $messageBlock, $headers ) ){
+                if( bxmail( GetMessage( "KIT_INFORMER_LICENSE_ADMIN_EMAIL" ), $messageTitle, $messageBlock, $headers ) ){
                     $result = true;
                 }
             }
@@ -101,11 +101,11 @@ class CExportproInformer{
             $arAdminList = self::GetAdminList();
         
             if( !empty( $arProcessSite ) ){
-                $messageTitle = GetMessage( "ACRIT_INFORMER_CRM_NOLICENSE_TITLE" ).$arProcessSite["DOMAIN_NAME"];
-                $messageBlock = GetMessage( "ACRIT_INFORMER_CRM_NOLICENSE_INFO_PRE" ).$arProcessSite["SITE_PROTOCOL"]."://".$arProcessSite["DOMAIN_NAME"]."/ ".GetMessage( "ACRIT_INFORMER_CRM_NOLICENSE_INFO_POST" )."\n";
+                $messageTitle = GetMessage( "KIT_INFORMER_CRM_NOLICENSE_TITLE" ).$arProcessSite["DOMAIN_NAME"];
+                $messageBlock = GetMessage( "KIT_INFORMER_CRM_NOLICENSE_INFO_PRE" ).$arProcessSite["SITE_PROTOCOL"]."://".$arProcessSite["DOMAIN_NAME"]."/ ".GetMessage( "KIT_INFORMER_CRM_NOLICENSE_INFO_POST" )."\n";
 
                 if( !empty( $arAdminList ) ){
-                    $messageBlock .= "\n".GetMessage( "ACRIT_INFORMER_ADMIN_LIST" )."\n\n";
+                    $messageBlock .= "\n".GetMessage( "KIT_INFORMER_ADMIN_LIST" )."\n\n";
                                 
                     foreach( $arAdminList as $arAdminListItem ){
                         $messageBlock .= "ID: ".$arAdminListItem["ID"].": ".$arAdminListItem["FULL_NAME"].", email: ".$arAdminListItem["EMAIL"]."\n";
@@ -113,7 +113,7 @@ class CExportproInformer{
                 }
                                 
                 $headers = "Content-type: text/plain; charset=".LANG_CHARSET;
-                if( bxmail( GetMessage( "ACRIT_INFORMER_LICENSE_ADMIN_EMAIL" ), $messageTitle, $messageBlock, $headers ) ){
+                if( bxmail( GetMessage( "KIT_INFORMER_LICENSE_ADMIN_EMAIL" ), $messageTitle, $messageBlock, $headers ) ){
                     $result = true;
                 }
             }    
@@ -166,26 +166,26 @@ class CExportproInformer{
                     $arAdminList = self::GetAdminList();
                     
                     if( !empty( $arProcessSite ) ){
-                        $messageTitle = GetMessage( "ACRIT_INFORMER_MODULE_LICENSE_SITE_PRE" ).$arProcessSite["DOMAIN_NAME"].": (".htmlspecialcharsback( $arModule["@"]["ID"] ).")";
-                        $messageBlock = GetMessage( "ACRIT_INFORMER_MODULE_LICENSE_PARTNER_MODULE" ).htmlspecialcharsback( $arModule["@"]["NAME"] ).": (".htmlspecialcharsback( $arModule["@"]["ID"] ).")"."\n".
-                        GetMessage( "ACRIT_INFORMER_MODULE_LICENSE_PARTNER_NAME" ).htmlspecialcharsback( $arModule["@"]["PARTNER_NAME"] )."\n";
+                        $messageTitle = GetMessage( "KIT_INFORMER_MODULE_LICENSE_SITE_PRE" ).$arProcessSite["DOMAIN_NAME"].": (".htmlspecialcharsback( $arModule["@"]["ID"] ).")";
+                        $messageBlock = GetMessage( "KIT_INFORMER_MODULE_LICENSE_PARTNER_MODULE" ).htmlspecialcharsback( $arModule["@"]["NAME"] ).": (".htmlspecialcharsback( $arModule["@"]["ID"] ).")"."\n".
+                        GetMessage( "KIT_INFORMER_MODULE_LICENSE_PARTNER_NAME" ).htmlspecialcharsback( $arModule["@"]["PARTNER_NAME"] )."\n";
                         
                         if( strlen( $arModule["@"]["DATE_TO"] ) > 0 ){
-                            $messageBlock .= GetMessage( "ACRIT_INFORMER_MODULE_LICENSE_EXPIRE_DATE" ).$arModule["@"]["DATE_TO"]."\n";
+                            $messageBlock .= GetMessage( "KIT_INFORMER_MODULE_LICENSE_EXPIRE_DATE" ).$arModule["@"]["DATE_TO"]."\n";
                         }
                         
                         if( !empty( $arAdminList ) ){
-                            $messageBlock .= "\n".GetMessage( "ACRIT_INFORMER_ADMIN_LIST" )."\n\n";
+                            $messageBlock .= "\n".GetMessage( "KIT_INFORMER_ADMIN_LIST" )."\n\n";
                                         
                             foreach( $arAdminList as $arAdminListItem ){
                                 $messageBlock .= "ID: ".$arAdminListItem["ID"].": ".$arAdminListItem["FULL_NAME"].", email: ".$arAdminListItem["EMAIL"]."\n";
                             }
                         }
                         
-                        $messageBlock .= GetMessage( "ACRIT_INFORMER_MODULE_LICENSE_SITE" ).$arProcessSite["SITE_PROTOCOL"]."://".$arProcessSite["DOMAIN_NAME"]."/";
+                        $messageBlock .= GetMessage( "KIT_INFORMER_MODULE_LICENSE_SITE" ).$arProcessSite["SITE_PROTOCOL"]."://".$arProcessSite["DOMAIN_NAME"]."/";
 
                         $headers = "Content-type: text/plain; charset=".LANG_CHARSET;
-                        if( bxmail( GetMessage( "ACRIT_INFORMER_LICENSE_ADMIN_EMAIL" ), $messageTitle, $messageBlock, $headers ) ){
+                        if( bxmail( GetMessage( "KIT_INFORMER_LICENSE_ADMIN_EMAIL" ), $messageTitle, $messageBlock, $headers ) ){
                             $result = true;
                         }
                     }

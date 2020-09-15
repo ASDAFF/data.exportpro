@@ -115,7 +115,7 @@ class CKitExportproExport{
                     echo '<div id="bx-admin-prefix">';
                     CAdminMessage::ShowMessage(
                         array(
-                            "MESSAGE" => GetMessage( "ACRIT_EXPORTPRO_PROCESS_RUN" ),
+                            "MESSAGE" => GetMessage( "KIT_EXPORTPRO_PROCESS_RUN" ),
                             "TYPE" => "FAIL",
                             "HTML" => "TRUE"
                         )
@@ -124,8 +124,8 @@ class CKitExportproExport{
                 }
                 else{
                     $adminEmail = COption::GetOptionString( "main", "email_from" );
-                    $subject = GetMessage( "ACRIT_EXOPRTPRO_PROCESS_RUN_SUBJECT" );
-                    $errorMessage = GetMessage( "ACRIT_EXOPRTPRO_PROCESS_RUN_ERROE_MESSAGE" );
+                    $subject = GetMessage( "KIT_EXOPRTPRO_PROCESS_RUN_SUBJECT" );
+                    $errorMessage = GetMessage( "KIT_EXOPRTPRO_PROCESS_RUN_ERROE_MESSAGE" );
                     $errorMessage = str_replace( array( "#PROFILE_ID#", "#PROFILE_NAME#" ), array( $this->profile["ID"], $this->profile["NAME"] ), $errorMessage );
                 }
                 return false;
@@ -450,7 +450,7 @@ class CKitExportproExport{
                     echo '<div id="bx-admin-prefix">';
                     CAdminMessage::ShowMessage(
                         array(
-                            "MESSAGE" => GetMessage( "ACRIT_EXPORTPRO_PROCESS_RUN" ),
+                            "MESSAGE" => GetMessage( "KIT_EXPORTPRO_PROCESS_RUN" ),
                             "TYPE" => "FAIL",
                             "HTML" => "TRUE"
                         )
@@ -459,8 +459,8 @@ class CKitExportproExport{
                 }
                 else{
                     $adminEmail = COption::GetOptionString( "main", "email_from" );
-                    $subject = GetMessage( "ACRIT_EXOPRTPRO_PROCESS_RUN_SUBJECT" );
-                    $errorMessage = GetMessage( "ACRIT_EXOPRTPRO_PROCESS_RUN_ERROE_MESSAGE" );
+                    $subject = GetMessage( "KIT_EXOPRTPRO_PROCESS_RUN_SUBJECT" );
+                    $errorMessage = GetMessage( "KIT_EXOPRTPRO_PROCESS_RUN_ERROE_MESSAGE" );
                     $errorMessage = str_replace( array( "#PROFILE_ID#", "#PROFILE_NAME#" ), array( $this->profile["ID"], $this->profile["NAME"] ), $errorMessage );
                 }
                 return false;

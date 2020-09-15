@@ -1,5 +1,5 @@
 <?php
-$APPLICATION->SetTitle( GetMessage( "ACRIT_MODULE_NAME" ) );
+$APPLICATION->SetTitle( GetMessage( "KIT_MODULE_NAME" ) );
 global $moduleID;
 ?>
 <form action="<?=$APPLICATION->GetCurPage()?>" method="get">

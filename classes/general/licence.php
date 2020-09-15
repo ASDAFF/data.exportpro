@@ -52,7 +52,7 @@ class KitLicence{
                 }
                 
                 if( $sSupportMess <> "" ){
-                    $sSupportMess .= GetMessage( "ACRIT_EXPORTPRO_BUY_LICENCE" );
+                    $sSupportMess .= GetMessage( "KIT_EXPORTPRO_BUY_LICENCE" );
                     $userOption = CUserOptions::GetOption( "main", "admSupInf" );
                     if( mktime() > $userOption["showInformerDate"] ){
                         $prolongUrl = "/bitrix/admin/buy_support.php?lang=".LANGUAGE_ID;

@@ -244,13 +244,13 @@ class CKitExportproLog{
             $arProfile = $dbProfile->GetByID( $profileID );
             
             if( check_email( $arProfile["SEND_LOG_EMAIL"] ) ){
-                $messageTitle = GetMessage( "ACRIT_LOG_SEND_TITLE" ).$arProfile["DOMAIN_NAME"];
-                $messageBlock = GetMessage( "ACRIT_LOG_SEND_OFFERS" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS"]."\n".
-                GetMessage( "ACRIT_LOG_SEND_OFFERS_TERM" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_EXPORT"]."\n".
-                GetMessage( "ACRIT_LOG_SEND_OFFERS_ERROR" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_ERROR"]."\n".
-                GetMessage( "ACRIT_LOG_SEND_DATE" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["LAST_START_EXPORT"]."\n\n".
-                GetMessage( "ACRIT_LOG_PROFILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"]."/bitrix/admin/kit_exportpro_edit.php?ID=".$profileID."\n".            
-                GetMessage( "ACRIT_LOG_SEND_FILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"].$sessionData["EXPORTPRO"]["LOG"][$profileID]["FILE"];            
+                $messageTitle = GetMessage( "KIT_LOG_SEND_TITLE" ).$arProfile["DOMAIN_NAME"];
+                $messageBlock = GetMessage( "KIT_LOG_SEND_OFFERS" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS"]."\n".
+                GetMessage( "KIT_LOG_SEND_OFFERS_TERM" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_EXPORT"]."\n".
+                GetMessage( "KIT_LOG_SEND_OFFERS_ERROR" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_ERROR"]."\n".
+                GetMessage( "KIT_LOG_SEND_DATE" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["LAST_START_EXPORT"]."\n\n".
+                GetMessage( "KIT_LOG_PROFILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"]."/bitrix/admin/kit_exportpro_edit.php?ID=".$profileID."\n".            
+                GetMessage( "KIT_LOG_SEND_FILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"].$sessionData["EXPORTPRO"]["LOG"][$profileID]["FILE"];            
                 
                 $headers = "Content-type: text/plain; charset=".LANG_CHARSET;
                 bxmail( $arProfile["SEND_LOG_EMAIL"], $messageTitle, $messageBlock, $headers );

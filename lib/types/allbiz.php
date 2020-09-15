@@ -3,21 +3,21 @@ IncludeModuleLangFile(__FILE__);
 
 $profileTypes["allbiz"] = array(
 	"CODE" => "allbiz",
-    "NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_NAME" ),
-	"DESCRIPTION" => GetMessage( "ACRIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_NAME" ),
+	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_ID" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,83 +42,83 @@ $profileTypes["allbiz"] = array(
 		),
 		array(
 			"CODE" => "NAME",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_NAME" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_NAME" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PRICE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_CURRENCY" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB"
 		),
         array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "URL",
-			"NAME" => "URL ".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_URL" ),
+			"NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
 		
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PICTURE" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "VENDOR",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_VENDOR" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_VENDOR" ),
 		),
 		array(
 			"CODE" => "VENDORCODE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_VENDORCODE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_VENDORCODE" ),
 		),
         array(
 			"CODE" => "COUNTRY_OF_ORIGIN",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_COUNTRYOFORIGIN" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_COUNTRYOFORIGIN" ),
 		),
         array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "PARAM1",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PARAM1" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PARAM1" ),
 		),
         array(
 			"CODE" => "PARAM2",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PARAM2" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PARAM2" ),
 		),
         array(
 			"CODE" => "PARAM3",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PARAM3" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PARAM3" ),
 		),
         array(
 			"CODE" => "PARAM4",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PARAM4" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PARAM4" ),
 		),
         array(
 			"CODE" => "PARAM5",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PARAM5" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PARAM5" ),
 		),
         array(
 			"CODE" => "PARAM6",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PARAM6" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PARAM6" ),
 		),
         array(
 			"CODE" => "PARAM7",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PARAM7" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PARAM7" ),
 		),
 	),
 	"FORMAT" => '<?xml version="1.0" encoding="#ENCODING#"?>
@@ -149,14 +149,14 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["allbiz"]["FIELDS"][3] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_FIELD_PRICE" ),
+        "NAME" => GetMessage( "KIT_EXPORTPRO_ALLBIZ_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["allbiz"]["PORTAL_REQUIREMENTS"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_ALLBIZ_PORTAL_REQUIREMENTS" );
-$profileTypes["allbiz"]["EXAMPLE"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_ALLBIZ_EXAMPLE" );
+$profileTypes["allbiz"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_ALLBIZ_PORTAL_REQUIREMENTS" );
+$profileTypes["allbiz"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_ALLBIZ_EXAMPLE" );
 
 $profileTypes["allbiz"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -176,22 +176,22 @@ $profileTypes["allbiz"]["ITEMS_FORMAT"] = "
     <url><![CDATA[#SITE_URL##URL#]]></url>
     <picture><![CDATA[#SITE_URL##PICTURE#]]></picture>
     <description>#DESCRIPTION#</description>
-    <param name=\"".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_PARAM_OPTPRICE" )."\">#PARAM1#</param>
-    <param name=\"".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_PARAM_ALTPRICE" )."\">#PARAM2#</param>
-    <param name=\"".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_PARAM_MINQUANT" )."\">#PARAM3#</param>
-    <param name=\"".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_PARAM_MY" )."\">#PARAM4#</param>
-    <param name=\"".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_PARAM_EXPORT" )."\">#PARAM5#</param>
-    <param name=\"".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_PARAM_IMPORT" )."\">#PARAM6#</param>
-    <param name=\"".GetMessage( "ACRIT_EXPORTPRO_ALLBIZ_PARAM_ALLBIZ_ID" )."\">#PARAM7#</param>
+    <param name=\"".GetMessage( "KIT_EXPORTPRO_ALLBIZ_PARAM_OPTPRICE" )."\">#PARAM1#</param>
+    <param name=\"".GetMessage( "KIT_EXPORTPRO_ALLBIZ_PARAM_ALTPRICE" )."\">#PARAM2#</param>
+    <param name=\"".GetMessage( "KIT_EXPORTPRO_ALLBIZ_PARAM_MINQUANT" )."\">#PARAM3#</param>
+    <param name=\"".GetMessage( "KIT_EXPORTPRO_ALLBIZ_PARAM_MY" )."\">#PARAM4#</param>
+    <param name=\"".GetMessage( "KIT_EXPORTPRO_ALLBIZ_PARAM_EXPORT" )."\">#PARAM5#</param>
+    <param name=\"".GetMessage( "KIT_EXPORTPRO_ALLBIZ_PARAM_IMPORT" )."\">#PARAM6#</param>
+    <param name=\"".GetMessage( "KIT_EXPORTPRO_ALLBIZ_PARAM_ALLBIZ_ID" )."\">#PARAM7#</param>
 </offer>
 ";
     
 $profileTypes["allbiz"]["LOCATION"] = array(
 	"yandex" => array(
-		"name" => GetMessage( "ACRIT_EXPORTPRO_ANDEKS" ),
+		"name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
 		"sub" => array(
 			"market" => array(
-				"name" => GetMessage( "ACRIT_EXPORTPRO_VEBMASTER" ),
+				"name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
 				"sub" => "",
 			)
 		)

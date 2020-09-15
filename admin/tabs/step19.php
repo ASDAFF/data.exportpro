@@ -5,12 +5,12 @@ $idConvertCnt = 0;
 ?>
 
 <tr class="heading" align="center">
-    <td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_CONVERT_FIELDSET_HEADER" )?></td>
+    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_CONVERT_FIELDSET_HEADER" )?></td>
 </tr>
 <tr align="center">
     <td colspan="2">
         <?=BeginNote();?>
-        <?=GetMessage( "ACRIT_EXPORTPRO_CONVERT_FIELDSET_DESCRIPTION" )?>
+        <?=GetMessage( "KIT_EXPORTPRO_CONVERT_FIELDSET_DESCRIPTION" )?>
         <?=EndNote();?>
     </td>
 </tr>
@@ -43,7 +43,7 @@ $idConvertCnt = 0;
 <tr>
     <td colspan="2" align="center" id="fieldset-item-add-button">
         <button class="adm-btn" onclick="ConvertFieldsetAdd( this ); return false;">
-            <?=GetMessage( "ACRIT_EXPORTPRO_CONVERT_FIELDSET_CONDITION_ADD" )?>
+            <?=GetMessage( "KIT_EXPORTPRO_CONVERT_FIELDSET_CONDITION_ADD" )?>
         </button>
     </td>
 </tr>

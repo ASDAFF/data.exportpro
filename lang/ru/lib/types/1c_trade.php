@@ -1,6 +1,6 @@
 <?php
-$MESS["ACRIT_EXPORTPRO_1C_TRADE_NAME"] = "Экспорт в управление торговлей";
-$MESS["ACRIT_EXPORTPRO_1C_TRADE_EXAMPLE"] = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+$MESS["KIT_EXPORTPRO_1C_TRADE_NAME"] = "Экспорт в управление торговлей";
+$MESS["KIT_EXPORTPRO_1C_TRADE_EXAMPLE"] = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <КоммерческаяИнформация ВерсияСхемы=\"2.021\" ДатаФормирования=\"2016-08-01T09:46:01\">
 	<Классификатор>
 		<Ид>fa051869-ae63-4cd2-8fad-2a4b464ee1b2</Ид>

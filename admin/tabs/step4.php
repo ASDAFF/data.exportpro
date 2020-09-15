@@ -5,7 +5,7 @@
 
 IncludeModuleLangFile( __FILE__ );
 
-$time[] = GetMessage( "ACRIT_EXPORTPRO_NOSELECT" );
+$time[] = GetMessage( "KIT_EXPORTPRO_NOSELECT" );
 
 //24hours format
 $time["Y-m-d_H:i"] = date( "Y-m-d H:i", time() );
@@ -20,30 +20,30 @@ $time["Y/m/d_h:i:s"] = date( "Y/m/d h:i:s", time() );
 $time["d/m/Y_h:i:s"] = date( "d/m/Y h:i:s", time() );
 $time["d.m.Y_h:i:s"] = date( "d.m.Y h:i:s", time() );
 $time["c"] = date( "c", time() );
-$time["Y-m-d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y-m-d h:m:s ".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y-m-d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "Y-m-d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y-m-d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y-m-d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
-$time["Y/m/d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y/m/d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y/m/d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "Y/m/d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y/m/d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y/m/d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
-$time["D/m/Y_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "D/m/Y h:i:s ".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["D/m/Y_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "D/m/Y h:i:s ".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["D/m/Y_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "D/m/Y h:i:s ".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
-$time["d.m.Y_h:i:s".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "d.m.Y h:i:s".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["d.m.Y_h:i:s".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "d.m.Y h:i:s".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["d.m.Y_h:i:s".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "d.m.Y h:i:s".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
+$time["Y-m-d_h:i:s_".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y-m-d h:m:s ".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y-m-d_h:i:s_".GetMessage( "KIT_EXPORTPRO_1" )] = date( "Y-m-d h:i:s ".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y-m-d_h:i:s_".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y-m-d h:i:s ".GetMessage( "KIT_EXPORTPRO_2" ), time() );
+$time["Y/m/d_h:i:s_".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y/m/d h:i:s ".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y/m/d_h:i:s_".GetMessage( "KIT_EXPORTPRO_1" )] = date( "Y/m/d h:i:s ".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y/m/d_h:i:s_".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y/m/d h:i:s ".GetMessage( "KIT_EXPORTPRO_2" ), time() );
+$time["D/m/Y_h:i:s_".GetMessage( "KIT_EXPORTPRO_" )] = date( "D/m/Y h:i:s ".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["D/m/Y_h:i:s_".GetMessage( "KIT_EXPORTPRO_1" )] = date( "D/m/Y h:i:s ".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["D/m/Y_h:i:s_".GetMessage( "KIT_EXPORTPRO_2" )] = date( "D/m/Y h:i:s ".GetMessage( "KIT_EXPORTPRO_2" ), time() );
+$time["d.m.Y_h:i:s".GetMessage( "KIT_EXPORTPRO_" )] = date( "d.m.Y h:i:s".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["d.m.Y_h:i:s".GetMessage( "KIT_EXPORTPRO_1" )] = date( "d.m.Y h:i:s".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["d.m.Y_h:i:s".GetMessage( "KIT_EXPORTPRO_2" )] = date( "d.m.Y h:i:s".GetMessage( "KIT_EXPORTPRO_2" ), time() );
 $time["Ymd"] = date( "Ymd", time() );
 $time["Y-m-d"] = date( "Y-m-d", time() );
-$time["YmdThis".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "YmdThis".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["YmdThis".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "YmdThis".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
+$time["YmdThis".GetMessage( "KIT_EXPORTPRO_" )] = date( "YmdThis".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["YmdThis".GetMessage( "KIT_EXPORTPRO_1" )] = date( "YmdThis".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_2" ), time() );
 $time["YmdThis"] = date( "YmdThis", time() );
 $time["Y-m-dTh:i:s"] = date( "Y-m-dTh:i:s", time() );
-$time["YmdThi".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "YmdThi".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["YmdThi".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "YmdThi".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
+$time["YmdThi".GetMessage( "KIT_EXPORTPRO_" )] = date( "YmdThi".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["YmdThi".GetMessage( "KIT_EXPORTPRO_1" )] = date( "YmdThi".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_2" ), time() );
 $time["YmdThi"] = date( "YmdThi", time() );
 $time["Y-m-dTh:i"] = date( "Y-m-dTh:i", time() );
 
@@ -87,19 +87,19 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 ?>
 
 <tr class="heading" align="center">
-	<td colspan="2"><b><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DETAIL" );?></b></td>
+	<td colspan="2"><b><?=GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL" );?></b></td>
 </tr>
 <tr align="center">
 	<td colspan="2">
 		<?=BeginNote();?>
-		<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DETAIL_DESCRIPTION" );?>
+		<?=GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_DESCRIPTION" );?>
 		<?=EndNote();?>
 	</td>
 </tr>
 <tr>
     <td width="50%" class="adm-detail-content-cell-l">
-        <span id="hint_PROFILE[DATEFORMAT]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[DATEFORMAT]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DATEFORMAT_HELP" )?>' );</script>
-        <label for="PROFILE[DATEFORMAT]"><b><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DATEFORMAT" );?></b></label>
+        <span id="hint_PROFILE[DATEFORMAT]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[DATEFORMAT]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_DATEFORMAT_HELP" )?>' );</script>
+        <label for="PROFILE[DATEFORMAT]"><b><?=GetMessage( "KIT_EXPORTPRO_SCHEME_DATEFORMAT" );?></b></label>
     </td>
     <td width="" class="adm-detail-content-cell-r">
         <select name="PROFILE[DATEFORMAT]">
@@ -112,8 +112,8 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="50%" class="adm-detail-content-cell-l">
-        <span id="hint_PROFILE[SITE_PROTOCOL]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[SITE_PROTOCOL]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_SITE_PROTOCOL_HELP" )?>' );</script>
-        <label for="PROFILE[SITE_PROTOCOL]"><b><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_SITE_PROTOCOL" )?></b></label>
+        <span id="hint_PROFILE[SITE_PROTOCOL]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[SITE_PROTOCOL]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_SITE_PROTOCOL_HELP" )?>' );</script>
+        <label for="PROFILE[SITE_PROTOCOL]"><b><?=GetMessage( "KIT_EXPORTPRO_SCHEME_SITE_PROTOCOL" )?></b></label>
     </td>
     <td width="" class="adm-detail-content-cell-r">
         <select name="PROFILE[SITE_PROTOCOL]">
@@ -126,38 +126,38 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="50%">
-        <span id="hint_PROFILE[EXPORT_PARENT_CATEGORIES]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_PARENT_CATEGORIES]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_HELP" )?>' );</script>
-        <label for="PROFILE[EXPORT_PARENT_CATEGORIES]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES" );?></label>
+        <span id="hint_PROFILE[EXPORT_PARENT_CATEGORIES]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_PARENT_CATEGORIES]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_HELP" )?>' );</script>
+        <label for="PROFILE[EXPORT_PARENT_CATEGORIES]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES" );?></label>
     </td>
     <td><input type="checkbox" name="PROFILE[EXPORT_PARENT_CATEGORIES]" value="Y" <?=$bExportParentCategories?> ></td>
 </tr>
 <tr>
     <td width="50%">
-        <span id="hint_PROFILE[EXPORT_PARENT_CATEGORIES_TO_OFFER]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_PARENT_CATEGORIES_TO_OFFER]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_TO_OFFER_HELP" )?>' );</script>
-        <label for="PROFILE[EXPORT_PARENT_CATEGORIES_TO_OFFER]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_TO_OFFER" );?></label>
+        <span id="hint_PROFILE[EXPORT_PARENT_CATEGORIES_TO_OFFER]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_PARENT_CATEGORIES_TO_OFFER]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_TO_OFFER_HELP" )?>' );</script>
+        <label for="PROFILE[EXPORT_PARENT_CATEGORIES_TO_OFFER]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_TO_OFFER" );?></label>
     </td>
     <td><input type="checkbox" name="PROFILE[EXPORT_PARENT_CATEGORIES_TO_OFFER]" value="Y" <?=$bExportParentCategoriesToOffer?> ></td>
 </tr>
 <tr>
     <td width="50%">
-        <span id="hint_PROFILE[EXPORT_OFFER_CATEGORIES_TO_OFFER]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_OFFER_CATEGORIES_TO_OFFER]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_OFFER_CATEGORIES_TO_OFFER_HELP" )?>' );</script>
-        <label for="PROFILE[EXPORT_OFFER_CATEGORIES_TO_OFFER]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_OFFER_CATEGORIES_TO_OFFER" );?></label>
+        <span id="hint_PROFILE[EXPORT_OFFER_CATEGORIES_TO_OFFER]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_OFFER_CATEGORIES_TO_OFFER]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_OFFER_CATEGORIES_TO_OFFER_HELP" )?>' );</script>
+        <label for="PROFILE[EXPORT_OFFER_CATEGORIES_TO_OFFER]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_OFFER_CATEGORIES_TO_OFFER" );?></label>
     </td>
     <td><input type="checkbox" name="PROFILE[EXPORT_OFFER_CATEGORIES_TO_OFFER]" value="Y" <?=$bExportOfferCategoriesToOffer?> ></td>
 </tr>
 <tr>
     <td width="50%">
-        <span id="hint_PROFILE[EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS_HELP" )?>' );</script>
-        <label for="PROFILE[EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS" );?></label>
+        <span id="hint_PROFILE[EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS_HELP" )?>' );</script>
+        <label for="PROFILE[EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS" );?></label>
     </td>
     <td><input type="checkbox" name="PROFILE[EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS]" value="Y" <?=$bExportFieldsIBlockInsteadCategory?> ></td>
 </tr>
 <tr class="heading">
-    <td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_SELECT" )?></td>
+    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_SELECT" )?></td>
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][NAME]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA" )?></label>
+        <label for="PROFILE[NAMESCHEMA][NAME]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][NAME]">
@@ -170,7 +170,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][PREVIEW_TEXT]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_PREVIEWTEXT" )?></label>
+        <label for="PROFILE[NAMESCHEMA][PREVIEW_TEXT]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_PREVIEWTEXT" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][PREVIEW_TEXT]">
@@ -183,7 +183,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][DETAIL_TEXT]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILTEXT" )?></label>
+        <label for="PROFILE[NAMESCHEMA][DETAIL_TEXT]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILTEXT" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][DETAIL_TEXT]">
@@ -196,7 +196,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][DETAIL_PICTURE]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILPICTURE" )?></label>
+        <label for="PROFILE[NAMESCHEMA][DETAIL_PICTURE]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILPICTURE" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][DETAIL_PICTURE]">
@@ -209,7 +209,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_QUANTITY]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_QUANTITY" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_QUANTITY]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_QUANTITY" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_QUANTITY]">
@@ -222,7 +222,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_QUANTITY_RESERVED]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_QUANTITY_RESERVED" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_QUANTITY_RESERVED]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_QUANTITY_RESERVED" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_QUANTITY_RESERVED]">
@@ -235,7 +235,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_WEIGHT]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_WEIGHT" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_WEIGHT]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_WEIGHT" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_WEIGHT]">
@@ -248,7 +248,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_WIDTH]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_WIDTH" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_WIDTH]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_WIDTH" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_WIDTH]">
@@ -261,7 +261,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_LENGTH]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_LENGTH" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_LENGTH]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_LENGTH" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_LENGTH]">
@@ -274,7 +274,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_HEIGHT]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_HEIGHT" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_HEIGHT]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_HEIGHT" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_HEIGHT]">
@@ -287,7 +287,7 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_PURCHASING_PRICE]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_PURCHASING_PRICE" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_PURCHASING_PRICE]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_PURCHASING_PRICE" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_PURCHASING_PRICE]">
@@ -299,21 +299,21 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
     </td>
 </tr>
 <tr class="heading">
-	<td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_TAGS" )?></td>
+	<td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_TAGS" )?></td>
 </tr>
 <tr>
 	<td align="center" colspan="2">
-		<div class="adm-info-message"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_FULLDESC" )?></div>
+		<div class="adm-info-message"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_FULLDESC" )?></div>
 	</td>
 </tr>
 
 <tr class="heading">
-	<td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_ALL" )?></td>
+	<td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_ALL" )?></td>
 </tr>
 <tr align="center">
 	<td colspan="2">
 		<?=BeginNote();?>
-		<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_MAIN_DESCRIPTION" )?>
+		<?=GetMessage( "KIT_EXPORTPRO_SCHEME_MAIN_DESCRIPTION" )?>
 		<br>
 		<div id="scheme_main_add_descr">
 			<?=$types[$arProfile["TYPE"]]["SCHEME_DESCRIPTION"]?>
@@ -329,12 +329,12 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 
 
 <tr class="heading">
-	<td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_OFFER" )?></td>
+	<td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER" )?></td>
 </tr>
 <tr align="center">
 	<td colspan="2">
 		<?=BeginNote();?>
-		<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_TAGS_DESCRIPTION" );?>
+		<?=GetMessage( "KIT_EXPORTPRO_SCHEME_TAGS_DESCRIPTION" );?>
 		<div id="scheme_main_add_offer_descr">
 			<?=$types[$arProfile["TYPE"]]["SCHEME_OFFER_DESCRIPTION"]?>
 		</div>
@@ -349,12 +349,12 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 
 <tr class="heading">
-	<td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_CATEGORY" )?></td>
+	<td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_CATEGORY" )?></td>
 </tr>
 <tr align="center">
 	<td colspan="2">
 		<?=BeginNote();?>
-		<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_CATEGORY_DESCRIPTION" );?>
+		<?=GetMessage( "KIT_EXPORTPRO_SCHEME_CATEGORY_DESCRIPTION" );?>
 		<?=EndNote();?>
 	</td>
 </tr>
@@ -365,12 +365,12 @@ function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
 </tr>
 
 <tr class="heading">
-	<td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_CURRENCY" )?></td>
+	<td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_CURRENCY" )?></td>
 </tr>
 <tr align="center">
 	<td colspan="2">
 		<?=BeginNote();?>
-		<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_CURRENCY_DESCRIPTION" );?>
+		<?=GetMessage( "KIT_EXPORTPRO_SCHEME_CURRENCY_DESCRIPTION" );?>
 		<?=EndNote();?>
 	</td>
 </tr>

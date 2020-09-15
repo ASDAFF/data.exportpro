@@ -57,7 +57,7 @@ if( $POST_RIGHT >= "R" ){
 	    
 	    $tabControl->BeginNextTab();?>
 		<tr>
-            <td class="heading" colspan="2"><?=GetMessage( "SC_FRM_1" );?></td>
+            <td class="heading" colspan="2">№№№№№<?=GetMessage( "SC_FRM_1" );?></td>
         </tr>
         <tr>
             <td valign="top" class="adm-detail-content-cell-l">
@@ -84,7 +84,7 @@ if( $POST_RIGHT >= "R" ){
         
         <tr>
 			<td colspan="2">
-				<?=GetMessage( "ACRIT_EXPORTPRO_RECOMMENDS" );?>
+				<?=GetMessage( "KIT_EXPORTPRO_RECOMMENDS" );?>
 			</td>
 		</tr>
 		

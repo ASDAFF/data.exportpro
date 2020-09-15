@@ -1,11 +1,11 @@
 <?
-$MESS["ACRIT_EXPORTPRO_CURRENCU_RUB"] = "Российский рубль";
-$MESS["ACRIT_EXPORTPRO_CURRENCU_HEAD_CURRENCY"] = "Валюта";
-$MESS["ACRIT_EXPORTPRO_CURRENCU_HEAD_RATE"] = "Курс";
-$MESS["ACRIT_EXPORTPRO_CURRENCU_HEAD_CORRECT"] = "Коррекция курса";
-$MESS["ACRIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY"] = "Конвертировать курс валют";
-$MESS["ACRIT_EXPORTPRO_CURRENCU_HEAD_CONVERTTO"] = "Конвертировать в";
-$MESS["ACRIT_EXPORTPRO_MARKET_CURRENCY_DESCRIPTION"] = "
+$MESS["KIT_EXPORTPRO_CURRENCU_RUB"] = "Российский рубль";
+$MESS["KIT_EXPORTPRO_CURRENCU_HEAD_CURRENCY"] = "Валюта";
+$MESS["KIT_EXPORTPRO_CURRENCU_HEAD_RATE"] = "Курс";
+$MESS["KIT_EXPORTPRO_CURRENCU_HEAD_CORRECT"] = "Коррекция курса";
+$MESS["KIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY"] = "Конвертировать курс валют";
+$MESS["KIT_EXPORTPRO_CURRENCU_HEAD_CONVERTTO"] = "Конвертировать в";
+$MESS["KIT_EXPORTPRO_MARKET_CURRENCY_DESCRIPTION"] = "
     Если галочка <b>\"Конвертировать курс валют\" не установлена</b>, то будет произведена коррекция выбранных<br>
     валют, на выбранное значение в процентах.
     Корректировать можно в обе стороны. Если в большую сторону, то указывается число(дробное или целое),<br>
@@ -15,5 +15,5 @@ $MESS["ACRIT_EXPORTPRO_MARKET_CURRENCY_DESCRIPTION"] = "
     в соответствии с выбранным курсом.
 ";
 
-$MESS["ACRIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY_HELP"] = "Используется для пересчета курсов валют к одной";
+$MESS["KIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY_HELP"] = "Используется для пересчета курсов валют к одной";
 ?>

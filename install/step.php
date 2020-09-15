@@ -1,5 +1,5 @@
 <?if( !check_bitrix_sessid() ) return;?>
-<?echo CAdminMessage::ShowNote( GetMessage( "ACRIT_EXPORTPRO_MODULE" ) );
+<?echo CAdminMessage::ShowNote( GetMessage( "KIT_EXPORTPRO_MODULE" ) );
 /**
  * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
@@ -10,7 +10,7 @@ IncludeModuleLangFile(__FILE__);
 <table id="install_instruction">
 	<tr>
         <td>
-            <?=GetMessage( "ACRIT_EXPORTPRO_RECOMMENDS" );?>
+            <?=GetMessage( "KIT_EXPORTPRO_RECOMMENDS" );?>
         </td>
     </tr>
     <tr class="">

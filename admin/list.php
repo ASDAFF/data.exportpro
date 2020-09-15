@@ -218,7 +218,7 @@ while( $arRes = $rsData->NavNext( true, "f_" ) ){
 	$row->AddViewField( "NAME", '<a href="kit_exportpro_edit.php?ID='.$f_ID."&amp;lang=".LANG.'" title="'.GetMessage( "parser_act_edit" ).'">'.$f_NAME."</a>" );
 	$row->AddInputField( "NAME", array( "size" => 20 ) );
 	$row->AddViewField( "START_LAST_TIME_X", $f_SETUP["LAST_START_EXPORT"] );
-	$row->AddViewField( "TYPE_RUN", $f_TYPE_RUN == "comp" ? GetMessage( "ACRIT_EXPORTPRO_RUN_TYPE_COMPONENT" ) : GetMessage( "ACRIT_EXPORTPRO_RUN_TYPE_CRON" ) );
+	$row->AddViewField( "TYPE_RUN", $f_TYPE_RUN == "comp" ? GetMessage( "KIT_EXPORTPRO_RUN_TYPE_COMPONENT" ) : GetMessage( "KIT_EXPORTPRO_RUN_TYPE_CRON" ) );
 	$arActions = array();
 	if( $POST_RIGHT == "W" ){
 		$arActions[] = array(

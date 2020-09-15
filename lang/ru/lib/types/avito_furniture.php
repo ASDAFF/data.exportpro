@@ -1,20 +1,20 @@
 <?
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_NAME"] = "Экспорт в систему авито (Мебель и интерьер)";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ALLOWEMAIL"] = "Возможность написать сообщение по объявлению через сайт — одно из значений списка: Да, Нет. Примечание: значение по умолчанию — Да.";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_MANAGERNAME"] = "Имя менеджера, контактного лица компании по данному объявлению — строка не более 40 символов.";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CITY"] = "Город или населенный пункт, в котором находится объект объявления — в соответствии со значениями из справочника.<br>
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_NAME"] = "Экспорт в систему авито (Мебель и интерьер)";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ALLOWEMAIL"] = "Возможность написать сообщение по объявлению через сайт — одно из значений списка: Да, Нет. Примечание: значение по умолчанию — Да.";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_MANAGERNAME"] = "Имя менеджера, контактного лица компании по данному объявлению — строка не более 40 символов.";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CITY"] = "Город или населенный пункт, в котором находится объект объявления — в соответствии со значениями из справочника.<br>
 Элемент обязателен для всех регионов, кроме Москвы и Санкт-Петербурга.<br>
 Справочник является неполным. Если требуемое значение в нем отсутствует, то укажите ближайший к вашему объекту пункт из справочника, а точное название населенного пункта — в элементе Street.";
 
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DISTRICT"] = "Район города — в соответствии со значениями из справочника.";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CATEGORY"] = "Категория — строка Мебель и интерьер.";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_GOODSTYPE"] = "Вид товара — одно из значений списка:<br><br>
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DISTRICT"] = "Район города — в соответствии со значениями из справочника.";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CATEGORY"] = "Категория — строка Мебель и интерьер.";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_GOODSTYPE"] = "Вид товара — одно из значений списка:<br><br>
 Компьютерные столы и кресла,<br>
 Кровати, диваны и кресла,<br>
 Кухонные гарнитуры,<br>
@@ -27,14 +27,14 @@ $MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_GOODSTYPE"] = "Вид товара 
 Другое.";
 
 
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_TITLE"] = "Название объявления — строка до 50 символов.<br><br>Примечание: не пишите в название цену и контактную информацию — для этого есть отдельные поля; и не используйте слово продам.";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DESCRIPTION"] = "Описание ";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_PRICE"] = "Цена в рублях";
-$MESS["ACRIT_EXPORTPRO_AVITO_FURNITURE_FIELD_IMAGE"] = "Изображения";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_TITLE"] = "Название объявления — строка до 50 символов.<br><br>Примечание: не пишите в название цену и контактную информацию — для этого есть отдельные поля; и не используйте слово продам.";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DESCRIPTION"] = "Описание ";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_PRICE"] = "Цена в рублях";
+$MESS["KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_IMAGE"] = "Изображения";
 
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/realty/";
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_FURNITURE_EXAMPLE"] = "
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/realty/";
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_FURNITURE_EXAMPLE"] = "
 <?xml version=\"1.0\"?>
 <Ads formatVersion=\"3\" target=\"Avito.ru\">
     <Ad>

@@ -15,12 +15,12 @@ if( CModule::IncludeModule( "currency" ) ){
 }
 else{
 	$arCurrencyList = array(
-        "RUB" => GetMessage( "ACRIT_EXPORTPRO_CURRENCU_RUB" ),
-		"USD" => GetMessage( "ACRIT_EXPORTPRO_CURRENCU_USD" ),
-		"EUR" => GetMessage( "ACRIT_EXPORTPRO_CURRENCU_EUR" ),
-		"UAH" => GetMessage( "ACRIT_EXPORTPRO_CURRENCU_UAH" ),
-		"BYR" => GetMessage( "ACRIT_EXPORTPRO_CURRENCU_BYR" ),
-		"KZT" => GetMessage( "ACRIT_EXPORTPRO_CURRENCU_KZH" )
+        "RUB" => GetMessage( "KIT_EXPORTPRO_CURRENCU_RUB" ),
+		"USD" => GetMessage( "KIT_EXPORTPRO_CURRENCU_USD" ),
+		"EUR" => GetMessage( "KIT_EXPORTPRO_CURRENCU_EUR" ),
+		"UAH" => GetMessage( "KIT_EXPORTPRO_CURRENCU_UAH" ),
+		"BYR" => GetMessage( "KIT_EXPORTPRO_CURRENCU_BYR" ),
+		"KZT" => GetMessage( "KIT_EXPORTPRO_CURRENCU_KZH" )
     );
 }
 
@@ -55,14 +55,14 @@ ksort( $currencyRates );
 <tr align="center">
     <td colspan="2">
         <?=BeginNote();?>
-        <?=GetMessage( "ACRIT_EXPORTPRO_MARKET_CURRENCY_DESCRIPTION" )?>
+        <?=GetMessage( "KIT_EXPORTPRO_MARKET_CURRENCY_DESCRIPTION" )?>
         <?=EndNote();?>
     </td>
 </tr>
 <tr>
     <td width="50%">
-        <span id="hint_PROFILE[CURRENCY][CONVERT_CURRENCY]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[CURRENCY][CONVERT_CURRENCY]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY_HELP" )?>' );</script>
-        <label for="PROFILE[CURRENCY][CONVERT_CURRENCY]"><?=GetMessage( "ACRIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY" )?></label>
+        <span id="hint_PROFILE[CURRENCY][CONVERT_CURRENCY]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[CURRENCY][CONVERT_CURRENCY]' ), '<?=GetMessage( "KIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY_HELP" )?>' );</script>
+        <label for="PROFILE[CURRENCY][CONVERT_CURRENCY]"><?=GetMessage( "KIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY" )?></label>
     </td>
     <td><input type="checkbox" name="PROFILE[CURRENCY][CONVERT_CURRENCY]" value="Y" <?=$convertCurrency?> onclick="convertCurrency()" ></td>
 </tr>
@@ -71,10 +71,10 @@ ksort( $currencyRates );
         <table cellpadding="2" cellspacing="0" border="0" class="internal" align="center" width="100%">
             <thead>
                 <tr class="heading">
-                    <td colspan="3" align="left"><?=GetMessage( "ACRIT_EXPORTPRO_CURRENCU_HEAD_CURRENCY" )?></td>
-                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "ACRIT_EXPORTPRO_CURRENCU_HEAD_RATE" )?></td>
-                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "ACRIT_EXPORTPRO_CURRENCU_HEAD_CONVERTTO" )?></td>
-                    <td align="center"><?=GetMessage( "ACRIT_EXPORTPRO_CURRENCU_HEAD_CORRECT" )?></td>
+                    <td colspan="3" align="left"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_CURRENCY" )?></td>
+                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_RATE" )?></td>
+                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_CONVERTTO" )?></td>
+                    <td align="center"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_CORRECT" )?></td>
                 </tr>
             </thead>
             <tbody>

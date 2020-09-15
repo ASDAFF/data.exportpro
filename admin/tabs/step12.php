@@ -34,7 +34,7 @@ $use_market_category = $arProfile["USE_MARKET_CATEGORY"] == "Y" ? 'checked="chec
 <tr align="center">
     <td colspan="2">
         <?=BeginNote();?>
-        <?=GetMessage( "ACRIT_EXPORTPRO_MARKET_CATEGORY_EBAY_DESCRIPTION" )?>
+        <?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_EBAY_DESCRIPTION" )?>
         <?=EndNote();?>
     </td>
 </tr>

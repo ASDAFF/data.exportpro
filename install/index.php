@@ -32,10 +32,10 @@ class kit_exportpro extends CModule{
             $this->MODULE_VERSION = $arModuleVersion["VERSION"];
             $this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
         }
-        $this->MODULE_NAME = GetMessage( "ACRIT_EXPORTPRO_MODULE_NAME" );
-        $this->MODULE_DESCRIPTION = GetMessage( "ACRIT_EXPORTPRO_MODULE_DESC" );
-        $this->PARTNER_NAME = GetMessage("ACRIT_EXPORTPRO_PARTNER_NAME");
-        $this->PARTNER_URI = GetMessage("ACRIT_EXPORTPRO_PARTNER_URI");
+        $this->MODULE_NAME = GetMessage( "KIT_EXPORTPRO_MODULE_NAME" );
+        $this->MODULE_DESCRIPTION = GetMessage( "KIT_EXPORTPRO_MODULE_DESC" );
+        $this->PARTNER_NAME = GetMessage("KIT_EXPORTPRO_PARTNER_NAME");
+        $this->PARTNER_URI = GetMessage("KIT_EXPORTPRO_PARTNER_URI");
         
         $app = \Bitrix\Main\Application::getInstance();
         $dbSite = \Bitrix\Main\SiteTable::getList();
@@ -145,7 +145,7 @@ class kit_exportpro extends CModule{
        
             
         if( !is_array( $arJqueryExt ) || !isset( $arJqueryExt["js"] ) || !file_exists( $DOCUMENT_ROOT.$arJqueryExt["js"] ) ){
-            $APPLICATION->ThrowException( GetMessage( "ACRIT_EXPORTPRO_JQUERY_REQUIRE" ) );
+            $APPLICATION->ThrowException( GetMessage( "KIT_EXPORTPRO_JQUERY_REQUIRE" ) );
             return false;
         }       
         unset( $arJqueryExt );
@@ -156,7 +156,7 @@ class kit_exportpro extends CModule{
         }
 
         if( !isset( $step ) || ( $step < 1 ) ){
-            $APPLICATION->IncludeAdminFile( GetMessage( "ACRIT_EXPORTPRO_RECOMMENDED" ), $DOCUMENT_ROOT."/bitrix/modules/{$this->MODULE_ID}/install/step.php" );
+            $APPLICATION->IncludeAdminFile( GetMessage( "KIT_EXPORTPRO_RECOMMENDED" ), $DOCUMENT_ROOT."/bitrix/modules/{$this->MODULE_ID}/install/step.php" );
         }
         elseif( ( $step == 3 ) && ( $install == "Y" ) ){
             $this->InstallFiles();

@@ -20,28 +20,28 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[USE_VARIANT]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[USE_VARIANT]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_USE_VARIANT_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_USE_VARIANT" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[USE_VARIANT]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_USE_VARIANT_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_USE_VARIANT" )?>
     </td>
     <td width="50%">
         <input type="checkbox" value="Y" name="PROFILE[USE_VARIANT]" <?=$variantChecked?> />
     </td>
 </tr>
 <tr align="center" class="heading">
-    <td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SETTINGS" )?></td>
+    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SETTINGS" )?></td>
 </tr>
 <tr align="center">
     <td colspan="2">
         <?echo BeginNote();
-        echo GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SEX_DESCRIPTION" );
+        echo GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SEX_DESCRIPTION" );
         echo EndNote();?>
     </td>
 </tr>
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][SEX]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SEX]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SEX_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SEX" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SEX]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SEX_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SEX" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][SEX]" size="50" data-value="PROFILE[VARIANT][SEX_VALUE]" value="<?=$arProfile["VARIANT"]["SEX"]?>" onclick="ShowPropertyList( this )"/>
@@ -51,8 +51,8 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][SEXOFFER]"></span>
-        <script type="text/javascript">BX.hint_replace(BX('hint_PROFILE[VARIANT][SEXOFFER]'), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SEX_OFFER_HELP" )?>');</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SEX_OFFER" )?>
+        <script type="text/javascript">BX.hint_replace(BX('hint_PROFILE[VARIANT][SEXOFFER]'), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SEX_OFFER_HELP" )?>');</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SEX_OFFER" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][SEXOFFER]" size="50" data-value="PROFILE[VARIANT][SEXOFFER_VALUE]" value="<?=$arProfile["VARIANT"]["SEXOFFER"]?>" onclick="ShowPropertyList( this )"/>
@@ -62,8 +62,8 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][SEX_CONST]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SEX_CONST]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SEX_CONST_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SEX_CONST" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SEX_CONST]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SEX_CONST_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SEX_CONST" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][SEX_CONST]" size="50" value="<?=$arProfile["VARIANT"]["SEX_CONST"]?>"/>
@@ -72,15 +72,15 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr align="center">
     <td colspan="2" style="width: 200%; height: 205px; display: inline-block;">
         <?echo BeginNote();
-        echo GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_COLOR_DESCRIPTION" );
+        echo GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_COLOR_DESCRIPTION" );
         echo EndNote();?>
     </td>
 </tr>
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][COLOR]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][COLOR]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_COLOR_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_COLOR" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][COLOR]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_COLOR_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_COLOR" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][COLOR]" size="50" data-value="PROFILE[VARIANT][COLOR_VALUE]" value="<?=$arProfile["VARIANT"]["COLOR"]?>" onclick="ShowPropertyList( this )"/>
@@ -90,8 +90,8 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][COLOROFFER]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][COLOROFFER]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_COLOR_OFFER_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_COLOR_OFFER" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][COLOROFFER]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_COLOR_OFFER_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_COLOR_OFFER" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][COLOROFFER]" size="50" data-value="PROFILE[VARIANT][COLOROFFER_VALUE]" value="<?=$arProfile["VARIANT"]["COLOROFFER"]?>" onclick="ShowPropertyList( this )"/>
@@ -101,8 +101,8 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][SIZE]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SIZE]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SIZE_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SIZE" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SIZE]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SIZE_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SIZE" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][SIZE]" size="50" data-value="PROFILE[VARIANT][SIZE_VALUE]" value="<?=$arProfile["VARIANT"]["SIZE"]?>" onclick="ShowPropertyList( this )"/>
@@ -112,8 +112,8 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][SIZEOFFER]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SIZEOFFER]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SIZE_OFFER_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_SIZE_OFFER" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][SIZEOFFER]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SIZE_OFFER_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_SIZE_OFFER" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][SIZEOFFER]" size="50" data-value="PROFILE[VARIANT][SIZEOFFER_VALUE]" value="<?=$arProfile["VARIANT"]["SIZEOFFER"]?>" onclick="ShowPropertyList( this )"/>
@@ -123,8 +123,8 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][WEIGHT]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][WEIGHT]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_WEIGHT_HELP" )?>');</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_WEIGHT" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][WEIGHT]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_WEIGHT_HELP" )?>');</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_WEIGHT" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][WEIGHT]" size="50" data-value="PROFILE[VARIANT][WEIGHT_VALUE]" value="<?=$arProfile["VARIANT"]["WEIGHT"]?>" onclick="ShowPropertyList( this )"/>
@@ -134,8 +134,8 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][WEIGHTOFFER]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][WEIGHTOFFER]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER_HELP" )?>');</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][WEIGHTOFFER]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER_HELP" )?>');</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER" )?>
     </td>
     <td width="50%">
         <input type="text" name="PROFILE[VARIANT][WEIGHTOFFER]" size="50" data-value="PROFILE[VARIANT][WEIGHTOFFER_VALUE]" value="<?=$arProfile["VARIANT"]["WEIGHTOFFER"]?>" onclick="ShowPropertyList( this )"/>
@@ -143,13 +143,13 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
     </td>
 </tr>
 <tr align="center" class="heading">
-    <td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_PRICE_TITLE" )?></td>
+    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_PRICE_TITLE" )?></td>
 </tr>
 <tr>
     <td width="50%">
         <span id="hint_PROFILE[VARIANT][PRICE]"></span>
-        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][PRICE]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_PRICE_HELP" )?>' );</script>
-        <?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_PRICE" )?>
+        <script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VARIANT][PRICE]' ), '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_PRICE_HELP" )?>' );</script>
+        <?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_PRICE" )?>
     </td>
     <td width="50%">
         <select name="PROFILE[VARIANT][PRICE]">
@@ -159,7 +159,7 @@ $variantChecked = $arProfile["USE_VARIANT"] == "Y" ? 'checked="checked"' : "";
     </td>
 </tr>
 <tr align="center" class="heading">
-    <td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_VARIANT_LIST_CATEGORY" )?></td>
+    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_VARIANT_LIST_CATEGORY" )?></td>
 </tr>
 
 <?foreach( $categories as $id => $category ){?>

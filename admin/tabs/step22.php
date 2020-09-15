@@ -4,7 +4,7 @@
  */
 
 IncludeModuleLangFile( __FILE__ );
-$time[] = GetMessage( "ACRIT_EXPORTPRO_NOSELECT" );
+$time[] = GetMessage( "KIT_EXPORTPRO_NOSELECT" );
 
 //24hours format
 $time["Y-m-d_H:i"] = date( "Y-m-d H:i", time() );
@@ -19,30 +19,30 @@ $time["Y/m/d_h:i:s"] = date( "Y/m/d h:i:s", time() );
 $time["d/m/Y_h:i:s"] = date( "d/m/Y h:i:s", time() );
 $time["d.m.Y_h:i:s"] = date( "d.m.Y h:i:s", time() );
 $time["c"] = date( "c", time() );
-$time["Y-m-d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y-m-d h:m:s ".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y-m-d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "Y-m-d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y-m-d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y-m-d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
-$time["Y/m/d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y/m/d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y/m/d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "Y/m/d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y/m/d_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y/m/d h:i:s ".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
-$time["D/m/Y_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "D/m/Y h:i:s ".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["D/m/Y_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "D/m/Y h:i:s ".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["D/m/Y_h:i:s_".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "D/m/Y h:i:s ".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
-$time["d.m.Y_h:i:s".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "d.m.Y h:i:s".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["d.m.Y_h:i:s".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "d.m.Y h:i:s".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["d.m.Y_h:i:s".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "d.m.Y h:i:s".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
+$time["Y-m-d_h:i:s_".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y-m-d h:m:s ".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y-m-d_h:i:s_".GetMessage( "KIT_EXPORTPRO_1" )] = date( "Y-m-d h:i:s ".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y-m-d_h:i:s_".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y-m-d h:i:s ".GetMessage( "KIT_EXPORTPRO_2" ), time() );
+$time["Y/m/d_h:i:s_".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y/m/d h:i:s ".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y/m/d_h:i:s_".GetMessage( "KIT_EXPORTPRO_1" )] = date( "Y/m/d h:i:s ".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y/m/d_h:i:s_".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y/m/d h:i:s ".GetMessage( "KIT_EXPORTPRO_2" ), time() );
+$time["D/m/Y_h:i:s_".GetMessage( "KIT_EXPORTPRO_" )] = date( "D/m/Y h:i:s ".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["D/m/Y_h:i:s_".GetMessage( "KIT_EXPORTPRO_1" )] = date( "D/m/Y h:i:s ".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["D/m/Y_h:i:s_".GetMessage( "KIT_EXPORTPRO_2" )] = date( "D/m/Y h:i:s ".GetMessage( "KIT_EXPORTPRO_2" ), time() );
+$time["d.m.Y_h:i:s".GetMessage( "KIT_EXPORTPRO_" )] = date( "d.m.Y h:i:s".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["d.m.Y_h:i:s".GetMessage( "KIT_EXPORTPRO_1" )] = date( "d.m.Y h:i:s".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["d.m.Y_h:i:s".GetMessage( "KIT_EXPORTPRO_2" )] = date( "d.m.Y h:i:s".GetMessage( "KIT_EXPORTPRO_2" ), time() );
 $time["Ymd"] = date( "Ymd", time() );
 $time["Y-m-d"] = date( "Y-m-d", time() );
-$time["YmdThis".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "YmdThis".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["YmdThis".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "YmdThis".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i:s".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
+$time["YmdThis".GetMessage( "KIT_EXPORTPRO_" )] = date( "YmdThis".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["YmdThis".GetMessage( "KIT_EXPORTPRO_1" )] = date( "YmdThis".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i:s".GetMessage( "KIT_EXPORTPRO_2" ), time() );
 $time["YmdThis"] = date( "YmdThis", time() );
 $time["Y-m-dTh:i:s"] = date( "Y-m-dTh:i:s", time() );
-$time["YmdThi".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "YmdThi".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["YmdThi".GetMessage( "ACRIT_EXPORTPRO_1" )] = date( "YmdThi".GetMessage( "ACRIT_EXPORTPRO_1" ), time() );
-$time["Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_" )] = date( "Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_" ), time() );
-$time["Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i".GetMessage( "ACRIT_EXPORTPRO_2" ), time() );
+$time["YmdThi".GetMessage( "KIT_EXPORTPRO_" )] = date( "YmdThi".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["YmdThi".GetMessage( "KIT_EXPORTPRO_1" )] = date( "YmdThi".GetMessage( "KIT_EXPORTPRO_1" ), time() );
+$time["Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_" )] = date( "Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_" ), time() );
+$time["Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_2" )] = date( "Y-m-dTh:i".GetMessage( "KIT_EXPORTPRO_2" ), time() );
 $time["YmdThi"] = date( "YmdThi", time() );
 $time["Y-m-dTh:i"] = date( "Y-m-dTh:i", time() );
 
@@ -85,19 +85,19 @@ if( empty( $arProfile["NAMESCHEMA"]["CATALOG_QUANTITY"] ) && !empty($arType["NAM
 }?>
 
 <tr class="heading" align="center">
-	<td colspan="2"><b><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DETAIL" );?></b></td>
+	<td colspan="2"><b><?=GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL" );?></b></td>
 </tr>
 <tr align="center">
 	<td colspan="2">
 		<?=BeginNote();?>
-		<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DETAIL_DESCRIPTION" );?>
+		<?=GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_DESCRIPTION" );?>
 		<?=EndNote();?>
 	</td>
 </tr>
 <tr>
     <td width="50%" class="adm-detail-content-cell-l">
-        <span id="hint_PROFILE[DATEFORMAT]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[DATEFORMAT]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DATEFORMAT_HELP" )?>' );</script>
-        <label for="PROFILE[DATEFORMAT]"><b><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_DATEFORMAT" );?></b></label>
+        <span id="hint_PROFILE[DATEFORMAT]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[DATEFORMAT]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_DATEFORMAT_HELP" )?>' );</script>
+        <label for="PROFILE[DATEFORMAT]"><b><?=GetMessage( "KIT_EXPORTPRO_SCHEME_DATEFORMAT" );?></b></label>
     </td>
     <td width="" class="adm-detail-content-cell-r">
         <select name="PROFILE[DATEFORMAT]">
@@ -110,8 +110,8 @@ if( empty( $arProfile["NAMESCHEMA"]["CATALOG_QUANTITY"] ) && !empty($arType["NAM
 </tr>
 <tr>
     <td width="50%" class="adm-detail-content-cell-l">
-        <span id="hint_PROFILE[SITE_PROTOCOL]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[SITE_PROTOCOL]' ), '<?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_SITE_PROTOCOL_HELP" )?>' );</script>
-        <label for="PROFILE[SITE_PROTOCOL]"><b><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_SITE_PROTOCOL" )?></b></label>
+        <span id="hint_PROFILE[SITE_PROTOCOL]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[SITE_PROTOCOL]' ), '<?=GetMessage( "KIT_EXPORTPRO_SCHEME_SITE_PROTOCOL_HELP" )?>' );</script>
+        <label for="PROFILE[SITE_PROTOCOL]"><b><?=GetMessage( "KIT_EXPORTPRO_SCHEME_SITE_PROTOCOL" )?></b></label>
     </td>
     <td width="" class="adm-detail-content-cell-r">
         <select name="PROFILE[SITE_PROTOCOL]">
@@ -125,11 +125,11 @@ if( empty( $arProfile["NAMESCHEMA"]["CATALOG_QUANTITY"] ) && !empty($arType["NAM
 
 
 <tr class="heading">
-    <td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_SELECT" )?></td>
+    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_SELECT" )?></td>
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][NAME]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA" )?></label>
+        <label for="PROFILE[NAMESCHEMA][NAME]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][NAME]">
@@ -142,7 +142,7 @@ if( empty( $arProfile["NAMESCHEMA"]["CATALOG_QUANTITY"] ) && !empty($arType["NAM
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][PREVIEW_TEXT]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_PREVIEWTEXT" )?></label>
+        <label for="PROFILE[NAMESCHEMA][PREVIEW_TEXT]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_PREVIEWTEXT" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][PREVIEW_TEXT]">
@@ -155,7 +155,7 @@ if( empty( $arProfile["NAMESCHEMA"]["CATALOG_QUANTITY"] ) && !empty($arType["NAM
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][DETAIL_TEXT]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILTEXT" )?></label>
+        <label for="PROFILE[NAMESCHEMA][DETAIL_TEXT]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILTEXT" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][DETAIL_TEXT]">
@@ -168,7 +168,7 @@ if( empty( $arProfile["NAMESCHEMA"]["CATALOG_QUANTITY"] ) && !empty($arType["NAM
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][DETAIL_PICTURE]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILPICTURE" )?></label>
+        <label for="PROFILE[NAMESCHEMA][DETAIL_PICTURE]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_DETAILPICTURE" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][DETAIL_PICTURE]">
@@ -181,7 +181,7 @@ if( empty( $arProfile["NAMESCHEMA"]["CATALOG_QUANTITY"] ) && !empty($arType["NAM
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <label for="PROFILE[NAMESCHEMA][CATALOG_QUANTITY]"><?=GetMessage( "ACRIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_QUANTITY" )?></label>
+        <label for="PROFILE[NAMESCHEMA][CATALOG_QUANTITY]"><?=GetMessage( "KIT_EXPORTPRO_SCHEME_NAMESCHEMA_CATALOG_QUANTITY" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <select name="PROFILE[NAMESCHEMA][CATALOG_QUANTITY]">

@@ -1,33 +1,33 @@
 <?
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_NAME"] = "Экспорт в систему авито(\"Недвижимость за рубежом\")";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CATEGORY"] = "Категория объявления<br><b>Возможные значения: Недвижимость за рубежом</b><br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_REGION"] = "Дата конца экспозиции объявления<br>(Значение из Справочника регионов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_SUBWAY"] = "Станция метро<br>(Значение из Cправочника метро)";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DESCRIPTION"] = "Описание ";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_PRICE"] = "Цена в рублях";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_CATEGORY_VALUE"] = "Недвижимость за рубежом";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OPERATIONTYPE"] = "Тип объявления<br><b>Возможные значения: Продам, Сдам<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LOCALITY"] = "Город или населенный пункт, уточнение";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_STREET"] = "Наименование улицы, на которой<br>находится объект объявления";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ROOMS"] = "Количество комнат в квартире";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_SQUARE"] = "Площадь в кв. м.<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CITY"] = "Город или населенный пункт, в котором находится объект объявления<br>см. Местоположение объявления<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_COUNTRY"] = "Страна, в которой находится объект объявления<br>Значение из справочника стран<br><b class='required'>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LEASETYPE"] = "Тип аренды,только для типа 'Сдам'<br><b>Возможные значения:<ul>
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_NAME"] = "Экспорт в систему авито(\"Недвижимость за рубежом\")";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CATEGORY"] = "Категория объявления<br><b>Возможные значения: Недвижимость за рубежом</b><br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_REGION"] = "Дата конца экспозиции объявления<br>(Значение из Справочника регионов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_SUBWAY"] = "Станция метро<br>(Значение из Cправочника метро)";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DESCRIPTION"] = "Описание ";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_PRICE"] = "Цена в рублях";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_CATEGORY_VALUE"] = "Недвижимость за рубежом";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OPERATIONTYPE"] = "Тип объявления<br><b>Возможные значения: Продам, Сдам<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LOCALITY"] = "Город или населенный пункт, уточнение";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_STREET"] = "Наименование улицы, на которой<br>находится объект объявления";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ROOMS"] = "Количество комнат в квартире";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_SQUARE"] = "Площадь в кв. м.<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CITY"] = "Город или населенный пункт, в котором находится объект объявления<br>см. Местоположение объявления<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_COUNTRY"] = "Страна, в которой находится объект объявления<br>Значение из справочника стран<br><b class='required'>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LEASETYPE"] = "Тип аренды,только для типа 'Сдам'<br><b>Возможные значения:<ul>
 <li>Долгосрочная</li>
 <li>Посуточная</li>
 </ul></b>
 <br><b class='required'>Обязательный элемент</b>
 ";
 
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_IMAGE"] = "Изображения";
-$MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OBJECTTYPE"] = "Вид объекта<br><b>Возможные значения:<ul>
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_IMAGE"] = "Изображения";
+$MESS["KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OBJECTTYPE"] = "Вид объекта<br><b>Возможные значения:<ul>
 <li>Квартира, апартаменты</li>
 <li>Дом, вилла</li>
 <li>Земельный участок</li>
@@ -37,9 +37,9 @@ $MESS["ACRIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OBJECTTYPE"] = "Вид объек�
 <br><b class='required'>Обязательный элемент</b>";
 
 
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/realty/";
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_EXAMPLE"] = "
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/realty/";
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_EXAMPLE"] = "
 <?xml version=\"1.0\"?>
 <Ads target=\"Avito.ru\" formatVersion=\"2\">
     <Ad>

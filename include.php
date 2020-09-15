@@ -49,8 +49,8 @@ class CKitExportproMenu{
         $aMenu = array(
             "menu_id" => "kit",
             "sort" => 150,
-            "text" => GetMessage( "ACRIT_MENU_NAME" ),
-            "title" => GetMessage( "ACRIT_MENU_TITLE" ),
+            "text" => GetMessage( "KIT_MENU_NAME" ),
+            "title" => GetMessage( "KIT_MENU_TITLE" ),
             "icon" => "clouds_menu_icon",
             "page_icon" => "clouds_page_icon",
             "items_id" => "global_menu_kit",
@@ -257,7 +257,7 @@ class CKitExportproElement{
             return true;
         }
             
-        $pregMatchExp = GetMessage( "ACRIT_EXPORTPRO_A_AA_A" );
+        $pregMatchExp = GetMessage( "KIT_EXPORTPRO_A_AA_A" );
                                                                                                           
         preg_match_all( "/.*(<[\w\d_-]+).*(#[\w\d_-]+:*[\w\d_-]+#).*(<\/.+>)/", $this->profile["OFFER_TEMPLATE"], $this->arMatches );
         
@@ -946,7 +946,7 @@ class CKitExportproElement{
         if( empty( $iblockList ) )
             return true;
             
-        $pregMatchExp = GetMessage( "ACRIT_EXPORTPRO_A_AA_A" );
+        $pregMatchExp = GetMessage( "KIT_EXPORTPRO_A_AA_A" );
                                                                                                           
         preg_match_all( "/.*(<[\w\d_-]+).*(#[\w\d_-]+:*[\w\d_-]+#).*(<\/.+>)/", $this->profile["OFFER_TEMPLATE"], $this->arMatches );
         
@@ -1435,9 +1435,9 @@ class CKitExportproElement{
 
         if( !$cronrun ){
             echo '<div class="width: 100%; text-align: center; font-size: 18px; margin: 40px 0; padding: 40px 0; border: 1px solid #ccc; border-radius: 6px; background: #f5f5f5;">',
-            GetMessage( "ACRIT_EXPORTPRO_RUN_EXPORT_RUN" ), "<br>",
-            str_replace( array( "#PROFILE_ID#", "#PROFILE_NAME#" ), array( $this->profile["ID"], $this->profile["NAME"] ), GetMessage( "ACRIT_EXPORTPRO_RUN_STEP_PROFILE" ) ), "<br>",
-            str_replace( array( "#STEP#", "#COUNT#" ), array( $page, $dbElements->NavPageCount ), GetMessage( "ACRIT_EXPORTPRO_RUN_STEP_RUN" ) ),
+            GetMessage( "KIT_EXPORTPRO_RUN_EXPORT_RUN" ), "<br>",
+            str_replace( array( "#PROFILE_ID#", "#PROFILE_NAME#" ), array( $this->profile["ID"], $this->profile["NAME"] ), GetMessage( "KIT_EXPORTPRO_RUN_STEP_PROFILE" ) ), "<br>",
+            str_replace( array( "#STEP#", "#COUNT#" ), array( $page, $dbElements->NavPageCount ), GetMessage( "KIT_EXPORTPRO_RUN_STEP_RUN" ) ),
             "</div>";
         }       
                                                   
@@ -1460,7 +1460,7 @@ class CKitExportproElement{
         if( empty( $iblockList ) )
             return false;
             
-        $pregMatchExp = GetMessage( "ACRIT_EXPORTPRO_A_AA_A" );
+        $pregMatchExp = GetMessage( "KIT_EXPORTPRO_A_AA_A" );
                                                                                                           
         preg_match_all( "/.*(<.+>).*(#[\w\d_-]+:*[\w\d_-]+#).*(<\/.+>)/", $this->profile["OFFER_TEMPLATE"], $this->arMatches );
 
@@ -2283,7 +2283,7 @@ class CKitExportproElement{
                                                           
             if( ( $field["REQUIRED"] == "Y" ) && ( empty( $templateValues["{$field["CODE"]}"] ) || !isset( $templateValues["{$field["CODE"]}"] ) ) ){
                 $skipElement = true;
-                $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "FIELD", "{$field["CODE"]}", GetMessage( "ACRIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
+                $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "FIELD", "{$field["CODE"]}", GetMessage( "KIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
                 $this->log->IncProductError();
             }
         }     
@@ -3170,14 +3170,14 @@ class CKitExportproElement{
                 $dateTimeFormattedValue = date( "Y-m-d", $dateTimeValue );
                 if( stripos( $templateValues["#{$field["CODE"]}#"], $dateTimeFormattedValue ) !== false ){
                     $skipElement = true;
-                    $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "ACRIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
+                    $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "KIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
                     $this->log->IncProductError();
                 }
             }                                                            
                       
             if( ( $field["REQUIRED"] == "Y" ) && ( empty( $templateValues["#{$field["CODE"]}#"] ) || !isset( $templateValues["#{$field["CODE"]}#"] ) ) ){
                 $skipElement = true;
-                $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "ACRIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
+                $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "KIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
                 $this->log->IncProductError();
             }                                                       
         }                                 

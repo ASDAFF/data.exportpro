@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["wikimart_simple"] = array(
 	"CODE" => "wikimart_simple",
-    "NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_NAME" ),
-	"DESCRIPTION" => GetMessage( "ACRIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_NAME" ),
+	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_ID" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,104 +42,104 @@ $profileTypes["wikimart_simple"] = array(
 		),
 		array(
 			"CODE" => "BID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_BID" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_BID" ),
 			"VALUE" => "",
 		),
 		array(
 			"CODE" => "URL",
-			"NAME" => "URL ".GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_URL" ),
+			"NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_PRICE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_PRICE" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_CURRENCY" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
 		array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_PICTURE" ),
 		),
         array(
 			"CODE" => "STORE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_STORE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_STORE" ),
 		),
         array(
 			"CODE" => "NAME",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_NAME" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_NAME" ),
 			"VALUE" => "NAME",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "VENDOR",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_VENDOR" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_VENDOR" ),
 		),
 		array(
 			"CODE" => "VENDORCODE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_VENDORCODE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_VENDORCODE" ),
 		),
 		
 		array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_DESCRIPTION" ),
 		),
 		array(
 			"CODE" => "ADULT",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_ADULT" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_ADULT" ),
 		),
         array(
 			"CODE" => "AGE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_AGE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_AGE" ),
 		),
 		array(
 			"CODE" => "CPA",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_CPA" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_CPA" ),
 		),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
@@ -171,15 +171,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["wikimart_simple"]["FIELDS"][4] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_PRICE" ),
+        "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_SIMPLE_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["wikimart_simple"]["PORTAL_REQUIREMENTS"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_WIKIMART_SIMPLE_PORTAL_REQUIREMENTS" );
-$profileTypes["wikimart_simple"]["EXAMPLE"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_WIKIMART_SIMPLE_EXAMPLE" );
+$profileTypes["wikimart_simple"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_WIKIMART_SIMPLE_PORTAL_REQUIREMENTS" );
+$profileTypes["wikimart_simple"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_WIKIMART_SIMPLE_EXAMPLE" );
 
 $profileTypes["wikimart_simple"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' />" . PHP_EOL;
@@ -208,7 +208,7 @@ $profileTypes["wikimart_simple"]["ITEMS_FORMAT"] = "
     
 $profileTypes["wikimart_simple"]["LOCATION"] = array(
 	"wikimart" => array(
-		"name" => GetMessage( "ACRIT_EXPORTPRO_WIKIMART" ),
+		"name" => GetMessage( "KIT_EXPORTPRO_WIKIMART" ),
 		"sub" => array(
 		)
 	),

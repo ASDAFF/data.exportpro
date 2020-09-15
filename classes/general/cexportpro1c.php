@@ -174,7 +174,7 @@ class CKitCML2ExportElement extends CKitExportproElement{
         if( empty( $iblockList ) )
             return true;
 
-        $pregMatchExp = GetMessage( "ACRIT_EXPORTPRO_A_AA_A" );
+        $pregMatchExp = GetMessage( "KIT_EXPORTPRO_A_AA_A" );
         preg_match_all( "/.*(<[\w\d_-]+).*(#[\w\d_-]+:*[\w\d_-]+#).*(<\/.+>)/", $this->profile["OFFER_TEMPLATE"], $this->arMatches );
 
         // install for all templates #EXAMPLE# null value, so that you can remove
@@ -958,14 +958,14 @@ class CKitCML2ExportElement extends CKitExportproElement{
                 $dateTimeFormattedValue = date( "Y-m-d", $dateTimeValue );
                 if( stripos( $templateValues["#{$field["CODE"]}#"], $dateTimeFormattedValue ) !== false ){
                     $skipElement = true;
-                    $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "ACRIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
+                    $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "KIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
                     $this->log->IncProductError();
                 }
             }
 
             if( ( $field["REQUIRED"] == "Y" ) && ( empty( $templateValues["#{$field["CODE"]}#"] ) || !isset( $templateValues["#{$field["CODE"]}#"] ) ) ){
                 $skipElement = true;
-                $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "ACRIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
+                $this->log->AddMessage( "{$arItem["NAME"]} (ID:{$arItem["ID"]}) : ".str_replace( "#FIELD#", "#{$field["CODE"]}#", GetMessage( "KIT_EXPORTPRO_REQUIRED_FIELD_SKIP" ) ) );
                 $this->log->IncProductError();
             }
         }

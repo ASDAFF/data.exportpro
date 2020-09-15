@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["ym_multimedia"] = array(
 	"CODE" => "ym_multimedia",
-    "NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_NAME" ),
-	"DESCRIPTION" => GetMessage( "ACRIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_NAME" ),
+	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_ID" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,111 +42,111 @@ $profileTypes["ym_multimedia"] = array(
 		),
 		array(
 			"CODE" => "BID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_BID" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_BID" ),
 		),
 		array(
 			"CODE" => "URL",
-			"NAME" => "URL ".GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_URL" ),
+			"NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PRICE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PRICE" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_CURRENCY" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
 		array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PICTURE" ),
 		),
          array(
 			"CODE" => "STORE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_STORE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_STORE" ),
 		),
         array(
 			"CODE" => "PICKUP",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PICKUP" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PICKUP" ),
 		),
         array(
 			"CODE" => "DELIVERY",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_DELIVERY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_DELIVERY" ),
 		),
         array(
 			"CODE" => "ARTIST",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_ARTIST" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_ARTIST" ),
 		),
         array(
 			"CODE" => "TITLE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_TITLE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_TITLE" ),
             "VALUE" => "NAME",
             "REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "YEAR",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_YEAR" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_YEAR" ),
 		),
 		array(
 			"CODE" => "MEDIA",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_MEDIA" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_MEDIA" ),
 		),
         array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "AGE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_AGE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_AGE" ),
 		),
 		array(
 			"CODE" => "BARCODE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_BARCODE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_BARCODE" ),
 		),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
@@ -178,16 +178,16 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["ym_multimedia"]["FIELDS"][4] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "ACRIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PRICE" ),
+        "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_MULTIMEDIA_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["ym_multimedia"]["PORTAL_REQUIREMENTS"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_MARKET_MULTIMEDIA_PORTAL_REQUIREMENTS" );
-$profileTypes["ym_multimedia"]["PORTAL_VALIDATOR"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_MARKET_MULTIMEDIA_PORTAL_VALIDATOR" );
-$profileTypes["ym_multimedia"]["EXAMPLE"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_MARKET_MULTIMEDIA_EXAMPLE" );
+$profileTypes["ym_multimedia"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_MULTIMEDIA_PORTAL_REQUIREMENTS" );
+$profileTypes["ym_multimedia"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_MULTIMEDIA_PORTAL_VALIDATOR" );
+$profileTypes["ym_multimedia"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_MULTIMEDIA_EXAMPLE" );
 
 $profileTypes["ym_multimedia"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -218,10 +218,10 @@ $profileTypes["ym_multimedia"]["ITEMS_FORMAT"] = "
     
 $profileTypes["ym_multimedia"]["LOCATION"] = array(
 	"yandex" => array(
-		"name" => GetMessage( "ACRIT_EXPORTPRO_ANDEKS" ),
+		"name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
 		"sub" => array(
 			"market" => array(
-				"name" => GetMessage( "ACRIT_EXPORTPRO_VEBMASTER" ),
+				"name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
 				"sub" => "",
 			)
 		)

@@ -19,7 +19,7 @@ foreach( $marketCategory as $key => $cat ){
 <tr align="center">
     <td colspan="2">
         <?=BeginNote();?>
-		<?=GetMessage( "ACRIT_EXPORTPRO_OZON_CATEGORY_DESCRIPTION" )?>
+		<?=GetMessage( "KIT_EXPORTPRO_OZON_CATEGORY_DESCRIPTION" )?>
         <?=EndNote();?>
     </td>
 </tr>

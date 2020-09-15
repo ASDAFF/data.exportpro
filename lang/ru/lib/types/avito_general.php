@@ -1,21 +1,21 @@
 <?
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_NAME"] = "Экспорт в систему авито";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_CATEGORY"] = "Категория объявления<br><b>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_REGION"] = "Дата конца экспозиции объявления<br>(Значение из Справочника регионов)<br><b>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b>Обязательный элемент</b>";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_SUBWAY"] = "Станция метро<br>(Значение из Cправочника метро)";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_DESCRIPTION"] = "Описание ";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_PRICE"] = "Цена в рублях";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
-$MESS["ACRIT_EXPORTPRO_AVITO_GENERAL_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_NAME"] = "Экспорт в систему авито";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_CATEGORY"] = "Категория объявления<br><b>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_REGION"] = "Дата конца экспозиции объявления<br>(Значение из Справочника регионов)<br><b>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b>Обязательный элемент</b>";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_SUBWAY"] = "Станция метро<br>(Значение из Cправочника метро)";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_DESCRIPTION"] = "Описание ";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_PRICE"] = "Цена в рублях";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
+$MESS["KIT_EXPORTPRO_AVITO_GENERAL_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
 
 
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/";
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
-$MESS["ACRIT_EXPORTPRO_TYPE_AVITO_GENERAL_EXAMPLE"] = "
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/";
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
+$MESS["KIT_EXPORTPRO_TYPE_AVITO_GENERAL_EXAMPLE"] = "
 <?xml version=\"1.0\"?>
 <Ads target=\"Avito.ru\" formatVersion=\"1\">
     <Ad>

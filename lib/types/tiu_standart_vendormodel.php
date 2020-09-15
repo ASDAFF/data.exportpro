@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["tiu_standart_vendormodel"] = array(
 	"CODE" => "tiu_standart_vendormodel",
-    "NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_NAME" ),
-	"DESCRIPTION" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY" ),
+    "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_NAME" ),
+	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY" ),
 	"REG" => "",
 	"HELP" => "",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_ID" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,91 +42,91 @@ $profileTypes["tiu_standart_vendormodel"] = array(
 		),
         array(
             "CODE" => "SELLING_TYPE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_SELLINGTYPE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_SELLINGTYPE" ),
         ),
 		array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PRICE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "OLDPRICE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OLDPRICE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OLDPRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "DISCOUNT",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_DISCOUNT" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_DISCOUNT" ),
 		),
         array(
 			"CODE" => "OPTPRICE1",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OPTPRICE1" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OPTPRICE1" ),
 		),
         array(
 			"CODE" => "OPTQUANTITY1",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OPTQUANTITY1" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OPTQUANTITY1" ),
 		),
         array(
 			"CODE" => "MINIMUM_ORDER_QUANTITY",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_MINIMUM_ORDER_QUANTITY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_MINIMUM_ORDER_QUANTITY" ),
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_CURRENCY" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
 		array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PICTURE" ),
 		),
         array(
 			"CODE" => "TYPEPREFIX",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_TYPEPREFIX" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_TYPEPREFIX" ),
 		),
         array(
 			"CODE" => "VENDOR",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_VENDOR" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_VENDOR" ),
             "REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "VENDORCODE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_VENDORCODE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_VENDORCODE" ),
 		),
         array(
 			"CODE" => "BARCODE",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_BARCODE" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_BARCODE" ),
 		),
 		array(
 			"CODE" => "MODEL",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_MODEL" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_MODEL" ),
             "REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "COUNTRY",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_COUNTRYOFORIGIN" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_COUNTRYOFORIGIN" ),
 		),
         array(
 			"CODE" => "PARAM",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PARAM" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PARAM" ),
 		),
         array(
 			"CODE" => "KEYWORDS",
-			"NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_KEYWORDS" ),
+			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_KEYWORDS" ),
 		),
 	),
 	"FORMAT" => '<?xml version="1.0" encoding="#ENCODING#"?>
@@ -157,21 +157,21 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["tiu_standart_vendormodel"]["FIELDS"][3] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PRICE" ),
+        "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
     );
     
     $profileTypes["tiu_standart_vendormodel"]["FIELDS"][4] = array(
         "CODE" => "OLDPRICE",
-        "NAME" => GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OLDPRICE" ),
+        "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_FIELD_OLDPRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["tiu_standart_vendormodel"]["PORTAL_REQUIREMENTS"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_TIU_VENDORMODEL_PORTAL_REQUIREMENTS" );
-$profileTypes["tiu_standart_vendormodel"]["EXAMPLE"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_TIU_PORTAL_CATEGORY_VENDORMODEL_EXAMPLE" );
+$profileTypes["tiu_standart_vendormodel"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_TIU_VENDORMODEL_PORTAL_REQUIREMENTS" );
+$profileTypes["tiu_standart_vendormodel"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_TIU_PORTAL_CATEGORY_VENDORMODEL_EXAMPLE" );
 
 $profileTypes["tiu_standart_vendormodel"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -212,9 +212,9 @@ $profileTypes["tiu_standart_vendormodel"]["ITEMS_FORMAT"] = "
     
 $profileTypes["tiu_standart_vendormodel"]["LOCATION"] = array(
 	"tiu" => array(
-		"name" => GetMessage( "ACRIT_EXPORTPRO_TIU" ),
+		"name" => GetMessage( "KIT_EXPORTPRO_TIU" ),
 		"sub" => array(
 		)
 	),
 );
-$profileTypes["tiu_standart_vendormodel"]["SCHEME_OFFER_DESCRIPTION"] = GetMessage( "ACRIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_SCHEME_OFFER_DESCRIPTION" );
+$profileTypes["tiu_standart_vendormodel"]["SCHEME_OFFER_DESCRIPTION"] = GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_VENDORMODEL_SCHEME_OFFER_DESCRIPTION" );

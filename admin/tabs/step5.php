@@ -8,41 +8,41 @@ IncludeModuleLangFile( __FILE__ );
 $options = $profileUtils->createFieldset2( $arProfile["IBLOCK_ID"], true );
 
 $fieldType = array(
-    "none" => GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" ),
-    "field" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_FIELD" ),
-    "const" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONST" ),
-    "complex" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_COMPLEX" ),
-    "composite" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_COMPOSITE" )
+    "none" => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
+    "field" => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
+    "const" => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
+    "complex" => GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPLEX" ),
+    "composite" => GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE" )
 );   
 
 $fieldTypeComplex = array(
-    "none" => GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" ),
-    "field" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_FIELD" ),
-    "const" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONST" ),
+    "none" => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
+    "field" => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
+    "const" => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
 );
 
 $fieldTypeComposite = array(
-    "none" => GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" ),
-    "field" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_FIELD" ),
-    "const" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONST" ),
+    "none" => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
+    "field" => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
+    "const" => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
 );
 
 $roundModes = array(
-    "none" => GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" ),
-    "UP" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ROUND_MODE_UP" ),
-    "DOWN" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ROUND_MODE_DOWN" ),
-    "EVEN" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ROUND_MODE_EVEN" ),
-    "ODD" => GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ROUND_MODE_ODD" )
+    "none" => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
+    "UP" => GetMessage( "KIT_EXPORTPRO_FIELDSET_ROUND_MODE_UP" ),
+    "DOWN" => GetMessage( "KIT_EXPORTPRO_FIELDSET_ROUND_MODE_DOWN" ),
+    "EVEN" => GetMessage( "KIT_EXPORTPRO_FIELDSET_ROUND_MODE_EVEN" ),
+    "ODD" => GetMessage( "KIT_EXPORTPRO_FIELDSET_ROUND_MODE_ODD" )
 );
 $idCnt = 0;                      
 ?>
 <tr class="heading" align="center">
-    <td colspan="2"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_HEADER" )?></td>
+    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HEADER" )?></td>
 </tr>
 <tr align="center">
     <td colspan="2">
         <?=BeginNote();?>
-        <?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_DESCRIPTION" )?>
+        <?=GetMessage( "KIT_EXPORTPRO_FIELDSET_DESCRIPTION" )?>
         <?=EndNote();?>
     </td>
 </tr>
@@ -97,7 +97,7 @@ $idCnt = 0;
                             </select>
                             
                             <select class="field-block <?=$hideFieldBlock?>" name="PROFILE[XMLDATA][<?=$id?>][VALUE]" onchange="ShowResolveBlock( this )" data-id="<?=$id?>">
-                                <option value="">--<?=GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                                <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
                                 <?if( $field["TYPE"] == "field" ){
                                     $opt = $profileUtils->selectFieldset2( $options, $field["VALUE"] , $selectedPropertyType );
                                     echo implode( "\n", $opt );
@@ -106,7 +106,7 @@ $idCnt = 0;
                             </select>
                            
                             <select class="resolve-block <?=$hideResolveBlock?>" name="PROFILE[XMLDATA][<?=$id?>][RESOLVE]">
-                                <option value="">--<?=GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                                <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
                                     <?if( ( $resolve = CExportproProfile::getFieldsetResolve( $arProfile["IBLOCK_ID"], $options, $field["VALUE"] ) ) !== false ){ 
                                         $opt = $profileUtils->selectFieldset2($resolve, $field["RESOLVE"]);
                                         echo implode( "\n", $opt );
@@ -116,8 +116,8 @@ $idCnt = 0;
                             <div class="const-block <?=$hideConstBlock?>">
                                 <?$hideContvalueFalse = !$useCondition ? "hide" : "";?>
                                 <?$showPlaceholder = !$hideContvalueFalse ? "placeholder" : "data-placeholder";?>
-                                <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_TRUE]" <?=$showPlaceholder?>="<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"><?=$field["CONTVALUE_TRUE"]?></textarea>
-                                <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_FALSE]" placeholder="<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" class="<?=$hideContvalueFalse?>"><?=$field["CONTVALUE_FALSE"]?></textarea>
+                                <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_TRUE]" <?=$showPlaceholder?>="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"><?=$field["CONTVALUE_TRUE"]?></textarea>
+                                <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_FALSE]" placeholder="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" class="<?=$hideContvalueFalse?>"><?=$field["CONTVALUE_FALSE"]?></textarea>
                             </div>
                             <div class="complex-block-container <?=$hideComplexBlock?>">
                                 <div class="complex-block">
@@ -132,7 +132,7 @@ $idCnt = 0;
                                             <?}?>
                                         </select>
                                         <select class="field-block-complex <?=$hideComplexFieldTrueBlock?>" name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_TRUE_VALUE]">
-                                            <option value="">--<?=GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                                            <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
                                             <?if( $field["COMPLEX_TRUE_TYPE"] == "field" ){
                                                 $opt = $profileUtils->selectFieldset2( $options, $field["COMPLEX_TRUE_VALUE"] );
                                                 echo implode( "\n", $opt );
@@ -140,7 +140,7 @@ $idCnt = 0;
                                             }?>                                    
                                         </select>                                 
                                         <div class="const-block-complex <?=$hideComplexConstTrueBlock?>">
-                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_TRUE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"><?=$field["COMPLEX_TRUE_CONTVALUE"]?></textarea>
+                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_TRUE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"><?=$field["COMPLEX_TRUE_CONTVALUE"]?></textarea>
                                         </div>
                                     </div>                                                                 
                                     <div class="<?=$hideComplexFalse?>">                                                                 
@@ -151,7 +151,7 @@ $idCnt = 0;
                                             <?}?>
                                         </select>
                                         <select class="field-block-complex-false <?=$hideComplexFieldFalseBlock?>" name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_FALSE_VALUE]">
-                                            <option value="">--<?=GetMessage( "ACRIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                                            <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
                                             <?if( $field["COMPLEX_FALSE_TYPE"] == "field" ){
                                                 $opt = $profileUtils->selectFieldset2( $options, $field["COMPLEX_FALSE_VALUE"] );
                                                 echo implode( "\n", $opt );
@@ -159,7 +159,7 @@ $idCnt = 0;
                                             }?>                                    
                                         </select>                                 
                                         <div class="const-block-complex-false <?=$hideComplexConstFalseBlock?>">
-                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_FALSE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"><?=$field["COMPLEX_FALSE_CONTVALUE"]?></textarea>
+                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_FALSE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"><?=$field["COMPLEX_FALSE_CONTVALUE"]?></textarea>
                                         </div>
                                     </div>                                                                 
                                 </div>
@@ -171,8 +171,8 @@ $idCnt = 0;
                                 
                                     <div style="width: 100%;">
                                         <div class="composite-divider" style="width: 100%;">
-                                            <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
-                                            <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE_DIVIDER]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
+                                            <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
+                                            <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE_DIVIDER]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
                                             <input type="text" name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE_DIVIDER]" value="<?=$compositeTrueDivider;?>" style="width: 420px;" />
                                         </div>
                                         <div class="composite-data-area-true" style="margin: 10px 0px 0px 0px; width: 100%;">
@@ -193,7 +193,7 @@ $idCnt = 0;
                                                             unset( $opt );?>                                    
                                                         </select>                                 
                                                         <div class="const-block-composite <?=$hideCompositeConstTrueBlock?>">
-                                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE][<?=$compositeTrueId?>][COMPOSITE_TRUE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>" style="width: 420px;"><?=$arCompositeTrue["COMPOSITE_TRUE_CONTVALUE"]?></textarea>
+                                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE][<?=$compositeTrueId?>][COMPOSITE_TRUE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>" style="width: 420px;"><?=$arCompositeTrue["COMPOSITE_TRUE_CONTVALUE"]?></textarea>
                                                         </div>
                                                     </div>
                                                 <?}
@@ -201,14 +201,14 @@ $idCnt = 0;
                                         </div>
                                         <div class="composite-add-field-button truenode" data-id="<?=$idCnt?>" data-row-id="<?=$id?>" style="margin: 10px 0px 0px 0px;">
                                             <button class="adm-btn" onclick="CompositeFieldsetAdd( this ); return false;">
-                                                <?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
+                                                <?=GetMessage( "KIT_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
                                             </button>
                                         </div>
                                     </div>
                                     <div class="composite-data-area-false-container <?=$hideCompositeFalse?>" style="width: 100%; margin: 20px 0px 0px 0px;">
                                         <div class="composite-divider" style="width: 100%;">
-                                            <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
-                                            <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE_DIVIDER]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
+                                            <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
+                                            <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE_DIVIDER]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
                                             <input type="text" name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE_DIVIDER]" value="<?=$compositeFalseDivider;?>" style="width: 420px;" />
                                         </div>
                                         <div class="composite-data-area-false" style="margin: 10px 0px 0px 0px; width: 100%;">
@@ -229,7 +229,7 @@ $idCnt = 0;
                                                             unset( $opt );?>                                    
                                                         </select>                                 
                                                         <div class="const-block-composite <?=$hideCompositeConstFalseBlock?>">
-                                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE][<?=$compositeFalseId?>][COMPOSITE_FALSE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" style="width: 420px;"><?=$arCompositeFalse["COMPOSITE_FALSE_CONTVALUE"]?></textarea>
+                                                            <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE][<?=$compositeFalseId?>][COMPOSITE_FALSE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" style="width: 420px;"><?=$arCompositeFalse["COMPOSITE_FALSE_CONTVALUE"]?></textarea>
                                                         </div>
                                                     </div>
                                                 <?}
@@ -237,7 +237,7 @@ $idCnt = 0;
                                         </div>
                                         <div class="composite-add-field-button falsenode" data-id="<?=$idCnt?>" data-row-id="<?=$id?>" style="margin: 10px 0px 0px 0px;">
                                             <button class="adm-btn" onclick="CompositeFieldsetAdd( this ); return false;">
-                                                <?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
+                                                <?=GetMessage( "KIT_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
                                             </button>
                                         </div>
                                     </div>
@@ -245,74 +245,74 @@ $idCnt = 0;
                             </div>
                             <span class="fieldset-item-delete">&times</span>
                             <div style="margin: 10px 0px 10px 15px;">
-                                <span id="hint_EXPORTPRO_FIELDSET_REQUIRED"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_REQUIRED' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_REQUIRED_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_REQUIRED"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_REQUIRED' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_REQUIRED_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][REQUIRED]" value="Y" <?=$required?> />
-                                <label for="PROFILE[XMLDATA][<?=$id?>][REQUIRED]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_REQUIRED" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][REQUIRED]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_REQUIRED" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_CONDITION"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONDITION' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_CONDITION"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONDITION' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][USE_CONDITION]" <?=$useCondition?> value="Y" data-id="<?=$id?>" onclick="ShowConditionBlock( this, <?=$idCnt?> )"/>
-                                <label for="PROFILE[XMLDATA][<?=$id?>][USE_CONDITION]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][USE_CONDITION]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_DELETE_ONEMPTY"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_DELETE_ONEMPTY' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_DELETE_ONEMPTY_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_DELETE_ONEMPTY"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_DELETE_ONEMPTY' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_DELETE_ONEMPTY_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][DELETE_ONEMPTY]" <?=$deleteOnEmpty?> value="Y">
-                                <label for="PROFILE[XMLDATA][<?=$id?>][DELETE_ONEMPTY]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_DELETE_ONEMPTY" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][DELETE_ONEMPTY]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_DELETE_ONEMPTY" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_URL_ENCODE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_URL_ENCODE' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_URL_ENCODE_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_URL_ENCODE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_URL_ENCODE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_URL_ENCODE_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][URL_ENCODE]" <?=$urlEncode?> value="Y">
-                                <label for="PROFILE[XMLDATA][<?=$id?>][URL_ENCODE]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_URL_ENCODE" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][URL_ENCODE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_URL_ENCODE" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_CONVERT_CASE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONVERT_CASE' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONVERT_CASE_HELP" )?>' );</script>                    
+                                <span id="hint_EXPORTPRO_FIELDSET_CONVERT_CASE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONVERT_CASE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONVERT_CASE_HELP" )?>' );</script>                    
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][CONVERT_CASE]" <?=$convertCase?> value="Y">
-                                <label for="PROFILE[XMLDATA][<?=$id?>][CONVERT_CASE]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONVERT_CASE" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][CONVERT_CASE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONVERT_CASE" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_HTML_ENCODE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_HTML_ENCODE_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_HTML_ENCODE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE]" <?=$htmlEncode?> value="Y">
-                                <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_HTML_ENCODE" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE_CUT]" <?=$htmlEncodeCut?> value="Y">
-                                <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE_CUT]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE_CUT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_HTML_TO_TXT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_TO_TXT' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_HTML_TO_TXT_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_HTML_TO_TXT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_TO_TXT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_TO_TXT_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][HTML_TO_TXT]" <?=$htmlToTxt?> value="Y">
-                                <label for="PROFILE[XMLDATA][<?=$id?>][HTML_TO_TXT]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_HTML_TO_TXT" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][HTML_TO_TXT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_TO_TXT" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT_HELP" )?>' );</script>
+                                <span id="hint_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT_HELP" )?>' );</script>
                                 <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][SKIP_UNTERM_ELEMENT]" <?=$skipUntermElement?> value="Y">
-                                <label for="PROFILE[XMLDATA][<?=$id?>][SKIP_UNTERM_ELEMENT]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT" )?></label>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][SKIP_UNTERM_ELEMENT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT" )?></label>
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_TEXT_LIMIT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_TEXT_LIMIT' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_TEXT_LIMIT_HELP" )?>' );</script>
-                                <label for="PROFILE[XMLDATA][<?=$id?>][TEXT_LIMIT]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_TEXT_LIMIT" )?></label><br/>
+                                <span id="hint_EXPORTPRO_FIELDSET_TEXT_LIMIT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_TEXT_LIMIT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_TEXT_LIMIT_HELP" )?>' );</script>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][TEXT_LIMIT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_TEXT_LIMIT" )?></label><br/>
                                 <input type="text" name="PROFILE[XMLDATA][<?=$id?>][TEXT_LIMIT]" value="<?=$textLimit;?>" />
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT_HELP" )?>' );</script>
-                                <label for="PROFILE[XMLDATA][<?=$id?>][MULTIPROP_LIMIT]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT" )?></label><br/>
+                                <span id="hint_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT_HELP" )?>' );</script>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][MULTIPROP_LIMIT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT" )?></label><br/>
                                 <input type="text" name="PROFILE[XMLDATA][<?=$id?>][MULTIPROP_LIMIT]" value="<?=$multiPropLimit;?>" />
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_ROUND_PRECISION"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_ROUND_PRECISION' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ROUND_PRECISION_HELP" )?>' );</script>
-                                <label for="PROFILE[XMLDATA][<?=$id?>][ROUND][PRECISION]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_ROUND_PRECISION" )?></label><br/>
+                                <span id="hint_EXPORTPRO_FIELDSET_ROUND_PRECISION"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_ROUND_PRECISION' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_ROUND_PRECISION_HELP" )?>' );</script>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][ROUND][PRECISION]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_ROUND_PRECISION" )?></label><br/>
                                 <input type="text" maxlength="5" size="5" name="PROFILE[XMLDATA][<?=$id?>][ROUND][PRECISION]" value="<?=$roundPrecision;?>" />
                                 
                                 <select name="PROFILE[XMLDATA][<?=$id?>][ROUND][MODE]">
@@ -326,14 +326,14 @@ $idCnt = 0;
 
                                 <div class="minimum_offer_price" data-dependent="price" <?if( $selectedPropertyType == "price" ):?><?else:?>style="display: none"<?endif;?>>
                                     <div style="height: 5px;">&nbsp;</div>
-                                    <span id="hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_HELP" )?>' );</script>
+                                    <span id="hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_HELP" )?>' );</script>
                                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][MINIMUM_OFFER_PRICE]" <?=$calculateMinimum?> value="Y" onchange="ShowMinimumOfferPriceCode( this )">
-                                    <label for="PROFILE[XMLDATA][<?=$id?>][MINIMUM_OFFER_PRICE]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE" )?></label>
+                                    <label for="PROFILE[XMLDATA][<?=$id?>][MINIMUM_OFFER_PRICE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE" )?></label>
                                 
                                     <div class="minimum_offer_price_code" <?if( strlen( $calculateMinimum ) ):?><?else:?>style="display: none"<?endif;?>>
                                         <div style="height: 5px;">&nbsp;</div>
-                                        <span id="hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE_HELP" )?>' );</script>
-                                        <label for="PROFILE[XMLDATA][<?=$id?>][MINIMUM_OFFER_PRICE_CODE]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE" )?></label>
+                                        <span id="hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE_HELP" )?>' );</script>
+                                        <label for="PROFILE[XMLDATA][<?=$id?>][MINIMUM_OFFER_PRICE_CODE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MINIMUM_OFFER_PRICE_CODE" )?></label>
                                         <div>
                                         <input type="text" maxlength="20" size="20" name="PROFILE[XMLDATA][<?=$id?>][MINIMUM_OFFER_PRICE_CODE]" value="<?=$field["MINIMUM_OFFER_PRICE_CODE"]?>">
                                         </div>
@@ -342,8 +342,8 @@ $idCnt = 0;
                                 
                                 <div style="height: 5px;">&nbsp;</div>
                                 
-                                <span id="hint_EXPORTPRO_FIELDSET_CONVERT_DATA"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONVERT_DATA' ), '<?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONVERT_DATA_HELP" )?>' );</script>
-                                <label for="PROFILE[XMLDATA][<?=$id?>][CONVERT_DATA]"><?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONVERT_DATA" )?></label><br/>
+                                <span id="hint_EXPORTPRO_FIELDSET_CONVERT_DATA"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONVERT_DATA' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONVERT_DATA_HELP" )?>' );</script>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][CONVERT_DATA]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONVERT_DATA" )?></label><br/>
                                 <table id="fieldset-convert-fieldset-container<?=$id?>" cellpadding="0" cellspacing="0" width="100%">
                                     <?if( is_array( $field["CONVERT_DATA"] ) ){
                                         foreach( $field["CONVERT_DATA"] as $convertDataId => $fields ){?>
@@ -367,7 +367,7 @@ $idCnt = 0;
                                 
                                 <div data-row-id="<?=$id?>" style="margin: 0 auto; padding: 10px; text-align: center;">
                                     <button class="adm-btn" onclick="FieldsetConvertFieldsetAdd( this ); return false;">
-                                        <?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONVERT_CONDITION_ADD" )?>
+                                        <?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONVERT_CONDITION_ADD" )?>
                                     </button>
                                 </div>
                             </div>
@@ -407,7 +407,7 @@ $idCnt = 0;
 <tr>
     <td colspan="2" align="center" id="fieldset-item-add-button">
         <button class="adm-btn" onclick="FieldsetAdd( this ); return false;">
-            <?=GetMessage( "ACRIT_EXPORTPRO_FIELDSET_CONDITION_ADD" );?>
+            <?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_ADD" );?>
         </button>
     </td>
 </tr>

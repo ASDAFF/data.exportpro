@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["avito_context"] = array(
     "CODE" => "avito_context",
-    "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_NAME" ),
-    "DESCRIPTION" => GetMessage( "ACRIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_NAME" ),
+    "DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
     "REG" => "http://market.yandex.ru/",
     "HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
     "FIELDS" => array(
         array(
             "CODE" => "ID",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_ID" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_ID" ),
             "VALUE" => "ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "AVAILABLE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_AVAILABLE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_AVAILABLE" ),
             "VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,25 +42,25 @@ $profileTypes["avito_context"] = array(
         ),
         array(
             "CODE" => "BID",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BID" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BID" ),
         ),
         array(
             "CODE" => "BASE_DELIVERY_COST",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BASEDELIVERYCOST" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BASEDELIVERYCOST" ),
         ),
         array(
             "CODE" => "BASE_DELIVERY_DAYS",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BASEDELIVERYDAYS" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BASEDELIVERYDAYS" ),
         ),
         array(
             "CODE" => "URL",
-            "NAME" => "URL ".GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_URL" ),
+            "NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_URL" ),
             "VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PRICE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PRICE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PRICE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
@@ -68,151 +68,151 @@ $profileTypes["avito_context"] = array(
         ),
         array(
             "CODE" => "OLDPRICE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_OLDPRICE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_OLDPRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "CURRENCYID",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_CURRENCY" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_CURRENCY" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
         ),
         array(
             "CODE" => "CATEGORYID",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_CATEGORY" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_CATEGORY" ),
             "VALUE" => "IBLOCK_SECTION_ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PICTURE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PICTURE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PICTURE" ),
         ),
         array(
             "CODE" => "STORE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_STORE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_STORE" ),
         ),
         array(
             "CODE" => "PICKUP",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PICKUP" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PICKUP" ),
         ),
         array(
             "CODE" => "DELIVERY",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DELIVERY" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DELIVERY" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_COST",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_LOCALDELIVERYCOST" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_LOCALDELIVERYCOST" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_DAYS",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_LOCALDELIVERYDAYS" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_LOCALDELIVERYDAYS" ),
         ),
         array(
             "CODE" => "TYPEPREFIX",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_TYPEPREFIX" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_TYPEPREFIX" ),
         ),
         array(
             "CODE" => "VENDOR",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_VENDOR" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_VENDOR" ),
         ),
         array(
             "CODE" => "VENDORCODE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_VENDORCODE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_VENDORCODE" ),
         ),
         array(
             "CODE" => "MODEL",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_MODEL" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_MODEL" ),
         ),
         array(
             "CODE" => "DESCRIPTION",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DESCRIPTION" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DESCRIPTION" ),
         ),
         array(
             "CODE" => "SALES_NOTES",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_SALESNOTES" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_SALESNOTES" ),
         ),
         array(
             "CODE" => "MANUFACTURER_WARRANTY",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_MANUFACTURERWARRANTY" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_MANUFACTURERWARRANTY" ),
         ),
         array(
             "CODE" => "COUNTRY_OF_ORIGIN",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_COUNTRYOFORIGIN" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_COUNTRYOFORIGIN" ),
         ),
         array(
             "CODE" => "DOWNLOADABLE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DOWNLOADABLE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DOWNLOADABLE" ),
         ),
         array(
             "CODE" => "ADULT",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_ADULT" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_ADULT" ),
         ),
         array(
             "CODE" => "AGE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_AGE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_AGE" ),
         ),
         array(
             "CODE" => "BARCODE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BARCODE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_BARCODE" ),
         ),
         array(
             "CODE" => "CPA",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_CPA" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_CPA" ),
         ),
         array(
             "CODE" => "REC",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_REC" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_REC" ),
         ),
         array(
             "CODE" => "EXPIRY",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_EXPIRY" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_EXPIRY" ),
         ),
         array(
             "CODE" => "WEIGHT",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_WEIGHT" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_WEIGHT" ),
         ),
         array(
             "CODE" => "DIMENSIONS",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DIMENSIONS" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_DIMENSIONS" ),
         ),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
         array(
             "CODE" => "PARAM",
-            "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PARAM" ),
+            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PARAM" ),
         ),
     ),
     "FORMAT" => '<?xml version="1.0" encoding="#ENCODING#"?>
@@ -245,7 +245,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["avito_context"]["FIELDS"][6] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PRICE" ),
+        "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
@@ -253,15 +253,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["avito_context"]["FIELDS"][7] = array(
         "CODE" => "OLDPRICE",
-        "NAME" => GetMessage( "ACRIT_EXPORTPRO_AVITO_CONTEXT_FIELD_OLDPRICE" ),
+        "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_CONTEXT_FIELD_OLDPRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["avito_context"]["PORTAL_REQUIREMENTS"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_AVITO_CONTEXT_PORTAL_REQUIREMENTS" );
-$profileTypes["avito_context"]["PORTAL_VALIDATOR"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_AVITO_CONTEXT_PORTAL_VALIDATOR" );
-$profileTypes["avito_context"]["EXAMPLE"] = GetMessage( "ACRIT_EXPORTPRO_TYPE_AVITO_CONTEXT_EXAMPLE" );
+$profileTypes["avito_context"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_CONTEXT_PORTAL_REQUIREMENTS" );
+$profileTypes["avito_context"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_CONTEXT_PORTAL_VALIDATOR" );
+$profileTypes["avito_context"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_CONTEXT_EXAMPLE" );
 
 $profileTypes["avito_context"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -307,10 +307,10 @@ $profileTypes["avito_context"]["ITEMS_FORMAT"] = "
     
 $profileTypes["avito_context"]["LOCATION"] = array(
     "yandex" => array(
-        "name" => GetMessage( "ACRIT_EXPORTPRO_ANDEKS" ),
+        "name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
         "sub" => array(
             "market" => array(
-                "name" => GetMessage( "ACRIT_EXPORTPRO_VEBMASTER" ),
+                "name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
                 "sub" => "",
             )
         )

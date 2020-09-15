@@ -37,7 +37,7 @@ if( file_exists( __DIR__."/db/category" ) ){
 					$marketData = file_put_contents( __DIR__."/db/category/market$dbstep.sql", $marketDataUTF8 );
 					unset( $marketData, $marketDataUTF8 );
 				}
-				echo "<h2>", GetMessage( "ACRIT_EXPORTPRO_STEP_2_DBINSTALL" ), " ", GetMessage( "ACRIT_EXPORTPRO_STEP_2_DBINSTALL_STEP" ), " ", $dbstep, "</h2><br>";
+				echo "<h2>", GetMessage( "KIT_EXPORTPRO_STEP_2_DBINSTALL" ), " ", GetMessage( "KIT_EXPORTPRO_STEP_2_DBINSTALL_STEP" ), " ", $dbstep, "</h2><br>";
 				$DB->RunSQLBatch( __DIR__."/db/category/market$dbstep.sql" );
 			}
 		}
