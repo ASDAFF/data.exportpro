@@ -1,4 +1,7 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UserTable;
@@ -7,7 +10,7 @@ use Bitrix\Catalog;
 Loc::loadMessages( __FILE__ );
 
 class CExportproMarketDB{
-    private $tableName = "acrit_exportpro_market";
+    private $tableName = "kit_exportpro_market";
     private $serial = array();
     
     public function GetList(){

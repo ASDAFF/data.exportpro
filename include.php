@@ -1,27 +1,30 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 IncludeModuleLangFile( __FILE__ );
 
 global $DBType;        
 
 $arClasses = array(
-    "AcritLicence" => "classes/general/licence.php",
     "CExportproProfileDB" => "classes/mysql/cexportproprofiledb.php",
     "CExportproMarketDB" => "classes/mysql/cexportpropro_marketdb.php",
     "CExportproMarketTiuDB" => "classes/mysql/cexportpropro_markettiudb.php",
     "CExportproProfile" => "classes/general/cexportproprofile.php",
     "CExportproVariant" => "classes/general/cexportproprofile.php",
     
-    "CAcritExportproCatalog" => "classes/general/cexportprofilter.php",
-    "CAcritExportproPrices" => "classes/general/cexportprofilter.php",
-    "CAcritExportproProps" => "classes/general/cexportprofilter.php",
-    "CAcritExportproCatalogCond" => "classes/general/cexportprofilter.php",
-    "CAcritExportproLog" => "classes/general/cexportprolog.php",
-    "AcritExportproSession" => "classes/general/cexportprosession.php",
-    "CAcritExportproUrlRewrite" => "classes/general/cexportprourlrewrite.php",
-    "CAcritExportproTools" => "classes/general/cexportprotools.php",
-    "CAcritCML2ExportTools" => "classes/general/cexportprocml2exporttools.php",
+    "CKitExportproCatalog" => "classes/general/cexportprofilter.php",
+    "CKitExportproPrices" => "classes/general/cexportprofilter.php",
+    "CKitExportproProps" => "classes/general/cexportprofilter.php",
+    "CKitExportproCatalogCond" => "classes/general/cexportprofilter.php",
+    "CKitExportproLog" => "classes/general/cexportprolog.php",
+    "KitExportproSession" => "classes/general/cexportprosession.php",
+    "CKitExportproUrlRewrite" => "classes/general/cexportprourlrewrite.php",
+    "CKitExportproTools" => "classes/general/cexportprotools.php",
+    "CKitCML2ExportTools" => "classes/general/cexportprocml2exporttools.php",
     
-    "CAcritExportproExport" => "classes/general/cexportproexport.php",
+    "CKitExportproExport" => "classes/general/cexportproexport.php",
     "CExportproCron" => "classes/general/cexportproagent.php",
     "CExportproAgent" => "classes/general/cexportproagent.php",
     "CExportproInformer" => "classes/general/cexportproinformer.php",
@@ -29,40 +32,40 @@ $arClasses = array(
     "Threads" => "classes/general/threads.php",
     "ThreadsSession" => "classes/general/threads.php",
     "OZON" => "classes/general/ozon.php",
-    "CAcritCML2ExportElement" => "classes/general/cexportpro1c.php",
-    "CAcritCML2" => "classes/general/cexportpro1c.php",
-    "CAcritCML2Export" => "classes/general/cexportpro1c.php",
+    "CKitCML2ExportElement" => "classes/general/cexportpro1c.php",
+    "CKitCML2" => "classes/general/cexportpro1c.php",
+    "CKitCML2Export" => "classes/general/cexportpro1c.php",
 );                     
 
-CModule::AddAutoloadClasses( "acrit.exportpro", $arClasses );
+CModule::AddAutoloadClasses( "kit.exportpro", $arClasses );
 
-class CAcritExportproMenu{
+class CKitExportproMenu{
     public function OnBuildGlobalMenu( &$aGlobalMenu, &$aModuleMenu ){
         global $USER, $APPLICATION, $adminMenu, $adminPage;
-        if( key_exists( "global_menu_acrit", $adminMenu->aGlobalMenu ) ){
+        if( key_exists( "global_menu_kit", $adminMenu->aGlobalMenu ) ){
             return;
         }
 
         $aMenu = array(
-            "menu_id" => "acrit",
+            "menu_id" => "kit",
             "sort" => 150,
             "text" => GetMessage( "ACRIT_MENU_NAME" ),
             "title" => GetMessage( "ACRIT_MENU_TITLE" ),
             "icon" => "clouds_menu_icon",
             "page_icon" => "clouds_page_icon",
-            "items_id" => "global_menu_acrit",
+            "items_id" => "global_menu_kit",
             "items" => array()
         );
-        $aGlobalMenu["global_menu_acrit"] = $aMenu;
+        $aGlobalMenu["global_menu_kit"] = $aMenu;
     }
 }
 
-class CAcritExportproElement{
+class CKitExportproElement{
     public $profile = null;
     public $DEMO = 2;
     public $isDemo = true;
     public $DEMO_CNT;
-    public $MODULEID = "acrit.exportpro";
+    public $MODULEID = "kit.exportpro";
     public $stepElements = 50;
     public $dateFields = array();
     public $log;
@@ -98,19 +101,19 @@ class CAcritExportproElement{
             "DATE_ACTIVE_TO"
         );
 
-        $this->log = new CAcritExportproLog( $this->profile["ID"] );
+        $this->log = new CKitExportproLog( $this->profile["ID"] );
         $this->iblockE = "file_get_contents";
         $this->iblockD = "base64_decode";
         
         $this->baseDateTimePatern = "Y-m-dTh:i:s±h:i";
         
-        $paternCharset = CAcritExportproTools::GetStringCharset( $this->baseDateTimePatern );
+        $paternCharset = CKitExportproTools::GetStringCharset( $this->baseDateTimePatern );
                 
         if( $paternCharset == "cp1251" ){
             $this->baseDateTimePatern = $APPLICATION->ConvertCharset( $this->baseDateTimePatern, "cp1251", "utf8" );
         }             
         
-        $dateGenerate = ( $this->profile["DATEFORMAT"] == $this->baseDateTimePatern ) ? CAcritExportproTools::GetYandexDateTime( date( "d.m.Y H:i:s" ) ) : date( str_replace( "_", " ", $this->profile["DATEFORMAT"] ), time() );                
+        $dateGenerate = ( $this->profile["DATEFORMAT"] == $this->baseDateTimePatern ) ? CKitExportproTools::GetYandexDateTime( date( "d.m.Y H:i:s" ) ) : date( str_replace( "_", " ", $this->profile["DATEFORMAT"] ), time() );
         
         $this->defaultFields = array(
             "#ENCODING#" => $this->profileEncoding[$this->profile["ENCODING"]],
@@ -145,7 +148,7 @@ class CAcritExportproElement{
     }
     
     public function GetSections(){
-        $arSessionData = AcritExportproSession::GetAllSession( $this->profile["ID"] );
+        $arSessionData = KitExportproSession::GetAllSession( $this->profile["ID"] );
         $sessionData = array();
         if( !empty( $arSessionData ) ){
             $sessionData = $arSessionData[0];
@@ -166,7 +169,7 @@ class CAcritExportproElement{
     }
     
     public function GetCurrencies(){
-        $arSessionData = AcritExportproSession::GetAllSession( $this->profile["ID"] );
+        $arSessionData = KitExportproSession::GetAllSession( $this->profile["ID"] );
         $sessionData = array();
         if( !empty( $arSessionData ) ){
             $sessionData = $arSessionData[0];
@@ -191,17 +194,17 @@ class CAcritExportproElement{
     }
 
     protected function DemoCount(){
-        $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+        $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
         return ( $sessionData["EXPORTPRO"][$this->profile["ID"]]["DEMO_COUNT"] > $this->DEMO_CNT );
     }
     
     protected function DemoCountInc(){
-        $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+        $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
         if( !isset( $sessionData["EXPORTPRO"][$this->profile["ID"]]["DEMO_COUNT"] ) )
             $sessionData["EXPORTPRO"][$this->profile["ID"]]["DEMO_COUNT"] = 0;
         
         $sessionData["EXPORTPRO"][$this->profile["ID"]]["DEMO_COUNT"]++;
-        AcritExportproSession::SetSession( $this->profile["ID"], $sessionData );
+        KitExportproSession::SetSession( $this->profile["ID"], $sessionData );
     }   
 
     public function Process( $page = 1, $cronrun = false, $fileType = "xml", $fileExport = false, $fileExportName = false, $arOzonCategories = false , &$_ProcessEnd=false ){
@@ -231,7 +234,7 @@ class CAcritExportproElement{
         global $APPLICATION;
         $result = "";
         
-        $paternCharset = CAcritExportproTools::GetStringCharset( $field );    
+        $paternCharset = CKitExportproTools::GetStringCharset( $field );
         $result = $APPLICATION->ConvertCharset( $field, $paternCharset, $this->profileEncoding[$this->profile["ENCODING"]] );
         
         return $result;
@@ -405,7 +408,7 @@ class CAcritExportproElement{
         if( is_array( $filterProps[2] ) ){
             $this->usePrices = array_merge( $this->usePrices, $filterProps[2] );
         }
-        $dbEvents = GetModuleEvents( "acrit.exportpro", "OnBeforePropertiesSelect" );
+        $dbEvents = GetModuleEvents( "kit.exportpro", "OnBeforePropertiesSelect" );
         $eventResult = array();
         while( $arEvent = $dbEvents->Fetch() ){             
             ExecuteModuleEventEx(
@@ -495,10 +498,10 @@ class CAcritExportproElement{
             array()
         );              
         
-        $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+        $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
         $sessionData["EXPORTPRO"]["LOG"][$this->profile["ID"]]["STEPS"] = $this->isDemo ? 1 : $dbElements->NavPageCount;
         
-        AcritExportproSession::SetSession( $this->profile["ID"], $sessionData );
+        KitExportproSession::SetSession( $this->profile["ID"], $sessionData );
         $arProcessTmp = array();
         
         if( $this->profile["TYPE"] == "advantshop" ){         
@@ -540,7 +543,7 @@ class CAcritExportproElement{
                         $arOfferElementProperties = $dbOfferElement->GetProperties();
                         $arOfferCondElementProperties = $this->GetElementProperties( $dbOfferElement );
                                   
-                        if( !CAcritExportproTools::CheckCondition( $arOfferCondElementProperties, $this->profile["EVAL_FILTER"] ) )
+                        if( !CKitExportproTools::CheckCondition( $arOfferCondElementProperties, $this->profile["EVAL_FILTER"] ) )
                             continue;
                             
                         $dbOfferMesure = CCatalogMeasure::getList(
@@ -775,7 +778,7 @@ class CAcritExportproElement{
             $arTuple[] = "gifts";
             $arTuple[] = "productsets";
             
-            CAcritExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
+            CKitExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
                                         
             if( $paternCharset == "cp1251" ){
                 $this->baseDateTimePatern = $APPLICATION->ConvertCharset( $this->baseDateTimePatern, "cp1251", "utf8" );
@@ -786,7 +789,7 @@ class CAcritExportproElement{
                 foreach( $field as $fieldPart ){
                     $arTuple[] = $this->ExportConvertCharset( $fieldPart );    
                 }
-                CAcritExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
+                CKitExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
             }
             
             foreach( $arResFields as $arTuple ){
@@ -855,14 +858,14 @@ class CAcritExportproElement{
                 $arTuple[] = $this->ExportConvertCharset( $paternField );
             }
             
-            CAcritExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
+            CKitExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
             
             foreach( $arProcess as $arRow ){
                 $arTuple = array();
                 foreach( $arRow as $colValue ){
                     $arTuple[] = $this->ExportConvertCharset( $colValue );
                 }
-                CAcritExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
+                CKitExportproTools::ExportArrayMultiply( $arResFields, $arTuple );
             }   
             
             foreach( $arResFields as $arTuple ){
@@ -1095,7 +1098,7 @@ class CAcritExportproElement{
         if( is_array( $filterProps[2] ) ){
             $this->usePrices = array_merge( $this->usePrices, $filterProps[2] );
         }
-        $dbEvents = GetModuleEvents( "acrit.exportpro", "OnBeforePropertiesSelect" );
+        $dbEvents = GetModuleEvents( "kit.exportpro", "OnBeforePropertiesSelect" );
         $eventResult = array();
         while( $arEvent = $dbEvents->Fetch() ){
             ExecuteModuleEventEx(
@@ -1183,9 +1186,9 @@ class CAcritExportproElement{
             array()
         );
         
-        $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+        $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
         $sessionData["EXPORTPRO"]["LOG"][$this->profile["ID"]]["STEPS"] = $this->isDemo ? 1 : $dbElements->NavPageCount;
-        AcritExportproSession::SetSession( $this->profile["ID"], $sessionData );
+        KitExportproSession::SetSession( $this->profile["ID"], $sessionData );
         
         while( $arElement = $dbElements->GetNextElement() ){
             $variantItems = array();
@@ -1251,7 +1254,7 @@ class CAcritExportproElement{
             
             // activizm.ru profile
             if( $this->isVariant( $arItem["IBLOCK_SECTION_ID"] ) ){
-                $dbEvents = GetModuleEvents( "acrit.exportpro", "OnBeforePropertiesSelect" );
+                $dbEvents = GetModuleEvents( "kit.exportpro", "OnBeforePropertiesSelect" );
                 $eventResult = array();
                 while( $arEvent=$dbEvents->Fetch() ){
                     ExecuteModuleEventEx(
@@ -1266,7 +1269,7 @@ class CAcritExportproElement{
                         )
                     ); 
                 }
-                CAcritExportproElement::OnBeforePropertiesSelect( $eventResult );
+                CKitExportproElement::OnBeforePropertiesSelect( $eventResult );
 
                 $productExport = 0;
                 foreach( $variantItems as $price => $items ){
@@ -1394,14 +1397,14 @@ class CAcritExportproElement{
                         $itemTemplate = str_replace( "</offer>", "<variantList>$variantItemTemplate</variantList></offer>", $itemTemplate );
                     }                             
                                 
-                    CAcritExportproExport::Save( $itemTemplate );
+                    CKitExportproExport::Save( $itemTemplate );
                     
                     // increase the count statistics for export goods
                     $this->log->IncProductExport( $productExport );
                 }
                 if( ( $productExport == 0 ) && count( $variantCatalogProducts ) ){
                     foreach( $variantCatalogProducts as $catalogProduct ){
-                        CAcritExportproExport::Save( $catalogProduct["XML"] );
+                        CKitExportproExport::Save( $catalogProduct["XML"] );
                         $this->log->IncProductExport( 1 );
                     }
                 }
@@ -1533,7 +1536,7 @@ class CAcritExportproElement{
             $this->usePrices = array_merge( $this->usePrices, $filterProps[2] );
         }
         
-        $dbEvents = GetModuleEvents( "acrit.exportpro", "OnBeforePropertiesSelect" );
+        $dbEvents = GetModuleEvents( "kit.exportpro", "OnBeforePropertiesSelect" );
         $eventResult = array();
         while( $arEvent = $dbEvents->Fetch() ){             
             ExecuteModuleEventEx(
@@ -1620,9 +1623,9 @@ class CAcritExportproElement{
             array()
         );
         
-        $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+        $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
         $sessionData["EXPORTPRO"]["LOG"][$this->profile["ID"]]["STEPS"] = $this->isDemo ? 1 : $dbElements->NavPageCount;
-        AcritExportproSession::SetSession( $this->profile["ID"], $sessionData );
+        KitExportproSession::SetSession( $this->profile["ID"], $sessionData );
         
         while( $arElement = $dbElements->GetNextElement() ){
             $variantItems = array();
@@ -1678,7 +1681,7 @@ class CAcritExportproElement{
         }         
 
         // verification, whether the item meets the general conditions of profile
-        if( !CAcritExportproTools::CheckCondition( $arItem, $this->profile["EVAL_FILTER"] ) )
+        if( !CKitExportproTools::CheckCondition( $arItem, $this->profile["EVAL_FILTER"] ) )
             return false;
 
         // increase the count statistics for export goods
@@ -1693,7 +1696,7 @@ class CAcritExportproElement{
             $arItem = $arItemMain;
             $useCondition = ( $field["USE_CONDITION"] == "Y" );
             if( $useCondition ){
-                $conditionTrue = ( CAcritExportproTools::CheckCondition( $arItem, $field["EVAL_FILTER"] ) == true );
+                $conditionTrue = ( CKitExportproTools::CheckCondition( $arItem, $field["EVAL_FILTER"] ) == true );
             }
 
             if( $useCondition && !$conditionTrue ){
@@ -1713,7 +1716,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeFalseDivider;
                             }
                             if( $compositeField["COMPOSITE_FALSE_TYPE"] == "const" ){                            
-                                $compositeValue .= CAcritExportproTools::RoundNumber( $compositeField["COMPOSITE_FALSE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                $compositeValue .= CKitExportproTools::RoundNumber( $compositeField["COMPOSITE_FALSE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                             }
                             elseif( $compositeField["COMPOSITE_FALSE_TYPE"] == "field" ){
                                 $compositeValueTmp = "";
@@ -1741,17 +1744,17 @@ class CAcritExportproElement{
                                                 }
                                                 unset( $arField );
                                                                                         
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             else{
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_FALSE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_FALSE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             $arItem = $arItemMain;
                                             break;
                                         case 2:
                                             $values = null;
                                             $compositeValueTmp = $arItem["CATALOG_".$arValue[1]];
-                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             if( is_array( $arProductSKU ) ){
                                                 $values = $compositeValueTmp;
                                             }                           
@@ -1766,7 +1769,7 @@ class CAcritExportproElement{
                                                                                   
                                             if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                                 $compositeValueTmp = $convertFrom;
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 if( is_array( $arProductSKU ) ){
                                                     $values = $compositeValueTmp;
                                                 }                                    
@@ -1775,7 +1778,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         $compositeValueTmp = $convertTo;
-                                                        $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                        $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         if( is_array( $arProductSKU ) ){
                                                             $values = $compositeValueTmp;
                                                         }
@@ -1787,7 +1790,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                                     $arItem["CATALOG_".$arValue[1]],
                                                                     $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                                     $convertTo
@@ -1799,7 +1802,7 @@ class CAcritExportproElement{
                                                             }                                            
                                                         }
                                                         else{
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp *
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp *
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -1820,7 +1823,7 @@ class CAcritExportproElement{
                                                 }
                                                 if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                     $compositeValueTmp += $compositeValueTmp * floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                     if( is_array( $arProductSKU ) ){
                                                         $values = $compositeValueTmp;
                                                     }                                       
@@ -1837,7 +1840,7 @@ class CAcritExportproElement{
                                             }
                                             if( ( $arValue[0] == $arItem["IBLOCK_ID"] ) || ( $arValue[0] == $arProductSKU["IBLOCK_ID"] ) ){
                                                 if( $this->catalogSKU[$arValue[0]]["OFFERS_PROPERTY_ID"] == $arValue[2] ){
-                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                                 
                                                 if( is_array( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] ) ){
@@ -1845,11 +1848,11 @@ class CAcritExportproElement{
                                                     foreach( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] as $val ){
                                                         if( ( intval( $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) > 0 )
                                                             && ( count( $compositeValueTmp ) < $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) ){
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                             
                                                         }
                                                         else{
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         }
                                                     }
                                                     
@@ -1868,7 +1871,7 @@ class CAcritExportproElement{
                                                     }                                        
                                                 }
                                                 else{
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                             }
                                             $arItem = $arItemMain;
@@ -1878,7 +1881,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeValueTmp;
                             }
                         }
-                        $templateValues["#{$field["CODE"]}#"] =  CAcritExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                        $templateValues["#{$field["CODE"]}#"] =  CKitExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                     }
                     else{
                         $field["VALUE"] = $field["COMPLEX_FALSE_VALUE"];
@@ -1908,18 +1911,18 @@ class CAcritExportproElement{
                                         break;
                                     case 2:
                                         $templateValues["{$field["CODE"]}"] = $arItem["CATALOG_".$arValue[1]];
-                                        $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         preg_match( "PRICE_[\d]+", $arValue[1], $arPriceCode );
                                         $convertFrom = $arItem["CATALOG_{$arPriceCode[0]}_CURRENCY"];
                                         if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                             $templateValues["{$field["CODE"]}"] = $convertFrom;
-                                            $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             
                                             if( $this->profile["CURRENCY"]["CONVERT_CURRENCY"] == "Y" ){
                                                 if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                     $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                     $templateValues["{$field["CODE"]}"] = $convertTo;
-                                                    $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                             }
                                         }
@@ -1928,7 +1931,7 @@ class CAcritExportproElement{
                                                 if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                     $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                     if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                        $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                        $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                                 $arItem["CATALOG_".$arValue[1]],
                                                                 $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                                 $convertTo
@@ -1937,7 +1940,7 @@ class CAcritExportproElement{
                                                         );
                                                     }
                                                     else{
-                                                        $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"] *
+                                                        $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"] *
                                                             $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                             $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                             $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -1956,7 +1959,7 @@ class CAcritExportproElement{
                                             if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                 $templateValues["{$field["CODE"]}"] += $templateValues["{$field["CODE"]}"] *
                                                 floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                                $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                         }
                                         break;
@@ -2002,7 +2005,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeTrueDivider;
                             }
                             if( $compositeField["COMPOSITE_TRUE_TYPE"] == "const" ){                            
-                                $compositeValue .= CAcritExportproTools::RoundNumber( $compositeField["COMPOSITE_TRUE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                $compositeValue .= CKitExportproTools::RoundNumber( $compositeField["COMPOSITE_TRUE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                             }
                             elseif( $compositeField["COMPOSITE_TRUE_TYPE"] == "field" ){
                                 $compositeValueTmp = "";
@@ -2028,17 +2031,17 @@ class CAcritExportproElement{
                                                         $value = "";
                                                 }
                                                 unset( $arField );                       
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             else{
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_TRUE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_TRUE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             $arItem = $arItemMain;
                                             break;
                                         case 2:
                                             $values = null;
                                             $compositeValueTmp = $arItem["CATALOG_".$arValue[1]];
-                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             if( is_array( $arProductSKU ) ){
                                                 $values = $compositeValueTmp;
                                             }                           
@@ -2053,7 +2056,7 @@ class CAcritExportproElement{
                                                                                   
                                             if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                                 $compositeValueTmp = $convertFrom;
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 if( is_array( $arProductSKU ) ){
                                                     $values = $compositeValueTmp;
                                                 }                                    
@@ -2062,7 +2065,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         $compositeValueTmp = $convertTo;
-                                                        $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                        $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         if( is_array( $arProductSKU ) ){
                                                             $values = $compositeValueTmp;
                                                         }
@@ -2074,7 +2077,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                                     $arItem["CATALOG_".$arValue[1]],
                                                                     $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                                     $convertTo
@@ -2086,7 +2089,7 @@ class CAcritExportproElement{
                                                             }                                            
                                                         }
                                                         else{
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp *
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp *
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -2107,7 +2110,7 @@ class CAcritExportproElement{
                                                 }
                                                 if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                     $compositeValueTmp += $compositeValueTmp * floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                     if( is_array( $arProductSKU ) ){
                                                         $values = $compositeValueTmp;
                                                     }                                       
@@ -2124,7 +2127,7 @@ class CAcritExportproElement{
                                             }
                                             if( ( $arValue[0] == $arItem["IBLOCK_ID"] ) || ( $arValue[0] == $arProductSKU["IBLOCK_ID"] ) ){
                                                 if( $this->catalogSKU[$arValue[0]]["OFFERS_PROPERTY_ID"] == $arValue[2] ){
-                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                                 
                                                 if( is_array( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] ) ){
@@ -2132,11 +2135,11 @@ class CAcritExportproElement{
                                                     foreach( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] as $val ){
                                                         if( ( intval( $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) > 0 )
                                                             && ( count( $compositeValueTmp ) < $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) ){
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                             
                                                         }
                                                         else{
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         }
                                                     }
                                                     
@@ -2155,7 +2158,7 @@ class CAcritExportproElement{
                                                     }                                        
                                                 }
                                                 else{
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                             }
                                             $arItem = $arItemMain;
@@ -2165,7 +2168,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeValueTmp;
                             }
                         }
-                        $templateValues["#{$field["CODE"]}#"] =  CAcritExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                        $templateValues["#{$field["CODE"]}#"] =  CKitExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                     }
                     else{
                         $field["VALUE"] = ( $field["TYPE"] == "field" ) ? $field["VALUE"] : $field["COMPLEX_TRUE_VALUE"];
@@ -2188,19 +2191,19 @@ class CAcritExportproElement{
                                     break;
                                 case 2:
                                     $templateValues["{$field["CODE"]}"] = $arItem["CATALOG_".$arValue[1]];
-                                    $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                    $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                     
                                     preg_match( "PRICE_[\d]+", $arValue[1], $arPriceCode );
                                     $convertFrom = $arItem["CATALOG_{$arPriceCode[0]}_CURRENCY"];
                                     if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                         $templateValues["{$field["CODE"]}"] = $convertFrom;
-                                        $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         
                                         if( $this->profile["CURRENCY"]["CONVERT_CURRENCY"] == "Y" ){
                                             if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                 $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                 $templateValues["{$field["CODE"]}"] = $convertTo;
-                                                $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                         }
                                     }
@@ -2209,7 +2212,7 @@ class CAcritExportproElement{
                                             if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                 $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                 if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                    $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                    $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                             $arItem["CATALOG_".$arValue[1]],
                                                             $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                             $convertTo
@@ -2218,7 +2221,7 @@ class CAcritExportproElement{
                                                     );
                                                 }
                                                 else{
-                                                    $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"] *
+                                                    $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"] *
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -2237,7 +2240,7 @@ class CAcritExportproElement{
                                         if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                             $templateValues["{$field["CODE"]}"] += $templateValues["{$field["CODE"]}"] *
                                             floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                            $templateValues["{$field["CODE"]}"] = CAcritExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $templateValues["{$field["CODE"]}"] = CKitExportproTools::RoundNumber( $templateValues["{$field["CODE"]}"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         }
                                     }
                                     break;
@@ -2395,7 +2398,7 @@ class CAcritExportproElement{
         
         // check element on basic profile conditions
         if( $this->catalogIncluded ){
-            if( !CAcritExportproTools::CheckCondition( $arItem, $this->profile["EVAL_FILTER"] ) ){
+            if( !CKitExportproTools::CheckCondition( $arItem, $this->profile["EVAL_FILTER"] ) ){
                 return $arItem;
             }
         }
@@ -2452,7 +2455,7 @@ class CAcritExportproElement{
 
             $useCondition = ( $field["USE_CONDITION"] == "Y" );
             if( $useCondition ){
-                $conditionTrue = ( CAcritExportproTools::CheckCondition( $arItem, $field["EVAL_FILTER"] ) == true );
+                $conditionTrue = ( CKitExportproTools::CheckCondition( $arItem, $field["EVAL_FILTER"] ) == true );
             }                 
 
             if( $useCondition && !$conditionTrue ){
@@ -2472,7 +2475,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeFalseDivider;
                             }
                             if( $compositeField["COMPOSITE_FALSE_TYPE"] == "const" ){                            
-                                $compositeValue .= CAcritExportproTools::RoundNumber( $compositeField["COMPOSITE_FALSE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                $compositeValue .= CKitExportproTools::RoundNumber( $compositeField["COMPOSITE_FALSE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                             }
                             elseif( $compositeField["COMPOSITE_FALSE_TYPE"] == "field" ){
                                 $compositeValueTmp = "";
@@ -2500,17 +2503,17 @@ class CAcritExportproElement{
                                                 }
                                                 unset( $arField );
                                                                                         
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             else{
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_FALSE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_FALSE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             $arItem = $arItemMain;
                                             break;
                                         case 2:
                                             $values = null;
                                             $compositeValueTmp = $arItem["CATALOG_".$arValue[1]];
-                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             if( is_array( $arProductSKU ) ){
                                                 $values = $compositeValueTmp;
                                             }                           
@@ -2525,7 +2528,7 @@ class CAcritExportproElement{
                                                                                   
                                             if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                                 $compositeValueTmp = $convertFrom;
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 if( is_array( $arProductSKU ) ){
                                                     $values = $compositeValueTmp;
                                                 }                                    
@@ -2534,7 +2537,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         $compositeValueTmp = $convertTo;
-                                                        $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                        $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         if( is_array( $arProductSKU ) ){
                                                             $values = $compositeValueTmp;
                                                         }
@@ -2546,7 +2549,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                                     $arItem["CATALOG_".$arValue[1]],
                                                                     $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                                     $convertTo
@@ -2558,7 +2561,7 @@ class CAcritExportproElement{
                                                             }                                            
                                                         }
                                                         else{
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp *
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp *
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -2579,7 +2582,7 @@ class CAcritExportproElement{
                                                 }
                                                 if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                     $compositeValueTmp += $compositeValueTmp * floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                     if( is_array( $arProductSKU ) ){
                                                         $values = $compositeValueTmp;
                                                     }                                       
@@ -2596,7 +2599,7 @@ class CAcritExportproElement{
                                             }
                                             if( ( $arValue[0] == $arItem["IBLOCK_ID"] ) || ( $arValue[0] == $arProductSKU["IBLOCK_ID"] ) ){
                                                 if( $this->catalogSKU[$arValue[0]]["OFFERS_PROPERTY_ID"] == $arValue[2] ){
-                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                                 
                                                 if( is_array( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] ) ){
@@ -2604,11 +2607,11 @@ class CAcritExportproElement{
                                                     foreach( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] as $val ){
                                                         if( ( intval( $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) > 0 )
                                                             && ( count( $compositeValueTmp ) < $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) ){
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                             
                                                         }
                                                         else{
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         }
                                                     }                                        
                                                     
@@ -2627,7 +2630,7 @@ class CAcritExportproElement{
                                                     }
                                                 }
                                                 else{
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                             }
                                             $arItem = $arItemMain;
@@ -2637,7 +2640,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeValueTmp;
                             }
                         }
-                        $templateValues["#{$field["CODE"]}#"] =  CAcritExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                        $templateValues["#{$field["CODE"]}#"] =  CKitExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                     }
                     else{
                         $field["VALUE"] = $field["COMPLEX_FALSE_VALUE"];
@@ -2669,17 +2672,17 @@ class CAcritExportproElement{
                                                 $value = "";
                                         }
                                         unset( $arField );
-                                        $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                     }
                                     else{
-                                        $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $arItem[$field["VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $arItem[$field["VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                     }
                                     $arItem = $arItemMain;
                                     break;
                                 case 2:
                                     $values = null;
                                     $templateValues["#{$field["CODE"]}#"] = $arItem["CATALOG_".$arValue[1]];
-                                    $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                    $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                     if( is_array( $arProductSKU ) ){
                                         $values = $templateValues["#{$field["CODE"]}#"];
                                     }
@@ -2695,7 +2698,7 @@ class CAcritExportproElement{
                                                                           
                                     if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                         $templateValues["#{$field["CODE"]}#"] = $convertFrom;
-                                        $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         if( is_array( $arProductSKU ) ){
                                             $values = $templateValues["#{$field["CODE"]}#"];
                                         }
@@ -2704,7 +2707,7 @@ class CAcritExportproElement{
                                             if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                 $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                 $templateValues["#{$field["CODE"]}#"] = $convertTo;
-                                                $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 if( is_array( $arProductSKU ) ){
                                                     $values=$templateValues["#{$field["CODE"]}#"];
                                                 }
@@ -2716,7 +2719,7 @@ class CAcritExportproElement{
                                             if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                 $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                 if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                    $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                    $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                             $arItem["CATALOG_".$arValue[1]],
                                                             $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                             $convertTo
@@ -2729,7 +2732,7 @@ class CAcritExportproElement{
                                                                                                    
                                                 }
                                                 else{
-                                                    $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"] *
+                                                    $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"] *
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -2751,7 +2754,7 @@ class CAcritExportproElement{
                                         if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                             $templateValues["#{$field["CODE"]}#"] += $templateValues["#{$field["CODE"]}#"] *
                                             floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                            $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             if(is_array( $arProductSKU )){
                                                 $values = $templateValues["#{$field["CODE"]}#"];
                                             }
@@ -2777,7 +2780,7 @@ class CAcritExportproElement{
                                     }
                                     if( $arValue[0] == $arItem["IBLOCK_ID"] || $arValue[0] == $arProductSKU["IBLOCK_ID"] ){
                                         if( $this->catalogSKU[$arValue[0]]["OFFERS_PROPERTY_ID"] == $arValue[2] ){
-                                            $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         }
                                         
                                         if( is_array( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] ) ){
@@ -2785,15 +2788,15 @@ class CAcritExportproElement{
                                             foreach( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] as $val ){
                                                 if( ( intval( $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) > 0 )
                                                     && ( count( $templateValues["#{$field["CODE"]}#"] ) < $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) ){
-                                                    $templateValues["#{$field["CODE"]}#"][] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );       
+                                                    $templateValues["#{$field["CODE"]}#"][] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                                 else{
-                                                    $templateValues["#{$field["CODE"]}#"][] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $templateValues["#{$field["CODE"]}#"][] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                             }                                        
                                         }
                                         else{
-                                            $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         }
                                     }
                                     $arItem = $arItemMain;
@@ -2817,7 +2820,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeTrueDivider;
                             }
                             if( $compositeField["COMPOSITE_TRUE_TYPE"] == "const" ){                            
-                                $compositeValue .= CAcritExportproTools::RoundNumber( $compositeField["COMPOSITE_TRUE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                $compositeValue .= CKitExportproTools::RoundNumber( $compositeField["COMPOSITE_TRUE_CONTVALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                             }
                             elseif( $compositeField["COMPOSITE_TRUE_TYPE"] == "field" ){
                                 $compositeValueTmp = "";
@@ -2845,17 +2848,17 @@ class CAcritExportproElement{
                                                 }
                                                 unset( $arField );
                                                                                         
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             else{
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_TRUE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem[$compositeField["COMPOSITE_TRUE_VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             }
                                             $arItem = $arItemMain;
                                             break;
                                         case 2:
                                             $values = null;
                                             $compositeValueTmp = $arItem["CATALOG_".$arValue[1]];
-                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             if( is_array( $arProductSKU ) ){
                                                 $values = $compositeValueTmp;
                                             }                           
@@ -2870,7 +2873,7 @@ class CAcritExportproElement{
                                                                                   
                                             if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                                 $compositeValueTmp = $convertFrom;
-                                                $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 if( is_array( $arProductSKU ) ){
                                                     $values = $compositeValueTmp;
                                                 }                                    
@@ -2879,7 +2882,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         $compositeValueTmp = $convertTo;
-                                                        $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                        $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         if( is_array( $arProductSKU ) ){
                                                             $values = $compositeValueTmp;
                                                         }
@@ -2891,7 +2894,7 @@ class CAcritExportproElement{
                                                     if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                         $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                         if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                                     $arItem["CATALOG_".$arValue[1]],
                                                                     $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                                     $convertTo
@@ -2903,7 +2906,7 @@ class CAcritExportproElement{
                                                             }                                            
                                                         }
                                                         else{
-                                                            $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp *
+                                                            $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp *
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                                 $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -2924,7 +2927,7 @@ class CAcritExportproElement{
                                                 }
                                                 if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                     $compositeValueTmp += $compositeValueTmp * floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $compositeValueTmp, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                     if( is_array( $arProductSKU ) ){
                                                         $values = $compositeValueTmp;
                                                     }                                       
@@ -2941,7 +2944,7 @@ class CAcritExportproElement{
                                             }                                                   
                                             if( ( $arValue[0] == $arItem["IBLOCK_ID"] ) || ( $arValue[0] == $arProductSKU["IBLOCK_ID"] ) ){
                                                 if( $this->catalogSKU[$arValue[0]]["OFFERS_PROPERTY_ID"] == $arValue[2] ){
-                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                                 
                                                 if( is_array( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] ) ){
@@ -2949,11 +2952,11 @@ class CAcritExportproElement{
                                                     foreach( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] as $val ){
                                                         if( ( intval( $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) > 0 )
                                                             && ( count( $compositeValueTmp ) < $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) ){
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                             
                                                         }
                                                         else{
-                                                            $compositeValueTmp[] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                            $compositeValueTmp[] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                         }
                                                     }
                                                     
@@ -2972,7 +2975,7 @@ class CAcritExportproElement{
                                                     }
                                                 }
                                                 else{
-                                                    $compositeValueTmp = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $compositeValueTmp = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                             }
                                             $arItem = $arItemMain;
@@ -2982,7 +2985,7 @@ class CAcritExportproElement{
                                 $compositeValue .= $compositeValueTmp;
                             }
                         }
-                        $templateValues["#{$field["CODE"]}#"] =  CAcritExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                        $templateValues["#{$field["CODE"]}#"] =  CKitExportproTools::RoundNumber( $compositeValue, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                     }
                     else{
                         $field["VALUE"] = ( $field["TYPE"] == "field" ) ? $field["VALUE"] : $field["COMPLEX_TRUE_VALUE"];
@@ -3015,17 +3018,17 @@ class CAcritExportproElement{
                                                 $value = "";
                                         }
                                         unset( $arField );
-                                        $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $value, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                     }
                                     else{
-                                        $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $arItem[$field["VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $arItem[$field["VALUE"]], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                     }
                                     $arItem = $arItemMain;
                                     break;
                                 case 2:
                                     $values = null;
                                     $templateValues["#{$field["CODE"]}#"] = $arItem["CATALOG_".$arValue[1]];
-                                    $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                    $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                     
                                     if( is_array( $arProductSKU ) ){
                                         $values = $templateValues["#{$field["CODE"]}#"];
@@ -3042,7 +3045,7 @@ class CAcritExportproElement{
                                                                           
                                     if( strpos( $arValue[1], "_CURRENCY" ) > 0 ){
                                         $templateValues["#{$field["CODE"]}#"] = $convertFrom;
-                                        $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                        $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         if( is_array( $arProductSKU ) ){
                                             $values = $templateValues["#{$field["CODE"]}#"];
                                         }                                    
@@ -3051,7 +3054,7 @@ class CAcritExportproElement{
                                             if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                 $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                 $templateValues["#{$field["CODE"]}#"] = $convertTo;
-                                                $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 if( is_array( $arProductSKU ) ){
                                                     $values = $templateValues["#{$field["CODE"]}#"];
                                                 }
@@ -3063,7 +3066,7 @@ class CAcritExportproElement{
                                             if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                                 $convertTo = $this->profile["CURRENCY"][$convertFrom]["CONVERT_TO"];
                                                 if( $this->profile["CURRENCY"][$convertFrom]["RATE"] == "SITE" ){
-                                                    $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
+                                                    $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( CCurrencyRates::ConvertCurrency(
                                                             $arItem["CATALOG_".$arValue[1]],
                                                             $this->profile["CURRENCY"][$convertFrom]["CONVERT_FROM"],
                                                             $convertTo
@@ -3075,7 +3078,7 @@ class CAcritExportproElement{
                                                     }                                            
                                                 }
                                                 else{
-                                                    $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"] *
+                                                    $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"] *
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE"] /
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertTo]["RATE"] /
                                                         $this->currencyRates[$this->profile["CURRENCY"][$convertFrom]["RATE"]][$convertFrom]["RATE_CNT"] *
@@ -3098,7 +3101,7 @@ class CAcritExportproElement{
                                         if( $this->profile["CURRENCY"][$convertFrom]["CHECK"] ){
                                             $templateValues["#{$field["CODE"]}#"] += $templateValues["#{$field["CODE"]}#"] *
                                             floatval( $this->profile["CURRENCY"][$convertFrom]["PLUS"] ) / 100;
-                                            $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $templateValues["#{$field["CODE"]}#"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                             if( is_array( $arProductSKU ) ){
                                                 $values=$templateValues["#{$field["CODE"]}#"];
                                             }                                       
@@ -3124,7 +3127,7 @@ class CAcritExportproElement{
                                     }
                                     if( ( $arValue[0] == $arItem["IBLOCK_ID"] ) || ( $arValue[0] == $arProductSKU["IBLOCK_ID"] ) ){
                                         if( $this->catalogSKU[$arValue[0]]["OFFERS_PROPERTY_ID"] == $arValue[2] ){
-                                            $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_VALUE"][0], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         }
                                         
                                         if( is_array( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] ) ){
@@ -3132,15 +3135,15 @@ class CAcritExportproElement{
                                             foreach( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"] as $val ){
                                                 if( ( intval( $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) > 0 )
                                                     && ( count( $templateValues["#{$field["CODE"]}#"] ) < $this->profile["XMLDATA"][$field["CODE"]]["MULTIPROP_LIMIT"] ) ){
-                                                    $templateValues["#{$field["CODE"]}#"][] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $templateValues["#{$field["CODE"]}#"][] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                                 else{
-                                                    $templateValues["#{$field["CODE"]}#"][] = CAcritExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                                    $templateValues["#{$field["CODE"]}#"][] = CKitExportproTools::RoundNumber( $val, $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                                 }
                                             }                                        
                                         }
                                         else{
-                                            $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                                            $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( $arItem["PROPERTY_{$arValue[2]}_DISPLAY_VALUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                                         }
                                     }
                                     $arItem = $arItemMain;
@@ -3153,7 +3156,7 @@ class CAcritExportproElement{
                     || ( ( $field["TYPE"] == "complex" ) && ( $field["COMPLEX_TRUE_TYPE"] == "const" ) ) ){ // const
                 
                     $field["CONTVALUE_TRUE"] = ( $field["TYPE"] == "const" ) ? $field["CONTVALUE_TRUE"] : $field["COMPLEX_TRUE_CONTVALUE"];            
-                    $templateValues["#{$field["CODE"]}#"] =  CAcritExportproTools::RoundNumber( $field["CONTVALUE_TRUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                    $templateValues["#{$field["CODE"]}#"] =  CKitExportproTools::RoundNumber( $field["CONTVALUE_TRUE"], $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                 }   
                 else{
                     $templateValues["#{$field["CODE"]}#"] = "";
@@ -3161,7 +3164,7 @@ class CAcritExportproElement{
             }                                                      
             
             if( $DB->IsDate( $templateValues["#{$field["CODE"]}#"] ) && ( $this->profile["DATEFORMAT"] == $this->baseDateTimePatern ) ){
-                $templateValues["#{$field["CODE"]}#"] = CAcritExportproTools::RoundNumber( CAcritExportproTools::GetYandexDateTime( $templateValues["#{$field["CODE"]}#"] ), $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
+                $templateValues["#{$field["CODE"]}#"] = CKitExportproTools::RoundNumber( CKitExportproTools::GetYandexDateTime( $templateValues["#{$field["CODE"]}#"] ), $field["ROUND"]["PRECISION"], $field["ROUND"]["MODE"] );
                 
                 $dateTimeValue = MakeTimeStamp( "" );
                 $dateTimeFormattedValue = date( "Y-m-d", $dateTimeValue );
@@ -3257,7 +3260,7 @@ class CAcritExportproElement{
                 if( !empty( $templateValues[$match] ) ){
                     if( is_array( $templateValues[$match] ) ){
                         foreach( $templateValues[$match] as &$val ){
-                            $templateValueCharset = CAcritExportproTools::GetStringCharset( $val );
+                            $templateValueCharset = CKitExportproTools::GetStringCharset( $val );
                             if( $templateValueCharset == "cp1251" ){
                                 $convertedTemplateValue = $APPLICATION->ConvertCharset( $val, "cp1251", "utf8" );
                                 $convertedTemplateValue = html_entity_decode( $convertedTemplateValue );
@@ -3269,7 +3272,7 @@ class CAcritExportproElement{
                         }
                     }
                     else{
-                        $templateValueCharset = CAcritExportproTools::GetStringCharset( $templateValues[$match] );                        
+                        $templateValueCharset = CKitExportproTools::GetStringCharset( $templateValues[$match] );
                         if( $templateValueCharset == "cp1251" ){
                             $convertedTemplateValue = $APPLICATION->ConvertCharset( $templateValues[$match], "cp1251", "utf8" );
                             $convertedTemplateValue = html_entity_decode( $convertedTemplateValue );
@@ -3331,7 +3334,7 @@ class CAcritExportproElement{
                         $strWords = explode( " ", $tmpStr );
                         
                         if( ( strlen( $strWords[0] ) > 0 ) && ( count( $strWords ) > 1 ) ){
-                            $templateValueCharset = CAcritExportproTools::GetStringCharset( $templateValues[$match] );
+                            $templateValueCharset = CKitExportproTools::GetStringCharset( $templateValues[$match] );
                             
                             if( $templateValueCharset == "cp1251" ){
                                 $strWords[0] = mb_convert_case( $strWords[0], MB_CASE_TITLE, "WINDOWS-1251" );
@@ -3425,7 +3428,7 @@ class CAcritExportproElement{
            
             if( !$this->isVariant( $arItem["IBLOCK_SECTION_ID"] ) ){
                 if( isset( $arItemConfig["DELAY_FLUSH"] ) && ( $arItemConfig["DELAY_FLUSH"] === true ) ){
-                    CAcritExportproExport::Save( $itemTemplate.$this->delay );
+                    CKitExportproExport::Save( $itemTemplate.$this->delay );
                     $this->delay = "";
                 }
                 elseif( isset( $arItemConfig["DELAY_SKU"] ) && ( $arItemConfig["DELAY_SKU"] === true ) ){
@@ -3436,7 +3439,7 @@ class CAcritExportproElement{
                     $this->log->IncProductExport();
                 }
                 else{
-                    CAcritExportproExport::Save( $itemTemplate );
+                    CKitExportproExport::Save( $itemTemplate );
                     $this->log->IncProductExport();
                 }
             }
@@ -3523,7 +3526,7 @@ class CAcritExportproElement{
             )
         );
         
-        $arSectionUserFields = CAcritExportproTools::GetIblockUserFields( $arItem["IBLOCK_ID"] );
+        $arSectionUserFields = CKitExportproTools::GetIblockUserFields( $arItem["IBLOCK_ID"] );
         if( $arSectionList = $dbSectionList->GetNext() ){
             foreach( $arSectionUserFields as $arSectionUserFieldsItem ){
                 if( in_array( $arSectionUserFieldsItem["FIELD_NAME"], $this->useFields ) ){
@@ -3569,7 +3572,7 @@ class CAcritExportproElement{
                 elseif( $this->GetResolveProperties( $property, $property["ID"], "PROPERTIES" ) ){
                 }
                 else{                                                               
-                    $property = CIBlockFormatProperties::GetDisplayValue( $arItem, $property, "acrit_exportpro_event" );
+                    $property = CIBlockFormatProperties::GetDisplayValue( $arItem, $property, "kit_exportpro_event" );
                     if( empty( $property["VALUE_ENUM_ID"] ) ){
                         if( !is_array( $property["DISPLAY_VALUE"] ) )
                             $property["ORIGINAL_VALUE"] = array( $property["DISPLAY_VALUE"] );
@@ -3664,7 +3667,7 @@ class CAcritExportproElement{
     
     protected function SaveSections( $sections ){                             
         if( is_array( $sections ) ){
-            $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+            $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
             
             if( !is_array( $sessionData["EXPORTPRO"][$this->profile["ID"]]["CATEGORY"] ) )
                 $sessionData["EXPORTPRO"][$this->profile["ID"]]["CATEGORY"] = array();
@@ -3673,13 +3676,13 @@ class CAcritExportproElement{
                 $sessionData["EXPORTPRO"][$this->profile["ID"]]["CATEGORY"],
                 $sections
             );
-            AcritExportproSession::SetSession( $this->profile["ID"], $sessionData );
+            KitExportproSession::SetSession( $this->profile["ID"], $sessionData );
         }
     }
 
     protected function SaveCurrencies( $currencies ){
         if( is_array( $currencies ) ){
-            $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+            $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
             if( !is_array( $sessionData["EXPORTPRO"][$this->profile["ID"]]["CURRENCY"] ) )
                 $sessionData["EXPORTPRO"][$this->profile["ID"]]["CURRENCY"] = array();
             
@@ -3687,7 +3690,7 @@ class CAcritExportproElement{
                 $sessionData["EXPORTPRO"][$this->profile["ID"]]["CURRENCY"],
                 $currencies
             );
-            AcritExportproSession::SetSession( $this->profile["ID"], $sessionData );
+            KitExportproSession::SetSession( $this->profile["ID"], $sessionData );
         }
     }
 
@@ -3880,22 +3883,22 @@ class CAcritExportproElement{
     }
 }
 
-class AcritExportproProtect{
+class KitExportproProtect{
     static function Protect( $mode, $action ){
         if( $action == "protect" ){
-            COption::SetOptionInt( "acrit.exportpro", "acrit.exportpro.mode", intval( $mode ) );
+            COption::SetOptionInt( "kit.exportpro", "kit.exportpro.mode", intval( $mode ) );
             if( $mode == 1 )
                 return false;
             else
                 return true;
         }
         else{
-            return ( COption::GetOptionInt( "acrit.exportpro", "acrit.exportpro.mode" ) != 1 );
+            return ( COption::GetOptionInt( "kit.exportpro", "kit.exportpro.mode" ) != 1 );
         }
     }
 }
 
-class CAcritExportproComponent{
+class CKitExportproComponent{
     private $__componentId = false;
     private $__path = false;
     private $__data = false;
@@ -3903,8 +3906,8 @@ class CAcritExportproComponent{
     private $__Class = false;
 
     private static $__components = array(
-        "catalog" => "CAcritExportproRemarketingCatalog",
-        "catalog.element" => "CAcritExportproRemarketingCatalogElement",
+        "catalog" => "CKitExportproRemarketingCatalog",
+        "catalog.element" => "CKitExportproRemarketingCatalogElement",
     );
     
     private static $__component_name = array(
@@ -3982,7 +3985,7 @@ class CAcritExportproComponent{
     }
 }
 
-class CAcritExportproRemarketing{
+class CKitExportproRemarketing{
     function OnEndBufferContent( &$bufferContent ){
         if( defined( "ADMIN_SECTION" ) && ( ADMIN_SECTION == true ) )
             return;
@@ -4068,7 +4071,7 @@ class CAcritExportproRemarketing{
             )
         );
 
-        $dbEvents = GetModuleEvents( "acrit.exportpro", "OnGetRemarketingSettings" );
+        $dbEvents = GetModuleEvents( "kit.exportpro", "OnGetRemarketingSettings" );
         while( $arEvent = $dbEvents->Fetch() ){
             ExecuteModuleEventEx( $arEvent, array( &$arSettings ) );
         }
@@ -4083,7 +4086,7 @@ class CAcritExportproRemarketing{
         
         $arCategory = array();
         if( $profile["CHECK_INCLUDE"] <> "Y" )
-            $resultSection = CAcritExportproTools::GetSectionNavChain( $result["variables"]["SECTION_ID"] );
+            $resultSection = CKitExportproTools::GetSectionNavChain( $result["variables"]["SECTION_ID"] );
         
         foreach( $profile["CATEGORY"] as $category ){
             if( $profile["CHECK_INCLUDE"] <> "Y" ){
@@ -4140,7 +4143,7 @@ class CAcritExportproRemarketing{
             </script>'
         );
         
-        $dbEvents = GetModuleEvents( "acrit.exportpro", "OnGetRemarketingTemplate" );
+        $dbEvents = GetModuleEvents( "kit.exportpro", "OnGetRemarketingTemplate" );
         while( $arEvent = $dbEvents->Fetch() ){
             ExecuteModuleEventEx( $arEvent, array( &$arTemplate ) );
         }
@@ -4165,8 +4168,8 @@ class CAcritExportproRemarketing{
     }
     
     private static function execute(){
-        $componentsOnPage = CAcritExportproUrlRewrite::getInstance();
-        $component= new CAcritExportproComponent();
+        $componentsOnPage = CKitExportproUrlRewrite::getInstance();
+        $component= new CKitExportproComponent();
         
         foreach( $componentsOnPage->getUrlRewrite() as $componentId => $componentVal ){
             if( ( $rule = $componentsOnPage->getRuleByComponentId( $componentId ) ) !== false ){
@@ -4182,7 +4185,7 @@ class CAcritExportproRemarketing{
     } 
 }
 
-class CAcritExportproRemarketingCatalog{
+class CKitExportproRemarketingCatalog{
     protected static function __onPrepareComponentParams( &$params ){}
 
     protected static function __component( &$component ){
@@ -4328,7 +4331,7 @@ class CAcritExportproRemarketingCatalog{
     } 
 }
 
-class CAcritExportproRemarketingCatalogElement{
+class CKitExportproRemarketingCatalogElement{
     protected static function __onPrepareComponentParams( &$params ){}
     
     protected static function __component( &$component ){

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `acrit_exportpro_profile`(
+CREATE TABLE IF NOT EXISTS `kit_exportpro_profile`(
     `ID` int(11) NOT NULL auto_increment,
     `ACTIVE` CHAR(1) DEFAULT 'Y' NOT NULL,
     `NAME` VARCHAR(100) NULL,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `acrit_exportpro_profile`(
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE IF NOT EXISTS `acrit_exportpro_profile_data`(
+CREATE TABLE IF NOT EXISTS `kit_exportpro_profile_data`(
     `ID` int(11) NOT NULL auto_increment,
     `PROFILE_ID` int(11) NOT NULL,
     `IBLOCK_TYPE_ID` LONGTEXT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `acrit_exportpro_profile_data`(
     UNIQUE KEY (PROFILE_ID)
 );
 
-CREATE TABLE IF NOT EXISTS `acrit_exportpro_profile_tools`(
+CREATE TABLE IF NOT EXISTS `kit_exportpro_profile_tools`(
     `ID` int(11) NOT NULL auto_increment,
     `PROFILE_ID` int(11) NOT NULL,
     `CONDITION` LONGTEXT NULL,

@@ -1,9 +1,13 @@
 <?
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 IncludeModuleLangFile( __FILE__ );
 
-class acrit_exportpro extends CModule{
-    const MODULE_ID = "acrit.exportpro";
-    var $MODULE_ID = "acrit.exportpro";
+class kit_exportpro extends CModule{
+    const MODULE_ID = "kit.exportpro";
+    var $MODULE_ID = "kit.exportpro";
     var $MODULE_VERSION;
     var $MODULE_VERSION_DATE;
     var $MODULE_NAME;
@@ -18,7 +22,7 @@ class acrit_exportpro extends CModule{
         "windows-1251" => "cp1251",
     );
 
-    function acrit_exportpro(){
+    function kit_exportpro(){
         require( __DIR__."/version.php" );
 
         $path = str_replace( "\\", "/", __FILE__ );
@@ -47,15 +51,15 @@ class acrit_exportpro extends CModule{
     }
     
     function InstallEvents(){
-        RegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID , "CAcritExportproMenu", "OnBuildGlobalMenu" );
-        RegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CAcritExportproRemarketing", "OnEndBufferContent" );
+        RegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID , "CKitExportproMenu", "OnBuildGlobalMenu" );
+        RegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CKitExportproRemarketing", "OnEndBufferContent" );
         
         return true;
     }
 
     function UnInstallEvents(){
-        UnRegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID, "CAcritExportproMenu", "OnBuildGlobalMenu" );
-        UnRegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CAcritExportproRemarketing", "OnEndBufferContent" );
+        UnRegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID, "CKitExportproMenu", "OnBuildGlobalMenu" );
+        UnRegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CKitExportproRemarketing", "OnEndBufferContent" );
         
         return true;
     }
@@ -66,12 +70,12 @@ class acrit_exportpro extends CModule{
         $this->errors = false;
         if( CModule::IncludeModule( "security" ) ){
             $dbSecurityFilter = CSecurityFilterMask::GetList();
-            $acritMask = "/bitrix/admin/acrit_export_edit.php";
+            $kitMask = "/bitrix/admin/kit_export_edit.php";
 
             $bMaskSet = false;
             $arFilterMask = array();
             while( $arSecurityFilter = $dbSecurityFilter->Fetch() ){
-                if( $arSecurityFilter["FILTER_MASK"] == $acritMask )
+                if( $arSecurityFilter["FILTER_MASK"] == $kitMask )
                     $bMaskSet = true;
 
                 $arFilterMask[] = array(
@@ -82,7 +86,7 @@ class acrit_exportpro extends CModule{
 
             if( !$bMaskSet ){
                 $arFilterMask[] = array(
-                    "MASK" => $acritMask,
+                    "MASK" => $kitMask,
                     "SITE_ID" => ""
                 );
                 CSecurityFilterMask::Update( $arFilterMask );
@@ -105,12 +109,12 @@ class acrit_exportpro extends CModule{
         
         if( CModule::IncludeModule( "security" ) ){
             $dbSecurityFilter = CSecurityFilterMask::GetList();
-            $acritMask = "/bitrix/admin/acrit_export_edit.php";
+            $kitMask = "/bitrix/admin/kit_export_edit.php";
 
             $bMaskSet = false;
             $arFilterMask = array();
             while( $arSecurityFilter = $dbSecurityFilter->Fetch() ){
-                if( $arSecurityFilter["FILTER_MASK"] == $acritMask )
+                if( $arSecurityFilter["FILTER_MASK"] == $kitMask )
                     $bMaskSet = true;
                 else
                     $arFilterMask[] = array(
@@ -163,8 +167,8 @@ class acrit_exportpro extends CModule{
             foreach( $this->siteArray as $siteID => $siteDir ){
                 $urlRewriter->Add(array(
                     "SITE_ID" => $siteID,
-                    "CONDITION" => "#^/acrit.exportpro/(.*)#",
-                    "PATH" => "/acrit.exportpro/index.php",
+                    "CONDITION" => "#^/kit.exportpro/(.*)#",
+                    "PATH" => "/kit.exportpro/index.php",
                     "RULE" => "path=$1",
                 ));
             }
@@ -209,7 +213,7 @@ class acrit_exportpro extends CModule{
                     if( ( $item == ".." ) || ( $item == "." ) || ( $item == "menu.php" ) ){
                         continue;
                     }
-                    file_put_contents( $file = $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin/acrit_exportpro_".$item,
+                    file_put_contents( $file = $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin/kit_exportpro_".$item,
                         "<".'? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/'.self::MODULE_ID."/admin/".$item.'" );?'.">" );
                 }
                 closedir( $dir );
@@ -272,8 +276,8 @@ class acrit_exportpro extends CModule{
             DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/tools", $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools" );
             DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/themes", $_SERVER["DOCUMENT_ROOT"]."/bitrix/themes" );
             DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/panel", $_SERVER["DOCUMENT_ROOT"]."/bitrix/panel" );
-            DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/public/acrit_exportpro", $_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/catalog_export" );
-            DeleteDirFilesEx( "/upload/acrit_exportpro/" );
+            DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/public/kit_exportpro", $_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/catalog_export" );
+            DeleteDirFilesEx( "/upload/kit_exportpro/" );
         }
         DeleteDirFilesEx( "/upload/exportpro_log" );
         DeleteDirFilesEx( "/".$this->MODULE_ID );

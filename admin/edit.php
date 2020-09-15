@@ -1,6 +1,9 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
-$moduleId = "acrit.exportpro";
+$moduleId = "kit.exportpro";
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/$moduleId/include.php" );
 
@@ -25,7 +28,7 @@ CModule::IncludeModule( "catalog" );
 function CheckFields(){
     global $PROFILE, $APPLICATION, $ID;
     if( intval( $ID ) > 0 ){
-        $export = new CAcritExportproExport( $ID );
+        $export = new CKitExportproExport( $ID );
     }
     $requiredFields = array(
         "NAME", "CODE", "SHOPNAME", "COMPANY", "DOMAIN_NAME"
@@ -68,7 +71,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && ( !empty( $save ) || !empty( $apply 
     if( ( $fieldsCheck = CheckFields() ) ){
         PrepareFields();
         if( CModule::IncludeModule( "catalog" ) ){
-            $obCond = new CAcritExportproCatalogCond();
+            $obCond = new CKitExportproCatalogCond();
 
             $boolCond = $obCond->Init( BT_COND_MODE_PARSE, 0, array() );
             if( !$boolCond ){
@@ -304,7 +307,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && ( !empty( $save ) || !empty( $apply 
         }
 
         if( $save ){
-            LocalRedirect( "acrit_exportpro_list.php" );
+            LocalRedirect( "kit_exportpro_list.php" );
             die();
         }
         else{
@@ -313,7 +316,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && ( !empty( $save ) || !empty( $apply 
 
             if( !isset( $arQuery["ID"] ) || empty( $arQuery["ID"] ) ){
                 $arQuery["ID"] = $ID;
-                LocalRedirect( "acrit_exportpro_edit.php?".http_build_query( $arQuery ) );
+                LocalRedirect( "kit_exportpro_edit.php?".http_build_query( $arQuery ) );
                 die();
             }
         }
@@ -340,7 +343,7 @@ if( !is_array( $t ) || !isset( $t["js"] ) || !file_exists( $DOCUMENT_ROOT.$t["js
 if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUEST["ajax_start"] ) && !isset( $_REQUEST["ajax_count"] ) && !isset( $_POST["auth"] ) ){
     CUtil::InitJSCore( array( "ajax", "jquery" ) );
     $APPLICATION->AddHeadScript( "/bitrix/js/iblock/iblock_edit.js" );
-    $APPLICATION->AddHeadScript( "/bitrix/js/acrit.exportpro/main.js" );
+    $APPLICATION->AddHeadScript( "/bitrix/js/kit.exportpro/main.js" );
 
     if( !CModule::IncludeModule( "iblock" ) ){
         return false;
@@ -377,28 +380,27 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
     $aContext = array(
         array(
             "TEXT" => GetMessage( "MAIN_ADD" ),
-            "LINK" => "acrit_exportpro_edit.php?lang=".LANG,
+            "LINK" => "kit_exportpro_edit.php?lang=".LANG,
             "TITLE" => GetMessage( "PARSER_ADD_TITLE" ),
             "ICON" => "btn_new",
         ),
     );
 
     // add attach it to list
-    $sTableID = "tbl_acritprofile";
+    $sTableID = "tbl_kitprofile";
     $oSort = new CAdminSorting( $sTableID, "ID", "desc" );
     $lAdmin = new CAdminList( $sTableID, $oSort );
     $lAdmin->AddAdminContextMenu( $aContext );
     $lAdmin->CheckListMode();
 
     require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
-
-    AcritLicence::Show();
+    
 
     $aMenu = array(
         array(
             "TEXT" => GetMessage( "ACRIT_EXPORTPRO_LIST" ),
             "TITLE" => GetMessage( "ACRIT_EXPORTPRO_LIST" ),
-            "LINK" => "acrit_exportpro_list.php?lang=".LANG,
+            "LINK" => "kit_exportpro_list.php?lang=".LANG,
             "ICON" => "btn_list",
         ),
         array(
@@ -415,26 +417,26 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
         $aMenu[] = array(
             "TEXT" => GetMessage( "ACRIT_EXPORTPRO_ADD" ),
             "TITLE" => GetMessage( "ACRIT_EXPORTPRO_ADD" ),
-            "LINK" => "acrit_exportpro_edit.php?lang=".LANG,
+            "LINK" => "kit_exportpro_edit.php?lang=".LANG,
             "ICON" => "btn_new",
         );
         $aMenu[] = array(
             "TEXT" => GetMessage( "ACRIT_EXPORTPRO_COPY" ),
             "TITLE" => GetMessage( "ACRIT_EXPORTPRO_COPY" ),
-            "LINK" => "acrit_exportpro_edit.php?copy=$ID&ID=$ID&lang=".LANG,
+            "LINK" => "kit_exportpro_edit.php?copy=$ID&ID=$ID&lang=".LANG,
             "ICON" => "btn_copy",
         );
         $aMenu[] = array(
             "TEXT" => GetMessage( "ACRIT_EXPORTPRO_DEL" ),
             "TITLE" => GetMessage( "ACRIT_EXPORTPRO_DEL" ),
-            "LINK" => "javascript:if(confirm('".GetMessage( "parser_mnu_del_conf" )."'))window.location='acrit_exportpro_list.php?ID=".$ID."&action=delete&lang=".LANG."&".bitrix_sessid_get()."';",
+            "LINK" => "javascript:if(confirm('".GetMessage( "parser_mnu_del_conf" )."'))window.location='kit_exportpro_list.php?ID=".$ID."&action=delete&lang=".LANG."&".bitrix_sessid_get()."';",
             "ICON" => "btn_delete",
         );
         $aMenu[] = array( "SEPARATOR" => "Y" );
         $aMenu[] = array(
             "TEXT" => GetMessage( "ACRIT_EXPORTPRO_RUN" ),
             "TITLE" => GetMessage( "ACRIT_EXPORTPRO_RUN" ),
-            "LINK" => "/bitrix/tools/acrit.exportpro/acrit_exportpro.php?ID=".$ID,
+            "LINK" => "/bitrix/tools/kit.exportpro/kit_exportpro.php?ID=".$ID,
             "ICON" => "btn_start_catalog"
         );
     }
@@ -529,7 +531,7 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
         $tabControl->Buttons(
             array(
                 "disabled"=>($POST_RIGHT<"W"),
-                "back_url"=>"acrit_exportpro_list.php?lang=".LANG,
+                "back_url"=>"kit_exportpro_list.php?lang=".LANG,
             )
         );
 
@@ -586,7 +588,7 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
 						//	  text: '<?=GetMessage( "ACRIT_EXPORTPRO_MARKET_CATEGORY_BUTTON_CLOSE" );?>',
                         //	  className: 'webform-button-link-cancel',
                         //	  events: {click: function(){
-						//		 this.popupWindow.close(); // закрытие окна
+						//		 this.popupWindow.close(); // Р·Р°РєСЂС‹С‚РёРµ РѕРєРЅР°
                         //	  }}
                         //   })
                     ],

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 IncludeModuleLangFile( __FILE__ );
 
@@ -72,7 +75,7 @@ $bExportParentCategoriesToOffer = $arProfile["EXPORT_PARENT_CATEGORIES_TO_OFFER"
 $bExportOfferCategoriesToOffer = $arProfile["EXPORT_OFFER_CATEGORIES_TO_OFFER"] == "Y" ? 'checked="checked"' : "";
 $bExportFieldsIBlockInsteadCategory = $arProfile["EXPORT_PARENT_CATEGORIES_WITH_IBLOCK_FIELDS"] == "Y" ? 'checked="checked"' : "";
 
-function AcritExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
+function KitExportproGetDefaultSelectedStep4( $schemeValue, $arProfileValue ){
     $default = "OFFER_IF_SKU_EMPTY";
     if( empty( $arProfileValue ) ){
         if( substr_compare( $schemeValue, $default, "-".strlen( $default ) ) == 0 ){

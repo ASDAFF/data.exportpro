@@ -1,18 +1,21 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
 
-\Bitrix\Main\Loader::includeModule( "acrit.exportpro" );
+\Bitrix\Main\Loader::includeModule( "kit.exportpro" );
 
 Loc::loadMessages( __FILE__ );
 
-class AcritExportproSession{
+class KitExportproSession{
     static private $sessionDir;
     static private $cronPage = -1;
     static public function Init( $cronpage ){
         if( !self::$sessionDir )
-            self::$sessionDir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/acrit.exportpro/";
+            self::$sessionDir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/";
         
         self::$cronPage = $cronpage;
     }

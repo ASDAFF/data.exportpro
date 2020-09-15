@@ -1,4 +1,8 @@
 <?
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 $MESS["ACRIT_EXPORTPRO_RUNTYPE_INFILE"] = "В файл";
 $MESS["ACRIT_EXPORTPRO_RUNTYPE_RUN"] = "Выполнять экспорт";
 $MESS["ACRIT_EXPORTPRO_RUNTYPE_AGENT"] = "Агент";
@@ -30,7 +34,7 @@ $MESS["ACRIT_EXPORTPRO_FILE_EXPORT_NEED_RERUN"] = "Изменены настро
 $MESS["ACRIT_EXPORTPRO_RUNTYPE_EXPORT_RUN"] = "<b class='required' style='color: red;'>Экспорт уже запущен</b>";
 $MESS["ACRIT_EXPORTPRO_RUNTYPE_UNLOCK"] = "Удалить блокировку";
 $MESS["ACRIT_EXPORTPRO_OPEN_INNEW_WINDOW"] = "Открыть файл в новом окне";
-$MESS["ACRIT_EXPORTPRO_RUN_EXPORT_FILE_DESCRIPTION"] = '<span class="required"><b>Важно!</b></span> Для сохранение файлов экспорта создан специальный раздел "/acrit.exportpro/" в корне сайта.<br>
+$MESS["ACRIT_EXPORTPRO_RUN_EXPORT_FILE_DESCRIPTION"] = '<span class="required"><b>Важно!</b></span> Для сохранение файлов экспорта создан специальный раздел "/kit.exportpro/" в корне сайта.<br>
  Настоятельно рекомендуем сохранять файлы в этот раздел или любой подраздел данного раздела.<br> 
  Если файл сохранен в рекомендуемом разделе, то при открытии на просмотр содержимое файла кэшироваться браузером не будет,<br> 
  в противном случае файл будет кэшироваться и при каждом открытии файла для просмотра в браузере<br> 

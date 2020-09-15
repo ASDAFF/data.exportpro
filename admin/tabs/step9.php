@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
 IncludeModuleLangFile(__FILE__);
 
@@ -42,7 +46,7 @@ else{
 }
 
 if( strlen( $profileDefaults["PROFILE_CODE"] ) > 0 ){
-    $exportFilePath = "/acrit.exportpro/".$profileDefaults["PROFILE_CODE"].".xml";
+    $exportFilePath = "/kit.exportpro/".$profileDefaults["PROFILE_CODE"].".xml";
 }
 
 $bUseCompress = $arProfile["USE_COMPRESS"] == "Y" ? 'checked="checked"' : "";
@@ -203,14 +207,14 @@ $productsPerStep = intval( $arProfile["SETUP"]["EXPORT_STEP"] ) <= 0 ? 50 : intv
                     $hideCronIsPeriod = "hide";
                     $hideRunNewWindow = "";
                 }
-                if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/acrit.exportpro/export_{$arProfile["ID"]}_run.lock" ) )
+                if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/export_{$arProfile["ID"]}_run.lock" ) )
                     $hideRunNewWindow = "hide";
                 ?>
                 
                 <tr id="tr_run_new_window" class="<?=$hideRunNewWindow?>">
                     <td width="40%" class="adm-detail-content-cell-l"></td>
                     <td width="60%" class="adm-detail-content-cell-r" align="left">
-                        <a class="adm-btn <?if( $exportTimeStamp > $profileTimeStamp ):?>adm-btn-save<?else:?>adm-btn-red<?endif;?>" href="/bitrix/tools/acrit.exportpro/acrit_exportpro.php?ID=<?=$ID?>" target="_blank"><?if( !empty( $arProfile["SETUP"]["URL_DATA_FILE"] ) ):?><?=GetMessage( "ACRIT_EXPORTPRO_RERUN_FILE_EXPORT" )?><?else:?><?=GetMessage( "ACRIT_EXPORTPRO_RUN_FILE_EXPORT" )?><?endif;?></a>
+                        <a class="adm-btn <?if( $exportTimeStamp > $profileTimeStamp ):?>adm-btn-save<?else:?>adm-btn-red<?endif;?>" href="/bitrix/tools/kit.exportpro/kit_exportpro.php?ID=<?=$ID?>" target="_blank"><?if( !empty( $arProfile["SETUP"]["URL_DATA_FILE"] ) ):?><?=GetMessage( "ACRIT_EXPORTPRO_RERUN_FILE_EXPORT" )?><?else:?><?=GetMessage( "ACRIT_EXPORTPRO_RUN_FILE_EXPORT" )?><?endif;?></a>
                         <?if( !$exportTimeStamp || ( $exportTimeStamp < $profileTimeStamp ) ){?>
                             <br/><br/>
                             <span class="important-info"><?if( !$exportTimeStamp ):?><?=GetMessage( "ACRIT_EXPORTPRO_FILE_EXPORT_NOT_EXIST" )?><?elseif( $exportTimeStamp < $profileTimeStamp ):?><?=GetMessage( "ACRIT_EXPORTPRO_FILE_EXPORT_NEED_RERUN" )?><?endif;?></span>
@@ -324,7 +328,7 @@ $productsPerStep = intval( $arProfile["SETUP"]["EXPORT_STEP"] ) <= 0 ? 50 : intv
         <input type="text" name="PROFILE[SETUP][LAST_START_EXPORT]" readonly="readonly" placeholder=".. ::" value="<?=$arProfile["SETUP"]["LAST_START_EXPORT"]?>">
     </td>
 </tr>
-<?if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/acrit.exportpro/export_{$arProfile["ID"]}_run.lock" ) ):?>
+<?if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/export_{$arProfile["ID"]}_run.lock" ) ):?>
     <tr id="unlock-container">
         <td>
             <?=GetMessage( "ACRIT_EXPORTPRO_RUNTYPE_EXPORT_RUN" );?>

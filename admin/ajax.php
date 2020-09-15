@@ -1,11 +1,14 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 include( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php" );
 if( !check_bitrix_sessid() ) die();
 
 IncludeModuleLangFile( __FILE__ );
 
-CModule::IncludeModule( "acrit.exportpro" );
+CModule::IncludeModule( "kit.exportpro" );
 CModule::IncludeModule( "iblock" );
 CModule::IncludeModule( "catalog" );
 
@@ -13,9 +16,9 @@ $ajax_action();
 
 function unlock_export(){
     global $APPLICATION, $profileID;
-    if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/acrit.exportpro/export_{$profileID}_run.lock" ) ){
+    if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/export_{$profileID}_run.lock" ) ){
         require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
-        unlink( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/acrit.exportpro/export_{$profileID}_run.lock" );
+        unlink( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/export_{$profileID}_run.lock" );
 
         ob_start();
         echo '<td colspan="2" align="center">';
@@ -122,9 +125,9 @@ function get_condition_block(){
     global $fId, $fCnt, $PROFILE, $APPLICATION;
     
     $profileUtils = new CExportproProfile();
-    $obCond = new CAcritExportproCatalogCond();
+    $obCond = new CKitExportproCatalogCond();
     
-    CAcritExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $PROFILE["IBLOCK_ID"], $PROFILE["USE_SKU"] );
+    CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $PROFILE["IBLOCK_ID"], $PROFILE["USE_SKU"] );
     $boolCond = $obCond->Init(
         0,
         0,
@@ -317,7 +320,7 @@ function market_save(){
         $marketName = mb_convert_encoding( $marketName, "cp1251", "utf8" );
     }
 
-    CModule::IncludeModule( "acrit.exportpro" );
+    CModule::IncludeModule( "kit.exportpro" );
     $marketCategory = new CExportproMarketDB();
 
     $arFields = array(
@@ -361,7 +364,7 @@ function market_save(){
 
 function market_edit(){
     global $APPLICATION, $PROFILE, $marketId;
-    CModule::IncludeModule( "acrit.exportpro" );
+    CModule::IncludeModule( "kit.exportpro" );
     $marketCategory = new CExportproMarketDB();
     $marketCategory = $marketCategory->GetByID( $marketId );
     $APPLICATION->RestartBuffer();
@@ -379,11 +382,11 @@ function market_edit(){
 function calcSteps(){
     global $APPLICATION, $profileId;
     
-    CModule::IncludeModule( "acrit.exportpro" );
+    CModule::IncludeModule( "kit.exportpro" );
     
     $dbProfile = new CExportproProfileDB();
     $arProfile = $dbProfile->GetById( $profileId );
-    $elementsObj = new CAcritExportproElement( $arProfile );
+    $elementsObj = new CKitExportproElement( $arProfile );
     $oneProductTime = $elementsObj->CalcProcessXMLLoadingByOneProduct();
     if( $oneProductTime ){
         $maxExecutionTime = ini_get( "max_execution_time" );
@@ -709,7 +712,7 @@ function change_type(){
         ob_start();?>
         <?if( strlen( $types[$PROFILE["TYPE"]]["PORTAL_VALIDATOR"] ) > 0 ){?>
             <div style="float: left;">
-                <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/acrit.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
+                <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/kit.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
                 <input type="button" value="..." onclick="BtnClick()">
             </div>
             <div style="padding: 5px 0px 0px 300px;">
@@ -718,7 +721,7 @@ function change_type(){
             <div style="clear: both;"></div>
         <?}
         else{?>
-            <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/acrit.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
+            <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/kit.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
             <input type="button" value="..." onclick="BtnClick()">
         <?}?>
         <?$exportFilePath = ob_get_clean();
@@ -1043,8 +1046,8 @@ function change_type(){
                 <div id="PROFILE_XMLDATA_<?=$id?>_CONDITION" class="condition-block <?=$hideCondition?>">
                     <?
                     if( $field["USE_CONDITION"] == "Y" && CModule::IncludeModule( "catalog" ) ){
-                        $obCond = new CAcritExportproCatalogCond();
-                        CAcritExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $arProfile["IBLOCK_ID"], $arProfile["USE_SKU"] );
+                        $obCond = new CKitExportproCatalogCond();
+                        CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $arProfile["IBLOCK_ID"], $arProfile["USE_SKU"] );
                         $boolCond = $obCond->Init(
                             0,
                             0,

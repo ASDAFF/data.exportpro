@@ -1,14 +1,17 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
 
-\Bitrix\Main\Loader::includeModule( "acrit.exportpro" );
+\Bitrix\Main\Loader::includeModule( "kit.exportpro" );
 
 Loc::loadMessages( __FILE__ );
 
-class CAcritExportproLog{
-    public $logFilename = "/upload/acrit.exportpro/";
+class CKitExportproLog{
+    public $logFilename = "/upload/kit.exportpro/";
     private $profileId;
     private $session;
     
@@ -21,8 +24,8 @@ class CAcritExportproLog{
         $this->profileId = $profileId;
     }
     
-    public static function AcritDump( $dumpData, $clear = FALSE, $depth = 0 ){
-        $fileName = "acrit_exportpro_dump.txt";
+    public static function KitDump( $dumpData, $clear = FALSE, $depth = 0 ){
+        $fileName = "kit_exportpro_dump.txt";
         $file = $_SERVER["DOCUMENT_ROOT"]."/upload/".$fileName;
 
         $depthSign = "----";
@@ -55,7 +58,7 @@ class CAcritExportproLog{
                         file_put_contents( $file, $strResult, FILE_APPEND );
                         $strResult = "";
 
-                        self::AcritDump( $value, $clear, $nextDepth );
+                        self::KitDump( $value, $clear, $nextDepth );
                     }
                     elseif( is_null( $value ) ){
                         $strResult .= $strDepth.$key." = *NULL*\n";
@@ -99,7 +102,7 @@ class CAcritExportproLog{
     }
 
     public function Init( $profile ){
-        $sessionData = AcritExportproSession::GetSession( $profile["ID"] );
+        $sessionData = KitExportproSession::GetSession( $profile["ID"] );
 
         $sessionData["EXPORTPRO"]["LOG"][$profile["ID"]] = array(
             "IBLOCK" => 0,
@@ -164,41 +167,41 @@ class CAcritExportproLog{
         $this->logFilename = $this->logFilename."log_export_".$this->profileId.".txt";
         $sessionData["EXPORTPRO"]["LOG"][$profile["ID"]]["FILE"] = $this->logFilename;
         file_put_contents( $_SERVER["DOCUMENT_ROOT"].$this->logFilename, "" );
-        AcritExportproSession::SetSession( $profile["ID"], $sessionData );
+        KitExportproSession::SetSession( $profile["ID"], $sessionData );
     }
     
     public function IncIblcok(){
-        $sessionData = AcritExportproSession::GetSession( $this->profileId );
+        $sessionData = KitExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["IBLOCK"]++;
-        AcritExportproSession::SetSession( $this->profileId, $sessionData );
+        KitExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncSection(){
-        $sessionData = AcritExportproSession::GetSession( $this->profileId );
+        $sessionData = KitExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["SECTIONS"]++;
-        AcritExportproSession::SetSession( $this->profileId, $sessionData );
+        KitExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncProduct( $cnt = 0 ){
-        $sessionData = AcritExportproSession::GetSession( $this->profileId );
+        $sessionData = KitExportproSession::GetSession( $this->profileId );
         if( !intval( $cnt ) )
             $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS"]++;
         else
             $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS"] += $cnt;
         
-        AcritExportproSession::SetSession( $this->profileId, $sessionData );
+        KitExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncProductExport(){
-        $sessionData = AcritExportproSession::GetSession( $this->profileId );
+        $sessionData = KitExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS_EXPORT"]++;
-        AcritExportproSession::SetSession( $this->profileId, $sessionData );
+        KitExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncProductError(){
-        $sessionData = AcritExportproSession::GetSession( $this->profileId );
+        $sessionData = KitExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS_ERROR"]++;
-        AcritExportproSession::SetSession( $this->profileId, $sessionData );
+        KitExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function AddMessage( $message ){
@@ -217,7 +220,7 @@ class CAcritExportproLog{
         $dbProfile = new CExportproProfileDB();
         $arProfile = $dbProfile->GetByID( $profileID );
                   
-        $arSessionData = AcritExportproSession::GetAllSession( $profileID );
+        $arSessionData = KitExportproSession::GetAllSession( $profileID );
         $sessionData = array();
         if( !empty( $arSessionData ) ){
             $sessionData = $arSessionData[0];
@@ -246,7 +249,7 @@ class CAcritExportproLog{
                 GetMessage( "ACRIT_LOG_SEND_OFFERS_TERM" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_EXPORT"]."\n".
                 GetMessage( "ACRIT_LOG_SEND_OFFERS_ERROR" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_ERROR"]."\n".
                 GetMessage( "ACRIT_LOG_SEND_DATE" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["LAST_START_EXPORT"]."\n\n".
-                GetMessage( "ACRIT_LOG_PROFILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"]."/bitrix/admin/acrit_exportpro_edit.php?ID=".$profileID."\n".            
+                GetMessage( "ACRIT_LOG_PROFILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"]."/bitrix/admin/kit_exportpro_edit.php?ID=".$profileID."\n".            
                 GetMessage( "ACRIT_LOG_SEND_FILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"].$sessionData["EXPORTPRO"]["LOG"][$profileID]["FILE"];            
                 
                 $headers = "Content-type: text/plain; charset=".LANG_CHARSET;
@@ -263,7 +266,7 @@ class CAcritExportproLog{
         $dbProfile = new CExportproProfileDB();
         $arProfile = $dbProfile->GetByID( $profileID );
         
-        $arSessionData = AcritExportproSession::GetAllSession( $profileID );
+        $arSessionData = KitExportproSession::GetAllSession( $profileID );
         $sessionData = array();
         if( !empty( $arSessionData ) ){
             $sessionData = $arSessionData[0];

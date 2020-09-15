@@ -1,13 +1,16 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
 
-\Bitrix\Main\Loader::includeModule( "acrit.exportpro" );
+\Bitrix\Main\Loader::includeModule( "kit.exportpro" );
 
 Loc::loadMessages( __FILE__ );
 
-class CAcritExportproTools{
+class CKitExportproTools{
     public function RoundNumber( $number, $precision, $mode, $precision_default = false ){
         switch( $mode ){
             case "UP":

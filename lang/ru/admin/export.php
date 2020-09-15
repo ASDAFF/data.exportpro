@@ -1,4 +1,7 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 $MESS["export_save_err"] = "Ошибка сохранения профиля";
 $MESS["export_del_err"] = "Ошибка удаления профиля";
@@ -16,7 +19,7 @@ $MESS["parser_act_del_conf"] = "Удалить профиль экспорта?"
 $MESS["parser_act_copy"] = "Копировать";
 $MESS["PARSER_ADD_TITLE"] = "Добавить";
 $MESS["post_title"] = "Профили экспорта на торговые площадки";
-$MESS["ACRIT_EXPORTPRO_LIST_IMPORT_SUCCESS"] = "Профили успешно экспортированы<br><a href=\"/upload/acrit_exportpro/#FILENAME#\">/upload/acrit_exportpro/#FILENAME#</a>";
+$MESS["ACRIT_EXPORTPRO_LIST_IMPORT_SUCCESS"] = "Профили успешно экспортированы<br><a href=\"/upload/kit_exportpro/#FILENAME#\">/upload/kit_exportpro/#FILENAME#</a>";
 $MESS["ACRIT_EXPORTPRO_LIST_IMPORT_FAIL"] = "Экспорт профилей завершился неудачей";
 $MESS["ACRIT_EXPORTPRO_PROFILE_EXPORT_SHORT"] = "экспорт";
 $MESS["ACRIT_EXPORTPRO_PROFILE_LIST_EXPORT_TITLE"] = "Экспорт профилей";

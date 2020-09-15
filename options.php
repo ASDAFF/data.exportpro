@@ -1,5 +1,9 @@
 <?
-$moduleId = "acrit.exportpro";
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
+$moduleId = "kit.exportpro";
 
 
 $POST_RIGHT = $APPLICATION->GetGroupRight( $moduleId );
@@ -7,8 +11,7 @@ if( $POST_RIGHT >= "R" ){
 	IncludeModuleLangFile( $_SERVER["DOCUMENT_ROOT"].BX_ROOT."/modules/main/options.php" );
 	Cmodule::IncludeModule( $moduleId );
 	IncludeModuleLangFile( __FILE__ );
-    
-    AcritLicence::Show();
+	
     
 	$aTabs = array(
 		array(

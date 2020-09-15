@@ -1,14 +1,17 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
 
 \Bitrix\Main\Loader::includeModule( "catalog" );
-\Bitrix\Main\Loader::includeModule( "acrit.exportpro" );
+\Bitrix\Main\Loader::includeModule( "kit.exportpro" );
 
 Loc::loadMessages( __FILE__ );
 
-class CAcritExportproExport{
+class CKitExportproExport{
     private $profile;
     private $dbMan;
     static $fileExport;
@@ -37,12 +40,12 @@ class CAcritExportproExport{
 
     public function __construct( $profileID ){
         global $exportstep;
-        $this->lockDir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/acrit.exportpro/";
+        $this->lockDir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/";
         
-        $sessionData = AcritExportproSession::GetSession( $profileID );
+        $sessionData = KitExportproSession::GetSession( $profileID );
         
         $this->dbMan = new CExportproProfileDB();
-        $this->baseDir = $_SERVER["DOCUMENT_ROOT"]."/acrit.exportpro/";
+        $this->baseDir = $_SERVER["DOCUMENT_ROOT"]."/kit.exportpro/";
         $this->profile = $this->dbMan->GetByID( $profileID );
         
         self::$fileExport = $_SERVER["DOCUMENT_ROOT"].$this->profile["SETUP"]["URL_DATA_FILE"];
@@ -61,12 +64,12 @@ class CAcritExportproExport{
         $this->dynamicDownload = false;
         
         if( strlen( strstr( self::$fileExport, $this->baseDir ) ) > 0 ){
-            self::$fileExport = str_replace( $this->baseDir, $_SERVER["DOCUMENT_ROOT"]."/upload/acrit.exportpro/", self::$fileExport );
+            self::$fileExport = str_replace( $this->baseDir, $_SERVER["DOCUMENT_ROOT"]."/upload/kit.exportpro/", self::$fileExport );
             CheckDirPath( dirname( self::$fileExport )."/" );
             $this->dynamicDownload = true;
         }
         
-        AcritExportproSession::SetSession( $profileID, $sessionData );
+        KitExportproSession::SetSession( $profileID, $sessionData );
     }
 
     public function Export( $type = "", $cronpage = 0 ){ 
@@ -96,9 +99,9 @@ class CAcritExportproExport{
             if( file_exists( self::$fileExport ) )
                 unlink( self::$fileExport );
         }
-        AcritExportproSession::Init( $exportstep );
+        KitExportproSession::Init( $exportstep );
 		                                             
-		$log = new CAcritExportproLog( $this->profile["ID"] );
+		$log = new CKitExportproLog( $this->profile["ID"] );
         
         // Check on export process is already running
         if( $this->isLock() && ( !$exportstep || ( $exportstep == 1 ) ) ){
@@ -133,8 +136,8 @@ class CAcritExportproExport{
         $profileUtils->GetProfileData();
         
         if( CModule::IncludeModule( "catalog" ) ){
-            $obCond = new CAcritExportproCatalogCond();
-            CAcritExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $this->profile["IBLOCK_ID"], $this->profile["USE_SKU"] );
+            $obCond = new CKitExportproCatalogCond();
+            CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $this->profile["IBLOCK_ID"], $this->profile["USE_SKU"] );
 		    $obCond->Init( BT_COND_MODE_GENERATE, 0, array() );                                                                      
             $this->profile["EVAL_FILTER"] = $obCond->Generate( $this->profile["CONDITION"], array( "FIELD" => '$GLOBALS["CHECK_COND"]' ) );
             $this->PrepareFieldFilter();
@@ -151,7 +154,7 @@ class CAcritExportproExport{
             }
         }        
         
-        $elementsObj = new CAcritExportproElement( $this->profile );
+        $elementsObj = new CKitExportproElement( $this->profile );
         $elementsObj->SetCronPage($cronpage);
         $this->Lock();
             
@@ -161,7 +164,7 @@ class CAcritExportproExport{
                 if( file_exists( self::$fileExport ) )
                     unlink( self::$fileExport );
                 
-                AcritExportproSession::DeleteSession( $this->profile["ID"] );
+                KitExportproSession::DeleteSession( $this->profile["ID"] );
             }
             
             if( $cronrun ){
@@ -175,11 +178,11 @@ class CAcritExportproExport{
                 else{
                     unlink( self::$fileExport );
                     $threads = new Threads();
-                    $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+                    $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
                     if( isset( $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] ) 
                         && is_array( $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] ) ){
                         $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] = array();
-                        AcritExportproSession::SetSession( $this->profile["ID"] , $sessionData );
+                        KitExportproSession::SetSession( $this->profile["ID"] , $sessionData );
                     }
                     
                     $tCnt = intval( $this->profile["SETUP"]["THREADS"] ) > 0 ? intval( $this->profile["SETUP"]["THREADS"] ) : 1;
@@ -187,7 +190,7 @@ class CAcritExportproExport{
                     
                     $allPages = $elementsObj->Process( 1, $cronrun, $this->profile["SETUP"]["FILE_TYPE"], self::$fileExport, $this->profile["SETUP"]["URL_DATA_FILE"], $marketCategory );
 
-                    $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+                    $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
                     $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] = array();
                     $steps = $sessionData["EXPORTPRO"]["LOG"][$this->profile["ID"]]["STEPS"];
                     $steps2 = $steps / $tCnt + ( ( $steps % $tCnt ) == 0 ? 0 : 1 );
@@ -198,7 +201,7 @@ class CAcritExportproExport{
                                 break;
                                 
                             $threadsId = $threads->newThread(
-                                $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/acrit.exportpro/tools/cronrun_proc.php",
+                                $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/kit.exportpro/tools/cronrun_proc.php",
                                 array(
                                     "documentRoot" => $_SERVER["DOCUMENT_ROOT"],
                                     "profileId" => $this->profile["ID"],
@@ -274,14 +277,14 @@ class CAcritExportproExport{
                     self::$fileExport = self::$firstStepFilename;
                 }
 				
-				$basePatern =  "Y-m-dTh:i:s±h:i";
-				$paternCharset = CAcritExportproTools::GetStringCharset( $basePatern );
+				$basePatern =  "Y-m-dTh:i:sÂ±h:i";
+				$paternCharset = CKitExportproTools::GetStringCharset( $basePatern );
 				
 				if( $paternCharset == "cp1251" ){
 					$basePatern = $APPLICATION->ConvertCharset( $basePatern, "cp1251", "utf8" );
 				}
 								
-				$dateGenerate = ( $this->profile["DATEFORMAT"] == $basePatern ) ? CAcritExportproTools::GetYandexDateTime( date( "d.m.Y H:i:s" ) ) : date( str_replace( "_", " ", $this->profile["DATEFORMAT"] ), time() );                
+				$dateGenerate = ( $this->profile["DATEFORMAT"] == $basePatern ) ? CKitExportproTools::GetYandexDateTime( date( "d.m.Y H:i:s" ) ) : date( str_replace( "_", " ", $this->profile["DATEFORMAT"] ), time() );
 				                                         
                 $baseDeliveryCost = $this->profile["XMLDATA"]["BASE_DELIVERY_COST"]["VALUE"];
                 if( $this->profile["XMLDATA"]["BASE_DELIVERY_COST"]["TYPE"] == "const" ){
@@ -363,14 +366,14 @@ class CAcritExportproExport{
                 
                 $this->dbMan->Update( $this->profile["ID"], $this->profile );
                 $this->Unlock();
-                AcritExportproSession::DeleteSession( $this->profile["ID"] );
+                KitExportproSession::DeleteSession( $this->profile["ID"] );
 
                 if( $this->profile["USE_COMPRESS"] == "Y" ){
                     if( file_exists( $this->originalName ) ){
                         $zipSavePath = $this->originalName;
                     }
-                    elseif( file_exists( $_SERVER["DOCUMENT_ROOT"]."/upload/acrit.exportpro/".$this->originalNamePath ) ){
-                        $zipSavePath = $_SERVER["DOCUMENT_ROOT"]."/upload/acrit.exportpro/".$this->originalNamePath;
+                    elseif( file_exists( $_SERVER["DOCUMENT_ROOT"]."/upload/kit.exportpro/".$this->originalNamePath ) ){
+                        $zipSavePath = $_SERVER["DOCUMENT_ROOT"]."/upload/kit.exportpro/".$this->originalNamePath;
                     }
                     elseif( file_exists( $_SERVER["DOCUMENT_ROOT"]."/upload".$this->originalNamePath ) ){
                         $zipSavePath = $_SERVER["DOCUMENT_ROOT"]."/upload".$this->originalNamePath;
@@ -431,9 +434,9 @@ class CAcritExportproExport{
             if( file_exists( self::$fileExport ) )
                 unlink( self::$fileExport );
         }
-        AcritExportproSession::Init( $exportstep );
+        KitExportproSession::Init( $exportstep );
 
-        $log = new CAcritExportproLog( $this->profile["ID"] );
+        $log = new CKitExportproLog( $this->profile["ID"] );
 
         // Check on export process is already running
         if( $this->isLock() && ( !$exportstep || ( $exportstep == 1 ) ) ){
@@ -468,14 +471,14 @@ class CAcritExportproExport{
         $profileUtils->GetProfileData();
 
         if( CModule::IncludeModule( "catalog" ) ){
-            $obCond = new CAcritExportproCatalogCond();
-            CAcritExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $this->profile["IBLOCK_ID"], $this->profile["USE_SKU"] );
+            $obCond = new CKitExportproCatalogCond();
+            CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $this->profile["IBLOCK_ID"], $this->profile["USE_SKU"] );
             $obCond->Init( BT_COND_MODE_GENERATE, 0, array() );
             $this->profile["EVAL_FILTER"] = $obCond->Generate( $this->profile["CONDITION"], array( "FIELD" => '$GLOBALS["CHECK_COND"]' ) );
             $this->PrepareFieldFilter();
         }
          
-        $elementsObj = new CAcritCML2ExportElement( $this->profile );
+        $elementsObj = new CKitCML2ExportElement( $this->profile );
 
         $elementsObj->SetCronPage( $cronpage );
         $this->Lock();
@@ -486,7 +489,7 @@ class CAcritExportproExport{
                 if( file_exists( self::$fileExport ) )
                     unlink( self::$fileExport );
 
-                AcritExportproSession::DeleteSession( $this->profile["ID"] );
+                KitExportproSession::DeleteSession( $this->profile["ID"] );
             }
 
             if( $cronrun ){
@@ -500,18 +503,18 @@ class CAcritExportproExport{
                 else{
                     unlink( self::$fileExport );
                     $threads = new Threads();
-                    $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+                    $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
                     if( isset( $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] )
                         && is_array( $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] ) ){
                         $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] = array();
-                        AcritExportproSession::SetSession( $this->profile["ID"] , $sessionData );
+                        KitExportproSession::SetSession( $this->profile["ID"] , $sessionData );
                     }
 
                     $tCnt = intval( $this->profile["SETUP"]["THREADS"] ) > 0 ? intval( $this->profile["SETUP"]["THREADS"] ) : 1;
                     $allPages = $elementsObj->Process( 1, $cronrun, $this->profile["SETUP"]["FILE_TYPE"], self::$fileExport, $this->profile["SETUP"]["URL_DATA_FILE"], $marketCategory );
                     $arStages = $elementsObj->GetAllStage();
 
-                    $sessionData = AcritExportproSession::GetSession( $this->profile["ID"] );
+                    $sessionData = KitExportproSession::GetSession( $this->profile["ID"] );
                     $sessionData["EXPORTPRO"]["THREAD"][$this->profile["ID"]] = array();
 
                     foreach( $arStages as $stage ){
@@ -536,7 +539,7 @@ class CAcritExportproExport{
                                     break;
 
                                 $threadsId = $threads->newThread(
-                                    $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/acrit.exportpro/tools/cronrun_proc.php",
+                                    $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/kit.exportpro/tools/cronrun_proc.php",
                                     array(
                                         "documentRoot" => $_SERVER["DOCUMENT_ROOT"],
                                         "profileId" => $this->profile["ID"],
@@ -627,14 +630,14 @@ class CAcritExportproExport{
 
                 $this->dbMan->Update( $this->profile["ID"], $this->profile );
                 $this->Unlock();
-                AcritExportproSession::DeleteSession( $this->profile["ID"] );
+                KitExportproSession::DeleteSession( $this->profile["ID"] );
 
                 if( $this->profile["USE_COMPRESS"] == "Y" ){
                     if( file_exists( $this->originalName ) ){
                         $zipSavePath = $this->originalName;
                     }
-                    elseif( file_exists( $_SERVER["DOCUMENT_ROOT"]."/upload/acrit.exportpro/".$this->originalNamePath ) ){
-                        $zipSavePath = $_SERVER["DOCUMENT_ROOT"]."/upload/acrit.exportpro/".$this->originalNamePath;
+                    elseif( file_exists( $_SERVER["DOCUMENT_ROOT"]."/upload/kit.exportpro/".$this->originalNamePath ) ){
+                        $zipSavePath = $_SERVER["DOCUMENT_ROOT"]."/upload/kit.exportpro/".$this->originalNamePath;
                     }
                     elseif( file_exists( $_SERVER["DOCUMENT_ROOT"]."/upload".$this->originalNamePath ) ){
                         $zipSavePath = $_SERVER["DOCUMENT_ROOT"]."/upload".$this->originalNamePath;
@@ -1031,7 +1034,7 @@ class CAcritExportproExport{
     }
     
     private function PrepareFieldFilter(){
-        $obCond = new CAcritExportproCatalogCond();
+        $obCond = new CKitExportproCatalogCond();
         $obCond->Init( BT_COND_MODE_GENERATE, 0, array() );
 
         foreach( $this->profile["XMLDATA"] as $id => $field ){

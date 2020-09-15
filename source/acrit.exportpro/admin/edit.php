@@ -586,7 +586,7 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
 						//	  text: '<?=GetMessage( "ACRIT_EXPORTPRO_MARKET_CATEGORY_BUTTON_CLOSE" );?>',
                         //	  className: 'webform-button-link-cancel',
                         //	  events: {click: function(){
-						//		 this.popupWindow.close(); // закрытие окна
+						//		 this.popupWindow.close(); // Р·Р°РєСЂС‹С‚РёРµ РѕРєРЅР°
                         //	  }}
                         //   })
                     ],

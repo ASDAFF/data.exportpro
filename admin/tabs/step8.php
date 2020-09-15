@@ -1,10 +1,14 @@
 <?
-    IncludeModuleLangFile(__FILE__);
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
+IncludeModuleLangFile(__FILE__);
 ?>
 <div id="PROFILE_CONDITION">
 <?                          
-    $obCond = new CAcritExportproCatalogCond();
-    CAcritExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock(
+    $obCond = new CKitExportproCatalogCond();
+    CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock(
         $arProfile["IBLOCK_ID"],
         $arProfile["USE_SKU"]
     );

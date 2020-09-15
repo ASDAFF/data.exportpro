@@ -1,5 +1,8 @@
 <?if( !check_bitrix_sessid() ) return;?>
 <?echo CAdminMessage::ShowNote( GetMessage( "ACRIT_EXPORTPRO_MODULE" ) );
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 IncludeModuleLangFile(__FILE__);
 ?>
@@ -16,7 +19,7 @@ IncludeModuleLangFile(__FILE__);
                 <input type="submit" class="adm-btn adm-btn-save" value="<?=GetMessage( "MOD_BACK" )?>" />
             </form>  
 			<form action="/bitrix/admin/partner_modules.php" method="GET">
-				<input type="hidden" name="id" value="acrit.exportpro">
+				<input type="hidden" name="id" value="kit.exportpro">
                 <input type="hidden" name="lang" value="<?=LANGUAGE_ID?>">
                 <input type="hidden" name="install" value="Y">
                 <input type="hidden" name="sessid" value="<?=bitrix_sessid()?>">

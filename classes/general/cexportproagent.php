@@ -1,9 +1,12 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
 
 class CExportproAgent{
     public static function StartExport( $profileId ){
-        AcritExportproSession::Init( 0 );
-        AcritExportproSession::DeleteSession( $profileId );
+        KitExportproSession::Init( 0 );
+        KitExportproSession::DeleteSession( $profileId );
         $arAgent = CAgent::GetList(
             array(),
             array(
@@ -20,7 +23,7 @@ class CExportproAgent{
             }
         }
         
-        $export = new CAcritExportproExport( intval( $profileId ) );
+        $export = new CKitExportproExport( intval( $profileId ) );
         $export->Export( "agent" );
         return __CLASS__."::".__FUNCTION__."(".$profileId.");";
     }
@@ -61,7 +64,7 @@ class CExportproAgent{
                 
                 $agent_ID = CAgent::AddAgent(
                     "CExportproAgent::StartExport(".$profileID.");",
-                    "acrit.exportpro",
+                    "kit.exportpro",
                     "N",
                     $agent_period,
                     "",
@@ -98,9 +101,9 @@ class CExportproAgent{
 
             $cfgData = preg_replace( "#.*bitrix\/modules\/main\/tools\/cron_events.php(\r)*\n#i", "", $cfgData);
             $cfgData = preg_replace( "#.*bitrix\/modules\/main\/tools\/cron_events.php#i", "", $cfgData);
-            $cfgData = preg_replace( "#.*bitrix\/modules\/acrit.exportpro\/tools\/cron_events.php(\r)*\n#i", "", $cfgData);
-            $cfgData = preg_replace( "#.*bitrix\/modules\/acrit.exportpro\/tools\/cron_events.php#i", "", $cfgData);
-            $cronTask = "* * * * * php -f {$_SERVER["DOCUMENT_ROOT"]}/bitrix/modules/acrit.exportpro/tools/cron_events.php";
+            $cfgData = preg_replace( "#.*bitrix\/modules\/kit.exportpro\/tools\/cron_events.php(\r)*\n#i", "", $cfgData);
+            $cfgData = preg_replace( "#.*bitrix\/modules\/kit.exportpro\/tools\/cron_events.php#i", "", $cfgData);
+            $cronTask = "* * * * * php -f {$_SERVER["DOCUMENT_ROOT"]}/bitrix/modules/kit.exportpro/tools/cron_events.php";
             if( PHP_EOL == substr( $cfgData, "-".strlen( PHP_EOL ) ) ){
                $cfgData .= $cronTask.PHP_EOL;
             }
@@ -119,7 +122,7 @@ class CExportproAgent{
         if( $profileID > 0 ){
             CAgent::RemoveAgent(
                 "CExportproAgent::StartExport(".$profileID.");",
-                "acrit.exportpro"
+                "kit.exportpro"
             );
         }
     }
@@ -189,7 +192,7 @@ class CExportproAgent{
 
 class CExportproCron{
     public static function StartExport( $profileId ){
-        $export = new CAcritExportproExport( intval( $profileId ) );
+        $export = new CKitExportproExport( intval( $profileId ) );
         $export->Export( "cron" );
         $arAgent = CAgent::GetList(
             array(),
@@ -280,14 +283,14 @@ class CExportproCron{
 		}
 
 		foreach( $cron_list as $id => $cronRecord ){
-            if( strpos( $cronRecord, "/acrit.exportpro/tools/cronrun.php $profileID" ) ){
+            if( strpos( $cronRecord, "/kit.exportpro/tools/cronrun.php $profileID" ) ){
                 unset( $cron_list[$id] );
             }
         }
 
         if( !$delete_cron ){
 			foreach( $cronTime as $strTime ){
-				$cron_list[] = "$strTime php -f {$_SERVER["DOCUMENT_ROOT"]}/bitrix/modules/acrit.exportpro/tools/cronrun.php $profileID \"{$_SERVER["DOCUMENT_ROOT"]}\"";
+				$cron_list[] = "$strTime php -f {$_SERVER["DOCUMENT_ROOT"]}/bitrix/modules/kit.exportpro/tools/cronrun.php $profileID \"{$_SERVER["DOCUMENT_ROOT"]}\"";
 			}
 		}
 

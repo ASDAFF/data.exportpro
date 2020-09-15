@@ -1,5 +1,9 @@
 <?
-$MESS["ACRIT_EXPORTPRO_MODULE"] = "Модуль acrit.exportpro установлен";
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
+$MESS["ACRIT_EXPORTPRO_MODULE"] = "Модуль kit.exportpro установлен";
 $MESS["ACRIT_EXPORTPRO_INSTRUCTIONS"] = "Array";
 $MESS["ACRIT_EXPORTPRO_INSTRUCTIONS_LINK"] = "http://www.acrit-studio.ru/market/";
 $MESS["ACRIT_EXPORTPRO_ABOUT"] = "Array";

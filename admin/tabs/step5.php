@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 IncludeModuleLangFile( __FILE__ );
 
 $options = $profileUtils->createFieldset2( $arProfile["IBLOCK_ID"], true );
@@ -369,8 +373,8 @@ $idCnt = 0;
                             </div>
                             <div id="PROFILE_XMLDATA_<?=$id?>_CONDITION" class="condition-block <?=$hideCondition?>">
                                 <?if( $field["USE_CONDITION"] == "Y" && CModule::IncludeModule( "catalog" ) ){
-                                    $obCond = new CAcritExportproCatalogCond();
-                                    CAcritExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $arProfile["IBLOCK_ID"], $arProfile["USE_SKU"] );
+                                    $obCond = new CKitExportproCatalogCond();
+                                    CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $arProfile["IBLOCK_ID"], $arProfile["USE_SKU"] );
                                     $boolCond = $obCond->Init(
                                         0,
                                         0,

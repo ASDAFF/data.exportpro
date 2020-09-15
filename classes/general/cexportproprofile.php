@@ -255,8 +255,8 @@ class CExportproProfile{
     }
 
     function createFieldset(){
-        $ibFields = array( CAcritExportproCondCtrlIBlockFields::GetControlShow() );
-        $ibProps = CAcritExportproCondCtrlIBlockProps::GetControlShow();
+        $ibFields = array( CKitExportproCondCtrlIBlockFields::GetControlShow() );
+        $ibProps = CKitExportproCondCtrlIBlockProps::GetControlShow();
         $ibFields = array_merge( $ibFields, $ibProps );
         $options = $this->createFieldsetRecursive( $ibFields );
 

@@ -2,7 +2,7 @@
 
 IncludeModuleLangFile(__FILE__);
 
-class AcritLicence{
+class KitLicence{
     public static function Show(){
         IncludeModuleLangFile( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/interface/prolog_main_admin.php" );
         $supportFinishDate = COption::GetOptionString( "main", "~support_finish_date", "" );

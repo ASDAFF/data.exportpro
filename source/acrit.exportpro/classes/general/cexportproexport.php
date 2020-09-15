@@ -274,7 +274,7 @@ class CAcritExportproExport{
                     self::$fileExport = self::$firstStepFilename;
                 }
 				
-				$basePatern =  "Y-m-dTh:i:s±h:i";
+				$basePatern =  "Y-m-dTh:i:sÂ±h:i";
 				$paternCharset = CAcritExportproTools::GetStringCharset( $basePatern );
 				
 				if( $paternCharset == "cp1251" ){

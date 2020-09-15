@@ -1,4 +1,8 @@
 <?
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 $documentRoot = $_SERVER["DOCUMENT_ROOT"];
 
 $filePath = $_SERVER["REQUEST_URI"];
@@ -13,8 +17,8 @@ $document = false;
 if( file_exists( $documentRoot.$filePath ) ){
     $document = $documentRoot.$filePath;
 }
-elseif( file_exists( $documentRoot."/upload/acrit.exportpro/".$filePath ) ){
-    $document = $documentRoot."/upload/acrit.exportpro/".$filePath;
+elseif( file_exists( $documentRoot."/upload/kit.exportpro/".$filePath ) ){
+    $document = $documentRoot."/upload/kit.exportpro/".$filePath;
 }
 elseif( file_exists( $documentRoot."/upload/".$filePath ) ){
     $document = $documentRoot."/upload/".$filePath;

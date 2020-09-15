@@ -1,5 +1,9 @@
 <?php
-$moduleID = "acrit.exportpro";
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
+$moduleID = "kit.exportpro";
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/$moduleID/include.php" );
 
@@ -14,9 +18,7 @@ if( !CModule::IncludeModule( "iblock" ) ){
 IncludeModuleLangFile( __FILE__ );
 
 if( !$_REQUEST["export_import"] ){
-    require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
-    
-    AcritLicence::Show();?>
+    require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" ); ?>
     <div class="adm-detail-content-wrap">
         <div class="adm-detail-content">
             <div class="adm-detail-content-item-block" style="height: auto; overflow-y: visible;">
@@ -47,9 +49,7 @@ if( !$_REQUEST["export_import"] ){
 if( $_REQUEST["export_import"] == "export" ){
     //  file selection
     if( $_REQUEST["step"] != 2 ){
-        require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
-        AcritLicence::Show();
-        ?>
+        require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" ); ?>
         <div class="adm-detail-content-wrap">
             <div class="adm-detail-content">
                 <div class="adm-detail-content-item-block" style="height: auto; overflow-y: visible;">
@@ -66,7 +66,7 @@ if( $_REQUEST["export_import"] == "export" ){
                                     <input type="hidden" name="export_import" value="export">
                                     <input type="hidden" name="step" value="2">
                                     <br><br>
-                                    <a href="/bitrix/admin/acrit_exportpro_export.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
+                                    <a href="/bitrix/admin/kit_exportpro_export.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
                                     <input type="submit" class="adm-btn-save" value="<?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
                                 </form>
                                 <br><br>
@@ -97,7 +97,7 @@ if( $_REQUEST["export_import"] == "export" ){
     }
     //  show table & export
     else{
-        $sTableID = "tbl_acritprofile";
+        $sTableID = "tbl_kitprofile";
         
         function CheckFilter(){
             global $FilterArr, $lAdmin;
@@ -317,14 +317,13 @@ if( $_REQUEST["export_import"] == "export" ){
             }
         }
         
-        AcritLicence::Show();        
         if( strlen( $directMessage ) > 0 ){
             CAdminMessage::ShowMessage( array( "MESSAGE" => $directMessage, "TYPE" => "OK", "HTML" => true ) );
         }
         $lAdmin->DisplayList();
         ?>
         <br>
-        <a href="/bitrix/admin/acrit_exportpro_list.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST" )?></a>&nbsp;&nbsp;&nbsp;
+        <a href="/bitrix/admin/kit_exportpro_list.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST" )?></a>&nbsp;&nbsp;&nbsp;
         
         <?
     }
@@ -332,7 +331,6 @@ if( $_REQUEST["export_import"] == "export" ){
 
 if( $_REQUEST["export_import"] == "import" ){
     require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
-    AcritLicence::Show();
         
     if( $_REQUEST["step"] != 2 ){?>
         <div class="adm-detail-content-wrap">
@@ -351,7 +349,7 @@ if( $_REQUEST["export_import"] == "import" ){
                                     <input type="hidden" name="export_import" value="import">
                                     <input type="hidden" name="step" value="2">
                                     <br><br>
-                                    <a href="/bitrix/admin/acrit_exportpro_export.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
+                                    <a href="/bitrix/admin/kit_exportpro_export.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
                                     <input type="submit" class="adm-btn-save" value="<?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
                                 </form>
                                 <br><br>
@@ -409,7 +407,7 @@ if( $_REQUEST["export_import"] == "import" ){
         }
         ?>
             <br>
-            <a href="/bitrix/admin/acrit_exportpro_list.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST" )?></a>
+            <a href="/bitrix/admin/kit_exportpro_list.php" class="adm-btn"><?=GetMessage( "ACRIT_EXPORTPRO_PROFILE_LIST" )?></a>
         <?
     }
 }?>

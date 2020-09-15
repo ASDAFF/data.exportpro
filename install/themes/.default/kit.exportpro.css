@@ -1,5 +1,9 @@
-.adm-main-menu-item.adm-acrit .adm-main-menu-item-icon {
-    background: url("images/acrit/acrit.png") no-repeat 17px 6px;
+/*
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
+.adm-main-menu-item.adm-kit .adm-main-menu-item-icon {
+    background: url("images/kit/kit.png") no-repeat 17px 6px;
     height: 45px;
     position: relative;
     z-index: 2;
@@ -87,7 +91,7 @@
 #step12 #market_category_data_ebay .field-edit,
 #step13 #market_category_data_ozon .field-edit,
 #step20 #market_category_data .field-edit {
-    background: url('images/acrit/exportpro/bx-admin-sprite-big.png') -3px -950px;
+    background: url('images/kit/exportpro/bx-admin-sprite-big.png') -3px -950px;
     width: 26px;
     height: 25px;
     display: inline-block;

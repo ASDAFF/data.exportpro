@@ -1,12 +1,16 @@
 <?php
+/**
+ * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 use Bitrix\Main\Localization\Loc;
 Loc::loadMessages( __FILE__ );
 
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/update_client.php" );
 
 class CExportproInformer{
-    private static $moduleId = "acrit.exportpro";
-    private static $modulePrefix = "acrit";
+    private static $moduleId = "kit.exportpro";
+    private static $modulePrefix = "kit";
     private static $timeExpire = 2592000;
     
     private function GetSiteInfo(){
