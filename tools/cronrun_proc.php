@@ -17,7 +17,7 @@ if( $params = Threads::getParams() ){
     $_SERVER["DOCUMENT_ROOT"] = $DOCUMENT_ROOT = $params["documentRoot"];
     require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php" );
     Cmodule::IncludeModule( "kit.exportpro" );
-    $export = new CAcritExportproExport( intval( $params["profileId"] ) );
+    $export = new CKitExportproExport( intval( $params["profileId"] ) );
     $export->Export( "cron", $params["cronPage"] );
 }
 ?>

@@ -15,6 +15,6 @@ $_SERVER["DOCUMENT_ROOT"] = $DOCUMENT_ROOT = $documentRoot;
 require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php" );
 
 CModule::IncludeModule( "kit.exportpro" );
-AcritExportproSession::Init( 0 );
-AcritExportproSession::DeleteSession( $profileId );
+KitExportproSession::Init( 0 );
+KitExportproSession::DeleteSession( $profileId );
 CExportproCron::StartExport( $profileId );
