@@ -149,11 +149,6 @@ class kit_exportpro extends CModule{
             return false;
         }       
         unset( $arJqueryExt );
-        
-        $licenceDB = $DB->Query( "SELECT * FROM b_option WHERE `MODULE_ID`='{$this->MODULE_ID}' AND `NAME`='~bsm_stop_date'" );
-        if( $licenceDB->Fetch() ){
-            $DB->Query( "DELETE FROM b_option WHERE `MODULE_ID`='{$this->MODULE_ID}' AND `NAME`='~bsm_stop_date'" );
-        }
 
         if( !isset( $step ) || ( $step < 1 ) ){
             $APPLICATION->IncludeAdminFile( GetMessage( "KIT_EXPORTPRO_RECOMMENDED" ), $DOCUMENT_ROOT."/bitrix/modules/{$this->MODULE_ID}/install/step.php" );
@@ -200,7 +195,6 @@ class kit_exportpro extends CModule{
             if( $_REQUEST["savedata"] != "Y" ){
                 $this->UnInstallDB();
             }
-            $DB->Query( "DELETE FROM b_option WHERE `MODULE_ID`='{$this->MODULE_ID}' AND `NAME`='~bsm_stop_date'" );
             $APPLICATION->IncludeAdminFile( GetMessage( "MOD_UNINST_OK" ), $DOCUMENT_ROOT."/bitrix/modules/{$this->MODULE_ID}/install/unstep2.php" );
         }
     }

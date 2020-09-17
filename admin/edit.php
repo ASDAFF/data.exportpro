@@ -436,7 +436,7 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
         $aMenu[] = array(
             "TEXT" => GetMessage( "KIT_EXPORTPRO_RUN" ),
             "TITLE" => GetMessage( "KIT_EXPORTPRO_RUN" ),
-            "LINK" => "/bitrix/tools/kit.exportpro/kit_exportpro.php?ID=".$ID,
+            "LINK" => "kit_exportpro.php?ID=".$ID,
             "ICON" => "btn_start_catalog"
         );
     }
