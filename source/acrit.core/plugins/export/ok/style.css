@@ -1,0 +1,15 @@
+.acrit-exp-tab-albums-table-input-cell {
+	padding-right: 16px;
+}
+.acrit-exp-tab-albums-table-input {
+	width: 100%;
+}
+.acrit-exp-tab-albums-table-up,
+.acrit-exp-tab-albums-table-down {
+	border-bottom: 1px dashed;
+}
+.acrit-exp-tab-albums-table-up:hover,
+.acrit-exp-tab-albums-table-down:hover {
+	text-decoration: none !important;
+	border-bottom: none;
+}

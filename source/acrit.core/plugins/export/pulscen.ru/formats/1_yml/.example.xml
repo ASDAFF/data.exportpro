@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog>
+	<shop>
+		<url>http://mysite.ru</url>
+		<currencies>
+			<currency id="RUR"/>
+			<currency id="USD"/>
+			<currency id="EUR"/>
+		</currencies>
+		<categories>
+			<category id="1">Часы</category>
+			<category id="2" parentId="1">Наручные женские часы</category>
+			<category id="3" parentId="1">Наручные мужские часы</category>
+		</categories>
+		<offers>
+			<offer id="1" available="true" >
+				<url>http://mysite.ru/product_page.asp?pid=12348</url>
+				<price>699.54</price>
+				<measure_unit>шт.</measure_unit>
+				<currencyId>USD</currencyId>
+				<categoryId>2</categoryId>
+				<picture>http://mysite.ru/img/device12345.jpg</picture>
+				<delivery>false</delivery>
+				<name> Золотые наручные часы </name>
+				<announce> Регулируемый ремешок тесьма с металлической застежкой </announce>
+				<min_qty>1</min_qty>       
+				<qty_measure_unit>шт.</qty_measure_unit>
+				<description> Изящные золотые часы </description>
+				<sales_notes> Необходима предоплата </sales_notes>
+				<rubricId>https://www.pulscen.ru/price/332302-naruchnye-chasy<rubricId>
+			</offer>
+			<offer id="2" available="true" >
+				<url>http://mysite.ru/product_page.asp?pid=12351</url>
+				<price>700</price>
+				<is_exact_price>false</is_exact_price>
+				<price_max>1000</price_max>
+				<measure_unit>шт.</measure_unit>
+				<currencyId>USD</currencyId>
+				<categoryId>3</categoryId>
+				<picture>http://mysite.ru/img/device12346.jpg</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>300</local_delivery_cost>
+				<typePrefix>Часы наручные мужские</typePrefix>         
+				<vendor> Longines </vendor>
+				<model> A1234485B </model>
+				<announce> Классические мужские часы с кожаным ремешком </announce>
+				<description> Классические механические мужские часы с автоподзаводом на кожаном ремешке </description>
+				<min_qty>1</min_qty>       
+				<qty_measure_unit>шт.</qty_measure_unit>
+				<sales_notes> Необходима предоплата </sales_notes>
+			</offer> 
+			<offer id="3" available="false" >
+				<url>http://mysite.ru/product_page.asp?pid=15570</url>
+				<oldprice>850</oldprice>
+				<price>700</price>
+				<discount_expires_at>20.02.2015</discount_expires_at>
+				<measure_unit>шт.</measure_unit>
+				<currencyId>USD</currencyId>
+				<categoryId>2</categoryId>
+				<picture>http://mysite.ru/build.strojmir/200806/10180545.html/02.jpg</picture>
+				<picture>http://mysite.ru/ui/10213852/image/17-1.jpg</picture>
+				<picture>http://mysite.ru/images/foto/c/0/apps/4/87/4087503_purple-decoration-25.jpg</picture>
+				<picture>http://mysite.ru/uploads/posts/2008-11/1225613551_3.jpg</picture>
+				<picture>http://mysite.ru/imgcache/64104.jpg</picture>
+				<delivery_field>По согласованию с поставщиком</delivery_field>
+				<name> Женские наручные часы Longines A1211157B </name>
+				<announce> Механические женские наручные часы на кожаном ремешке </announce>
+				<description> Элегантные механические женские наручные часы с автоподзаводом на кожаном ремешке </description>
+				<sales_notes> Необходима предоплата </sales_notes>
+				<min_qty>1</min_qty>       
+				<qty_measure_unit>шт.</qty_measure_unit>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>

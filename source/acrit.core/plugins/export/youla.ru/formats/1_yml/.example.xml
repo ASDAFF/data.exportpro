@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<yml_catalog xmlns="http://webmaster.yandex.ru/schemas/feed/realty/2010-06">
+  <shop>
+    <offers>
+      <generation-date>2019-08-14 12:52:19</generation-date>
+      <offer id="924965116">
+        <url>https://youla.ru/moskva/dom-dacha/divany-kresla/divan-2kh-spalnyi-ievroknizhka-5d2b2e482aecd6a9c6536dee</url>
+        <youlaCategoryId>4</youlaCategoryId>
+        <youlaSubcategoryId>407</youlaSubcategoryId>
+		<divany_kresla_tip>9412</divany_kresla_tip>
+        <address>Москва, ш. Варшавское, д. 33</address>
+        <price>8000</price>
+        <phone>8 968 917-30-66</phone>
+        <name>Диван 2-х спальный еврокнижка</name>
+        <price>8000</price>
+		<managerName>Андрей</managerName>
+        <picture>https://static.am/special_tmp/citydivan/4790587581.jpg</picture>
+        <picture>https://static.am/special_tmp/citydivan/4790587591.jpg</picture>
+        <picture>https://static.am/special_tmp/citydivan/4790587629.jpg</picture>
+        <picture>https://static.am/special_tmp/citydivan/4790587654.jpg</picture>
+        <picture>https://static.am/special_tmp/citydivan/4790587738.jpg</picture>
+        <description><![CDATA[Диван выдвижной, в хорошем состоянии, удобный механизм еврокнижка с ящиком для белья, чехлы подушек на молниях, их можно стирать. метро Беляево.]]></description>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>

@@ -1,0 +1,626 @@
+34: Advertising
+827: Agriculture
+1313: Automobiles
+13583: Clothing, Shoes & Accessories
+13585: Communication & Utilities
+21092: Computers & High Tech
+18789: eBayana
+13587: Food & Beverage
+39: Gas & Oil
+875: Government
+21136: Health & Beauty
+170068: Hotel & Motel
+13595: Household
+165254: Jewelry & Watches
+165255: Musical Instruments
+21097: Pets
+849: Restaurants & Fast Food
+13598: Retail Stores
+36: Soda
+13617: Tires
+13623: Merchandise & Memorabilia
+171180: Price Guides & Publications
+165266: Other Collectible Ads
+1335: Animals
+165267: Amphibians & Reptiles
+10811: Birds
+10818: Cats
+10823: Dogs
+45602: Farm & Countryside
+69525: Fish & Marine
+13651: Horses: Merch. & Memorabilia
+156265: Horses: Model Horses
+10869: Insects & Butterflies
+3230: Prehistoric & Dinosaurs
+165298: Small Pets
+45604: Wild Animals
+171181: Price Guides & Publications
+1336: Other Animal Collectibles
+13658: Animation Art & Characters
+1529: Animation Art
+1344: Animation Characters
+11118: Japanese, Anime
+171182: Price Guides & Publications
+66502: Arcade, Jukeboxes & Pinball
+13715: Arcade Gaming
+13720: Jukeboxes
+165327: Pachinko
+13724: Pinball
+171183: Price Guides & Publications
+165328: Other Coin-Op Collectibles
+14429: Autographs
+156999: Celebrities
+14428: Historical
+157000: Military
+157001: Models
+157002: Movies
+157003: Music
+48773: Political
+14431: Science, Inventor
+14438: Space
+157004: Sports
+157005: Television
+171184: Price Guides & Publications
+14433: Other Collectible Autographs
+66503: Banks, Registers & Vending
+13719: Cash Registers
+885: Mechanical Banks
+158420: Safes
+35736: Still, Piggy Banks
+13732: Vending Machines
+171185: Price Guides & Publications
+3265: Barware
+170074: Absinthe Accessories
+13906: Bar Sets
+13907: Coasters
+11635: Corkscrews
+35711: Decanters
+35713: Glasses, Cups, Mugs
+35714: Guides, Recipes, Games
+10902: Ice Buckets
+35715: Pitchers
+10903: Pourers, Stoppers
+10904: Shakers
+3273: Shot Glasses
+10905: Swizzle/Stir Sticks
+171186: Price Guides & Publications
+3269: Other Barware
+156277: Beads
+156278: Pre-1400
+156279: 1400-1800
+156280: 1800-1950
+156281: 1950-Now
+171201: Price Guides & Publications
+29797: Bottles & Insulators
+39491: Bottles
+795: Insulators
+171187: Price Guides & Publications
+165335: Other Collectible Bottles
+562: Breweriana, Beer
+35716: Advertising-Print
+50731: Ashtrays
+13550: Bottle Caps
+170075: Bottles: Aluminum
+563: Bottles: Glass
+3915: Cans: US
+3919: Cans: International
+35717: Clocks
+50736: Clothing
+565: Coasters
+50732: Coolers
+3920: Drinkware, Steins
+50733: Hats
+567: Labels
+50734: Lighters
+13551: Mirrors
+566: Openers
+50735: Patches
+72041: Pins
+35728: Playing Cards
+35729: Posters, Prints
+568: Pre-Prohibition
+50737: Signs & Tins
+35730: Tap Handles, Knobs
+35733: Towels
+572: Trays
+118: Other Breweriana
+898: Casino
+10908: Cards
+63747: Card Dealer Shoe
+150118: Card Guards
+63748: Card Shuffler
+66504: Casino Memorabilia
+35743: Chips
+63761: Dealer Buttons
+10909: Dice
+73488: Manuals, Strategy
+73489: Roulette Wheels, Sets
+63763: Slot Cards
+13728: Slots
+3443: Strikes
+35749: Tables, Layouts
+3512: Tokens
+3949: Trade Stimulators
+573: Other Casino Collectibles
+397: Clocks
+13851: Antique (Pre-1930)
+13855: Vintage (1930-69)
+13860: Modern (1970-Now)
+10027: Parts & Tools
+171188: Price Guides & Publications
+63: Comics
+3956: International Editions
+65: Platinum Age (1897-1937)
+66: Golden Age (1938-55)
+73: Silver Age (1956-69)
+12590: Bronze Age (1970-83)
+165364: Copper Age (1984-1991)
+900: Modern Age (1992-Now)
+48776: Apparel & Accessories
+3952: Collections
+3966: Fan Clubs & Zines
+80: Figurines
+3953: Full Runs & Sets
+3954: Graphic Novels, TPBs
+3965: Magazines
+8575: Manga
+79: Newspaper Comics
+3984: Original Comic Art
+82498: Posters
+99961: Price Guides & Buyers' Guides
+10547: Storage Supplies
+64: Other Comic Collectibles
+1462: Credit, Charge Cards
+3913: Cultures & Ethnicities
+149360: African
+149362: Asian
+4002: Australian
+29457: Black Americana
+4000: British
+179530: Canada: Aboriginal
+13739: Celtic
+10911: Egyptian
+165476: Ethnic Americana
+4001: European
+2000: Hawaiian
+13740: Latin American
+165484: Middle Eastern
+713: Native American: US
+13765: Pacific Islands
+4006: Russian
+4007: Western Americana
+171189: Price Guides & Publications
+128: Other Cultural Collectibles
+13777: Decorative Collectibles
+156286: Decorative Collectible Brands
+13831: Baskets
+39623: Bells
+86919: Bird Houses, Feeders
+86920: Book Ends
+73499: Bowls
+50792: Candles, Holders
+791: Chalkware
+4023: Cloisonne
+574: Collector Plates
+4025: Eggs
+41168: Figurines
+13834: Flags
+73500: Frames
+13835: Lighthouses
+66518: Miniatures
+73502: Mugs, Cups
+39628: Music Boxes
+73503: Ornaments
+152540: Nautical Décor
+86922: Paperweights
+73501: Pitchers
+86916: Planters
+86917: Salt & Pepper Shakers
+4029: Seashells
+47140: Shoes
+73504: Signs
+3637: Snowdomes
+13836: Spoons
+1360: State Plates
+73506: Tea Pots, Sets
+86918: Trays, Platters
+13837: Trinket Boxes
+73507: Vases
+63783: Wall Hangings, Mirrors
+86926: Windchimes
+41393: Other Decorative Collectibles
+258032: Virtual & Crypto Collectibles
+137: Disneyana
+139: Vintage (Pre-1968)
+1369: Contemporary (1968-Now)
+10860: Fantasy, Mythical & Magic
+35863: Dragons
+99962: Elves, Gnomes, Pixies
+35874: Fairies
+13640: Gargoyles
+156307: Grim Reaper
+29798: Harry Potter
+73517: Lord of the Rings
+14012: Magic
+13641: Mermaids
+13642: Pegasus
+86941: Skulls
+10862: Unicorns
+29800: Wizards
+1340: Other Fantasy Collectibles
+13877: Historical Memorabilia
+165494: Accounting & Taxation
+13902: Astronauts & Space Travel
+165504: Banking & Insurance
+167992: Cities & Towns
+165513: Fairs, Parks & Architecture
+4038: Firefighting & Rescue
+13881: Flags & Pennants
+402: Fraternal Organizations
+165554: Inventors & Geniuses
+165555: Lawyers & Legal
+165556: Mobs, Gangsters & Criminals
+928: Police
+13897: Political
+39630: Royalty
+39725: Teaching & Education
+165564: Veterinary Medicine
+208: Other Historical Memorabilia
+907: Holiday & Seasonal
+33829: Christmas: Vintage (Pre-1946)
+33838: Christmas: Modern (1946-90)
+1089: Christmas: Current (1991-Now)
+70966: Easter
+14285: Halloween
+82508: July 4th
+168040: Mardi Gras
+911: New Year
+103993: St. Patrick's Day
+168043: Thanksgiving
+70978: Valentine's Day
+365: Other Holiday Collectibles
+13905: Kitchen & Home
+4037: Electric Fans
+4043: Flue Covers
+12513: Furniture
+13919: Irons
+81: Kitchenware
+165567: Large Appliances
+476: Magnets
+978: Tableware
+1401: Knives, Swords & Blades
+43217: Armor & Shields
+182970: Blade Parts, Supplies & Accs
+182973: Collectible Fixed Blade Knives
+182981: Collectible Folding Knives
+88903: Daggers
+182974: Machetes
+165583: Spears & Spear Heads
+43336: Swords & Sabers
+41182: Tactical Axes & Hatchets
+157009: TV, Film & Game Replica Blades
+171202: Price Guides & Publications
+475: Other Collectible Blades
+1404: Lamps, Lighting
+4062: Candle Holders
+13862: Ceiling Fixtures
+4053: Lamps: Electric
+4057: Lamps: Non-Electric
+13865: Lamp Repair, Refurbishing
+4055: Neon
+157010: Night Lights
+13868: Sconces
+1408: Shades
+371: Other Collectible Lighting
+940: Linens & Textiles (1930-Now)
+13944: Bed & Bath Linens
+942: Curtains & Drapes
+29817: Fabric
+13948: Feed & Flour Sacks
+13949: Kitchen Textiles
+945: Lace, Crochet & Doilies
+29823: Pillows
+947: Quilts
+948: Rugs
+949: Samplers
+13954: Table Linens
+950: Tapestries
+171190: Price Guides & Publications
+33: Other Collectible Textiles
+1430: Metalware
+1431: Aluminum
+3630: Brass
+1432: Bronze
+3631: Cast Iron
+13937: Chrome
+1433: Copper
+1434: Pewter
+1436: Silverplate
+1435: Sterling Silver
+10950: Tin
+171191: Price Guides & Publications
+28: Other Collectible Metalware
+13956: Militaria
+156373: Pre-1700
+156375: 1700-74
+156377: Revolutionary War (1775-83)
+156379: 1784-1860
+13958: Civil War (1861-65)
+156383: Indian Wars (1866-97)
+156385: Spanish-Amer War (1898-1902)
+156387: 1903-13
+13962: WW I (1914-18)
+156371: 1919-38
+13977: WW II (1939-45)
+156471: 1946-49
+156440: Korea (1950-53)
+156442: 1954-60
+36060: Vietnam (1961-75)
+156446: 1976-89
+156448: Desert Storm (1990-91)
+156450: 1992-2001
+36066: Current Militaria (2001-Now)
+66527: Militaria (Date Unknown)
+36075: Surplus
+171192: Price Guides & Publications
+135: Other Militaria
+182982: Non-Sport Trading Cards
+182983: Batman Trading Cards
+182987: Benchwarmer
+182992: Doctor Who Trading Cards
+182996: Game of Thrones Trading Cards
+183001: Garbage Pail Kids
+183006: Harry Potter Movie Cards
+183010: James Bond Trading Cards
+60225: Lord of the Rings Movie Cards
+183014: Mars Attacks!
+183019: Marvel Movie Trading Cards
+183024: Spider-Man Trading Cards
+183028: Star Trek Trading Cards
+100899: Star Wars Trading Cards
+183036: Wacky Packages
+183041: Walking Dead Trading Cards
+183046: X-Men Trading Cards
+183050: Trading Card Singles
+183051: Trading Card Lots
+183052: Complete Trading Card Sets
+183053: Sealed Trading Cards
+183054: Wrappers & Empty Card Boxes
+156521: Vintage Non-Sport Cards
+183490: Sticker Albums, Packs & Spares
+183056: Non-Sport Card Supplies & Accs
+171198: Price Guides & Publications
+219: Other Non-Sport Card Merch
+124: Paper
+168047: Bank Checks & Drafts
+4089: Blotters
+13985: Booklets
+13989: Brochures
+41183: Calendars
+156488: Correspondence
+29465: Documents
+41187: Ephemera
+165659: Gift Wrap
+156496: Matchbooks
+165660: Matchbox Labels
+1437: Menus
+165662: Napkins
+13992: Newspapers
+13685: Pin Up
+1438: Playing Cards
+29490: Programs
+1440: Scrapbooks
+165664: Stationery
+35889: Vintage Greeting Cards
+125: Other Paper Collectibles
+966: Pens & Writing Instruments
+4377: Calligraphy Tools
+28019: Desktop Items
+970: Inkwells
+7278: Pens
+165650: Pen Accessories
+7282: Pencils
+971: Sets
+165654: Typewriters
+171193: Price Guides & Publications
+158: Other Writing Collectibles
+14005: Pez, Keychains, Promo Glasses
+38016: Keychains
+4097: Pez
+1443: Promo Glasses
+60811: Phone Cards
+14277: Photographic Images
+407: Vintage & Antique (Pre-1940)
+14281: Contemporary (1940-Now)
+179207: Risqué
+39507: Pinbacks, Bobbles, Lunchboxes
+1409: Lunchboxes, Thermoses
+19287: Bobbleheads, Nodders
+50787: Pinbacks
+914: Postcards
+3634: Advertising
+13996: Amusement Parks
+29468: Animals
+63808: Art
+916: Artist Signed
+156356: Buildings, Architecture
+4093: Comic
+927: Cowboy, Western Motifs
+36079: Cultures & Ethnicities
+918: Exposition
+156336: Events
+919: Greetings
+29474: Holidays
+156344: Landscapes/Mountains
+921: Military
+4095: National Parks
+3635: Patriotic
+156345: People
+29480: Real Photo
+156346: Religions
+156351: Risqué
+156337: Roadside America
+13998: Royalty
+4094: Sports
+29485: Transportation
+63809: Universities
+20193: US States, Cities & Towns
+20245: International Cities & Towns
+156357: Uncirculated Postcards
+167981: Supplies & Reference
+127: Other Collectible Postcards
+29832: Radio, Phonograph, TV, Phone
+38026: Phonographs, Accessories
+931: Radios
+38036: Telephones
+3638: Television Sets
+171194: Price Guides & Publications
+29833: Other Vintage Radio, TV, Phone
+1446: Religion & Spirituality
+165666: Buddhism
+11668: Christianity
+165683: Hinduism
+165688: Islam
+13773: Judaism
+35831: Wicca & Paganism
+366: Other Spiritual Collectibles
+3213: Rocks, Fossils & Minerals
+3221: Crystals & Mineral Specimens
+3215: Fossils
+4839: Lapidary Materials
+3239: Meteorites & Tektites
+4259: Publications
+82515: Shells
+12525: Stone Carvings
+165727: Merchandise & Memorabilia
+415: Other Rocks, Fossils, Minerals
+152: Science Fiction & Horror
+73548: Aliens, AVP
+785: Babylon 5
+37880: Battlestar Galactica
+14905: Buffy the Vampire Slayer
+1450: Dr. Who
+73549: Farscape
+157023: Firefly, Serenity
+591: Godzilla
+165728: Lost
+73550: Lost in Space
+14015: Planet of the Apes
+165729: Predator
+165730: Resident Evil
+98026: Smallville
+99965: Space 1999
+29493: Star Trek
+29495: Star Wars
+98035: Stargate SG-1
+73560: Thunderbirds
+168049: Twilight
+99977: UFOs, Area 51, Roswell
+156: X-Files
+14289: Xena
+153: Other Sci-Fi Collectibles
+412: Science & Medicine (1930-Now)
+14016: Engineering
+157026: Magnets
+4065: Medicine, Dentistry
+15912: Mining
+4085: Optical
+14020: Scientific Instruments
+171196: Price Guides & Publications
+413: Other Sci & Med Collectibles
+113: Sewing (1930-Now)
+38058: Baskets & Boxes
+41192: Buttons
+38054: Foot Pedals
+605: Machines
+38055: Manuals & Books
+38056: Needles & Cases
+4157: Patterns
+1465: Pin Cushions
+38059: Sewing Kits
+14083: Spools & Thread
+38060: Thimbles
+38067: Tools, Scissors & Measures
+14084: Transfers
+171200: Price Guides & Publications
+114: Other Sewing Collectibles
+165800: Souvenirs & Travel Memorabilia
+165801: United States
+165855: International
+165876: Other Travel Memorabilia
+593: Tobacciana
+594: Ashtrays
+38039: Cases
+44: Cigarettes
+11671: Cigars
+38041: Felts & Silks
+112485: Hookahs
+951: Lighters
+4117: Match Holders
+73563: Papers
+4118: Pipes
+73564: Rollers & Makers
+38052: Signs
+75512: Snuff Boxes
+73565: Tags
+38053: Tins
+4120: Tobacco Cards
+171195: Price Guides & Publications
+133: Other Tobacciana
+13849: Tools, Hardware & Locks
+3557: Locks, Keys
+4115: Scales
+4121: Tools
+171197: Price Guides & Publications
+417: Transportation
+14024: Automobilia
+14049: Aviation
+35959: Bicycles
+14052: Boats & Ships
+4151: Buses & Taxi Cabs
+1412: Maps & Atlases
+10958: Motorcycles
+1444: Railroadiana & Trains
+48830: Scooters
+71013: Signs
+4152: Subways
+152541: Traction & Trolleys
+35976: Trucks
+4150: Other Transport. Collectibles
+597: Vanity, Perfume & Shaving
+18790: Combs, Brushes
+35979: Compacts
+14081: Hand Mirrors
+601: Hatpins
+156530: Lipstick Tubes, Holders
+35982: Perfumes
+170077: Perfumes-Solid
+14082: Pill Boxes
+156531: Powder Boxes
+4154: Powder Jars
+4155: Sets
+35986: Shaving
+35993: Trays
+18791: Trinket Boxes
+599: Vanity Accessories
+168052: Reproductions
+171199: Price Guides & Publications
+598: Other Vanity Collectibles
+69851: Vintage, Retro, Mid-Century
+69852: 1940s
+69853: 1950s
+69854: 1960s
+69855: 1970s
+69856: 1980s
+72397: Bakelite
+108962: Plastic
+156532: Unknown
+45058: Wholesale Lots
+45059: Comics
+45060: Figurines
+52538: Flags
+45061: Knives & Swords
+50984: Lighters
+45062: Pins, Buttons
+45063: Postcards & Paper
+26425: Other Collectible Lots

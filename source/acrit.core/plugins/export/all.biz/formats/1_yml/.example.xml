@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog>
+	<shop>
+		<categories>
+			<category id="1">Капуста</category>
+			<category id="2">Ноутбуки</category>
+			<category id="3">Мужские костюмы</category>
+			<category id="4">Инструменты музыкальные</category>
+		</categories>
+		<currencies>
+			<currency id="UAH" rate="1"/>
+			<currency id="USD" rate="15.9"/>
+		</currencies>
+		<offers>
+			<offer id="1" available="true">
+				<categoryId>4</categoryId>
+				<name>YAMAHA NP-3</name>
+				<price>3810.00</price>
+				<currencyId>UAH</currencyId>
+				<vendor>Nokia</vendor>
+				<vendorCode>A1234567B</vendorCode>
+				<country_of_origin>Япония</country_of_origin>
+				<url><![CDATA[http://www.vash-site/page1.html]]></url>
+				<picture><![CDATA[http://www.ua.all.biz/img/ua/catalog/2707296.jpeg]]></picture>
+				<picture><![CDATA[http://www.ua.all.biz/img/ua/catalog/2707296.jpeg]]></picture>
+				<picture><![CDATA[http://www.ua.all.biz/img/ua/catalog/2707296.jpeg]]></picture>
+				<picture><![CDATA[
+				http://www.ua.all.biz/img/ua/catalog/2707296.jpeg,
+				http://www.ua.all.biz/img/ua/catalog/2707296.jpeg,
+				http://www.ua.all.biz/img/ua/catalog/2707296.jpeg
+				]]></picture>
+				<description><![CDATA[
+				NP-31 - прекрасное решение для тех, кому необходимо легкое и в
+				то же время элегантное портативное фортепиано. Тщательно подобранные
+				стерео-сэмплы воспроизводят насыщенный, реалистичный тон акустического рояля,
+				а компактность и минимальный вес NP-31 позволяют взять с собой инструмент
+				куда угодно. Yamaha NP-31 оснащена с клавиатурой Graded Soft Touch
+				на 76 клавиш. Клавиши верхнего и нижнего регистра различны по весу.
+				NP-31 оснащена тон-генератором AWM (Advanced Wave Memory) .
+				]]></description>
+				<param name="Оптовая цена в основной валюте">3.78</param>
+				<param name="Минимальный заказ опт">1000</param>
+				<param name="Производимая продукция">1</param>
+				<param name="Возможен экспорт">1</param>
+				<param name="Импортная продукция">0</param>
+				<param name="id позиции allbiz">0</param>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>

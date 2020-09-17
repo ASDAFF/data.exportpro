@@ -1,0 +1,159 @@
+/**/
+input[data-role="categories-update-attributes-start"].hidden,
+input[data-role="categories-update-attributes-stop"].hidden {
+	display:none!important;
+}
+div[data-role="categories-update-attributes-loader"] {
+	display:inline-block;
+	background:url("/bitrix/panel/main/images/waiter-button-light.gif") no-repeat 0 0;
+	height:20px;
+	margin-right:10px;
+	vertical-align:middle;
+	width:20px;
+}
+div[data-role="categories-update-attributes-loader"].hidden {
+	display:none;
+}
+div[data-role="categories-update-attributes-result"] {
+	display:inline-block;
+	margin-left:10px;
+	vertical-align:middle;
+}
+a[data-role="log-task-json-preview"] {
+	cursor:pointer;
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	     -o-user-select:none;
+	        user-select:none;
+}
+a[data-role="log-tasks-status-toggle"],
+a[data-role="log-tasks-item-update-status"] {
+	cursor:pointer;
+	-webkit-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	     -o-user-select:none;
+	        user-select:none;
+}
+div[data-role="log-tasks-status-details-table"] {
+	display:none;
+	margin-top:4px;
+}
+div[data-role="log-tasks-status-details-table"] table {
+	border-collapse:collapse;
+	min-width:250px;
+}
+div[data-role="log-tasks-status-details-table"] table thead th {
+	background:silver;
+	border:1px solid gray;
+	padding:4px 6px;
+}
+div[data-role="log-tasks-status-details-table"] table tbody td {
+	border:1px solid gray;
+	padding:2px 6px;
+}
+div[data-role="log-tasks-status-details-table"] table tbody td a {
+	cursor:pointer;
+	display:inline-block;
+}
+div[data-role="log-tasks-status-details-table"] table tbody td a:hover {
+	padding-bottom:1px;
+}
+
+table[data-role="allowed-values-table"] {
+	height:100%;
+	table-layout:fixed;
+	width:100%;
+}
+table[data-role="allowed-values-table"] td {
+	vertical-align:top;
+}
+table[data-role="allowed-values-table"] tr:first-child {
+	height:0;
+}
+table[data-role="allowed-values-table"] tr:first-child td {
+	height:0;
+	padding-bottom:8px;
+}
+table[data-role="allowed-values-table"] tr:first-child td input {
+	box-sizing:border-box;
+	width:100%;
+}
+div[data-role="allowed-values-filter-result"] {
+	display:none;
+}
+
+div[data-role="allowed-values-found-items"] {
+	font-size:0;
+}
+div[data-role="allowed-values-found-items"] span {
+	background:#e2ebee;
+	box-sizing:border-box;
+	cursor:default;
+	display:inline-block;
+	font-size:12px;
+	margin:0 4px 4px 0;
+	max-width:100%;
+	overflow:hidden;
+	padding:4px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	transition:0.2s background;
+}
+div[data-role="allowed-values-found-items"] span.colored {
+	background:silver;
+}
+div[data-role="allowed-values-found-info"] {
+	margin-bottom:8px;
+}
+
+div[data-role="categories-alternative-list"] {
+	display:inline-block;
+	max-width:100%;
+}
+div[data-role="categories-alternative-item"] {
+	margin-bottom:4px;
+	padding:4px 80px 4px 8px;
+	position:relative;
+}
+div[data-role="categories-alternative-item"]:hover {
+	background:#eaeaea;
+}
+div[data-role="categories-alternative-item"]:first-child {
+	display:none;
+}
+div[data-role="categories-alternative-item"]:last-child {
+	margin-bottom:10px;
+}
+div[data-role="categories-alternative-item-name"] {
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+div[data-role="categories-alternative-item-delete"] {
+	right:4px;
+	margin-top:-8px;
+	position:absolute;
+	text-align:right;
+	top:50%;
+	width:70px;
+}
+div[data-role="categories-alternative-item-delete"] a {
+	cursor:pointer;
+}
+div[data-role="categories-alternative-item-sample"] {
+	display:none;
+}
+
+#tr_CATEGORIES_REDEFINITION_SOURCE {
+	display:none;
+}
+
+#acrit_exp_ozon_json_preview_popup .adm-detail-title-view-tab {
+	display:none;
+}
+#acrit_exp_ozon_json_preview_popup pre {
+	word-break:break-word;
+}

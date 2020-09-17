@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2012-05-25 09:36">
+<shop>
+	<name>Интернет-магазин "shop"</name>
+	<company>Интернет-магазин "shop"</company>
+	<url>http://www.shop.com.ua/</url>
+	<currencies>
+		<currency id="UAH" rate="1"/>
+		<currency id="USD" rate="8.12"/>
+	</currencies>
+	<categories>
+		<category id="73">Ноутбуки</category>
+		<category id="119">Нетбуки</category>
+		<category id="153">Коммуникаторы и смартфоны</category>
+		<category id="166">Мобильные телефоны</category>
+		<category id="184">Фотоаппараты</category>
+		<category id="189" parentId="184">Зеркальные фотоаппараты</category>
+		<category id="191" parentId="184">Компактные фотоаппараты</category>
+		<category id="220">Электронные книги</category>
+		<category id="232">Медиаплееры</category>
+		<category id="247">Планшетные ПК</category>
+		<category id="260" parentId="652">Периферия МФУ</category>
+		<category id="266" parentId="73">Аксессуары для ноутбуков</category>
+		<category id="267" parentId="652">Веб-камеры</category>
+		<category id="652">Периферия</category>
+	</categories>
+	<offers>
+		<offer id="4707" available="true">
+			<url>http://www.shop.com.ua/Samsung-RV518-NP-RV518-A02UA?from=technoportal</url>
+			<price>464</price>
+			<currencyId>USD</currencyId>
+			<categoryId>73</categoryId>
+			<picture>http://www.shop.com.ua/data/small/samsung_rv518_(np-rv518-a02ua)_4.jpg</picture>
+			<delivery>true</delivery>
+			<vendor>Samsung</vendor>
+			<name>Ноутбук Samsung RV518 (NP-RV518-A02UA)</name>
+			<description>Экран 15.6 / (1366х768) HD / Intel Pentium DC B940(2.0Ghz) / 2048Mb DDRIII / 320Gb SATA (5400rpm) / Intel HD Graphics / Оптический привод - DVD-SuperMulti DL / без ОС / 2.5kg / LAN 10/100 / Wi-Fi b/g/n / Bluetooth 3.0 / 3xUSB / CR3in1 / WEB-Cam / Li-Ion 6 cell / гарантия 1 год / Silver</description>
+			<warranty>24</warranty>
+		</offer>
+		<offer id="8960" available="true">
+			<url>http://www.shop.com.ua/HP-Mini-110-3602sr-LR835EA?from=technoportal</url>
+			<price>903</price>
+			<currencyId>USD</currencyId>
+			<categoryId>119</categoryId>
+			<picture>http://www.shop.com.ua/data/small/hp_mini-110-3602sr-lr835ea_medium.jpg</picture>
+			<delivery>true</delivery>
+			<vendor>Hp</vendor>
+			<name>Нетбук HP Mini 110-3602sr (LR835EA)</name>
+			<description>10.1WSVGA(1024x600) / Intel Atom N455 (1.66GHz) / 2048Mb DDRIII / 250Gb SATA (7200rpm) / Intel GMA 3150 / Опт привод - нет / Win 7 Starter Edition / 1.15kg</description>
+			<warranty>12</warranty>
+		</offer>
+		<offer id="7057" available="true">
+			<url>http://www.shop.com.ua/Nikon-D3000-kit-18-55-VR?from=technoportal</url>
+			<price>477</price>
+			<currencyId>USD</currencyId>
+			<categoryId>189</categoryId>
+			<picture>http://www.shop.com.ua/data/small/699_d3000_kit_18-55vr.jpg</picture>
+			<delivery>true</delivery>
+			<vendor>Nikon</vendor>
+			<name>Nikon D3000 kit 18-55 VR (официальная гарантия)</name>
+			<description>Матрица 23.6 x 15.8 мм, 10.2 Мп / Объектив 18-55VR Kit / Поддержка Карт Памяти SD/SDHC / LCD-Дисплей 3 / Питание От Литий-ионного Аккумулятора / 126 x 97 x 144 мм, 485 г / Гарантия: 12 месяцев undefined</description>
+			<warranty>12</warranty>
+		</offer>
+	</offers>
+</shop>
+</yml_catalog>

@@ -1,0 +1,37 @@
+<?
+$MESS['ACRIT_CRM_PLUGIN_ALI_CONTACT_TITLE'] = 'Данные покупателя';
+$MESS['ACRIT_CRM_PLUGIN_ALI_CONTACT_FIRST_NAME'] = 'Имя';
+$MESS['ACRIT_CRM_PLUGIN_ALI_CONTACT_LAST_NAME'] = 'Фамилия';
+$MESS['ACRIT_CRM_PLUGIN_ALI_CONTACT_LOGIN_ID'] = 'Логин';
+$MESS['ACRIT_CRM_PLUGIN_ALI_CONTACT_COUNTRY'] = 'Код страны';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_PLACE_ORDER_SUCCESS'] = 'Получен новый заказ';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_PAYMENT_PROCESSING'] = 'Производится оплата покупателем';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_RISK_CONTROL'] = 'Заказ оплачен, контроль рисков';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_RISK_CONTROL_HOLD'] = 'Задержан службой контроля';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_WAIT_SELLER_EXAMINE_MONEY'] = 'Ожидание проверки платежа продавцом';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_SELLER_PART_SEND_GOODS'] = 'Ожидание частичной отправки товаров продавцом';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_WAIT_SELLER_SEND_GOODS'] = 'Ожидание отправки товаров продавцом';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_WAIT_BUYER_ACCEPT_GOODS'] = 'Ожидание приёма товаров покупателем';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_FINISH'] = 'Завершён';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_IN_CANCEL'] = 'В процессе отмены';
+$MESS['ACRIT_CRM_PLUGIN_ALI_STATUSES_ARCHIVE'] = 'В архиве';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_GMT_CREATE'] = 'Дата создания заказа';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_OVER_TIME_LEFT'] = 'Дата закрытия заказа';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_LOGISTICS_AMOUNT'] = 'Стоимость доставки';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_LOGISTICS_STATUS'] = 'Статус доставки';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_RECEIPT_ADDRESS_COUNTRY'] = 'Доставка: Страна';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_RECEIPT_ADDRESS_PROVINCE'] = 'Доставка: Регион';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_RECEIPT_ADDRESS_CITY'] = 'Доставка: Город';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_RECEIPT_ADDRESS_DETAIL_ADDRESS'] = 'Доставка: Адрес';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_RECEIPT_ADDRESS_ZIP'] = 'Доставка: Индекс';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_RECEIPT_ADDRESS_PHONE'] = 'Доставка: Телефон';
+$MESS['ACRIT_CRM_PLUGIN_ALI_FIELDS_RECEIPT_ADDRESS_CONTACT_PERSON'] = 'Доставка: Контактное лицо';
+$MESS['ACRIT_CRM_PLUGIN_ALI_SETTINGS_HEADING'] = 'Данные для подключения к площадке';
+$MESS['ACRIT_CRM_PLUGIN_ALI_SETTINGS_TOKEN_HINT'] = 'Токен авторизации';
+$MESS['ACRIT_CRM_PLUGIN_ALI_SETTINGS_TOKEN'] = 'Токен авторизации';
+$MESS['ACRIT_CRM_PLUGIN_ALI_SETTINGS_TOKEN_HELP'] = 'Для получения токена авторизации вам необходимо, будучи авторизованным на AliExpress под аккаунтом продавца, перейти по нижеследующей ссылке и выдать приложению "Интеграция с Битрикс24" требуемые разрешения. После этого вы будете перенаправлены на страницу с токеном. Скопируйте его и вставьте в поле "Токен авторизации".';
+$MESS['ACRIT_CRM_PLUGIN_ALI_SETTINGS_GET_TOKEN'] = 'Получить токен авторизации';
+$MESS['ACRIT_CRM_PLUGIN_ALI_SETTINGS_CHECK_TOKEN'] = 'Проверить подключение';
+$MESS['ACRIT_CRM_PLUGIN_ALI_CHECK_ERROR'] = 'Ошибка';
+$MESS['ACRIT_CRM_PLUGIN_ALI_CHECK_SUCCESS'] = 'Успешно';
+?>

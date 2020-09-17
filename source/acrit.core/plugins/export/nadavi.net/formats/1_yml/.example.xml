@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<yml_catalog date="2008-12-09 14:12" >
+	<shop>
+		<name>...</name>
+		<url>...</url>
+		<currencies>
+			<currency id="USD" rate="8.3"/>
+			<currency id="UAH" rate="1"/>
+		</currencies>
+		<catalog>
+			<category id="...">...</category>
+			<category id="..." parentId="...">...</category>
+		</catalog>
+		<items>
+			<item id="...">
+				<name>...</name>
+				<url>...</url>
+				<price>...</price>
+				<categoryId>...</categoryId>
+				<vendor>...</vendor>
+				<image>...</image>
+				<description>...</description>
+			</item>
+			<item id="...">
+				<name>...</name>
+				<url>...</url>
+				<price>...</price>
+				<categoryId>...</categoryId>
+				<vendor>...</vendor>
+				<image>...</image>
+				<description>...</description>
+			</item>
+		</items>
+	</shop>
+</yml_catalog>

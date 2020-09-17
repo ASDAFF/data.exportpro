@@ -1,0 +1,1 @@
+<a href="https://docs.google.com/document/d/1flyFODQ1UGy6pKh5jwi0-yuNz2SzqkeZsNwEvD1zbmU/edit" target="_blank">Документация</a>

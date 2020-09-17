@@ -1,0 +1,32 @@
+textarea.acrit-exp-custom-json-structure,
+textarea.acrit-exp-custom-json-fields {
+	font:normal 13px/15px "Courier New", "Courier", monospace!important;
+	height:150px;
+	max-height:1000px;
+	min-height:50px;
+	overflow:auto;
+	resize:vertical;
+	width:100%;
+  -webkit-tab-size:4;
+     -moz-tab-size:4;
+       -o-tab-size:4;
+          tab-size:4;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+textarea.acrit-exp-custom-json-structure {
+	height:200px;
+}
+textarea.acrit-exp-custom-json-fields {
+	height:150px;
+}
+.acrit-exp-custom-json-encode-option {
+	margin-bottom:2px;
+}
+.acrit-exp-custom-json-encode-option label {
+	display:block;
+}
+.acrit-exp-custom-json-encode-option label span {
+	vertical-align:middle;
+}

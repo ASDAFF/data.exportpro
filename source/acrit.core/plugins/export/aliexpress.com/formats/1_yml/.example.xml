@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<yml_catalog>
+	<shop>
+		<categories>
+			<category id="1212">Юбки</category>
+			<category id="1313">Умные колонки</category>
+		</categories>
+		<offers>
+			<offer id="1111" group_id="111">
+				<name>Юбка AliExpress 1244 с рисунком</name>
+				<description>Удобная юбка на каждый день с рисунком</description>
+				<vendor>AliExpress Clothes</vendor>
+				<price>349</price>
+				<categoryId>1212</categoryId>
+				<picture>https://ae01.alicdn.com/kf/H174a98384ce6439191895561d53db93dW/ICEbear-2019.jpg</picture>
+				<picture>https://ae01.alicdn.com/kf/Hed6d1f9b8b324bf095a73a9721bc2397I/ICEbear-2019.jpg</picture>
+				<picture>https://ae01.alicdn.com/kf/H003ce561e23640319ab51e8099a15015S/ICEbear-2019.jpg</picture>
+				<param name="Состав">Хлопок 100%</param>
+				<param name="Цвет">Желтый</param>
+				<param name="Размер">XS</param>
+				<param name="Рост">170</param>
+				<weight>1</weight>
+				<length>12</length>
+				<width>13.2</width>
+				<height>12</height>
+				<quantity>11</quantity>
+			</offer>
+			<offer id="1112" group_id="111">
+				<name>Юбка AliExpress 1244 с рисунком</name>
+				<description>Удобная юбка на каждый день с рисунком</description>
+				<vendor>AliExpress Clothes</vendor>
+				<price>349</price>
+				<categoryId>1212</categoryId>
+				<picture>https://ae01.alicdn.com/kf/H174a98384ce6439191895561d53db93dW/ICEbear-2019.jpg</picture>
+				<picture>https://ae01.alicdn.com/kf/Hed6d1f9b8b324bf095a73a9721bc2397I/ICEbear-2019.jpg</picture>
+				<picture>https://ae01.alicdn.com/kf/H003ce561e23640319ab51e8099a15015S/ICEbear-2019.jpg</picture>
+				<param name="Состав">Хлопок 100%</param>
+				<param name="Цвет">Желтый</param>
+				<param name="Размер">XS</param>
+				<param name="Рост">170</param>
+				<weight>1</weight>
+				<length>12</length>
+				<width>13.2</width>
+				<height>12</height>
+				<quantity>11</quantity>
+			</offer>
+			<offer id="1113" group_id="111">
+				<name>Юбка AliExpress 1244 с рисунком</name>
+				<description>Удобная юбка на каждый день с рисунком</description>
+				<vendor>AliExpress Clothes</vendor>
+				<price>349</price>
+				<categoryId>1212</categoryId>
+				<picture>https://ae01.alicdn.com/kf/H174a98384ce6439191895561d53db93dW/ICEbear-2019.jpg</picture>
+				<picture>https://ae01.alicdn.com/kf/Hed6d1f9b8b324bf095a73a9721bc2397I/ICEbear-2019.jpg</picture>
+				<picture>https://ae01.alicdn.com/kf/H003ce561e23640319ab51e8099a15015S/ICEbear-2019.jpg</picture>
+				<param name="Состав">Хлопок 100%</param>
+				<param name="Цвет">Желтый</param>
+				<param name="Размер">S</param>
+				<param name="Рост">170</param>
+				<weight>1</weight>
+				<length>12</length>
+				<width>13.2</width>
+				<height>12</height>
+				<quantity>11</quantity>
+			</offer>
+			<offer id="222" group_id="2036780">
+				<name>Умная колонка Tmall X</name>
+				<description>Умная колонка со встроенным голосовым ассистентом и процессором</description>
+				<vendor>Tmall</vendor>
+				<price>349</price>
+				<categoryId>1313</categoryId>
+				<picture>https://img.alicdn.com/imgextra/i2/3081047815/O1CN01XeOk5x27bJnPowroR_!!3081047815.jpg_430x430q90.jpg</picture>
+				<picture>https://img.alicdn.com/imgextra/i2/3081047815/O1CN01gUhXVq27bJll7Tod5_!!3081047815.jpg_430x430q90.jpg</picture>
+				<param name="Память">16</param>
+				<param name="Цвет">Белый</param>
+				<param name="Розетка">Евро</param>
+				<weight>1.4</weight>
+				<length>25</length>
+				<width>30</width>
+				<height>18</height>
+				<quantity>1</quantity>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>

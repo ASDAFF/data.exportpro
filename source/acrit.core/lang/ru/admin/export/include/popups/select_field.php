@@ -1,0 +1,9 @@
+<?
+$MESS['ACRIT_EXP_POPUP_SELECT_FIELD_NO_IBLOCK_SELECTED'] = 'Инфоблок не выбран';
+$MESS['ACRIT_EXP_POPUP_SELECT_FIELD_PLACEHOLDER'] = 'Введите текст для поиска поля или свойства';
+$MESS['ACRIT_EXP_POPUP_SELECT_FIELD_NOT_FOUND'] = 'Ничего не найдено';
+
+//
+$MESS['ACRIT_EXP_POPUP_SELECT_FIELD_TYPE_PRODUCT'] = 'Товар';
+$MESS['ACRIT_EXP_POPUP_SELECT_FIELD_TYPE_OFFER'] = 'Предложение';
+?>

@@ -1,0 +1,14 @@
+#tab_cont_currency, .adm-detail-content#currency {
+	display:none!important;
+}
+.acrit-exp-yandex-turbo-structure ul {
+	list-style:none;
+	margin:00;
+	padding:0;
+}
+.acrit-exp-yandex-turbo-structure ul ul {
+	margin:2px 0 4px 16px;
+}
+.acrit-exp-yandex-turbo-structure ul li {
+	margin-bottom:2px;
+}

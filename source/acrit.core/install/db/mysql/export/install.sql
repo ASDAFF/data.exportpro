@@ -1,0 +1,207 @@
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_profiles` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`ACTIVE` char(1) NOT NULL DEFAULT 'Y',
+	`NAME` varchar(255) NOT NULL,
+	`CODE` varchar(255) DEFAULT NULL,
+	`DESCRIPTION` longtext NOT NULL,
+	`SORT` int(11) NOT NULL,
+	`SITE_ID` char(2) NOT NULL,
+	`DOMAIN` varchar(255) NOT NULL,
+	`IS_HTTPS` char(1) NOT NULL DEFAULT 'N',
+	`PLUGIN` varchar(255) NOT NULL,
+	`FORMAT` varchar(255) DEFAULT NULL,
+	`LAST_IBLOCK_ID` int(11) DEFAULT NULL,
+	`LAST_SETTINGS_TAB` varchar(255) DEFAULT NULL,
+	`PARAMS` longtext NOT NULL,
+	`AUTO_GENERATE` char(1) NOT NULL DEFAULT 'N',
+	`LOCKED` char(1) NOT NULL DEFAULT 'N',
+	`DATE_CREATED` datetime NOT NULL,
+	`DATE_MODIFIED` datetime DEFAULT NULL,
+	`DATE_STARTED` datetime DEFAULT NULL,
+	`DATE_LOCKED` datetime DEFAULT NULL,
+	`SESSION` longtext,
+	`LAST_EXPORTED_ITEM` longtext,
+	`EXTERNAL_ID` varchar(255) DEFAULT NULL,
+	`ONE_TIME` char(1) NOT NULL DEFAULT 'N',
+	PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_iblocks` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`IBLOCK_ID` int(11) NOT NULL,
+	`IBLOCK_MAIN` char(1) NOT NULL DEFAULT 'Y',
+	`SECTIONS_ID` longtext,
+	`SECTIONS_MODE` varchar(50) DEFAULT NULL,
+	`USE_FILTER` char(1) NOT NULL DEFAULT 'N',
+	`FILTER` longtext,
+	`PARAMS` longtext NOT NULL,
+	`DATE_MODIFIED` datetime DEFAULT NULL,
+	PRIMARY KEY (`ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_1` (`PROFILE_ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_2` (`PROFILE_ID`,`IBLOCK_ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_fields` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`IBLOCK_ID` int(11) NOT NULL,
+	`FIELD` varchar(255) NOT NULL,
+	`TYPE` varchar(255) NOT NULL,
+	`PARAMS` longtext,
+	`CONDITIONS` longtext,
+	`DATE_MODIFIED` datetime DEFAULT NULL,
+	PRIMARY KEY (`ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_1` (`PROFILE_ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_2` (`PROFILE_ID`,`IBLOCK_ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_values` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`IBLOCK_ID` int(11) NOT NULL,
+	`TYPE` varchar(255) NOT NULL,
+	`FIELD` varchar(255) NOT NULL,
+	`VALUE` varchar(255) DEFAULT NULL,
+	`TITLE` varchar(255) DEFAULT NULL,
+	`CONST` longtext,
+	`SUFFIX` varchar(50) NOT NULL,
+	`PARAMS` longtext,
+	`DATE_MODIFIED` datetime DEFAULT NULL,
+	PRIMARY KEY (`ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_1` (`PROFILE_ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_2` (`PROFILE_ID`,`IBLOCK_ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_additional_fields` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`IBLOCK_ID` int(11) NOT NULL,
+	`NAME` varchar(255) DEFAULT NULL,
+	`UNIT` varchar(50) DEFAULT NULL,
+	`DEFAULT_FIELD` varchar(255) DEFAULT NULL,
+	PRIMARY KEY (`ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_1` (`PROFILE_ID`,`IBLOCK_ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_category_redefinition` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`IBLOCK_ID` int(11) NOT NULL,
+	`SECTION_ID` int(11) NOT NULL,
+	`SECTION_NAME` text NOT NULL,
+	PRIMARY KEY (`ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_1` (`PROFILE_ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_2` (`PROFILE_ID`,`IBLOCK_ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_category_custom_name` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `PROFILE_ID` int(11) NOT NULL,
+  `IBLOCK_ID` int(11) NOT NULL,
+  `CATEGORY_NAME` varchar(255) DEFAULT NULL,
+  `CATEGORY_ID` int(11) NOT NULL,
+  `CATEGORY_PARENT_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_export_data` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`IBLOCK_ID` int(11) NOT NULL,
+	`ELEMENT_ID` int(11) NOT NULL,
+	`SECTION_ID` int(11) DEFAULT NULL,
+	`SECTION_NAME` varchar(255) DEFAULT NULL,
+	`ADDITIONAL_SECTIONS_ID` text,
+	`CURRENCY` text,
+	`SORT` varchar(255) DEFAULT NULL,
+	`TYPE` varchar(255) NOT NULL,
+	`IS_ERROR` char(1) DEFAULT NULL,
+	`DATA` longtext,
+	`DATA_MORE` longtext,
+	`DATE_GENERATED` datetime NOT NULL,
+	`TIME` float DEFAULT '0',
+	`IS_OFFER` char(1) DEFAULT NULL,
+	`OFFERS_SUCCESS` int(11) DEFAULT NULL,
+	`OFFERS_ERRORS` int(11) DEFAULT NULL,
+	`EXPORTED` char(1) DEFAULT NULL,
+	PRIMARY KEY (`ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_1` (`ELEMENT_ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_2` (`PROFILE_ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_3` (`IBLOCK_ID`,`PROFILE_ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_4` (`ELEMENT_ID`,`PROFILE_ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_history` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`DATE_START` datetime NOT NULL,
+	`DATE_END` datetime DEFAULT NULL,
+	`ELEMENTS_COUNT` int(11) DEFAULT NULL,
+	`ELEMENTS_Y` int(11) DEFAULT NULL,
+	`ELEMENTS_N` int(11) DEFAULT NULL,
+	`OFFERS_Y` int(11) DEFAULT NULL,
+	`OFFERS_N` int(11) DEFAULT NULL,
+	`TIME_GENERATED` int(11) DEFAULT NULL,
+	`TIME_TOTAL` int(11) DEFAULT NULL,
+	`AUTO` char(1) NOT NULL DEFAULT 'N',
+	`COMMAND` text,
+	`PID` int(11) DEFAULT NULL,
+	`MULTITHREADING` char(1) DEFAULT NULL,
+	`THREADS` int(11) DEFAULT NULL,
+	`ELEMENTS_PER_THREAD` int(11) DEFAULT NULL,
+	`STOPPED` char(1) NOT NULL DEFAULT 'N',
+	`USER_ID` int(11) DEFAULT NULL,
+	`IP` varchar(15) DEFAULT NULL,
+	`VERSION` varchar(10) DEFAULT NULL,
+	PRIMARY KEY (`ID`),
+  KEY `ix_perf_acrit_#MODULE_CODE#_1` (`PROFILE_ID`)
+);
+
+CREATE TABLE IF NOT EXISTS `acrit_#MODULE_CODE#_new_external_id` (
+	`ID` int(11) NOT NULL AUTO_INCREMENT,
+	`PROFILE_ID` int(11) NOT NULL,
+	`IBLOCK_ID` int(11) NOT NULL,
+	`ELEMENT_ID` varchar(255) NOT NULL,
+	`EXTERNAL_ID` varchar(255) DEFAULT NULL,
+	`EXTERNAL_STATUS` varchar(255) DEFAULT NULL,
+	`EXTERNAL_DATA` longtext,
+	`DATE_CREATED` datetime NOT NULL,
+	PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `acrit_#MODULE_CODE#_crm_profiles` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `SORT` int(11) NOT NULL,
+  `NAME` varchar(255) NOT NULL,
+  `DESCRIPTION` text NOT NULL,
+  `ACTIVE` varchar(4) NOT NULL,
+  `PLUGIN` varchar(255) NOT NULL,
+  `CONNECT_CRED` text NOT NULL,
+  `CONNECT_DATA` text NOT NULL,
+  `OPTIONS` text NOT NULL,
+  `STAGES` text NOT NULL,
+  `FIELDS` text NOT NULL,
+  `CONTACTS` text NOT NULL,
+  `PRODUCTS` text NOT NULL,
+  `OTHER` text NOT NULL,
+  `SYNC` text NOT NULL,
+  `DATE_CREATED` datetime NOT NULL,
+  `DATE_MODIFIED` datetime NOT NULL,
+  PRIMARY KEY (`ID`)
+);
+
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_1 ON `acrit_#MODULE_CODE#_new_additional_fields` (`PROFILE_ID`, `IBLOCK_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_1 ON `acrit_#MODULE_CODE#_new_category_redefinition` (`PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_2 ON `acrit_#MODULE_CODE#_new_category_redefinition` (`PROFILE_ID`, `IBLOCK_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_1 ON `acrit_#MODULE_CODE#_new_export_data` (`ELEMENT_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_2 ON `acrit_#MODULE_CODE#_new_export_data` (`PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_3 ON `acrit_#MODULE_CODE#_new_export_data` (`IBLOCK_ID`, `PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_4 ON `acrit_#MODULE_CODE#_new_export_data` (`ELEMENT_ID`, `PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_1 ON `acrit_#MODULE_CODE#_new_fields` (`PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_2 ON `acrit_#MODULE_CODE#_new_fields` (`PROFILE_ID`, `IBLOCK_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_1 ON `acrit_#MODULE_CODE#_new_history` (`PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_1 ON `acrit_#MODULE_CODE#_new_iblocks` (`PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_2 ON `acrit_#MODULE_CODE#_new_iblocks` (`PROFILE_ID`, `IBLOCK_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_1 ON `acrit_#MODULE_CODE#_new_values` (`PROFILE_ID`);
+CREATE INDEX ix_perf_acrit_#MODULE_CODE#_2 ON `acrit_#MODULE_CODE#_new_values` (`PROFILE_ID`, `IBLOCK_ID`);

@@ -1,0 +1,48 @@
+{   
+  "fileAttributes":{   
+    "merchantId": 7, 
+    "type":"full", 
+    "dateTime":"2018-10-24T12-00-00+03-00" 
+  }, 
+  "outlets":[   
+    {   
+      "outletId": "1", 
+      "offers":[   
+        {   
+          "offerId": "1", 
+          "quantity": 5, 
+          "price": 1665 
+        }, 
+        {   
+          "offerId": "2", 
+          "quantity": 10, 
+          "price": 120 
+        }, 
+        {   
+          "offerId": "4", 
+          "quantity": 1, 
+          "price": 500 
+        }       ] 
+    }, 
+    {   
+      "outletId": "2", 
+      "offers":[   
+        {   
+          "offerId": "1", 
+          "quantity": 10, 
+          "price": 1664 
+        }, 
+        {   
+          "offerId": "2", 
+          "quantity": 9, 
+          "price": 120 
+        }, 
+        {   
+          "offerId": "4", 
+          "quantity": 5, 
+          "price": 510 
+        } 
+      ] 
+    } 
+  ] 
+}

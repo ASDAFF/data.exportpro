@@ -1,0 +1,10 @@
+{
+	"fileAttributes":{
+		"merchantId":#MERCHANT_ID#,
+		"type":#TYPE#,
+		"dateTime":#DATE(:c)#
+	},
+	"outlets":[
+		#JSON_ITEMS#
+	]
+}

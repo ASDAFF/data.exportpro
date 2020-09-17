@@ -1,0 +1,355 @@
+/* General */
+#acrit-exp-button-teacher:before {
+	background:url("button-teacher.png") center center no-repeat;
+	content:'';
+	display:inline-block;
+	margin:-1px 10px 0 -5px;
+	height:16px;
+	opacity:0.9;
+	vertical-align:middle;
+	width:16px;
+}
+.acrit_teacher_hidden {
+	display:none!important;
+}
+.acrit_teacher_html {
+	overflow:hidden;
+}
+/* Overlay: Background */
+.acrit_teacher_overlay_bg {
+	background-color:rgba(0, 0, 0, 0.75);
+	bottom:0;
+	left:0;
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:1000000;
+}
+/* Overlay: Data */
+.acrit_teacher_overlay_data {
+	bottom:0;
+	color:#fff;
+	left:0;
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:1000010;
+}
+.acrit_teacher_content_wrapper {
+	height:100%;
+	padding:60px 32px 80px;
+	position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.acrit_teacher_content {
+	height:100%;
+	position:relative;
+}
+.acrit_teacher_content table {
+	border-collapse:collapse;
+	height:100%;
+	width:100%;
+}
+.acrit_teacher_content table td {
+	text-align:center;
+	vertical-align:middle;
+}
+/* Overlay: Controls top */
+.acrit_teacher_overlay_controls_top {
+	background:rgba(0,0,0,0.5);
+	color:#fff;
+	left:0;
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:1000030;
+}
+.acrit_teacher_progress {
+	background:#fff;
+	height:3px;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-transition:0.5s;
+	   -moz-transition:0.5s;
+	        transition:0.5s;
+}
+.acrit_teacher_progress_full {
+	background:#1cce1c;
+}
+.acrit_teacher_overlay_title {
+	font-size:24px;
+	line-height:28px;
+	min-height:60px;
+	padding:16px 60px 16px 30px;
+	z-index:1000011;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.acrit_teacher_close {
+	cursor:pointer;
+	font-size:30px;
+	height:34px;
+	line-height:34px;
+	position:absolute;
+	right:22px;
+	text-align:center;
+	top:16px;
+	width:34px;
+	-webkit-transition:0.1s;
+	   -moz-transition:0.1s;
+	        transition:0.1s;
+}
+.acrit_teacher_close:hover {
+	background:#fff;
+	color:#000;
+}
+/* Overlay: Controls bottom */
+.acrit_teacher_overlay_controls_bottom {
+	background:rgba(0,0,0,0.5);
+	bottom:0;
+	color:#fff;
+	left:0;
+	position:fixed;
+	right:0;
+	z-index:1000030;
+}
+.acrit_teacher_step_data {
+	min-height:78px;
+	padding:26px 360px 26px 40px;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.acrit_teacher_step_title {
+	font-size:18px;
+}
+.acrit_teacher_step_description_toggle {
+	display:none;
+	margin-top:4px;
+}
+.acrit_teacher_step_description_toggle a {
+	border-bottom:1px dashed #1cce1c;
+	color:#1cce1c;
+	cursor:pointer;
+	display:inline;
+	font-size:13px;
+	text-decoration:none!important;
+}
+.acrit_teacher_step_description_toggle a:hover {
+	border-bottom:0;
+}
+.acrit_teacher_step_description {
+	font-size:14px;
+	max-height:200px;
+	overflow:auto;
+}
+.acrit_teacher_step_description a {
+	color:#1cce1c;
+}
+.acrit_teacher_step_description:before {
+	content:'';
+	display:block;
+	height:8px;
+	overflow:hidden;
+}
+.acrit_teacher_step_description:after {
+	content:'';
+	display:block;
+	height:8px;
+	overflow:hidden;
+}
+.acrit_teacher_step_description ul,
+.acrit_teacher_step_description ol {
+	margin:0;
+	padding:0 0 0 20px;
+}
+.acrit_teacher_buttons {
+	bottom:18px;
+	position:absolute;
+	right:30px;
+}
+.acrit_teacher_button {
+	display:inline-block;
+	vertical-align:bottom;
+}
+.acrit_teacher_button + .acrit_teacher_button {
+	margin-left:10px;
+}
+.acrit_teacher_button input[type="button"] {
+	background-color: #e0e9ec;
+	background-image: -webkit-linear-gradient(bottom, #d7e3e7, #fff)!important;
+	background-image: -moz-linear-gradient(bottom, #d7e3e7, #fff)!important;
+	background-image: -ms-linear-gradient(bottom, #d7e3e7, #fff)!important;
+	background-image: -o-linear-gradient(bottom, #d7e3e7, #fff)!important;
+	background-image: linear-gradient(bottom, #d7e3e7, #fff)!important;
+	border:solid 1px;
+	/**/
+	cursor:pointer;
+	display:inline-block;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:18px;
+	padding:10px 30px;
+	position:relative;
+	text-decoration:none;
+	text-shadow:0 1px rgba(0,0,0,0.1);
+	vertical-align:middle;
+	-webkit-font-smoothing:antialiased;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,.25), inset 0 1px 0 #cbdc00;
+	   -moz-box-shadow:0 1px 1px rgba(0,0,0,.25), inset 0 1px 0 #cbdc00;
+	        box-shadow:0 1px 1px rgba(0,0,0,.25), inset 0 1px 0 #cbdc00;
+	-webkit-border-radius:4px;
+	   -moz-border-radius:4px;
+	        border-radius:4px;
+}
+.acrit_teacher_button input[type="button"]:hover {
+	background: #f3f6f7!important;
+	background-image: -webkit-linear-gradient(top, #f8f8f9, #f2f6f8)!important;
+	background-image: -moz-linear-gradient(top, #f8f8f9, #f2f6f8)!important;
+	background-image: -ms-linear-gradient(top, #f8f8f9, #f2f6f8)!important;
+	background-image: -o-linear-gradient(top, #f8f8f9, #f2f6f8)!important;
+	background-image: linear-gradient(top, #f8f8f9, #f2f6f8)!important;
+	/**/
+	text-decoration:none;
+	-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 0 #d5e71a inset;
+	   -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 0 #d5e71a inset;
+	        box-shadow:0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 0 #d5e71a inset;
+}
+.acrit_teacher_button input[type="button"]:active {
+	background-image: -webkit-linear-gradient(top, rgba(179,194,200,.96), rgba(202,215,219,.96))!important;
+	background-image: -moz-linear-gradient(top, rgba(179,194,200,.96), rgba(202,215,219,.96))!important;
+	background-image: -ms-linear-gradient(top, rgba(179,194,200,.96), rgba(202,215,219,.96))!important;
+	background-image: -o-linear-gradient(top, rgba(179,194,200,.96), rgba(202,215,219,.96))!important;
+	background-image: linear-gradient(top, rgba(179,194,200,.96), rgba(202,215,219,.96))!important;
+	border-color:transparent #698f00 #698f00 !important;
+	/**/
+	border-top:none;
+}
+.acrit_teacher_button.acrit_teacher_button_next input[type="button"] {
+	background-color:#86ad00!important;
+	background-image:-webkit-linear-gradient(bottom, #729e00, #97ba00)!important;
+	background-image:-moz-linear-gradient(bottom, #729e00, #97ba00)!important;
+	background-image:-ms-linear-gradient(bottom, #729e00, #97ba00)!important;
+	background-image:-o-linear-gradient(bottom, #729e00, #97ba00)!important;
+	background-image:linear-gradient(bottom, #729e00, #97ba00)!important;
+	border-color:#97c004 #7ea502 #648900;
+	color:#fff;
+	font-weight:bold;
+}
+.acrit_teacher_button.acrit_teacher_button_next input[type="button"]:hover {
+	background-color:#9ec710!important;
+	background-image:-webkit-linear-gradient(top, #acce11, #8abb0d)!important;
+	background-image:-moz-linear-gradient(top, #acce11, #8abb0d)!important;
+	background-image:-ms-linear-gradient(top, #acce11, #8abb0d)!important;
+	background-image:-o-linear-gradient(top, #acce11, #8abb0d)!important;
+	background-image:linear-gradient(top, #acce11, #8abb0d)!important;
+	border-color:#97c004 #7ea502 #648900;
+}
+.acrit_teacher_button.acrit_teacher_button_next input[type="button"]:active {
+	background:#698f00!important;
+	-webkit-box-shadow:inset 0 2px 1px rgba(66,84,17,.71)!important;
+	   -moz-box-shadow:inset 0 2px 1px rgba(66,84,17,.71)!important;
+	        box-shadow:inset 0 2px 1px rgba(66,84,17,.71)!important;
+}
+/* Splash screen */
+.acrit_teacher_splash_screen {
+	background:rgba(255, 255, 255, 0.9);
+	color:#333;
+	display:inline-block;
+	font-size:16px;
+	height:300px;
+	margin-left:-300px;
+	margin-top:-150px;
+	overflow:hidden;
+	padding:20px 20px 80px;
+	position:absolute;
+	text-align:left;
+	top:50%;
+	width:600px;
+	z-index:1000040;
+	-webkit-border-radius:5px;
+	   -moz-border-radius:5px;
+	        border-radius:5px;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+	-webkit-box-shadow:0 0 10px 1px rgba(0, 0, 0,0.8);
+	   -moz-box-shadow:0 0 10px 1px rgba(0, 0, 0,0.8);
+	        box-shadow:0 0 10px 1px rgba(0, 0, 0,0.8);
+}
+.acrit_teacher_splash_screen_content {
+	height:100%;
+	position:relative;
+	overflow:auto;
+}
+.acrit_teacher_splash_screen_title {
+	color:green;
+	font-weight:bold;
+	margin:0 0 20px;
+}
+.acrit_teacher_splash_screen_description {
+	line-height:140%;
+}
+.acrit_teacher_splash_screen_description p {
+	margin:0 0 10px;
+}
+.acrit_teacher_splash_screen .acrit_teacher_button {
+	bottom:18px;
+	position:absolute;
+	right:30px;
+}
+/* Strokes and its controls */
+.acrit_teacher_stroke {
+	position:absolute;
+	border:2px solid #1cce1c;
+	z-index:1000013;
+	-webkit-border-radius:5px;
+	   -moz-border-radius:5px;
+	        border-radius:5px;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.acrit_teacher_control_highlighted {
+	resize:none!important; /* for <textarea> */
+	z-index:1000013!important;
+}
+.acrit_teacher_control_highlighted_relative {
+	position:relative!important;
+}
+.acrit_teacher_control_highlighted_absolute {
+	position:absolute!important;
+}
+.acrit_teacher_control_accessible {
+	z-index:1000020!important;
+}
+/* Some particular fixes */
+.acrit_teacher_control_accessible.select2-container + .select2-container {
+	z-index:1000021!important;
+}
+.acrit_teacher_control_highlighted.adm-info-message {
+	background:#fff!important;
+}
+.acrit_teacher_control_highlighted.adm-info-message:before {
+	background: #e6e5be;
+	background: -webkit-linear-gradient(top, rgba(244,233,141,.3), rgba(232,209,62,.3), rgba(225,194,40,.3));
+	background: -moz-linear-gradient(top, rgba(244,233,141,.3), rgba(232,209,62,.3), rgba(225,194,40,.3));
+	background: -ms-linear-gradient(top, rgba(244,233,141,.3), rgba(232,209,62,.3), rgba(225,194,40,.3));
+	background: -o-linear-gradient(top, rgba(244,233,141,.3), rgba(232,209,62,.3), rgba(225,194,40,.3));
+	background: linear-gradient(top, rgba(244,233,141,.3), rgba(232,209,62,.3), rgba(225,194,40,.3));
+	content:'';
+	border-radius: 5px;
+	position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+}
+

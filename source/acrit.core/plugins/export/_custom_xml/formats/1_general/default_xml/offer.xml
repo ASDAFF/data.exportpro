@@ -1,0 +1,12 @@
+<item offer="true">
+	<id>#ID#</id>
+	<name>#NAME#</name>
+	<description>#DESCRIPTION#</description>
+	<available>#AVAILABLE#</available>
+	<url>#URL#</url>
+	<category>#CATEGORY_ID#</category>
+	<picture>#PICTURE#</picture>
+	<article>#ARTICLE#</article>
+	<price>#PRICE#</price>
+	<param>#PARAMS#</param>
+</item>

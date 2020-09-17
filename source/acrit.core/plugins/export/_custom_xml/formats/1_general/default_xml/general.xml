@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="#ENCODING#"?>
+<export date="#DATETIME#">
+	<name>My export</name>
+	<company>My company</company>
+	<url>#SITE_URL#</url>
+	<currencies>#CURRENCIES#</currencies>
+	<categories>#CATEGORIES#</categories>
+	<items>
+		#ITEMS#
+	</items>
+</export>

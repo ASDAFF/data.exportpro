@@ -1,0 +1,4 @@
+<?
+$MESS['ACRIT_CORE_UPDATE_NOTIFY'] = 'Доступно обновление для модуля «#MODULE_NAME#» (#MODULE_ID#), текущая версия #VERSION_CURRENT#, новая версия #VERSION_NEW#. Рекомендуем <a href="/bitrix/admin/update_system_partner.php?tabControl_active_tab=tab2&addmodule=#MODULE_ID#&lang=#LANGUAGE_ID#" style="margin-left:0;">установить обновления</a>.';
+$MESS['ACRIT_CORE_RENEWAL_NOTIFY'] = 'Доступно обновление для модуля «#MODULE_NAME#» (#MODULE_ID#), текущая версия #VERSION_CURRENT#, новая версия #VERSION_NEW#. Рекомендуем <a href="http://marketplace.1c-bitrix.ru/tobasket.php?ID=#MODULE_ID#&prolong_period=12" style="margin-left:0;">продлить лицензию</a> и установить обновления.';
+?>

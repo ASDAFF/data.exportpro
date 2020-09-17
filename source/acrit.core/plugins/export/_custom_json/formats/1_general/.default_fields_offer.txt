@@ -1,0 +1,6 @@
+id
+name
+description
+price
+count
+count2

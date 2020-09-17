@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2018-07-08 17:22" xmlns="http://market.zakupki.mos.ru/spIntegration/Yml/1.0">
+	<shop>
+		<name>Company Name</name>
+		<company>OOO "Company name"</company>
+		<url>http://best.seller.ru</url>
+		<currencies>
+			<currency id="RUR" rate="1"/>
+		</currencies>
+		<categories>
+			<category id="1">Бытовая техника</category>
+			<category id="10" parentId="1">Мелкая техника для кухни</category>
+			<category id="101" parentId="10">Калькулятор торговый</category>
+			<category id="102" parentId="10">Калькулятор настольный</category>
+		</categories>
+		<offers>
+			<offer id="000000" available="true">
+				<currencyId>RUR</currencyId>
+				<name>КАЛЬКУЛЯТОР ФИНАНСОВЫЙ CASIO FC-100V</name>
+				<picture>https://im0-tub-ru.yandex.net/i?id=55d289bcf50fb89c2dc5e08425f8b235-sr&amp;n=13</picture>
+				<ste>77778</ste>
+				<isVisibleToStateCustomers>true</isVisibleToStateCustomers>
+				<isAvailableToIndividuals>true</isAvailableToIndividuals>
+				<ppCategory>1</ppCategory>
+				<categoryId>102</categoryId>
+				<okei id="113">Упаковка</okei>
+				<min-quantity>1</min-quantity>
+				<max-quantity>100</max-quantity>
+				<beginDate>2018-07-19T23:02:35</beginDate>
+				<endDate>2018-09-19T19:02:35</endDate>
+				<packageType id="4" />
+				<region id="504">Москва</region>
+				<param name="Размер экрана" unit="дюйм">2</param>
+				...
+				<param name="Цвет">Белый</param>
+				<price>6700</price>
+				<delivery-options>
+					<option days="1" cost="1000"></option>
+				</delivery-options>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>

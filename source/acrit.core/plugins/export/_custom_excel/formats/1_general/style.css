@@ -1,0 +1,60 @@
+textarea.acrit-exp-custom-excel-structure {
+	font:normal 13px/15px "Courier New", "Courier", monospace!important;
+	height:200px;
+	max-height:1000px;
+	min-height:50px;
+	overflow:auto;
+	resize:vertical;
+	width:100%;
+  -webkit-tab-size:4;
+     -moz-tab-size:4;
+       -o-tab-size:4;
+          tab-size:4;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+
+.acrit-exp-excel-tags-table table {
+	border-collapse:collapse;
+	width:100%;
+}
+.acrit-exp-excel-tags-table table th {
+	background:#ddd;
+	border:1px solid #ccc;
+	padding:6px;
+}
+.acrit-exp-excel-tags-table table td {
+	border:1px solid #ccc;
+	padding:6px;
+}
+.acrit-exp-excel-tags-table table td.align-center {
+	text-align:center;
+}
+.acrit-exp-excel-tags-table table tr.custom_heading td {
+	background:#eee!important;
+	font-weight:bold;
+}
+.acrit-exp-excel-tags-table table tr:hover td {
+	background:#e0e9ec;
+}
+.acrit-exp-excel-tags-table table td input[type=text] {
+	width:100%;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.acrit-exp-excel-tags-table table td select {
+	padding:0 2px;
+	height:24px;
+}
+
+/* Excel macros */
+a.acrit-exp-custom-excel-macro-link {
+	border-bottom:1px dashed #2675d7!important;
+	color:#2675d7!important;
+	text-decoration:none!important;
+}
+a.acrit-exp-custom-excel-macro-link:hover {
+	border-bottom:none!important;
+}

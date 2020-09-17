@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<price date="2008-09-19 12:55">
+	<name>Интернет-магазин</name>
+	<currency id="USD" rate="8.00"/>
+	<catalog>
+		<category id="1">Мобильные телефоны</category>
+		<category id="1001" parentID="1">Мобильные телефоны Motorola</category>
+	</catalog>
+	<items>
+		<item id="330">
+			<name>Motorola A1200</name>
+			<categoryId>1001</categoryId>
+			<price>1260</price>
+			<bnprice>1300</bnprice>
+			<url>http://url/catalog/1/1/330/</url>
+			<image>http://url/images/image7402727981188804741.jpg</image>
+			<vendor>Motorola</vendor>
+			<description>GSM 900/1800/1900. Тип корпуса: раскладушка. Аккумулятор: 850 мАч. цветной TFT экран, Цветной сенсорный TFT экран, 262144 цветов, 240х320, 2.4, дополнительный экран 65536 цветов, 120x160 пикс. Интерфейс USB. Встроенный MP3 плеер. Голосовое управление. Поддержка GPRS, Bluetooth, MMS. Запись видео. Java-приложения. Камера 2 Мп, 1600x1200, режим макросъемки, запись видео Вес: 122 г. Размер 95.7 х 51.7 х 21.5 мм </description>
+			<guarantee type="manufacturer">12</guarantee>
+			<param name="Страна изготовления">Китай</param>
+		</item>
+		<item id="400">
+			<name>Motorola C123</name>
+			<categoryId>1001</categoryId>
+			<price>240</price>
+			<bnprice>250</bnprice>
+			<url>http://url/catalog/1/1/400/</url>
+			<image>http://url/images/image8165287011197744112.jpg</image>
+			<vendor>Motorola</vendor>
+			<description>Аппарат начального класса выполнен в классическом моноблочном форм-факторе. Телефон оснащен минимальным количеством функций и предназначен только для осуществления звонков и отправки SMS, аккумулятор большой емкости позволяет аппарату работать до 11 часов в режиме разговора. Функционал: GSM 900/1800, LCD-монохромный (96x64 pix), SMS, iTAP, монофонические сигналы вызова, редактор мелодий, секундомер, калькулятор, будильник, телефонная книга ограничена объемом SIM карты</description>
+			<guarantee unit="days" type="shop">7</guarantee>
+		</item>
+		<item id="1192">
+			<name>Motorola E8</name>
+			<categoryId>1001</categoryId>
+			<price>1460</price>
+			<bnprice>1505</bnprice>
+			<url>http://url/catalog/1/1/1192/</url>
+			<image>http://url/images/image6522896241216847367.jpg</image>
+			<vendor>Motorola</vendor>
+			<description/>
+		</item>
+		<item id="5">
+			<name>Motorola K1</name>
+			<categoryId>1001</categoryId>
+			<price>795</price>
+			<bnprice>815</bnprice>
+			<url>http://url/catalog/1/1/5/</url>
+			<image>http://url/images/image3906117671182176494.jpg</image>
+			<vendor>Motorola</vendor>
+			<description>Стандарты: GSM 850/900/1800/1900. Корпус: раскладушка. Антенна: встроенная. Дисплей TFT, 262144 цветов. Размер дисплея: 176 x 220 пикселей. Тел. книжка: 1000 записей. Фотокамера встроенная, возможность воспроизведения видео. Голосовой набор. Bluetooth. MMS. Органайзер. Полифонические мелодии вызова. Размер 103 х 42 х 16 мм. Вес 102 г</description>
+		</item>
+	</items>
+</price>

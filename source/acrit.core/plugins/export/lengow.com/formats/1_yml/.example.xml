@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+	<product_id>1235RES56</product_id>
+	<title>TV LCD 100 Hertz Samsung</title>
+	<description>TV LCD 100 Hertz Samsuns, 47-inch screen...</description>
+	<price_including_tax>790.99</price_including_tax>
+	<pricenorebate>990.99</pricenorebate>
+	<sale_price>690.99</sale_price>
+	<category>High Tech &gt; TV &gt TV LCD</category>
+	<sub_category1>High Tech</sub_category1>
+	<sub_category2>TV</sub_category2>
+	<sub_category3>TV LCD</sub_category3>
+	<product_URL>http://mysite.com/productsXXXX.html</product_URL>
+	<image_URL>http://www.mysite.com/Photos/Products/XXXXX.jpg</image_URL>
+	<EAN>1234567890123</EAN>
+	<MPN>PRD567HT</MPN>
+	<brand>SAMSUNG</brand>
+	<delivery_costs>5.00</delivery_costs>
+	<delivery_time>12</delivery_time>
+	<delivery_description>Same day delivery for London</delivery_description>
+	<quantity_in_stock>23</quantity_in_stock>
+	<Availability>0</Availability>
+	<Warranty>3</Warranty>
+	<size>47</size>
+	<colour>Black</colour>
+	<material/>
+	<gender/>
+	<weight>20.55</weight>
+	<condition>new</condition>
+	<sales>1</sales>
+	<promo_texte/>
+	<promo_percentage>30</promo_percentage>
+	<start_date_promo>26-06-2016 08-00-00</start_date_promo>
+	<end_date_promo>04-08-2016 16-00-00</end_date_promo>
+	<ecotax>0</ecotax>
+	<currency>EUR</currency>
+</product>

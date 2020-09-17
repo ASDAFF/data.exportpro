@@ -1,0 +1,12 @@
+<?
+$MESS['ACRIT_EXP_CONDITIONS_POPUP_FIELD_NO_FIELD'] = 'Сначала необходимо выбрать поле.';
+$MESS['ACRIT_EXP_CONDITIONS_POPUP_FIELD_NO_LOGIC'] = 'Сначала необходимо выбрать логику.';
+
+//
+$MESS['ACRIT_EXP_CONDITIONS_POPUP_FIELD_PLACEHOLDER_LIST'] = 'Выберите значение из списка';
+$MESS['ACRIT_EXP_CONDITIONS_POPUP_FIELD_PLACEHOLDER_TEXT'] = 'Укажите значение';
+
+//
+$MESS['ACRIT_EXP_CONDITIONS_POPUP_FIELD_ID_ADD'] = 'Добавить';
+$MESS['ACRIT_EXP_CONDITIONS_POPUP_FIELD_TEXT_ADD'] = 'Добавить';
+?>
