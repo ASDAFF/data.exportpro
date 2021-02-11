@@ -1,9 +1,5 @@
 <?
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
-$moduleId = "kit.exportpro";
+$moduleId = "data.exportpro";
 
 
 $POST_RIGHT = $APPLICATION->GetGroupRight( $moduleId );
@@ -11,7 +7,8 @@ if( $POST_RIGHT >= "R" ){
 	IncludeModuleLangFile( $_SERVER["DOCUMENT_ROOT"].BX_ROOT."/modules/main/options.php" );
 	Cmodule::IncludeModule( $moduleId );
 	IncludeModuleLangFile( __FILE__ );
-	
+    
+    DataLicence::Show();
     
 	$aTabs = array(
 		array(
@@ -57,7 +54,7 @@ if( $POST_RIGHT >= "R" ){
 	    
 	    $tabControl->BeginNextTab();?>
 		<tr>
-            <td class="heading" colspan="2">№№№№№<?=GetMessage( "SC_FRM_1" );?></td>
+            <td class="heading" colspan="2"><?=GetMessage( "SC_FRM_1" );?></td>
         </tr>
         <tr>
             <td valign="top" class="adm-detail-content-cell-l">
@@ -84,7 +81,7 @@ if( $POST_RIGHT >= "R" ){
         
         <tr>
 			<td colspan="2">
-				<?=GetMessage( "KIT_EXPORTPRO_RECOMMENDS" );?>
+				<?=GetMessage( "DATA_EXPORTPRO_RECOMMENDS" );?>
 			</td>
 		</tr>
 		

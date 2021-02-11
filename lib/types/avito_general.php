@@ -3,62 +3,62 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["avito_general"] = array(
 	"CODE" => "avito_general",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "Id",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "Category",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_CATEGORY" ),
 			"REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "DateBegin",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_DATEBEGIN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_DATEBEGIN" ),
 		),
 		array(
 			"CODE" => "DateEnd",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_DATEEND" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_DATEEND" ),
 		),
 		array(
 			"CODE" => "Region",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_REGION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_REGION" ),
 			"REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "City",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_CITY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_CITY" ),
 			"REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "Subway",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_SUBWAY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_SUBWAY" ),
 		),
         array(
 			"CODE" => "Description",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "Price",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "ContactPhone",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_CONTACTPHONE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_CONTACTPHONE" ),
 		),
         array(
 			"CODE" => "AdStatus",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_ADSTATUS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_ADSTATUS" ),
 		),
 	),
 	"FORMAT" => '<?xml version="1.0"?>
@@ -78,15 +78,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["avito_general"]["FIELDS"][8] = array(
         "CODE" => "Price",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_GENERAL_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_GENERAL_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["avito_general"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_REQUIREMENTS" );
-$profileTypes["avito_general"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_VALIDATOR" );
-$profileTypes["avito_general"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_GENERAL_EXAMPLE" );
+$profileTypes["avito_general"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_REQUIREMENTS" );
+$profileTypes["avito_general"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_GENERAL_PORTAL_VALIDATOR" );
+$profileTypes["avito_general"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_GENERAL_EXAMPLE" );
 
 $profileTypes["avito_general"]["CURRENCIES"] = "";
 
@@ -113,7 +113,7 @@ $profileTypes["avito_general"]["ITEMS_FORMAT"] = "
     
 $profileTypes["avito_general"]["LOCATION"] = array(
 	"yandex" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_AVITO" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_AVITO" ),
 		"sub" => array(
 		)
 	),

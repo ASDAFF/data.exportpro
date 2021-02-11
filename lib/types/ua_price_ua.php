@@ -1,23 +1,27 @@
 <?php
+/**
+ * Copyright (c) 12/2/2021 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ */
+
 IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["ua_price_ua"] = array(
     "CODE" => "ua_price_ua",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_NAME" ),
-    "DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_NAME" ),
+    "DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
     "REG" => "http://market.yandex.ru/",
     "HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
     "FIELDS" => array(
         array(
             "CODE" => "ID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_ID" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_ID" ),
             "VALUE" => "ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "AVAILABLE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_AVAILABLE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_AVAILABLE" ),
             "VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,94 +46,94 @@ $profileTypes["ua_price_ua"] = array(
         ),
         array(
             "CODE" => "NAME",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_NAME" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_NAME" ),
             "VALUE" => "NAME",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "CATEGORYID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_CATEGORY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_CATEGORY" ),
             "VALUE" => "IBLOCK_SECTION_ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_PRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_PRICE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "OLDPRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_OLDPRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_OLDPRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "URL",
-            "NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_URL" ),
+            "NAME" => "URL ".GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_URL" ),
             "VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PICTURE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_PICTURE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_PICTURE" ),
         ),
         array(
             "CODE" => "VENDOR",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_VENDOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_VENDOR" ),
         ),
         array(
             "CODE" => "DESCRIPTION",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_DESCRIPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_DESCRIPTION" ),
         ),
         array(
             "CODE" => "WARRANTY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_WARRANTY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_WARRANTY" ),
         ),
         array(
             "CODE" => "AVAILABLE_AREA",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_AVAILABLE_AREA" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_AVAILABLE_AREA" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => "�����",
+            "CONTVALUE_TRUE" => "Склад",
         ),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
         array(
             "CODE" => "PARAM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_PARAM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_PARAM" ),
         ),            
     ),
     "FORMAT" => '<?xml version="1.0" encoding="#ENCODING#"?>
@@ -154,7 +158,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["ua_price_ua"]["FIELDS"][4] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
@@ -162,14 +166,14 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["ua_price_ua"]["FIELDS"][5] = array(
         "CODE" => "OLDPRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_UA_PRICE_UA_FIELD_OLDPRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_UA_PRICE_UA_FIELD_OLDPRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["ua_price_ua"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_UA_PRICE_UA_PORTAL_REQUIREMENTS" );
-$profileTypes["ua_price_ua"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_UA_PRICE_UA_EXAMPLE" );
+$profileTypes["ua_price_ua"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_UA_PRICE_UA_PORTAL_REQUIREMENTS" );
+$profileTypes["ua_price_ua"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_UA_PRICE_UA_EXAMPLE" );
 
 $profileTypes["ua_price_ua"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -194,10 +198,10 @@ $profileTypes["ua_price_ua"]["ITEMS_FORMAT"] = "
 
 $profileTypes["ua_price_ua"]["LOCATION"] = array(
     "yandex" => array(
-        "name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
+        "name" => GetMessage( "DATA_EXPORTPRO_ANDEKS" ),
         "sub" => array(
             "market" => array(
-                "name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
+                "name" => GetMessage( "DATA_EXPORTPRO_VEBMASTER" ),
                 "sub" => "",
             )
         )

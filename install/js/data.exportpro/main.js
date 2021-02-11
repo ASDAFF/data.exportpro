@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
 $( function(){
     var ret = {};
 
@@ -108,7 +104,7 @@ function getData( action, data, async, append ){
         'type': 'POST',
         'method': 'POST',
         'dataType': 'json',
-        'url': '/bitrix/admin/kit_exportpro_ajax.php',
+        'url': '/bitrix/admin/data_exportpro_ajax.php',
         'data': data,
         'async': async,
         'success': function( data ){
@@ -310,7 +306,7 @@ function CalcExportStep( profileId ){
         'type': 'POST',
         'method': 'POST',
         'dataType': 'json',
-        'url': '/bitrix/admin/kit_exportpro_ajax.php',
+        'url': '/bitrix/admin/data_exportpro_ajax.php',
         'data': {
             'profileId' : profileId,
             'ajax_action' : 'calcSteps',
@@ -339,7 +335,7 @@ function FieldsetAdd( obj ){
         'type': 'POST',
         'method': 'POST',
         'dataType': 'json',
-        'url': '/bitrix/admin/kit_exportpro_ajax.php',
+        'url': '/bitrix/admin/data_exportpro_ajax.php',
         'data': 'id=' + id + "&ajax_action=fieldset_add&sessid=" + BX.message( 'bitrix_sessid' ),
         'success': function( data ){
             if( data.result == 'ok' ){
@@ -387,7 +383,7 @@ function CompositeFieldsetAdd( obj ){
         'type': 'POST',
         'method': 'POST',
         'dataType': 'json',
-        'url': '/bitrix/admin/kit_exportpro_ajax.php',
+        'url': '/bitrix/admin/data_exportpro_ajax.php',
         'data': data,
         'success': function( data ){
             if( data.result == 'ok' ){
@@ -410,7 +406,7 @@ function ConvertFieldsetAdd( obj ){
         'type': 'POST',
         'method': 'POST',
         'dataType': 'json',
-        'url': '/bitrix/admin/kit_exportpro_ajax.php',
+        'url': '/bitrix/admin/data_exportpro_ajax.php',
         'data': 'id=' + id + "&ajax_action=convert_fieldset_add&sessid=" + BX.message( 'bitrix_sessid' ),
         'success': function( data ){
             if( data.result == 'ok' ){
@@ -437,7 +433,7 @@ function FieldsetConvertFieldsetAdd( obj ){
         'type': 'POST',
         'method': 'POST',
         'dataType': 'json',
-        'url': '/bitrix/admin/kit_exportpro_ajax.php',
+        'url': '/bitrix/admin/data_exportpro_ajax.php',
         'data': 'id=' + id + '&rowId=' + rowId + "&ajax_action=fieldset_convert_fieldset_add&sessid=" + BX.message( 'bitrix_sessid' ),
         'success': function( data ){
             if( data.result == 'ok' ){
@@ -458,7 +454,7 @@ function ShowMarketForm( type ){
             'type': 'POST',
             'method': 'POST',
             'dataType': 'json',
-            'url': '/bitrix/admin/kit_exportpro_ajax.php',
+            'url': '/bitrix/admin/data_exportpro_ajax.php',
             'data': {
                 'marketId' : marketId,
                 'ajax_action' : 'market_edit',

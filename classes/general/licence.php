@@ -2,7 +2,7 @@
 
 IncludeModuleLangFile(__FILE__);
 
-class KitLicence{
+class DataLicence{
     public static function Show(){
         IncludeModuleLangFile( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/interface/prolog_main_admin.php" );
         $supportFinishDate = COption::GetOptionString( "main", "~support_finish_date", "" );
@@ -52,7 +52,7 @@ class KitLicence{
                 }
                 
                 if( $sSupportMess <> "" ){
-                    $sSupportMess .= GetMessage( "KIT_EXPORTPRO_BUY_LICENCE" );
+                    $sSupportMess .= GetMessage( "DATA_EXPORTPRO_BUY_LICENCE" );
                     $userOption = CUserOptions::GetOption( "main", "admSupInf" );
                     if( mktime() > $userOption["showInformerDate"] ){
                         $prolongUrl = "/bitrix/admin/buy_support.php?lang=".LANGUAGE_ID;

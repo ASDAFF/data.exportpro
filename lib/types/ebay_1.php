@@ -3,99 +3,99 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["ebay_1"] = array(
 	"CODE" => "ebay_1",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "",
 	"HELP" => "",
 	"FIELDS" => array(
 		array(
 			"CODE" => "SKU",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_SKU" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_SKU" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "TITLE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_TITLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_TITLE" ),
 			"VALUE" => "NAME",
             "REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "SUBTITLE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_SUBTITLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_SUBTITLE" ),
 			"VALUE" => "PREVIEW_TEXT",
             "REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "TEMPLATE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_TEMPLATE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_TEMPLATE" ),
 		),
         array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_DESCRIPTION" ),
 			"VALUE" => "DETAIL_TEXT",
             "REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "URL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_URL" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "CONDITION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_CONDITION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_CONDITION" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "BRAND",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_BRAND" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_BRAND" ),
 		),
         array(
 			"CODE" => "MODEL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_MODEL" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_MODEL" ),
 		),
         array(
 			"CODE" => "MANUFACTURE_CODE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_MANUFACTURE_CODE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_MANUFACTURE_CODE" ),
 		),
         array(
 			"CODE" => "COUNTRY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_COUNTRY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_COUNTRY" ),
 		),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_EBAY_1_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_EBAY_1_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
@@ -115,8 +115,8 @@ $profileTypes["ebay_1"] = array(
 	"DATEFORMAT" => "Y-m-d_h:i",
 );
 
-$profileTypes["ebay_1"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_EBAY_1_PORTAL_REQUIREMENTS" );
-$profileTypes["ebay_1"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_EBAY_1_EXAMPLE" );
+$profileTypes["ebay_1"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_EBAY_1_PORTAL_REQUIREMENTS" );
+$profileTypes["ebay_1"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_EBAY_1_EXAMPLE" );
 
 $profileTypes["ebay_1"]["CURRENCIES"] = "";
 
@@ -153,7 +153,7 @@ $profileTypes["ebay_1"]["ITEMS_FORMAT"] = '
     
 $profileTypes["ebay_1"]["LOCATION"] = array(
 	"ebay_1" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_EBAY_1" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_EBAY_1" ),
 		"sub" => array(
 		)
 	),

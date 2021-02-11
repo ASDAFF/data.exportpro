@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["ym_clothes"] = array(
     "CODE" => "ym_clothes",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_NAME" ),
-    "DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_NAME" ),
+    "DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
     "REG" => "http://market.yandex.ru/",
     "HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
     "FIELDS" => array(
         array(
             "CODE" => "ID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_ID" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_ID" ),
             "VALUE" => "ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "AVAILABLE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_AVAILABLE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_AVAILABLE" ),
             "VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,210 +42,210 @@ $profileTypes["ym_clothes"] = array(
         ),
         array(
             "CODE" => "BID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_BID" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_BID" ),
         ),
         array(
             "CODE" => "BASE_DELIVERY_COST",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_BASEDELIVERYCOST" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_BASEDELIVERYCOST" ),
         ),
         array(
             "CODE" => "BASE_DELIVERY_DAYS",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_BASEDELIVERYDAYS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_BASEDELIVERYDAYS" ),
         ),
         array(
             "CODE" => "URL",
-            "NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_URL" ),
+            "NAME" => "URL ".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_URL" ),
             "VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PRICE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "OLDPRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_OLDPRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_OLDPRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "CURRENCYID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_CURRENCY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_CURRENCY" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
         ),
         array(
             "CODE" => "CATEGORYID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_CATEGORY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_CATEGORY" ),
             "VALUE" => "IBLOCK_SECTION_ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PICTURE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PICTURE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PICTURE" ),
         ),
         array(
             "CODE" => "STORE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_STORE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_STORE" ),
         ),
         array(
             "CODE" => "PICKUP",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PICKUP" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PICKUP" ),
         ),
         array(
             "CODE" => "DELIVERY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_DELIVERY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_DELIVERY" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_COST",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_LOCALDELIVERYCOST" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_LOCALDELIVERYCOST" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_DAYS",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_LOCALDELIVERYDAYS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_LOCALDELIVERYDAYS" ),
         ),
         array(
             "CODE" => "TYPEPREFIX",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_TYPEPREFIX" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_TYPEPREFIX" ),
         ),
         array(
             "CODE" => "VENDOR",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_VENDOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_VENDOR" ),
         ),
         array(
             "CODE" => "VENDORCODE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_VENDORCODE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_VENDORCODE" ),
         ),
         array(
             "CODE" => "MODEL",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_MODEL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_MODEL" ),
         ),
         array(
             "CODE" => "DESCRIPTION",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_DESCRIPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_DESCRIPTION" ),
         ),
         array(
             "CODE" => "SALES_NOTES",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_SALESNOTES" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_SALESNOTES" ),
         ),
         array(
             "CODE" => "MANUFACTURER_WARRANTY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_MANUFACTURERWARRANTY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_MANUFACTURERWARRANTY" ),
         ),
         array(
             "CODE" => "COUNTRY_OF_ORIGIN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_COUNTRYOFORIGIN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_COUNTRYOFORIGIN" ),
         ),
         array(
             "CODE" => "DOWNLOADABLE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_DOWNLOADABLE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_DOWNLOADABLE" ),
         ),
         array(
             "CODE" => "ADULT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_ADULT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_ADULT" ),
         ),
         array(
             "CODE" => "AGE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_AGE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_AGE" ),
         ),
         array(
             "CODE" => "BARCODE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_BARCODE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_BARCODE" ),
         ),
         array(
             "CODE" => "CPA",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_CPA" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_CPA" ),
         ),
         array(
             "CODE" => "REC",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_REC" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_REC" ),
         ),
         array(
             "CODE" => "EXPIRY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_EXPIRY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_EXPIRY" ),
         ),
         array(
             "CODE" => "WEIGHT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_WEIGHT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_WEIGHT" ),
         ),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
         array(
             "CODE" => "PARAM1",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP_VALUE" )
         ),                   
         array(
             "CODE" => "PARAM2",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST_VALUE" )
         ),
         array(
             "CODE" => "PARAM3",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE_VALUE" )
         ),
         array(
             "CODE" => "PARAM4",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_COLOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_COLOR" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_COLOR_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_COLOR_VALUE" )
         ),
         array(
             "CODE" => "PARAM5",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_GENDER" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_GENDER" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_GENDER_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_GENDER_VALUE" )
         ),
         array(
             "CODE" => "PARAM6",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_OLD" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_OLD" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_OLD_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_OLD_VALUE" )
         ),
         array(
             "CODE" => "PARAM7",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_MATERIAL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_MATERIAL" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_MATERIAL_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_MATERIAL_VALUE" )
         ),
     ),
     "FORMAT" => '<?xml version="1.0" encoding="#ENCODING#"?>
@@ -278,7 +278,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["ym_clothes"]["FIELDS"][6] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
@@ -286,15 +286,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["ym_clothes"]["FIELDS"][7] = array(
         "CODE" => "OLDPRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_OLDPRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_OLDPRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["ym_clothes"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_CLOTHES_PORTAL_REQUIREMENTS" );
-$profileTypes["ym_clothes"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_CLOTHES_PORTAL_VALIDATOR" );
-$profileTypes["ym_clothes"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_CLOTHES_EXAMPLE" );
+$profileTypes["ym_clothes"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_MARKET_CLOTHES_PORTAL_REQUIREMENTS" );
+$profileTypes["ym_clothes"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_MARKET_CLOTHES_PORTAL_VALIDATOR" );
+$profileTypes["ym_clothes"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_MARKET_CLOTHES_EXAMPLE" );
 
 $profileTypes["ym_clothes"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -333,22 +333,22 @@ $profileTypes["ym_clothes"]["ITEMS_FORMAT"] = "
     <rec>#REC#</rec>
     <expiry>#EXPIRY#</expiry>
     <weight>#WEIGHT#</weight>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP" )."\" unit=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP_UNIT" )."\">#PARAM1#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST" )."\" unit=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST_UNIT" )."\">#PARAM2#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE" )."\" unit=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE_UNIT" )."\">#PARAM3#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_COLOR" )."\">#PARAM4#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_GENDER" )."\">#PARAM5#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_OLD" )."\">#PARAM6#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_MATERIAL" )."\">#PARAM7#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP" )."\" unit=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BRA_CUP_UNIT" )."\">#PARAM1#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST" )."\" unit=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_BUST_UNIT" )."\">#PARAM2#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE" )."\" unit=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_PANTIES_SIZE_UNIT" )."\">#PARAM3#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_COLOR" )."\">#PARAM4#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_GENDER" )."\">#PARAM5#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_OLD" )."\">#PARAM6#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_MARKET_CLOTHES_FIELD_PARAM_MATERIAL" )."\">#PARAM7#</param>
 </offer>
 ";
     
 $profileTypes["ym_clothes"]["LOCATION"] = array(
     "yandex" => array(
-        "name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
+        "name" => GetMessage( "DATA_EXPORTPRO_ANDEKS" ),
         "sub" => array(
             "market" => array(
-                "name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
+                "name" => GetMessage( "DATA_EXPORTPRO_VEBMASTER" ),
                 "sub" => "",
             )
         )

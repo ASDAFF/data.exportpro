@@ -1,7 +1,4 @@
 <?php
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
 
 IncludeModuleLangFile( __FILE__ );
 
@@ -25,9 +22,9 @@ class CExportproProfileDB{
 		"VARIANT",
 	);
     
-    private $profileTableName = "kit_exportpro_profile";
-    private $dataTableName = "kit_exportpro_profile_data";
-    private $toolsTableName = "kit_exportpro_profile_tools";
+    private $profileTableName = "data_exportpro_profile";
+    private $dataTableName = "data_exportpro_profile_data";
+    private $toolsTableName = "data_exportpro_profile_tools";
     
     
     /*
@@ -343,7 +340,7 @@ class CExportproProfileDB{
 		CModule::IncludeModule( "main" );
 		$ID = intval( $ID );
 		// delete agent
-		$arAgent = CAgent::GetList( array(), array( "NAME" => "CKitExport::StartAgent(".$ID.");" ) )->Fetch();
+		$arAgent = CAgent::GetList( array(), array( "NAME" => "CDataExport::StartAgent(".$ID.");" ) )->Fetch();
 		CAgent::Delete( $arAgent["ID"] );
 
 		$DB->StartTransaction();

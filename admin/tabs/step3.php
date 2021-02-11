@@ -111,27 +111,27 @@ $ua_prom_ua = array(
 
 <tr class="heading" align="center">
 	<td colspan="2">
-		<b><?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE" )?></b>
+		<b><?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE" )?></b>
 	</td>
 </tr>
 
 <tr>
 	<td>
-        <span id="hint_PROFILE[TYPE]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[TYPE]' ), '<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_LABEL_HELP" )?>' );</script>
-        <?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_LABEL" )?>
+        <span id="hint_PROFILE[TYPE]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[TYPE]' ), '<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_LABEL_HELP" )?>' );</script>
+        <?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_LABEL" )?>
     </td>
 	<td>                                     
 		<select name="PROFILE[TYPE]">
             <? $selected = $arProfile["TYPE"] == "optional" ? 'selected="selected"' : ""; ?>
             <option value="optional" <?=$selected?>><?=$types["optional"]["NAME"]?></option>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_YANDEX" )?>">
-                <optgroup label="&nbsp;&nbsp;&nbsp;<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_YANDEX_MARKET" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_YANDEX" )?>">
+                <optgroup label="&nbsp;&nbsp;&nbsp;<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_YANDEX_MARKET" )?>">
                     <?foreach($yandex_market as $typeCode):?>
                         <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                         <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                     <?endforeach?>
                 </optgroup>
-                <optgroup label="&nbsp;&nbsp;&nbsp;<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_YANDEX_REALTY" )?>">
+                <optgroup label="&nbsp;&nbsp;&nbsp;<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_YANDEX_REALTY" )?>">
                     <?foreach( $yandex_realty as $typeCode ):?>
                         <?$selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                         <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
@@ -139,115 +139,115 @@ $ua_prom_ua = array(
                 </optgroup>
             </optgroup>
             
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_GOOGLE" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_GOOGLE" )?>">
 				 <?foreach($google as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_WIKIMART" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_WIKIMART" )?>">
 				 <?foreach($wikimart as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_TIU" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_TIU" )?>">
 				 <?foreach($tiu as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_MAIL.RU" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_MAIL.RU" )?>">
 				 <?foreach($mailru as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_ALLBIZ" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_ALLBIZ" )?>">
 				 <?foreach($allbiz as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_ACTIVIZM" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_ACTIVIZM" )?>">
 				 <?foreach($activizm as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_AVITO" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_AVITO" )?>">
 				 <?foreach($avito as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_EBAY" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_EBAY" )?>">
 				 <?foreach($ebay as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_OZON" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_OZON" )?>">
 				 <?foreach($ozon as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_PULSCEN" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_PULSCEN" )?>">
 				 <?foreach($pulscen as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-			<optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_LENGOW" )?>">
+			<optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_LENGOW" )?>">
 				 <?foreach($lengow as $typeCode):?>
 					 <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
 					 <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
 				 <?endforeach?>
 			</optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_ADVANTSHOP" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_ADVANTSHOP" )?>">
                  <?foreach( $advantshop as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                  <?endforeach?>
             </optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_PRICE_RU" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_PRICE_RU" )?>">
                  <?foreach( $price_ru as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                  <?endforeach?>
             </optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_1C" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_1C" )?>">
                  <?foreach( $nuraliev as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                  <?endforeach?>
             </optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_UA_NADAVI_NET" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_UA_NADAVI_NET" )?>">
                  <?foreach( $ua_nadavi_net as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                  <?endforeach?>
             </optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_UA_HOTLINE_UA" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_UA_HOTLINE_UA" )?>">
                  <?foreach( $ua_hotline_ua as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                  <?endforeach?>
             </optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_UA_TECHNOPORTAL_UA" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_UA_TECHNOPORTAL_UA" )?>">
                  <?foreach( $ua_technoportal_ua as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                  <?endforeach?>
             </optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_UA_PRICE_UA" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_UA_PRICE_UA" )?>">
                  <?foreach( $ua_price_ua as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
                  <?endforeach?>
             </optgroup>
-            <optgroup label="<?=GetMessage( "KIT_EXPORTPRO_EXPORTTYPE_UA_PROM_UA" )?>">
+            <optgroup label="<?=GetMessage( "DATA_EXPORTPRO_EXPORTTYPE_UA_PROM_UA" )?>">
                  <?foreach( $ua_prom_ua as $typeCode ):?>
                      <? $selected = $arProfile["TYPE"] == $typeCode ? 'selected="selected"' : ""; ?>
                      <option value="<?=$typeCode?>" <?=$selected?>>&nbsp;&nbsp;&nbsp;<?=$types[$typeCode]["NAME"]?></option>
@@ -256,13 +256,13 @@ $ua_prom_ua = array(
 		</select>
 	</td>
 </tr>
-<tr class="heading"><td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_EXPORT_REQUIREMENTS" );?></td></tr>
+<tr class="heading"><td colspan="2"><?=GetMessage( "DATA_EXPORTPRO_EXPORT_REQUIREMENTS" );?></td></tr>
 <tr>
     <td colspan="2" id="portal_requirements" style="text-align: center;">
         <a href="<?=$types[$arProfile["TYPE"]]["PORTAL_REQUIREMENTS"];?>" target="_blank"><?=$types[$arProfile["TYPE"]]["PORTAL_REQUIREMENTS"];?></a>
     </td>
 </tr>
-<tr class="heading"><td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_EXPORT_EXAMPLE" )?></td></tr>
+<tr class="heading"><td colspan="2"><?=GetMessage( "DATA_EXPORTPRO_EXPORT_EXAMPLE" )?></td></tr>
 <tr>
 	<td colspan="2" style="background:#FDF6E3" id="description">
 		<?if( $siteEncoding[SITE_CHARSET] != "utf8" )

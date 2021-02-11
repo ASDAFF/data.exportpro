@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
+ * Copyright (c) 11/2/2021 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
 include( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php" );
@@ -8,7 +8,7 @@ if( !check_bitrix_sessid() ) die();
 
 IncludeModuleLangFile( __FILE__ );
 
-CModule::IncludeModule( "kit.exportpro" );
+CModule::IncludeModule( "data.exportpro" );
 CModule::IncludeModule( "iblock" );
 CModule::IncludeModule( "catalog" );
 
@@ -16,15 +16,15 @@ $ajax_action();
 
 function unlock_export(){
     global $APPLICATION, $profileID;
-    if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/export_{$profileID}_run.lock" ) ){
+    if( file_exists( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/data.exportpro/export_{$profileID}_run.lock" ) ){
         require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
-        unlink( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/kit.exportpro/export_{$profileID}_run.lock" );
+        unlink( $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools/data.exportpro/export_{$profileID}_run.lock" );
 
         ob_start();
         echo '<td colspan="2" align="center">';
         CAdminMessage::ShowMessage(
             array(
-                "MESSAGE" => GetMessage( "KIT_EXPORTPRO_EXPORT_UNLOCK" ),
+                "MESSAGE" => GetMessage( "DATA_EXPORTPRO_EXPORT_UNLOCK" ),
                 "TYPE"    => "OK",
                 "HTML"    => "TRUE"
             )
@@ -58,32 +58,32 @@ function update_log(){
         <table width="30%" border="1">
             <tbody>
             <tr>
-                <td colspan="2" align="center"><b><?=GetMessage( "KIT_EXPORTPRO_LOG_ALL" )?></b></td>
+                <td colspan="2" align="center"><b><?=GetMessage( "DATA_EXPORTPRO_LOG_ALL" )?></b></td>
             </tr>
             <tr>
-                <td width="50%"><?=GetMessage( "KIT_EXPORTPRO_LOG_ALL_IB" )?></td>
+                <td width="50%"><?=GetMessage( "DATA_EXPORTPRO_LOG_ALL_IB" )?></td>
                 <td width="50%"><?=$arProfile["LOG"]["IBLOCK"]?></td>
             </tr>
             <tr>
-                <td width="50%"><?=GetMessage( "KIT_EXPORTPRO_LOG_ALL_SECTION" )?></td>
+                <td width="50%"><?=GetMessage( "DATA_EXPORTPRO_LOG_ALL_SECTION" )?></td>
                 <td width="50%"><?=$arProfile["LOG"]["SECTIONS"]?></td>
             </tr>
             <tr>
-                <td width="50%"><?=GetMessage( "KIT_EXPORTPRO_LOG_ALL_OFFERS" )?></td>
+                <td width="50%"><?=GetMessage( "DATA_EXPORTPRO_LOG_ALL_OFFERS" )?></td>
                 <td width="50%"><?=$arProfile["LOG"]["PRODUCTS"]?></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><b><?=GetMessage( "KIT_EXPORTPRO_LOG_EXPORT" )?></b></td>
+                <td colspan="2" align="center"><b><?=GetMessage( "DATA_EXPORTPRO_LOG_EXPORT" )?></b></td>
             </tr>
             <tr>
-                <td width="50%"><?=GetMessage( "KIT_EXPORTPRO_LOG_OFFERS_EXPORT" )?></td>
+                <td width="50%"><?=GetMessage( "DATA_EXPORTPRO_LOG_OFFERS_EXPORT" )?></td>
                 <td width="50%"><?=$arProfile["LOG"]["PRODUCTS_EXPORT"]?></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><b><?=GetMessage( "KIT_EXPORTPRO_LOG_ERROR" )?></b></td>
+                <td colspan="2" align="center"><b><?=GetMessage( "DATA_EXPORTPRO_LOG_ERROR" )?></b></td>
             </tr>
             <tr>
-                <td width="50%"><?=GetMessage( "KIT_EXPORTPRO_LOG_ERR_OFFERS" )?></td>
+                <td width="50%"><?=GetMessage( "DATA_EXPORTPRO_LOG_ERR_OFFERS" )?></td>
                 <td width="50%"><?=$arProfile["LOG"]["PRODUCTS_ERROR"]?></td>
             </tr>
             </tbody>
@@ -94,7 +94,7 @@ function update_log(){
     ob_start();
     if( file_exists( $_SERVER["DOCUMENT_ROOT"].$arProfile["LOG"]["FILE"] ) ){?>
         <td width="50%" class="adm-detail-content-cell-l" style="padding: 15px 0;">
-            <b><?=GetMessage( "KIT_EXPORTPRO_LOG_FILE" )?></b>
+            <b><?=GetMessage( "DATA_EXPORTPRO_LOG_FILE" )?></b>
         </td>
         <td width="50%" class="adm-detail-content-cell-r">
             <a href="<?=$arProfile["LOG"]["FILE"]?>" download="export_log"><?=$arProfile["LOG"]["FILE"]?></a>
@@ -125,9 +125,9 @@ function get_condition_block(){
     global $fId, $fCnt, $PROFILE, $APPLICATION;
     
     $profileUtils = new CExportproProfile();
-    $obCond = new CKitExportproCatalogCond();
+    $obCond = new CDataExportproCatalogCond();
     
-    CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $PROFILE["IBLOCK_ID"], $PROFILE["USE_SKU"] );
+    CDataExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $PROFILE["IBLOCK_ID"], $PROFILE["USE_SKU"] );
     $boolCond = $obCond->Init(
         0,
         0,
@@ -320,7 +320,7 @@ function market_save(){
         $marketName = mb_convert_encoding( $marketName, "cp1251", "utf8" );
     }
 
-    CModule::IncludeModule( "kit.exportpro" );
+    CModule::IncludeModule( "data.exportpro" );
     $marketCategory = new CExportproMarketDB();
 
     $arFields = array(
@@ -364,7 +364,7 @@ function market_save(){
 
 function market_edit(){
     global $APPLICATION, $PROFILE, $marketId;
-    CModule::IncludeModule( "kit.exportpro" );
+    CModule::IncludeModule( "data.exportpro" );
     $marketCategory = new CExportproMarketDB();
     $marketCategory = $marketCategory->GetByID( $marketId );
     $APPLICATION->RestartBuffer();
@@ -382,11 +382,11 @@ function market_edit(){
 function calcSteps(){
     global $APPLICATION, $profileId;
     
-    CModule::IncludeModule( "kit.exportpro" );
+    CModule::IncludeModule( "data.exportpro" );
     
     $dbProfile = new CExportproProfileDB();
     $arProfile = $dbProfile->GetById( $profileId );
-    $elementsObj = new CKitExportproElement( $arProfile );
+    $elementsObj = new CDataExportproElement( $arProfile );
     $oneProductTime = $elementsObj->CalcProcessXMLLoadingByOneProduct();
     if( $oneProductTime ){
         $maxExecutionTime = ini_get( "max_execution_time" );
@@ -419,26 +419,26 @@ function fieldset_add(){
     $options = $profileUtils->createFieldset2( $PROFILE["IBLOCK_ID"], true );
 
     $fieldType = array(
-        "none"    => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
-        "field"   => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
-        "const"   => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
-        "complex" => GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPLEX" )
+        "none"    => GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" ),
+        "field"   => GetMessage( "DATA_EXPORTPRO_FIELDSET_FIELD" ),
+        "const"   => GetMessage( "DATA_EXPORTPRO_FIELDSET_CONST" ),
+        "complex" => GetMessage( "DATA_EXPORTPRO_FIELDSET_COMPLEX" )
     );
 
     $fieldTypeComplex = array(
-        "none"  => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
-        "field" => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
-        "const" => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
+        "none"  => GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" ),
+        "field" => GetMessage( "DATA_EXPORTPRO_FIELDSET_FIELD" ),
+        "const" => GetMessage( "DATA_EXPORTPRO_FIELDSET_CONST" ),
     );
 
     ob_start();?>
     <tr class="fieldset-item" data-id="<?=$id?>">
         <td>
             <label for="PROFILE[XMLDATA][<?=$id?>]"></label>
-            <input type="text" name="PROFILE[XMLDATA][<?=$id?>][NAME]" placeholder="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_NAME_DESCR" )?>"/>
+            <input type="text" name="PROFILE[XMLDATA][<?=$id?>][NAME]" placeholder="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_NAME_DESCR" )?>"/>
         </td>
         <td colspan="2">
-            <input type="text" name="PROFILE[XMLDATA][<?=$id?>][CODE]" placeholder="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_NAME" )?>"/>
+            <input type="text" name="PROFILE[XMLDATA][<?=$id?>][CODE]" placeholder="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_NAME" )?>"/>
             <select name="PROFILE[XMLDATA][<?=$id?>][TYPE]" onchange="ShowConvalueBlock( this )" data-id="<?=$id?>">
                 <?foreach( $fieldType as $typeId => $typeName ){?>
                     <?$selected = $typeId == $field["TYPE"] ? 'selected="selected"' : "";?>
@@ -446,7 +446,7 @@ function fieldset_add(){
                 <?}?>
             </select>
             <select class="field-block" name="PROFILE[XMLDATA][<?=$id?>][VALUE]">
-                <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                <option value="">--<?=GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )?>--</option>
                 <?if( $field["TYPE"] == "field" ){
                     $opt = $profileUtils->selectFieldset2( $options, $field["VALUE"] );
                     echo implode( "\n", $opt );
@@ -458,9 +458,9 @@ function fieldset_add(){
                 <?$hideContvalueFalse = !$useCondition ? "hide" : "";?>
                 <?$showPlaceholder = !$hideContvalueFalse ? "placeholder" : "data-placeholder";?>
                 <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_TRUE]" <?=$showPlaceholder?>=
-                "<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
+                "<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
                 ><?=$field["CONTVALUE_TRUE"]?></textarea>
-                <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_FALSE]" placeholder="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" class="<?=$hideContvalueFalse?>"><?=$field["CONTVALUE_FALSE"]?></textarea>
+                <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_FALSE]" placeholder="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" class="<?=$hideContvalueFalse?>"><?=$field["CONTVALUE_FALSE"]?></textarea>
             </div>
             <div class="complex-block-container hide">
                 <div class="complex-block">
@@ -475,7 +475,7 @@ function fieldset_add(){
                             <?}?>
                         </select>
                         <select class="field-block-complex hide" name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_TRUE_VALUE]">
-                            <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                            <option value="">--<?=GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )?>--</option>
                             <?if( $field["COMPLEX_TRUE_TYPE"] == "field" ){
                                 $opt = $profileUtils->selectFieldset2( $options, $field["COMPLEX_TRUE_VALUE"] );
                                 echo implode( "\n", $opt );
@@ -485,7 +485,7 @@ function fieldset_add(){
 
                         <div class="const-block-complex hide">
                             <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_TRUE_CONTVALUE]" <?=$showPlaceholder?>
-                            ="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
+                            ="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
                             ><?=$field["COMPLEX_TRUE_CONTVALUE"]?></textarea>
                         </div>
                     </div>
@@ -497,7 +497,7 @@ function fieldset_add(){
                             <?}?>
                         </select>
                         <select class="field-block-complex-false hide" name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_FALSE_VALUE]">
-                            <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                            <option value="">--<?=GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )?>--</option>
                             <?if( $field["COMPLEX_FALSE_TYPE"] == "field" ){
                                 $opt = $profileUtils->selectFieldset2( $options, $field["COMPLEX_FALSE_VALUE"] );
                                 echo implode( "\n", $opt );
@@ -507,7 +507,7 @@ function fieldset_add(){
 
                         <div class="const-block-complex-false hide">
                             <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_FALSE_CONTVALUE]" <?=$showPlaceholder?>
-                            ="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
+                            ="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
                             ><?=$field["COMPLEX_FALSE_CONTVALUE"]?></textarea>
                         </div>
                     </div>
@@ -541,9 +541,9 @@ function composite_fieldset_add(){
     $options = $profileUtils->createFieldset2( $PROFILE["IBLOCK_ID"], true );
 
     $fieldTypeComposite = array(
-        "none" => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
-        "field" => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
-        "const" => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
+        "none" => GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" ),
+        "field" => GetMessage( "DATA_EXPORTPRO_FIELDSET_FIELD" ),
+        "const" => GetMessage( "DATA_EXPORTPRO_FIELDSET_CONST" ),
     );
 
     ob_start();?>
@@ -561,7 +561,7 @@ function composite_fieldset_add(){
                 unset( $opt );?>
             </select>                                 
             <div class="const-block-composite hide">
-                <textarea name="PROFILE[XMLDATA][<?=$rowId?>][COMPOSITE_TRUE][<?=$id?>][COMPOSITE_TRUE_CONTVALUE]" data-placeholder="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>" style="width: 420px;"></textarea>
+                <textarea name="PROFILE[XMLDATA][<?=$rowId?>][COMPOSITE_TRUE][<?=$id?>][COMPOSITE_TRUE_CONTVALUE]" data-placeholder="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>" style="width: 420px;"></textarea>
             </div>
         </div>
     <?}
@@ -574,13 +574,13 @@ function composite_fieldset_add(){
                 <?}?>
             </select><br/>
             <select class="field-block-composite hide" name="PROFILE[XMLDATA][<?=$rowId?>][COMPOSITE_FALSE][<?=$id?>][COMPOSITE_FALSE_VALUE]" style="width: 430px;">
-                <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                <option value="">--<?=GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )?>--</option>
                 <?$opt = $profileUtils->selectFieldset2( $options, false );
                 echo implode( "\n", $opt );
                 unset( $opt );?>
             </select>                                 
             <div class="const-block-composite hide">
-                <textarea name="PROFILE[XMLDATA][<?=$rowId?>][COMPOSITE_FALSE][<?=$id?>][COMPOSITE_FALSE_CONTVALUE]" data-placeholder="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" style="width: 420px;"></textarea>
+                <textarea name="PROFILE[XMLDATA][<?=$rowId?>][COMPOSITE_FALSE][<?=$id?>][COMPOSITE_FALSE_CONTVALUE]" data-placeholder="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" style="width: 420px;"></textarea>
             </div>
         </div>
     <?}?>
@@ -712,7 +712,7 @@ function change_type(){
         ob_start();?>
         <?if( strlen( $types[$PROFILE["TYPE"]]["PORTAL_VALIDATOR"] ) > 0 ){?>
             <div style="float: left;">
-                <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/kit.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
+                <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/data.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
                 <input type="button" value="..." onclick="BtnClick()">
             </div>
             <div style="padding: 5px 0px 0px 300px;">
@@ -721,7 +721,7 @@ function change_type(){
             <div style="clear: both;"></div>
         <?}
         else{?>
-            <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/kit.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
+            <input type="text" size="30" name="PROFILE[SETUP][URL_DATA_FILE]" value="/data.exportpro/<?=$profileCode?>.<?if( $PROFILE["TYPE"] == "advantshop" ):?>csv<?else:?>xml<?endif;?>"/>
             <input type="button" value="..." onclick="BtnClick()">
         <?}?>
         <?$exportFilePath = ob_get_clean();
@@ -766,23 +766,23 @@ function change_type(){
     $options = $profileUtils->createFieldset2( $PROFILE["IBLOCK_ID"], true );
 
     $fieldType = array(
-        "none"    => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
-        "field"   => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
-        "const"   => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
-        "complex" => GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPLEX" ),
-        "composite" => GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE" )
+        "none"    => GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" ),
+        "field"   => GetMessage( "DATA_EXPORTPRO_FIELDSET_FIELD" ),
+        "const"   => GetMessage( "DATA_EXPORTPRO_FIELDSET_CONST" ),
+        "complex" => GetMessage( "DATA_EXPORTPRO_FIELDSET_COMPLEX" ),
+        "composite" => GetMessage( "DATA_EXPORTPRO_FIELDSET_COMPOSITE" )
     );
 
     $fieldTypeComplex = array(
-        "none"  => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
-        "field" => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
-        "const" => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
+        "none"  => GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" ),
+        "field" => GetMessage( "DATA_EXPORTPRO_FIELDSET_FIELD" ),
+        "const" => GetMessage( "DATA_EXPORTPRO_FIELDSET_CONST" ),
     );
     
     $fieldTypeComposite = array(
-        "none" => GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" ),
-        "field" => GetMessage( "KIT_EXPORTPRO_FIELDSET_FIELD" ),
-        "const" => GetMessage( "KIT_EXPORTPRO_FIELDSET_CONST" ),
+        "none" => GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" ),
+        "field" => GetMessage( "DATA_EXPORTPRO_FIELDSET_FIELD" ),
+        "const" => GetMessage( "DATA_EXPORTPRO_FIELDSET_CONST" ),
     );  ?>
 
     <tbody>
@@ -828,7 +828,7 @@ function change_type(){
                     <?endforeach?>
                 </select>
                 <select class="field-block <?=$hideFieldBlock?>" name="PROFILE[XMLDATA][<?=$id?>][VALUE]">
-                    <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                    <option value="">--<?=GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )?>--</option>
                     <?if( $field["TYPE"] == "field" ){
                         $opt = $profileUtils->selectFieldset2( $options, $field["VALUE"] );
                         echo implode( "\n", $opt );
@@ -840,9 +840,9 @@ function change_type(){
                     <?$hideContvalueFalse = !$useCondition ? "hide" : "";?>
                     <?$showPlaceholder = !$hideContvalueFalse ? "placeholder" : "data-placeholder";?>
                     <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_TRUE]" <?=$showPlaceholder?>=
-                    "<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
+                    "<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
                     ><?=$field["CONTVALUE_TRUE"]?></textarea>
-                    <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_FALSE]" placeholder="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" class="<?=$hideContvalueFalse?>"><?=$field["CONTVALUE_FALSE"]?></textarea>
+                    <textarea name="PROFILE[XMLDATA][<?=$id?>][CONTVALUE_FALSE]" placeholder="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" class="<?=$hideContvalueFalse?>"><?=$field["CONTVALUE_FALSE"]?></textarea>
                 </div>
                 <div class="complex-block-container <?=$hideComplexBlock?>">
                     <div class="complex-block">
@@ -857,7 +857,7 @@ function change_type(){
                                 <?endforeach?>
                             </select>
                             <select class="field-block-complex <?=$hideComplexFieldTrueBlock?>" name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_TRUE_VALUE]">
-                                <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                                <option value="">--<?=GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )?>--</option>
                                 <?if( $field["COMPLEX_TRUE_TYPE"] == "field" ){
                                     $opt = $profileUtils->selectFieldset2( $options, $field["COMPLEX_TRUE_VALUE"] );
                                     echo implode( "\n", $opt );
@@ -867,7 +867,7 @@ function change_type(){
 
                             <div class="const-block-complex <?=$hideComplexConstTrueBlock?>">
                                 <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_TRUE_CONTVALUE]" <?=$showPlaceholder?>
-                                ="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
+                                ="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
                                 ><?=$field["COMPLEX_TRUE_CONTVALUE"]?></textarea>
                             </div>
                         </div>
@@ -879,7 +879,7 @@ function change_type(){
                                 <?endforeach?>
                             </select>
                             <select class="field-block-complex-false <?=$hideComplexFieldFalseBlock?>" name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_FALSE_VALUE]">
-                                <option value="">--<?=GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )?>--</option>
+                                <option value="">--<?=GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )?>--</option>
                                 <?if( $field["COMPLEX_FALSE_TYPE"] == "field" ){
                                     $opt = $profileUtils->selectFieldset2( $options, $field["COMPLEX_FALSE_VALUE"] );
                                     echo implode( "\n", $opt );
@@ -889,7 +889,7 @@ function change_type(){
 
                             <div class="const-block-complex-false <?=$hideComplexConstFalseBlock?>">
                                 <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPLEX_FALSE_CONTVALUE]" <?=$showPlaceholder?>
-                                ="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
+                                ="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>"
                                 ><?=$field["COMPLEX_FALSE_CONTVALUE"]?></textarea>
                             </div>
                         </div>
@@ -902,8 +902,8 @@ function change_type(){
                     
                         <div style="width: 100%;">
                             <div class="composite-divider" style="width: 100%;">
-                                <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
-                                <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE_DIVIDER]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
+                                <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE_DIVIDER]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
                                 <input type="text" name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE_DIVIDER]" value="<?=$compositeTrueDivider;?>" style="width: 420px;" />
                             </div>
                             <div class="composite-data-area-true" style="margin: 10px 0px 0px 0px; width: 100%;">
@@ -924,7 +924,7 @@ function change_type(){
                                                 unset( $opt );?>                                    
                                             </select>                                 
                                             <div class="const-block-composite <?=$hideCompositeConstTrueBlock?>">
-                                                <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE][<?=$compositeTrueId?>][COMPOSITE_TRUE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>" style="width: 420px;"><?=$arCompositeTrue["COMPOSITE_TRUE_CONTVALUE"]?></textarea>
+                                                <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_TRUE][<?=$compositeTrueId?>][COMPOSITE_TRUE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_TRUE" )?>" style="width: 420px;"><?=$arCompositeTrue["COMPOSITE_TRUE_CONTVALUE"]?></textarea>
                                             </div>
                                         </div>
                                     <?}
@@ -932,14 +932,14 @@ function change_type(){
                             </div>
                             <div class="composite-add-field-button truenode" data-id="<?=$idCnt?>" data-row-id="<?=$id?>" style="margin: 10px 0px 0px 0px;">
                                 <button class="adm-btn" onclick="CompositeFieldsetAdd( this ); return false;">
-                                    <?=GetMessage( "KIT_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
+                                    <?=GetMessage( "DATA_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
                                 </button>
                             </div>
                         </div>
                         <div class="composite-data-area-false-container <?=$hideCompositeFalse?>" style="width: 100%; margin: 20px 0px 0px 0px;">
                             <div class="composite-divider" style="width: 100%;">
-                                <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
-                                <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE_DIVIDER]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
+                                <span id="hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER_HELP" )?>' );</script>
+                                <label for="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE_DIVIDER]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_COMPOSITE_DIVIDER" )?></label><br/>
                                 <input type="text" name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE_DIVIDER]" value="<?=$compositeFalseDivider;?>" style="width: 420px;" />
                             </div>
                             <div class="composite-data-area-false" style="margin: 10px 0px 0px 0px; width: 100%;">
@@ -960,7 +960,7 @@ function change_type(){
                                                 unset( $opt );?>                                    
                                             </select>                                 
                                             <div class="const-block-composite <?=$hideCompositeConstFalseBlock?>">
-                                                <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE][<?=$compositeFalseId?>][COMPOSITE_FALSE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" style="width: 420px;"><?=$arCompositeFalse["COMPOSITE_FALSE_CONTVALUE"]?></textarea>
+                                                <textarea name="PROFILE[XMLDATA][<?=$id?>][COMPOSITE_FALSE][<?=$compositeFalseId?>][COMPOSITE_FALSE_CONTVALUE]" <?=$showPlaceholder?>="<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_FALSE" )?>" style="width: 420px;"><?=$arCompositeFalse["COMPOSITE_FALSE_CONTVALUE"]?></textarea>
                                             </div>
                                         </div>
                                     <?}
@@ -968,7 +968,7 @@ function change_type(){
                             </div>
                             <div class="composite-add-field-button falsenode" data-id="<?=$idCnt?>" data-row-id="<?=$id?>" style="margin: 10px 0px 0px 0px;">
                                 <button class="adm-btn" onclick="CompositeFieldsetAdd( this ); return false;">
-                                    <?=GetMessage( "KIT_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
+                                    <?=GetMessage( "DATA_EXPORTPRO_FIELDSET_ADD_PART_TO_COMPOSITE_FIELD" );?>
                                 </button>
                             </div>
                         </div>
@@ -978,76 +978,76 @@ function change_type(){
 
                 <div style="margin: 10px 0px 10px 15px;">
                     <span id="hint_EXPORTPRO_FIELDSET_REQUIRED"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_REQUIRED' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_REQUIRED_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_REQUIRED' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_REQUIRED_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][REQUIRED]" value="Y" <?=$required?> />
-                    <label for="PROFILE[XMLDATA][<?=$id?>][REQUIRED]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_REQUIRED" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][REQUIRED]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_REQUIRED" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_CONDITION"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONDITION' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONDITION' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][USE_CONDITION]" <?=$useCondition?> value="Y" data-id="<?=$id?>" onclick="ShowConditionBlock( this, <?=$idCnt?> )"/>
-                    <label for="PROFILE[XMLDATA][<?=$id?>][USE_CONDITION]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONDITION" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][USE_CONDITION]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONDITION" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_DELETE_ONEMPTY"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_DELETE_ONEMPTY' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_DELETE_ONEMPTY_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_DELETE_ONEMPTY' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_DELETE_ONEMPTY_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][DELETE_ONEMPTY]" <?=$deleteOnEmpty?> value="Y">
-                    <label for="PROFILE[XMLDATA][<?=$id?>][DELETE_ONEMPTY]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_DELETE_ONEMPTY" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][DELETE_ONEMPTY]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_DELETE_ONEMPTY" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
 
                     <span id="hint_EXPORTPRO_FIELDSET_URL_ENCODE"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_URL_ENCODE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_URL_ENCODE_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_URL_ENCODE' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_URL_ENCODE_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][URL_ENCODE]" <?=$urlEncode?> value="Y">
-                    <label for="PROFILE[XMLDATA][<?=$id?>][URL_ENCODE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_URL_ENCODE" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][URL_ENCODE]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_URL_ENCODE" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_CONVERT_CASE"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONVERT_CASE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONVERT_CASE_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_CONVERT_CASE' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONVERT_CASE_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][CONVERT_CASE]" <?=$convertCase?> value="Y">
-                    <label for="PROFILE[XMLDATA][<?=$id?>][CONVERT_CASE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_CONVERT_CASE" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][CONVERT_CASE]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_CONVERT_CASE" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_HTML_ENCODE"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_HTML_ENCODE_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE]" <?=$htmlEncode?> value="Y">
-                    <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_HTML_ENCODE" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE_CUT]" <?=$htmlEncodeCut?> value="Y">
-                    <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE_CUT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][HTML_ENCODE_CUT]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_HTML_ENCODE_CUT" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_HTML_TO_TXT"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_TO_TXT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_TO_TXT_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_HTML_TO_TXT' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_HTML_TO_TXT_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][HTML_TO_TXT]" <?=$htmlToTxt?> value="Y">
-                    <label for="PROFILE[XMLDATA][<?=$id?>][HTML_TO_TXT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_HTML_TO_TXT" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][HTML_TO_TXT]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_HTML_TO_TXT" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT_HELP" )?>');</script>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT_HELP" )?>');</script>
                     <input type="checkbox" name="PROFILE[XMLDATA][<?=$id?>][SKIP_UNTERM_ELEMENT]" <?=$skipUntermElement?> value="Y">
-                    <label for="PROFILE[XMLDATA][<?=$id?>][SKIP_UNTERM_ELEMENT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT" )?></label>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][SKIP_UNTERM_ELEMENT]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_SKIP_UNTERM_ELEMENT" )?></label>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_TEXT_LIMIT"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_TEXT_LIMIT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_TEXT_LIMIT_HELP" )?>');</script>
-                    <label for="PROFILE[XMLDATA][<?=$id?>][TEXT_LIMIT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_TEXT_LIMIT" )?></label><br/>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_TEXT_LIMIT' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_TEXT_LIMIT_HELP" )?>');</script>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][TEXT_LIMIT]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_TEXT_LIMIT" )?></label><br/>
                     <input type="text" name="PROFILE[XMLDATA][<?=$id?>][TEXT_LIMIT]" value="<?=$textLimit;?>"/>
 
                     <div style="height: 5px;">&nbsp;</div>
                     <span id="hint_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT"></span>
-                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT' ), '<?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT_HELP" )?>');</script>
-                    <label for="PROFILE[XMLDATA][<?=$id?>][MULTIPROP_LIMIT]"><?=GetMessage( "KIT_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT" )?></label><br/>
+                    <script type="text/javascript">BX.hint_replace( BX( 'hint_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT' ), '<?=GetMessage( "DATA_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT_HELP" )?>');</script>
+                    <label for="PROFILE[XMLDATA][<?=$id?>][MULTIPROP_LIMIT]"><?=GetMessage( "DATA_EXPORTPRO_FIELDSET_MULTIPROP_LIMIT" )?></label><br/>
                     <input type="text" name="PROFILE[XMLDATA][<?=$id?>][MULTIPROP_LIMIT]" value="<?=$multiPropLimit;?>"/>
                 </div>
                 <div id="PROFILE_XMLDATA_<?=$id?>_CONDITION" class="condition-block <?=$hideCondition?>">
                     <?
                     if( $field["USE_CONDITION"] == "Y" && CModule::IncludeModule( "catalog" ) ){
-                        $obCond = new CKitExportproCatalogCond();
-                        CKitExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $arProfile["IBLOCK_ID"], $arProfile["USE_SKU"] );
+                        $obCond = new CDataExportproCatalogCond();
+                        CDataExportproProps::$arIBlockFilter = $profileUtils->PrepareIBlock( $arProfile["IBLOCK_ID"], $arProfile["USE_SKU"] );
                         $boolCond = $obCond->Init(
                             0,
                             0,

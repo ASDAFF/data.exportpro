@@ -40,12 +40,12 @@ foreach( $arSpecialFormats as $arSpecialFormatsItem ){
 ?>
 <tr>
     <td width="40%" class="adm-detaell-l">
-        <span id="hint_PROFILE[USE_MARKET_CATEGORY]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[USE_MARKET_CATEGORY]' ), '<?=GetMessage( "KIT_EXPORTPRO_STEP1_USE_MARKETCATEGORY_HELP" )?>' );</script>
-        <label for="PROFILE[USE_MARKET_CATEGORY]"><?=GetMessage( "KIT_EXPORTPRO_STEP1_USE_MARKETCATEGORY" )?></label>
+        <span id="hint_PROFILE[USE_MARKET_CATEGORY]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[USE_MARKET_CATEGORY]' ), '<?=GetMessage( "DATA_EXPORTPRO_STEP1_USE_MARKETCATEGORY_HELP" )?>' );</script>
+        <label for="PROFILE[USE_MARKET_CATEGORY]"><?=GetMessage( "DATA_EXPORTPRO_STEP1_USE_MARKETCATEGORY" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <input type="checkbox" name="PROFILE[USE_MARKET_CATEGORY]" value="Y" <?=$use_market_category?> >
-        <i><?=GetMessage( "KIT_EXPORTPRO_STEP1_USE_MARKETCATEGORY_DESC" )?></i>
+        <i><?=GetMessage( "DATA_EXPORTPRO_STEP1_USE_MARKETCATEGORY_DESC" )?></i>
     </td>
 </tr>
 <tr>
@@ -58,8 +58,8 @@ foreach( $arSpecialFormats as $arSpecialFormatsItem ){
         </select>
     </td>
     <td>
-        <a class="adm-btn" onclick="ShowMarketForm( 'edit' )"><?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_EDIT" )?></a>
-        <a class="adm-btn adm-btn-save" onclick="ShowMarketForm( 'add' )"><?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_ADD" )?></a>
+        <a class="adm-btn" onclick="ShowMarketForm( 'edit' )"><?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_EDIT" )?></a>
+        <a class="adm-btn adm-btn-save" onclick="ShowMarketForm( 'add' )"><?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_ADD" )?></a>
     </td>
 </tr>
 <tr>
@@ -68,15 +68,15 @@ foreach( $arSpecialFormats as $arSpecialFormatsItem ){
             <input type="hidden" name="PROFILE[MARKET_CATEGORY_ID]" />
             <table>
                 <tr>
-                    <td><input type="text" name="PROFILE[MARKET_CATEGORY_NAME]" placeholder="<?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_NAME" )?>"/></td>
+                    <td><input type="text" name="PROFILE[MARKET_CATEGORY_NAME]" placeholder="<?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_NAME" )?>"/></td>
                 </tr>
                 <tr>
-                    <td><textarea name="PROFILE[MARKET_CATEGORY_DATA]" placeholder="<?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_DATA" )?>" size="20"></textarea></td>
+                    <td><textarea name="PROFILE[MARKET_CATEGORY_DATA]" placeholder="<?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_DATA" )?>" size="20"></textarea></td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="adm-btn save adm-btn-save" onclick="SaveMarketForm()"><?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_SAVE" )?></a>
-                        <a class="adm-btn back" onclick="HideMarketForm()"><?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_BACK" )?></a>
+                        <a class="adm-btn save adm-btn-save" onclick="SaveMarketForm()"><?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_SAVE" )?></a>
+                        <a class="adm-btn back" onclick="HideMarketForm()"><?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_BACK" )?></a>
                     </td>
                 </tr>
             </table>
@@ -115,7 +115,7 @@ foreach( $arSpecialFormats as $arSpecialFormatsItem ){
 <tr align="center">
     <td colspan="2">
         <?=BeginNote();?>
-        <?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_DESCRIPTION" );?>
+        <?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_DESCRIPTION" );?>
         <?=EndNote();?>
     </td>
 </tr>

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `kit_exportpro_market_ebay` (
+CREATE TABLE IF NOT EXISTS `data_exportpro_market_ebay` (
     `id` int(10) NOT NULL,
     `name` text NOT NULL,
     `level` int(2) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `kit_exportpro_market_ebay` (
     PRIMARY KEY(`id`),
     UNIQUE KEY(`id`)
 );
-INSERT IGNORE INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT IGNORE INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (48718, 'Прочее', 4, 57008),
 (42882, 'Освещение и лазеры', 3, 1266),
 (42883, 'Электрические лампы', 4, 42882),
@@ -1299,7 +1299,7 @@ INSERT IGNORE INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_i
 (3009, 'Комбинезоны', 3, 15724),
 (169001, 'Леггинсы', 3, 15724),
 (172378, 'Одежда для мам', 3, 15724);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (63856, 'Пальто и куртки', 4, 172378),
 (11534, 'Платья', 4, 172378),
 (11535, 'Джинсы', 4, 172378),
@@ -2725,7 +2725,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (37857, 'Кружки и чашки', 4, 10818),
 (37858, 'Орнаменты', 4, 10818),
 (103925, 'Рамки для картин и фотографий', 4, 10818);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (103926, 'Подушки и покрывала', 4, 10818),
 (37859, 'Постеры, печатные материалы и карт ', 4, 10818),
 (103927, 'Солонки и перечницы', 4, 10818),
@@ -4193,7 +4193,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (64968, 'Фигурки', 5, 13823),
 (64969, 'Серийные изделия', 5, 13823),
 (4027, 'Прочее', 5, 13823);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (13826, 'San Francisco Music Box', 4, 156286),
 (13827, 'Sarah''s Attic', 4, 156286),
 (4028, 'Schmid', 4, 156286),

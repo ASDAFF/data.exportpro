@@ -3,111 +3,111 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["lengow"] = array(
 	"CODE" => "lengow",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "UNIQUE_ID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "TITEL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_NAME" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_NAME" ),
 			"VALUE" => "NAME",
             "REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_DESCRIPTION" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "PRICE_INCLUDING_TAX",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_PRICE" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "BARRED_PRICE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_BARRED_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_BARRED_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "SALE_PRICE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_SALE_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_SALE_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "CATEGORY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "SUB_CATEGORY1",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_SUB_CATEGORY1" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_SUB_CATEGORY1" ),
 		),
         array(
 			"CODE" => "SUB_CATEGORY2",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_SUB_CATEGORY2" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_SUB_CATEGORY2" ),
 		),
         array(
 			"CODE" => "PRODUCT_URL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_PRODUCT_URL" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_PRODUCT_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "IMAGE_URL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_IMAGE_URL" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_IMAGE_URL" ),
 			"VALUE" => "DETAIL_PICTURE",
             "TYPE" => "field",
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "EAN",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_EAN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_EAN" ),
 		),
         array(
 			"CODE" => "MPN",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_MPN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_MPN" ),
 		),
         array(
 			"CODE" => "BRAND",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_BRAND" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_BRAND" ),
 		),
         array(
 			"CODE" => "DELIVERY_COSTS",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_DELIVERY_COSTS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_DELIVERY_COSTS" ),
 		),
         array(
 			"CODE" => "DELIVERY_TIME",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_DELIVERY_COSTS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_DELIVERY_COSTS" ),
 		),
         array(
 			"CODE" => "DELIVERY_DESCRIPTION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_DELIVERY_COSTS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_DELIVERY_COSTS" ),
 		),
         array(
 			"CODE" => "QUANTITY_IN_STOCK",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_QUANTITY_IN_STOCK" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_QUANTITY_IN_STOCK" ),
             "VALUE" => "CATALOG-QUANTITY",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABILITY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -132,59 +132,59 @@ $profileTypes["lengow"] = array(
 		),
         array(
 			"CODE" => "WARRANTY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_WARRANTY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_WARRANTY" ),
 		),
         array(
 			"CODE" => "SIZE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_SIZE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_SIZE" ),
 		),
         array(
 			"CODE" => "COLOUR",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_COLOUR" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_COLOUR" ),
 		),
         array(
 			"CODE" => "MATERIAL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_MATERIAL" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_MATERIAL" ),
 		),
         array(
 			"CODE" => "GENDER",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_GENDER" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_GENDER" ),
 		),
         array(
 			"CODE" => "WEIGHT",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_WEIGHT" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_WEIGHT" ),
 		),
         array(
 			"CODE" => "CONDITION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_CONDITION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_CONDITION" ),
 		),
         array(
 			"CODE" => "SALES",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_SALES" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_SALES" ),
 		),
         array(
 			"CODE" => "PROMO_TEXT",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_PROMO_TEXT" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_PROMO_TEXT" ),
 		),
         array(
 			"CODE" => "PROMO_PERCENTAGE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_PROMO_PERCENTAGE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_PROMO_PERCENTAGE" ),
 		),
         array(
 			"CODE" => "START_DATE_FOR_PROMO",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_START_DATE_FOR_PROMO" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_START_DATE_FOR_PROMO" ),
 		),
         array(
 			"CODE" => "END_DATE_FOR_PROMO",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_END_DATE_FOR_PROMO" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_END_DATE_FOR_PROMO" ),
 		),
         array(
 			"CODE" => "ECOTAX",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_ECOTAX" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_ECOTAX" ),
 		),
         array(
 			"CODE" => "CURRENCY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_CURRENCY" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
@@ -204,7 +204,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["lengow"]["FIELDS"][3] = array(
         "CODE" => "PRICE_INCLUDING_TAX",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
@@ -212,7 +212,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["lengow"]["FIELDS"][4] = array(
         "CODE" => "BARRED_PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_BARRED_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_BARRED_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
@@ -220,15 +220,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["lengow"]["FIELDS"][5] = array(
         "CODE" => "SALE_PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_LENGOW_FIELD_SALE_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_LENGOW_FIELD_SALE_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
     );
 }
 
-$profileTypes["lengow"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_LENGOW_PORTAL_REQUIREMENTS" );
-$profileTypes["lengow"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_LENGOW_EXAMPLE" );
+$profileTypes["lengow"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_LENGOW_PORTAL_REQUIREMENTS" );
+$profileTypes["lengow"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_LENGOW_EXAMPLE" );
 
 $profileTypes["lengow"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -277,10 +277,10 @@ $profileTypes["lengow"]["ITEMS_FORMAT"] = "
     
 $profileTypes["lengow"]["LOCATION"] = array(
 	"yandex" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_ANDEKS" ),
 		"sub" => array(
 			"market" => array(
-				"name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
+				"name" => GetMessage( "DATA_EXPORTPRO_VEBMASTER" ),
 				"sub" => "",
 			)
 		)

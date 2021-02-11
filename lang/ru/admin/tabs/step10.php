@@ -1,20 +1,20 @@
 <?
 $MESS["MAIN_TAB_TITLE_SUPPORT"] = "Категории активизма";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_USE_VARIANT"] = "Использовать категории активизма";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SETTINGS"] = "Настройки категорий активизма";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_ATTRIBUTE"] = "Атрибуты категорий активизма";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_PROPERTY"] = "Соответствующее свойство";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX"] = "Свойство гендерной принадлежности(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX_OFFER"] = "Свойство гендерной принадлежности(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX_CONST"] = "Значение гендерной принадлежности<br><b>(будет применено для всех разделов)</b><br>Если значение задано,<br>будет использовано значение, а не свойство";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_COLOR"] = "Свойство для вывода цвета(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SIZE"] = "Свойство для вывода размера(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_WEIGHT"] = "Свойство для вывода веса(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_COLOR_OFFER"] = "Свойство для вывода цвета(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SIZE_OFFER"] = "Свойство для вывода размера(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER"] = "Свойство для вывода веса(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_CATEGORY"] = "Настройка категорий";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX_DESCRIPTION"] = '
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_USE_VARIANT"] = "Использовать категории активизма";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SETTINGS"] = "Настройки категорий активизма";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_ATTRIBUTE"] = "Атрибуты категорий активизма";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_PROPERTY"] = "Соответствующее свойство";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SEX"] = "Свойство гендерной принадлежности(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SEX_OFFER"] = "Свойство гендерной принадлежности(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SEX_CONST"] = "Значение гендерной принадлежности<br><b>(будет применено для всех разделов)</b><br>Если значение задано,<br>будет использовано значение, а не свойство";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_COLOR"] = "Свойство для вывода цвета(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SIZE"] = "Свойство для вывода размера(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_WEIGHT"] = "Свойство для вывода веса(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_COLOR_OFFER"] = "Свойство для вывода цвета(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SIZE_OFFER"] = "Свойство для вывода размера(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER"] = "Свойство для вывода веса(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_CATEGORY"] = "Настройка категорий";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SEX_DESCRIPTION"] = '
 Свойство гендерной принадлежности размерной сетки, может името следующие значения:
 <ul style="text-align: left; -webkit-column-count: 4; column-count: 4; -moz-column-count: 4;">
     <li><b>M</b> - мужской</li>
@@ -23,7 +23,7 @@ $MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX_DESCRIPTION"] = '
     <li><b>C</b> - детский</li>
 </ul>
 ';
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_COLOR_DESCRIPTION"] = '
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_COLOR_DESCRIPTION"] = '
 Свойство для вывода цвета определяет цвет варианта предложения и может иметь одно из следующих значений:
 <ul style="text-align: left; -webkit-column-count: 4; column-count: 4; -moz-column-count: 4;">
 <li><b>бежевый</b></li>
@@ -46,19 +46,19 @@ $MESS["KIT_EXPORTPRO_VARIANT_LIST_COLOR_DESCRIPTION"] = '
 <li><b>черный</b></li>
 </ul>
 ';
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_PRICE_TITLE"] = "Тип цены";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_PRICE"] = "Выберите тип цены, указанный в тэге <b>&lt;price&gt;</b>";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_CATEGORY_EXT"] = '<span style="color: #716536">(Выберите размер, если для аналогичного<br> раздела выше указан размер в OZ,<br> в противном случае настройка будет проигнорирована)</span>';
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_PRICE_TITLE"] = "Тип цены";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_PRICE"] = "Выберите тип цены, указанный в тэге <b>&lt;price&gt;</b>";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_CATEGORY_EXT"] = '<span style="color: #716536">(Выберите размер, если для аналогичного<br> раздела выше указан размер в OZ,<br> в противном случае настройка будет проигнорирована)</span>';
 
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_USE_VARIANT_HELP"] = "Использовать категории активизма";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX_HELP"] = "Свойство гендерной принадлежности(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX_OFFER_HELP"] = "Свойство гендерной принадлежности(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SEX_CONST_HELP"] = "Значение гендерной принадлежности<br><b>(будет применено для всех разделов)</b><br>Если значение задано,<br>будет использовано значение, а не свойство";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_COLOR_HELP"] = "Свойство для вывода цвета(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_COLOR_OFFER_HELP"] = "Свойство для вывода цвета(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SIZE_HELP"] = "Свойство для вывода размера(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_SIZE_OFFER_HELP"] = "Свойство для вывода размера(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_WEIGHT_HELP"] = "Свойство для вывода веса(товар)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER_HELP"] = "Свойство для вывода веса(предложение)";
-$MESS["KIT_EXPORTPRO_VARIANT_LIST_PRICE_HELP"] = "Выберите тип цены, указанный в тэге <b>&lt;price&gt;</b>";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_USE_VARIANT_HELP"] = "Использовать категории активизма";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SEX_HELP"] = "Свойство гендерной принадлежности(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SEX_OFFER_HELP"] = "Свойство гендерной принадлежности(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SEX_CONST_HELP"] = "Значение гендерной принадлежности<br><b>(будет применено для всех разделов)</b><br>Если значение задано,<br>будет использовано значение, а не свойство";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_COLOR_HELP"] = "Свойство для вывода цвета(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_COLOR_OFFER_HELP"] = "Свойство для вывода цвета(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SIZE_HELP"] = "Свойство для вывода размера(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_SIZE_OFFER_HELP"] = "Свойство для вывода размера(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_WEIGHT_HELP"] = "Свойство для вывода веса(товар)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_WEIGHT_OFFER_HELP"] = "Свойство для вывода веса(предложение)";
+$MESS["DATA_EXPORTPRO_VARIANT_LIST_PRICE_HELP"] = "Выберите тип цены, указанный в тэге <b>&lt;price&gt;</b>";
 ?>

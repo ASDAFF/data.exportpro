@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["price_ru"] = array(
     "CODE" => "price_ru",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_NAME" ),
-    "DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_NAME" ),
+    "DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
     "REG" => "http://market.yandex.ru/",
     "HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
     "FIELDS" => array(
         array(
             "CODE" => "ID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_ID" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_ID" ),
             "VALUE" => "ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "AVAILABLE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_AVAILABLE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_AVAILABLE" ),
             "VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,17 +42,17 @@ $profileTypes["price_ru"] = array(
         ),
         array(
             "CODE" => "BID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_BID" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_BID" ),
         ),
         array(
             "CODE" => "URL",
-            "NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_URL" ),
+            "NAME" => "URL ".GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_URL" ),
             "VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_PRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_PRICE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
@@ -60,151 +60,151 @@ $profileTypes["price_ru"] = array(
         ),
         array(
             "CODE" => "OLDPRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_OLDPRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_OLDPRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "CURRENCYID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_CURRENCY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_CURRENCY" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
         ),
         array(
             "CODE" => "CATEGORYID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_CATEGORY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_CATEGORY" ),
             "VALUE" => "IBLOCK_SECTION_ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PICTURE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_PICTURE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_PICTURE" ),
         ),
         array(
             "CODE" => "STORE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_STORE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_STORE" ),
         ),
         array(
             "CODE" => "PICKUP",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_PICKUP" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_PICKUP" ),
         ),
         array(
             "CODE" => "DELIVERY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_DELIVERY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_DELIVERY" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_COST",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_LOCALDELIVERYCOST" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_LOCALDELIVERYCOST" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_DAYS",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_LOCALDELIVERYDAYS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_LOCALDELIVERYDAYS" ),
         ),
         array(
             "CODE" => "TYPEPREFIX",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_TYPEPREFIX" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_TYPEPREFIX" ),
         ),
         array(
             "CODE" => "VENDOR",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_VENDOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_VENDOR" ),
         ),
         array(
             "CODE" => "VENDORCODE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_VENDORCODE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_VENDORCODE" ),
         ),
         array(
             "CODE" => "MODEL",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_MODEL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_MODEL" ),
         ),
         array(
             "CODE" => "DESCRIPTION",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_DESCRIPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_DESCRIPTION" ),
         ),
         array(
             "CODE" => "SALES_NOTES",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_SALESNOTES" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_SALESNOTES" ),
         ),
         array(
             "CODE" => "MANUFACTURER_WARRANTY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_MANUFACTURERWARRANTY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_MANUFACTURERWARRANTY" ),
         ),
         array(
             "CODE" => "COUNTRY_OF_ORIGIN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_COUNTRYOFORIGIN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_COUNTRYOFORIGIN" ),
         ),
         array(
             "CODE" => "DOWNLOADABLE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_DOWNLOADABLE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_DOWNLOADABLE" ),
         ),
         array(
             "CODE" => "ADULT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_ADULT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_ADULT" ),
         ),
         array(
             "CODE" => "AGE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_AGE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_AGE" ),
         ),
         array(
             "CODE" => "BARCODE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_BARCODE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_BARCODE" ),
         ),
         array(
             "CODE" => "CPA",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_CPA" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_CPA" ),
         ),
         array(
             "CODE" => "REC",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_REC" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_REC" ),
         ),
         array(
             "CODE" => "EXPIRY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_EXPIRY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_EXPIRY" ),
         ),
         array(
             "CODE" => "WEIGHT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_WEIGHT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_WEIGHT" ),
         ),
         array(
             "CODE" => "DIMENSIONS",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_DIMENSIONS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_DIMENSIONS" ),
         ),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
         array(
             "CODE" => "PARAM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_PARAM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_PARAM" ),
         ),
     ),
     "FORMAT" => '<?xml version="1.0" encoding="#ENCODING#"?>
@@ -234,7 +234,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["price_ru"]["FIELDS"][4] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
@@ -242,15 +242,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["price_ru"]["FIELDS"][5] = array(
         "CODE" => "OLDPRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_PRICE_RU_FIELD_OLDPRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_PRICE_RU_FIELD_OLDPRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["price_ru"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_PRICE_RU_PORTAL_REQUIREMENTS" );
-$profileTypes["price_ru"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_PRICE_RU_PORTAL_VALIDATOR" );
-$profileTypes["price_ru"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_PRICE_RU_EXAMPLE" );
+$profileTypes["price_ru"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_PRICE_RU_PORTAL_REQUIREMENTS" );
+$profileTypes["price_ru"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_PRICE_RU_PORTAL_VALIDATOR" );
+$profileTypes["price_ru"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_PRICE_RU_EXAMPLE" );
 
 $profileTypes["price_ru"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -296,10 +296,10 @@ $profileTypes["price_ru"]["ITEMS_FORMAT"] = "
     
 $profileTypes["price_ru"]["LOCATION"] = array(
     "yandex" => array(
-        "name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
+        "name" => GetMessage( "DATA_EXPORTPRO_ANDEKS" ),
         "sub" => array(
             "market" => array(
-                "name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
+                "name" => GetMessage( "DATA_EXPORTPRO_VEBMASTER" ),
                 "sub" => "",
             )
         )

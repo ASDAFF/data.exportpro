@@ -4,13 +4,13 @@ IncludeModuleLangFile( __FILE__ );
 $profileTypes["google"] = array(
     "CODE"=>"google",
     "NAME"=>"Google Merchants",
-    "DESCRIPTION"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_DESCRIPTION" ),
+    "DESCRIPTION"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_DESCRIPTION" ),
     "REG"=>"http://google.com/merchants/",
     "HELP"=>"https://support.google.com/merchants/?hl=ru#topic=3404818",
     "FIELDS"=>array(
         array(
               "CODE"=>"g:id",
-              "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_ID" ),
+              "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_ID" ),
               "VALUE"=>"ID",
               "TYPE" => "field",
               "REQUIRED" => "Y",
@@ -18,7 +18,7 @@ $profileTypes["google"] = array(
         ),
         array(
               "CODE"=>"g:title",
-              "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_TITLE" ),
+              "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_TITLE" ),
               "VALUE" => "NAME",
               "TYPE" => "field",
               "REQUIRED" => "Y",
@@ -26,41 +26,41 @@ $profileTypes["google"] = array(
         ),
         array(
             "CODE"=>"g:description",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_DESCRIPTION" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_DESCRIPTION" ),
             "VALUE"=>"PREVIEW_TEXT",
             "TYPE" => "field",
         ),
         array(
             "CODE"=>"g:link",
-            "NAME"=> GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_LINK" ),
+            "NAME"=> GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_LINK" ),
             "VALUE"=>"DETAIL_PAGE_URL",
             "TYPE" => "field",
             "DELETE_ONEMPTY" => "N",
         ),
         array(
             "CODE"=>"g:mobile_link",
-            "NAME"=> GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_MOBILE_LINK" ),
+            "NAME"=> GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_MOBILE_LINK" ),
             "VALUE"=>"DETAIL_PAGE_URL",
             "TYPE" => "field",
             "DELETE_ONEMPTY" => "N",
         ),
         array(
             "CODE"=>"g:image_link",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_IMAGELINK" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_IMAGELINK" ),
             "VALUE"=>"DETAIL_PICTURE",
             "TYPE" => "field",
             "DELETE_ONEMPTY" => "N",
         ),
         array(
             "CODE"=>"g:additional_image_link",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_ADDITIONAL_IMAGELINK" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_ADDITIONAL_IMAGELINK" ),
             "VALUE"=>"DETAIL_PICTURE",
             "TYPE" => "field",
             "DELETE_ONEMPTY" => "N",
         ),
         array(
             "CODE"=>"g:condition",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_CONDITION" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_CONDITION" ),
             "REQUIRED" => "Y",
             "DELETE_ONEMPTY" => "N",
             "TYPE" => "const",
@@ -68,7 +68,7 @@ $profileTypes["google"] = array(
         ),
         array(
             "CODE"=>"g:availability",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY" ),
             "VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -95,12 +95,12 @@ $profileTypes["google"] = array(
         ),
         array(
             "CODE" => "g:availability_date",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY_DATE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY_DATE" ),
             "TYPE" => "field",
         ),
         array(
             "CODE"=>"g:price",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_PRICE" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_PRICE" ),
             "REQUIRED" => "Y",
             "DELETE_ONEMPTY" => "N",
             "TYPE" => "const",
@@ -108,181 +108,181 @@ $profileTypes["google"] = array(
         ),
         array(
             "CODE"=>"g:sale_price",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE" ),
             "DELETE_ONEMPTY" => "N",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "g:sale_price_effective",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE_EFFECTIVE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE_EFFECTIVE" ),
             "TYPE" => "field",
         ),
         array(
             "CODE"=>"g:shipping_country",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_COUNTRY" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_COUNTRY" ),
         ),
         array(
             "CODE"=>"g:shipping_service",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SERVICE" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SERVICE" ),
         ),
         array(
             "CODE"=>"g:shipping_price",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGPRICE" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGPRICE" ),
         ),
         array(
             "CODE" => "g:shipping_weight",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGWEIGHT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGWEIGHT" ),
         ),
         array(
             "CODE" => "g:shipping_label",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGLABEL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGLABEL" ),
         ),
         array(
             "CODE" => "g:multipack",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_MULTIPACK" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_MULTIPACK" ),
         ),
         array(
             "CODE" => "g:is_bundle",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_IS_BUNDLE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_IS_BUNDLE" ),
         ),
         array(
             "CODE"=>"g:gtin",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_GTIN" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_GTIN" ),
         ),
         array(
             "CODE"=>"g:brand",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_BRAND" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_BRAND" ),
         ),
         array(
             "CODE"=>"g:mpn",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_MPN" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_MPN" ),
         ),
         array(
             "CODE" => "g:item_group_id",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_ITEM_GROUP_ID" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_ITEM_GROUP_ID" ),
         ),
         array(
             "CODE" => "g:color",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_COLOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_COLOR" ),
         ),
         array(
             "CODE" => "g:gender",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_GENDER" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_GENDER" ),
         ),
         array(
             "CODE" => "g:age_group",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_AGE_GROUP" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_AGE_GROUP" ),
         ),
         array(
             "CODE" => "g:material",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_MATERIAL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_MATERIAL" ),
         ),
         array(
             "CODE" => "g:pattern",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_PATTERN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_PATTERN" ),
         ),
         array(
             "CODE" => "g:size",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SIZE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SIZE" ),
         ),
         array(
             "CODE" => "g:size_type",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SIZE_TYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SIZE_TYPE" ),
         ),
         array(
             "CODE" => "g:size_system",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SIZE_SYSTEM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SIZE_SYSTEM" ),
         ),
         array(
             "CODE" => "g:adult",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_ADULT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_ADULT" ),
         ),
         array(
             "CODE" => "g:adwords_grouping",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_GROUPING" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_GROUPING" ),
         ),
         array(
             "CODE" => "g:adwords_labels",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_LABELS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_LABELS" ),
         ),
         array(
             "CODE" => "g:adwords_redirect",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_REDIRECT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_REDIRECT" ),
         ),
         array(
             "CODE" => "g:custom_label_0",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_0" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_0" ),
         ),
         array(
             "CODE" => "g:custom_label_1",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_1" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_1" ),
         ),
         array(
             "CODE" => "g:custom_label_2",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_2" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_2" ),
         ),
         array(
             "CODE" => "g:custom_label_3",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_3" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_3" ),
         ),
         array(
             "CODE" => "g:custom_label_4",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_4" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_4" ),
         ),
         array(
             "CODE" => "g:unit_pricing_measure",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_MEASURE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_MEASURE" ),
         ),
         array(
             "CODE" => "g:unit_pricing_base_measure",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_BASE_MEASURE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_BASE_MEASURE" ),
         ),
         array(
             "CODE" => "g:excluded_destination",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_EXCLUDED_DESTINATION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_EXCLUDED_DESTINATION" ),
         ),
         array(
             "CODE" => "g:expiration_date",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_EXPIRATION_DATE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_EXPIRATION_DATE" ),
         ),
         array(
             "CODE"=>"g:google_product_category",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_PRODUCTCATEGORY" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_PRODUCTCATEGORY" ),
         ),
         array(
             "CODE"=>"g:product_type",
-            "NAME"=>GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_TYPE" ),
+            "NAME"=>GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_TYPE" ),
         ),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
@@ -307,7 +307,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["google"]["FIELDS"][10] = array(
         "CODE" => "g:price",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_PRICE" ),
         "REQUIRED" => "Y",
         "DELETE_ONEMPTY" => "N",
         "TYPE" => "field",
@@ -316,15 +316,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["google"]["FIELDS"][11] = array(
         "CODE" => "g:sale_price",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE" ),
         "DELETE_ONEMPTY" => "N",
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
     );
 }
 
-$profileTypes["google"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_PORTAL_REQUIREMENTS" );
-$profileTypes["google"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_GOOGLE_MERCHANT_EXAMPLE" );
+$profileTypes["google"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_PORTAL_REQUIREMENTS" );
+$profileTypes["google"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_GOOGLE_MERCHANT_EXAMPLE" );
 
 $profileTypes["google"]["ITEMS_FORMAT"] = "<item>
     <g:id>#g:id#</g:id>

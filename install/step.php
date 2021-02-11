@@ -1,8 +1,5 @@
 <?if( !check_bitrix_sessid() ) return;?>
-<?echo CAdminMessage::ShowNote( GetMessage( "KIT_EXPORTPRO_MODULE" ) );
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
+<?echo CAdminMessage::ShowNote( GetMessage( "DATA_EXPORTPRO_MODULE" ) );
 
 IncludeModuleLangFile(__FILE__);
 ?>
@@ -10,7 +7,7 @@ IncludeModuleLangFile(__FILE__);
 <table id="install_instruction">
 	<tr>
         <td>
-            <?=GetMessage( "KIT_EXPORTPRO_RECOMMENDS" );?>
+            <?=GetMessage( "DATA_EXPORTPRO_RECOMMENDS" );?>
         </td>
     </tr>
     <tr class="">
@@ -19,7 +16,7 @@ IncludeModuleLangFile(__FILE__);
                 <input type="submit" class="adm-btn adm-btn-save" value="<?=GetMessage( "MOD_BACK" )?>" />
             </form>  
 			<form action="/bitrix/admin/partner_modules.php" method="GET">
-				<input type="hidden" name="id" value="kit.exportpro">
+				<input type="hidden" name="id" value="data.exportpro">
                 <input type="hidden" name="lang" value="<?=LANGUAGE_ID?>">
                 <input type="hidden" name="install" value="Y">
                 <input type="hidden" name="sessid" value="<?=bitrix_sessid()?>">

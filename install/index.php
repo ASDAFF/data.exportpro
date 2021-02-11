@@ -1,13 +1,9 @@
 <?
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
 IncludeModuleLangFile( __FILE__ );
 
-class kit_exportpro extends CModule{
-    const MODULE_ID = "kit.exportpro";
-    var $MODULE_ID = "kit.exportpro";
+class data_exportpro extends CModule{
+    const MODULE_ID = "data.exportpro";
+    var $MODULE_ID = "data.exportpro";
     var $MODULE_VERSION;
     var $MODULE_VERSION_DATE;
     var $MODULE_NAME;
@@ -22,7 +18,7 @@ class kit_exportpro extends CModule{
         "windows-1251" => "cp1251",
     );
 
-    function kit_exportpro(){
+    function data_exportpro(){
         require( __DIR__."/version.php" );
 
         $path = str_replace( "\\", "/", __FILE__ );
@@ -32,10 +28,10 @@ class kit_exportpro extends CModule{
             $this->MODULE_VERSION = $arModuleVersion["VERSION"];
             $this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
         }
-        $this->MODULE_NAME = GetMessage( "KIT_EXPORTPRO_MODULE_NAME" );
-        $this->MODULE_DESCRIPTION = GetMessage( "KIT_EXPORTPRO_MODULE_DESC" );
-        $this->PARTNER_NAME = GetMessage("KIT_EXPORTPRO_PARTNER_NAME");
-        $this->PARTNER_URI = GetMessage("KIT_EXPORTPRO_PARTNER_URI");
+        $this->MODULE_NAME = GetMessage( "DATA_EXPORTPRO_MODULE_NAME" );
+        $this->MODULE_DESCRIPTION = GetMessage( "DATA_EXPORTPRO_MODULE_DESC" );
+        $this->PARTNER_NAME = GetMessage("DATA_EXPORTPRO_PARTNER_NAME");
+        $this->PARTNER_URI = GetMessage("DATA_EXPORTPRO_PARTNER_URI");
         
         $app = \Bitrix\Main\Application::getInstance();
         $dbSite = \Bitrix\Main\SiteTable::getList();
@@ -51,15 +47,15 @@ class kit_exportpro extends CModule{
     }
     
     function InstallEvents(){
-        RegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID , "CKitExportproMenu", "OnBuildGlobalMenu" );
-        RegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CKitExportproRemarketing", "OnEndBufferContent" );
+        RegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID , "CDataExportproMenu", "OnBuildGlobalMenu" );
+        RegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CDataExportproRemarketing", "OnEndBufferContent" );
         
         return true;
     }
 
     function UnInstallEvents(){
-        UnRegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID, "CKitExportproMenu", "OnBuildGlobalMenu" );
-        UnRegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CKitExportproRemarketing", "OnEndBufferContent" );
+        UnRegisterModuleDependences( "main", "OnBuildGlobalMenu", self::MODULE_ID, "CDataExportproMenu", "OnBuildGlobalMenu" );
+        UnRegisterModuleDependences( "main", "OnEndBufferContent", self::MODULE_ID , "CDataExportproRemarketing", "OnEndBufferContent" );
         
         return true;
     }
@@ -70,12 +66,12 @@ class kit_exportpro extends CModule{
         $this->errors = false;
         if( CModule::IncludeModule( "security" ) ){
             $dbSecurityFilter = CSecurityFilterMask::GetList();
-            $kitMask = "/bitrix/admin/kit_export_edit.php";
+            $dataMask = "/bitrix/admin/data_export_edit.php";
 
             $bMaskSet = false;
             $arFilterMask = array();
             while( $arSecurityFilter = $dbSecurityFilter->Fetch() ){
-                if( $arSecurityFilter["FILTER_MASK"] == $kitMask )
+                if( $arSecurityFilter["FILTER_MASK"] == $dataMask )
                     $bMaskSet = true;
 
                 $arFilterMask[] = array(
@@ -86,7 +82,7 @@ class kit_exportpro extends CModule{
 
             if( !$bMaskSet ){
                 $arFilterMask[] = array(
-                    "MASK" => $kitMask,
+                    "MASK" => $dataMask,
                     "SITE_ID" => ""
                 );
                 CSecurityFilterMask::Update( $arFilterMask );
@@ -109,12 +105,12 @@ class kit_exportpro extends CModule{
         
         if( CModule::IncludeModule( "security" ) ){
             $dbSecurityFilter = CSecurityFilterMask::GetList();
-            $kitMask = "/bitrix/admin/kit_export_edit.php";
+            $dataMask = "/bitrix/admin/data_export_edit.php";
 
             $bMaskSet = false;
             $arFilterMask = array();
             while( $arSecurityFilter = $dbSecurityFilter->Fetch() ){
-                if( $arSecurityFilter["FILTER_MASK"] == $kitMask )
+                if( $arSecurityFilter["FILTER_MASK"] == $dataMask )
                     $bMaskSet = true;
                 else
                     $arFilterMask[] = array(
@@ -145,13 +141,18 @@ class kit_exportpro extends CModule{
        
             
         if( !is_array( $arJqueryExt ) || !isset( $arJqueryExt["js"] ) || !file_exists( $DOCUMENT_ROOT.$arJqueryExt["js"] ) ){
-            $APPLICATION->ThrowException( GetMessage( "KIT_EXPORTPRO_JQUERY_REQUIRE" ) );
+            $APPLICATION->ThrowException( GetMessage( "DATA_EXPORTPRO_JQUERY_REQUIRE" ) );
             return false;
         }       
         unset( $arJqueryExt );
+        
+        $licenceDB = $DB->Query( "SELECT * FROM b_option WHERE `MODULE_ID`='{$this->MODULE_ID}' AND `NAME`='~bsm_stop_date'" );
+        if( $licenceDB->Fetch() ){
+            $DB->Query( "DELETE FROM b_option WHERE `MODULE_ID`='{$this->MODULE_ID}' AND `NAME`='~bsm_stop_date'" );
+        }
 
         if( !isset( $step ) || ( $step < 1 ) ){
-            $APPLICATION->IncludeAdminFile( GetMessage( "KIT_EXPORTPRO_RECOMMENDED" ), $DOCUMENT_ROOT."/bitrix/modules/{$this->MODULE_ID}/install/step.php" );
+            $APPLICATION->IncludeAdminFile( GetMessage( "DATA_EXPORTPRO_RECOMMENDED" ), $DOCUMENT_ROOT."/bitrix/modules/{$this->MODULE_ID}/install/step.php" );
         }
         elseif( ( $step == 3 ) && ( $install == "Y" ) ){
             $this->InstallFiles();
@@ -162,8 +163,8 @@ class kit_exportpro extends CModule{
             foreach( $this->siteArray as $siteID => $siteDir ){
                 $urlRewriter->Add(array(
                     "SITE_ID" => $siteID,
-                    "CONDITION" => "#^/kit.exportpro/(.*)#",
-                    "PATH" => "/kit.exportpro/index.php",
+                    "CONDITION" => "#^/data.exportpro/(.*)#",
+                    "PATH" => "/data.exportpro/index.php",
                     "RULE" => "path=$1",
                 ));
             }
@@ -195,6 +196,7 @@ class kit_exportpro extends CModule{
             if( $_REQUEST["savedata"] != "Y" ){
                 $this->UnInstallDB();
             }
+            $DB->Query( "DELETE FROM b_option WHERE `MODULE_ID`='{$this->MODULE_ID}' AND `NAME`='~bsm_stop_date'" );
             $APPLICATION->IncludeAdminFile( GetMessage( "MOD_UNINST_OK" ), $DOCUMENT_ROOT."/bitrix/modules/{$this->MODULE_ID}/install/unstep2.php" );
         }
     }
@@ -207,7 +209,7 @@ class kit_exportpro extends CModule{
                     if( ( $item == ".." ) || ( $item == "." ) || ( $item == "menu.php" ) ){
                         continue;
                     }
-                    file_put_contents( $file = $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin/kit_exportpro_".$item,
+                    file_put_contents( $file = $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin/data_exportpro_".$item,
                         "<".'? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/'.self::MODULE_ID."/admin/".$item.'" );?'.">" );
                 }
                 closedir( $dir );
@@ -270,8 +272,8 @@ class kit_exportpro extends CModule{
             DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/tools", $_SERVER["DOCUMENT_ROOT"]."/bitrix/tools" );
             DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/themes", $_SERVER["DOCUMENT_ROOT"]."/bitrix/themes" );
             DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/panel", $_SERVER["DOCUMENT_ROOT"]."/bitrix/panel" );
-            DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/public/kit_exportpro", $_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/catalog_export" );
-            DeleteDirFilesEx( "/upload/kit_exportpro/" );
+            DeleteDirFiles( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/public/data_exportpro", $_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/catalog_export" );
+            DeleteDirFilesEx( "/upload/data_exportpro/" );
         }
         DeleteDirFilesEx( "/upload/exportpro_log" );
         DeleteDirFilesEx( "/".$this->MODULE_ID );

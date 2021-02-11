@@ -1,9 +1,5 @@
 <?php
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
-$moduleID = "kit.exportpro";
+$moduleID = "data.exportpro";
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/$moduleID/include.php" );
 
@@ -18,23 +14,25 @@ if( !CModule::IncludeModule( "iblock" ) ){
 IncludeModuleLangFile( __FILE__ );
 
 if( !$_REQUEST["export_import"] ){
-    require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" ); ?>
+    require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
+    
+    DataLicence::Show();?>
     <div class="adm-detail-content-wrap">
         <div class="adm-detail-content">
             <div class="adm-detail-content-item-block" style="height: auto; overflow-y: visible;">
                 <table class="adm-detail-content-table edit-table">
-                    <tr class="heading"><td><?=GetMessage( "KIT_EXPORTPRO_PROFILE_TABLE_EXPORT_IMPORT_TITLE" )?></td></tr>
+                    <tr class="heading"><td><?=GetMessage( "DATA_EXPORTPRO_PROFILE_TABLE_EXPORT_IMPORT_TITLE" )?></td></tr>
                     <tr align="center">
                         <td>
                             <form method="post">
                                 <div style="margin: 20px">
                                     <input type="radio" name="export_import" value="export">
-                                    <label for="action"><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_EXPORT_TITLE" )?></label>
+                                    <label for="action"><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_EXPORT_TITLE" )?></label>
                                     
                                     <input type="radio" name="export_import" value="import">
-                                    <label for="action"><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_IMPORT_TITLE" )?></label>
+                                    <label for="action"><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_IMPORT_TITLE" )?></label>
                                 </div>
-                                <input type="submit" class="adm-btn-save" value="<?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
+                                <input type="submit" class="adm-btn-save" value="<?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
                             </form>
                             <br><br>
                         </td>
@@ -49,25 +47,27 @@ if( !$_REQUEST["export_import"] ){
 if( $_REQUEST["export_import"] == "export" ){
     //  file selection
     if( $_REQUEST["step"] != 2 ){
-        require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" ); ?>
+        require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
+        DataLicence::Show();
+        ?>
         <div class="adm-detail-content-wrap">
             <div class="adm-detail-content">
                 <div class="adm-detail-content-item-block" style="height: auto; overflow-y: visible;">
                     <table class="adm-detail-content-table edit-table">
-                        <tr class="heading"><td><?=GetMessage( "KIT_EXPORTPRO_PROFILE_TABLE_EXPORT_TITLE" )?></td></tr>
+                        <tr class="heading"><td><?=GetMessage( "DATA_EXPORTPRO_PROFILE_TABLE_EXPORT_TITLE" )?></td></tr>
                         <tr align="center">
                             <td>
                                 <form name="exportprofile_form">
                                     <br>
-                                    <label style="font-size: 14px"><b><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_EXPORT_FILE_TITLE" )?></b></label>
+                                    <label style="font-size: 14px"><b><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_EXPORT_FILE_TITLE" )?></b></label>
                                     &nbsp;&nbsp;&nbsp;
                                     <input type="text" name="URL_DATA_FILE_EXPORT">
                                     <input type="button" value="..." onclick="BtnClick()">
                                     <input type="hidden" name="export_import" value="export">
                                     <input type="hidden" name="step" value="2">
                                     <br><br>
-                                    <a href="/bitrix/admin/kit_exportpro_export.php" class="adm-btn"><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
-                                    <input type="submit" class="adm-btn-save" value="<?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
+                                    <a href="/bitrix/admin/data_exportpro_export.php" class="adm-btn"><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
+                                    <input type="submit" class="adm-btn-save" value="<?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
                                 </form>
                                 <br><br>
                             </td>
@@ -97,7 +97,7 @@ if( $_REQUEST["export_import"] == "export" ){
     }
     //  show table & export
     else{
-        $sTableID = "tbl_kitprofile";
+        $sTableID = "tbl_dataprofile";
         
         function CheckFilter(){
             global $FilterArr, $lAdmin;
@@ -171,8 +171,8 @@ if( $_REQUEST["export_import"] == "export" ){
                             break;
                     }
                 }
-                $message = GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_EXPORTED1" )."<ul>".implode( "\r\n", $message )."</ul>"
-                    .str_replace( "#FILE#", "http://".$_SERVER["HTTP_HOST"].$_REQUEST["URL_DATA_FILE_EXPORT"], GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_EXPORTED2" ) );
+                $message = GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_EXPORTED1" )."<ul>".implode( "\r\n", $message )."</ul>"
+                    .str_replace( "#FILE#", "http://".$_SERVER["HTTP_HOST"].$_REQUEST["URL_DATA_FILE_EXPORT"], GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_EXPORTED2" ) );
                 
                 CAdminMessage::ShowMessage( array( "MESSAGE" => $message, "TYPE" => "OK", "HTML" => true ) );
                 
@@ -194,8 +194,8 @@ if( $_REQUEST["export_import"] == "export" ){
                         $message[] = "<li>[$profId] {$rsData["NAME"]}</li>";
                     }
                 }
-                $directMessage = GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_EXPORTED1" )."<ul>".implode( "\r\n", $message )."</ul>"
-                    .str_replace( "#FILE#", "http://".$_SERVER["HTTP_HOST"].$_REQUEST["URL_DATA_FILE_EXPORT"], GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_EXPORTED2" ) );
+                $directMessage = GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_EXPORTED1" )."<ul>".implode( "\r\n", $message )."</ul>"
+                    .str_replace( "#FILE#", "http://".$_SERVER["HTTP_HOST"].$_REQUEST["URL_DATA_FILE_EXPORT"], GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_EXPORTED2" ) );
                 
                 file_put_contents( $_SERVER["DOCUMENT_ROOT"].$_REQUEST["URL_DATA_FILE_EXPORT"], Bitrix\Main\Web\Json::encode( $arProfiles ) );
             }
@@ -290,7 +290,7 @@ if( $_REQUEST["export_import"] == "export" ){
         
         $lAdmin->AddGroupActionTable(
             array(
-                "export" => GetMessage( "KIT_EXPORTPRO_PROFILE_EXPORT_SHORT" ),
+                "export" => GetMessage( "DATA_EXPORTPRO_PROFILE_EXPORT_SHORT" ),
             )
         );
         
@@ -317,13 +317,14 @@ if( $_REQUEST["export_import"] == "export" ){
             }
         }
         
+        DataLicence::Show();
         if( strlen( $directMessage ) > 0 ){
             CAdminMessage::ShowMessage( array( "MESSAGE" => $directMessage, "TYPE" => "OK", "HTML" => true ) );
         }
         $lAdmin->DisplayList();
         ?>
         <br>
-        <a href="/bitrix/admin/kit_exportpro_list.php" class="adm-btn"><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST" )?></a>&nbsp;&nbsp;&nbsp;
+        <a href="/bitrix/admin/data_exportpro_list.php" class="adm-btn"><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST" )?></a>&nbsp;&nbsp;&nbsp;
         
         <?
     }
@@ -331,26 +332,27 @@ if( $_REQUEST["export_import"] == "export" ){
 
 if( $_REQUEST["export_import"] == "import" ){
     require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
+    DataLicence::Show();
         
     if( $_REQUEST["step"] != 2 ){?>
         <div class="adm-detail-content-wrap">
             <div class="adm-detail-content">
                 <div class="adm-detail-content-item-block" style="height: auto; overflow-y: visible;">
                     <table class="adm-detail-content-table edit-table">
-                        <tr class="heading"><td><?=GetMessage( "KIT_EXPORTPRO_PROFILE_TABLE_IMPORT_TITLE" )?></td></tr>
+                        <tr class="heading"><td><?=GetMessage( "DATA_EXPORTPRO_PROFILE_TABLE_IMPORT_TITLE" )?></td></tr>
                         <tr align="center">
                             <td>
                                 <form  name="exportprofile_form" method="post">
                                     <br>
-                                    <label style="font-size: 14px"><b><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_IMPORT_FILE_TITLE" )?></b></label>
+                                    <label style="font-size: 14px"><b><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_IMPORT_FILE_TITLE" )?></b></label>
                                     &nbsp;&nbsp;&nbsp;
                                     <input type="text" name="URL_DATA_FILE_IMPORT">
                                     <input type="button" value="..." onclick="BtnClick()">
                                     <input type="hidden" name="export_import" value="import">
                                     <input type="hidden" name="step" value="2">
                                     <br><br>
-                                    <a href="/bitrix/admin/kit_exportpro_export.php" class="adm-btn"><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
-                                    <input type="submit" class="adm-btn-save" value="<?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
+                                    <a href="/bitrix/admin/data_exportpro_export.php" class="adm-btn"><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_BACK" )?></a>&nbsp;&nbsp;&nbsp;
+                                    <input type="submit" class="adm-btn-save" value="<?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_PROCESS" )?>">
                                 </form>
                                 <br><br>
                             </td>
@@ -396,7 +398,7 @@ if( $_REQUEST["export_import"] == "import" ){
         }
         
         if( count( $message ) > 0 ){
-            $message = GetMessage( "KIT_EXPORTPRO_PROFILE_LIST_EXPORTED3" )."<ul>".implode( "\r\n", $message )."</ul>";
+            $message = GetMessage( "DATA_EXPORTPRO_PROFILE_LIST_EXPORTED3" )."<ul>".implode( "\r\n", $message )."</ul>";
             CAdminMessage::ShowMessage(
                 array(
                     "MESSAGE" => $message,
@@ -407,7 +409,7 @@ if( $_REQUEST["export_import"] == "import" ){
         }
         ?>
             <br>
-            <a href="/bitrix/admin/kit_exportpro_list.php" class="adm-btn"><?=GetMessage( "KIT_EXPORTPRO_PROFILE_LIST" )?></a>
+            <a href="/bitrix/admin/data_exportpro_list.php" class="adm-btn"><?=GetMessage( "DATA_EXPORTPRO_PROFILE_LIST" )?></a>
         <?
     }
 }?>

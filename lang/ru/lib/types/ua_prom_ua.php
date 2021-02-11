@@ -1,27 +1,27 @@
 <?
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_NAME"] = "Выгрузка на портал Prom.ua";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_ID"] = "Идентификатор торгового предложения";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_NAME"] = "Название товара.<br><b>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_CATEGORY"] = "Идентификатор категории товара.<br>Товарное предложение может принадлежать только одной категории.<br><b>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_PRICE"] = "Цена, по которой данный товар можно приобрести.<br><b>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_OLDPRICE"] = "Если у товара есть скидка, в данном поле указывается цена без учета скидки.<br> При наличии данного тега тег <price> является обязательным.";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_URL"] = "URL страницы товара.<br>Максимальная длина URL — 512 символов.<br>Необязательный элемент для магазинов-салонов";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_PICTURE"] = "Ссылка на картинку соответствующего товарного предложения";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_VENDOR"] = "Производитель. Не отображается в названии предложения";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_DESCRIPTION"] = "Аннотация к книге.<br>Длина текста не более 175 символов (не включая знаки препинания),<br> запрещено использовать HTML-теги <br>(информация внутри тегов публиковаться не будет)";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_WARRANTY"] = "Число месяцев, на которые дается гарантия на товар. Необязательный элемент.";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_AVAILABLE_AREA"] = "Обязательное поле для участников программы: \"Честные цены\". Доступные значения: Склад, Заказ";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_UTM_SOURCE"] = "UTM метка: рекламная площадка";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_UTM_SOURCE_VALUE"] = "cpc_yandex_market";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_UTM_MEDIUM"] = "UTM метка: тип рекламы";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_UTM_MEDIUM_VALUE"] = "cpc";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_UTM_TERM"] = "UTM метка: ключевая фраза";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_UTM_CONTENT"] = "UTM метка: контейнер для дополнительной информации";
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_UTM_CAMPAIGN"] = "UTM метка: название рекламной кампании";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_NAME"] = "Выгрузка на портал Prom.ua";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_ID"] = "Идентификатор торгового предложения";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_NAME"] = "Название товара.<br><b>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_CATEGORY"] = "Идентификатор категории товара.<br>Товарное предложение может принадлежать только одной категории.<br><b>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_PRICE"] = "Цена, по которой данный товар можно приобрести.<br><b>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_OLDPRICE"] = "Если у товара есть скидка, в данном поле указывается цена без учета скидки.<br> При наличии данного тега тег <price> является обязательным.";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_URL"] = "URL страницы товара.<br>Максимальная длина URL — 512 символов.<br>Необязательный элемент для магазинов-салонов";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_PICTURE"] = "Ссылка на картинку соответствующего товарного предложения";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_VENDOR"] = "Производитель. Не отображается в названии предложения";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_DESCRIPTION"] = "Аннотация к книге.<br>Длина текста не более 175 символов (не включая знаки препинания),<br> запрещено использовать HTML-теги <br>(информация внутри тегов публиковаться не будет)";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_WARRANTY"] = "Число месяцев, на которые дается гарантия на товар. Необязательный элемент.";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_AVAILABLE_AREA"] = "Обязательное поле для участников программы: \"Честные цены\". Доступные значения: Склад, Заказ";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_UTM_SOURCE"] = "UTM метка: рекламная площадка";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_UTM_SOURCE_VALUE"] = "cpc_yandex_market";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_UTM_MEDIUM"] = "UTM метка: тип рекламы";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_UTM_MEDIUM_VALUE"] = "cpc";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_UTM_TERM"] = "UTM метка: ключевая фраза";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_UTM_CONTENT"] = "UTM метка: контейнер для дополнительной информации";
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_UTM_CAMPAIGN"] = "UTM метка: название рекламной кампании";
 
-$MESS["KIT_EXPORTPRO_UA_PROM_UA_FIELD_PARAM"] = "Характеристики товара";
-$MESS["KIT_EXPORTPRO_TYPE_UA_PROM_UA_PORTAL_REQUIREMENTS"] = "http://support.prom.ua/documents/290";
-$MESS["KIT_EXPORTPRO_TYPE_UA_PROM_UA_EXAMPLE"] = "
+$MESS["DATA_EXPORTPRO_UA_PROM_UA_FIELD_PARAM"] = "Характеристики товара";
+$MESS["DATA_EXPORTPRO_TYPE_UA_PROM_UA_PORTAL_REQUIREMENTS"] = "http://support.prom.ua/documents/290";
+$MESS["DATA_EXPORTPRO_TYPE_UA_PROM_UA_EXAMPLE"] = "
 <item id=\"330\">
     <name>Motorola A1200</name>
     <categoryId>1001</categoryId>

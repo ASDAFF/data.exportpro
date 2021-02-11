@@ -1,23 +1,19 @@
 <?
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\UserTable;
 use Bitrix\Catalog;
 
 Loc::loadMessages( __FILE__ );
 
-class CKitExportproCatalog extends CCatalogCondCtrlIBlockFields{
+class CDataExportproCatalog extends CCatalogCondCtrlIBlockFields{
     public static function GetClassName(){
         return __CLASS__;
     }
     
     public static function GetControls( $strControlID = false ){          
         $arControlList = array(
-            "CondKitCatpriceSetContains" => array(
-                "ID" => "CondKitCatpriceSetContains",
+            "CondDataCatpriceSetContains" => array(
+                "ID" => "CondDataCatpriceSetContains",
                 "FIELD" => "SET_CONTAINS",
                 "FIELD_TYPE" => "int",
                 "MULTIPLE" => "N",
@@ -39,7 +35,7 @@ class CKitExportproCatalog extends CCatalogCondCtrlIBlockFields{
                     "popup_url" =>  "/bitrix/admin/iblock_element_search.php",
                     "popup_params" => array(
                         "lang" => LANGUAGE_ID,
-                        "IBLOCK_ID" => CKitExportproProps::$arIBlockFilter[0],
+                        "IBLOCK_ID" => CDataExportproProps::$arIBlockFilter[0],
                         "discount" => "Y"
                     ),
                     "param_id" => "n"
@@ -90,7 +86,7 @@ class CKitExportproCatalog extends CCatalogCondCtrlIBlockFields{
     }
 }
 
-class CKitExportproPrices extends CCatalogCondCtrlIBlockFields{
+class CDataExportproPrices extends CCatalogCondCtrlIBlockFields{
 	public static function GetClassName(){
 		return __CLASS__;
 	}
@@ -193,7 +189,7 @@ class CKitExportproPrices extends CCatalogCondCtrlIBlockFields{
 	}
 }
 
-class CKitExportproProps extends CCatalogCondCtrlIBlockProps{
+class CDataExportproProps extends CCatalogCondCtrlIBlockProps{
 	public static $arIBlockFilter = array();
 	public static $arEnums = array();
 	public static function GetClassName(){
@@ -421,7 +417,7 @@ class CKitExportproProps extends CCatalogCondCtrlIBlockProps{
 }
 
 
-class CKitExportproCatalogCond extends CGlobalCondTree{
+class CDataExportproCatalogCond extends CGlobalCondTree{
 	public static function GetClassName(){
 		return __CLASS__;
 	}
@@ -468,20 +464,20 @@ class CKitExportproCatalogCond extends CGlobalCondTree{
             $basicEvents = GetModuleEvents( $this->arEvents["CONTROLS"]["MODULE_ID"], $this->arEvents["CONTROLS"]["EVENT_ID"], true );            
             $basicEvents = array_merge( $basicEvents, array(
                     array(
-                        "TO_CLASS" => "CKitExportproPrices",
+                        "TO_CLASS" => "CDataExportproPrices",
                         "TO_METHOD" => "GetControlDescr"
                     ),
                     array(
-                        "TO_CLASS" => "CKitExportproCatalog",
+                        "TO_CLASS" => "CDataExportproCatalog",
                         "TO_METHOD" => "GetControlDescr"
                     ),
                 )
             );  
             foreach( $basicEvents as $arEvent ){
                 if( $arEvent["TO_CLASS"] == "CCatalogCondCtrlIBlockProps" ){
-                    $arEvent["TO_CLASS"] = "CKitExportproProps";
-                    $arEvent["TO_MODULE_ID"] = "kit.exportpro";
-                    $arEvent["TO_NAME"] = "CKitExportproProps::GetControlDescr (kit.exportpro)";
+                    $arEvent["TO_CLASS"] = "CDataExportproProps";
+                    $arEvent["TO_MODULE_ID"] = "data.exportpro";
+                    $arEvent["TO_NAME"] = "CDataExportproProps::GetControlDescr (data.exportpro)";
                 }
                 $arRes = ExecuteModuleEventEx( $arEvent ); 
                 if( !is_array( $arRes ) )

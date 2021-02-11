@@ -3,7 +3,7 @@ require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_adm
 IncludeModuleLangFile(__FILE__);
 ?>
 <tr class="heading">
-    <td colspan="2"><?=GetMessage( "KIT_EXPORTPRO_INSTRUCTION_BASE" )?></td>
+    <td colspan="2"><?=GetMessage( "DATA_EXPORTPRO_INSTRUCTION_BASE" )?></td>
 </tr>
 <tr>
     <td colspan="2" align="center">

@@ -13,44 +13,44 @@ class CExportproVariant{
     public static function GetCategory(){
         return array(
             ""                  => "",
-            "apparel-RU"        => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_apparel-RU" ),
-            "apparel-US"        => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_apparel-US" ),
-            "apparel-INT"       => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_apparel-INT" ),
-            "apparel-cm"        => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_apparel-cm" ),
+            "apparel-RU"        => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_apparel-RU" ),
+            "apparel-US"        => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_apparel-US" ),
+            "apparel-INT"       => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_apparel-INT" ),
+            "apparel-cm"        => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_apparel-cm" ),
 
-            "shoes-cm"          => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_shoes-cm" ),
-            "shoes-EU"          => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_shoes-EU" ),
-            "shoes-RU"          => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_shoes-RU" ),
-            "shoes-US"          => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_shoes-US" ),
-            "shoes-UK"          => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_shoes-UK" ),
+            "shoes-cm"          => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_shoes-cm" ),
+            "shoes-EU"          => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_shoes-EU" ),
+            "shoes-RU"          => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_shoes-RU" ),
+            "shoes-US"          => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_shoes-US" ),
+            "shoes-UK"          => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_shoes-UK" ),
 
-            "headgears-INT"     => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_headgears-INT" ),
+            "headgears-INT"     => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_headgears-INT" ),
 
-            "gloves-cm"         => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_gloves-cm" ),
-            "gloves-INT"        => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_gloves-INT" ),
-            "handgrips_oz-OZ"   => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_handgrips-OZ" ),
-            "handgrips-INT"     => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_handgrips-INT" ),
-            "boxinghelmets-INT" => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_boxinghelmets-INT" ),
+            "gloves-cm"         => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_gloves-cm" ),
+            "gloves-INT"        => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_gloves-INT" ),
+            "handgrips_oz-OZ"   => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_handgrips-OZ" ),
+            "handgrips-INT"     => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_handgrips-INT" ),
+            "boxinghelmets-INT" => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_boxinghelmets-INT" ),
 
-            "bikeframes-INCH"   => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_bikeframes-INCH" ),
-            "bikeframes-INT"    => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_bikeframes-INT" ),
+            "bikeframes-INCH"   => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_bikeframes-INCH" ),
+            "bikeframes-INT"    => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_bikeframes-INT" ),
 
-            "skis-cm"           => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_skis-cm" ),
-            "skisticks-cm"      => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_skisticks-cm" ),
-            "skiboots-cm"       => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_skiboots-cm" ),
+            "skis-cm"           => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_skis-cm" ),
+            "skisticks-cm"      => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_skisticks-cm" ),
+            "skiboots-cm"       => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_skiboots-cm" ),
 
-            "boardboots-cm"     => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-cm" ),
-            "boardboots-UK"     => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-UK" ),
-            "boardboots-RU"     => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-RU" ),
-            "boardboots-EU"     => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-EU" ),
-            "boardboots-US"     => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-US" ),
+            "boardboots-cm"     => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-cm" ),
+            "boardboots-UK"     => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-UK" ),
+            "boardboots-RU"     => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-RU" ),
+            "boardboots-EU"     => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-EU" ),
+            "boardboots-US"     => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_boardboots-US" ),
 
-            "skihelmets-INT"    => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_skihelmets-INT" ),
+            "skihelmets-INT"    => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_skihelmets-INT" ),
 
 
-            "lingerie-EU"       => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_lingerie-EU" ),
-            "lingerie-UK"       => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_lingerie-UK" ),
-            "lingerie-IT"       => GetMessage( "KIT_EXPORTPRO_SCHEME_AKTIVIZM_lingerie-IT" ),
+            "lingerie-EU"       => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_lingerie-EU" ),
+            "lingerie-UK"       => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_lingerie-UK" ),
+            "lingerie-IT"       => GetMessage( "DATA_EXPORTPRO_SCHEME_AKTIVIZM_lingerie-IT" ),
         );
     }
 
@@ -255,8 +255,8 @@ class CExportproProfile{
     }
 
     function createFieldset(){
-        $ibFields = array( CKitExportproCondCtrlIBlockFields::GetControlShow() );
-        $ibProps = CKitExportproCondCtrlIBlockProps::GetControlShow();
+        $ibFields = array( CDataExportproCondCtrlIBlockFields::GetControlShow() );
+        $ibProps = CDataExportproCondCtrlIBlockProps::GetControlShow();
         $ibFields = array_merge( $ibFields, $ibProps );
         $options = $this->createFieldsetRecursive( $ibFields );
 
@@ -316,7 +316,7 @@ class CExportproProfile{
             
             if( count( $arUser ) ){
                 foreach( array( "NAME", "SECOND_NAME", "LAST_NAME", "EMAIL" ) as $value ){
-                    if( !strlen( $name = GetMessage( "KIT_EXPORTPRO_".$value ) ) )
+                    if( !strlen( $name = GetMessage( "DATA_EXPORTPRO_".$value ) ) )
                         $name = $value;
                     
                     $arProps["LINK_S_USERID"]["PROPERTY"]["VALUES"][] = array( "NAME" => $name, "CODE" => $value );
@@ -325,13 +325,13 @@ class CExportproProfile{
 
             foreach( $arUser as $propName => $val ){
                 if( strncmp( $propName, "PERSONAL_", strlen( "PERSONAL_" ) ) == 0 ){
-                    if( !strlen( $name = GetMessage( "KIT_EXPORTPRO_".$propName ) ) )
+                    if( !strlen( $name = GetMessage( "DATA_EXPORTPRO_".$propName ) ) )
                         $name = $propName;
                     
                     $arProps["LINK_S_USERID"]["PERSONAL"]["VALUES"][] = array( "NAME" => $name, "CODE" => $propName );
                 }
                 elseif( strncmp( $propName, "WORK_", strlen( "WORK_" ) ) == 0 ){
-                    if( !strlen( $name = GetMessage( "KIT_EXPORTPRO_".$propName ) ) )
+                    if( !strlen( $name = GetMessage( "DATA_EXPORTPRO_".$propName ) ) )
                         $name = $propName;
 
                     $arProps["LINK_S_USERID"]["WORK"]["VALUES"][] = array( "NAME" => $name, "CODE" => $propName );
@@ -346,7 +346,7 @@ class CExportproProfile{
 
             foreach( $arProps["LINK_S_USERID"] as $n => $values ){
                 if( count( $values ) ){
-                    if( !strlen( $name = GetMessage( "KIT_EXPORTPRO_".$n ) ) ) $name = $n;
+                    if( !strlen( $name = GetMessage( "DATA_EXPORTPRO_".$n ) ) ) $name = $n;
                     $arProps["LINK_S_USERID"][$n]["NAME"] = $name;
                 }
             }
@@ -394,28 +394,28 @@ class CExportproProfile{
     function createFieldset2( $IBLOCK, $SKU = false, $PRICE = false ){
         $filedNames = CIBlock::GetFieldsDefaults();
         $Properties = array(
-            "ID"                  => GetMessage( "KIT_EXPORTPRO_IDENTIFIKACIONNYY_NO" ),
-            "EXTERNAL_ID"         => GetMessage( "KIT_EXPORTPRO_IDENTIFIKACIONNYY_EXTERNAL_ID" ),
-            "NAME"                => GetMessage( "KIT_EXPORTPRO_NAIMENOVANIE" ),
-            "CODE"                => GetMessage( "KIT_EXPORTPRO_SIMVOLQNYY_KOD" ),
-            "ACTIVE"              => GetMessage( "KIT_EXPORTPRO_AKTIVNOSTQ" ),
-            "DETAIL_PAGE_URL"     => GetMessage( "KIT_EXPORTPRO_SSYLKA_NA_DETALQNUU" ),
-            "DATE_ACTIVE_FROM"    => GetMessage( "KIT_EXPORTPRO_DATA_NACALA_AKTIVNOS" ),
-            "DATE_ACTIVE_TO"      => GetMessage( "KIT_EXPORTPRO_DATA_OKONCANIA_AKTIV" ),
-            "PREVIEW_TEXT"        => GetMessage( "KIT_EXPORTPRO_TEKST_ANONSA" ),
-            "PREVIEW_PICTURE"     => GetMessage( "KIT_EXPORTPRO_IZOBRAJENIE_ANONSA" ),
-            "DETAIL_TEXT"         => GetMessage( "KIT_EXPORTPRO_DETALQNOE_OPISANIE" ),
-            "DETAIL_PICTURE"      => GetMessage( "KIT_EXPORTPRO_DETALQNOE_IZOBRAJENI" ),
-            "IBLOCK_ID"           => GetMessage( "KIT_EXPORTPRO_FIELD_IBLOCK_ID" ),
-            "IBLOCK_CODE"         => GetMessage( "KIT_EXPORTPRO_FIELD_IBLOCK_CODE" ),
-            "IBLOCK_SECTION_ID"   => GetMessage( "KIT_EXPORTPRO_FIELD_IBLOCK_SECTION_ID" ),
-            "IBLOCK_SECTION_NAME" => GetMessage( "KIT_EXPORTPRO_FIELD_IBLOCK_SECTION_NAME" ),
-            "SECTION.EXTERNAL_ID" => GetMessage( "KIT_EXPORTPRO_FIELD_SECTION.EXTERNAL_ID" ),
-            "CREATED_BY"          => GetMessage( "KIT_EXPORTPRO_FIELD_CREATED_BY" ),
-            "CREATED_USER_NAME"   => GetMessage( "KIT_EXPORTPRO_FIELD_CREATED_USER_NAME" ),
-            "TIMESTAMP_X"         => GetMessage( "KIT_EXPORTPRO_FIELD_TIMESTAMP_X" ),
-            "MODIFIED_BY"         => GetMessage( "KIT_EXPORTPRO_FIELD_MODIFIED_BY" ),
-            "USER_NAME"           => GetMessage( "KIT_EXPORTPRO_FIELD_USER_NAME" ),
+            "ID"                  => GetMessage( "DATA_EXPORTPRO_IDENTIFIKACIONNYY_NO" ),
+            "EXTERNAL_ID"         => GetMessage( "DATA_EXPORTPRO_IDENTIFIKACIONNYY_EXTERNAL_ID" ),
+            "NAME"                => GetMessage( "DATA_EXPORTPRO_NAIMENOVANIE" ),
+            "CODE"                => GetMessage( "DATA_EXPORTPRO_SIMVOLQNYY_KOD" ),
+            "ACTIVE"              => GetMessage( "DATA_EXPORTPRO_AKTIVNOSTQ" ),
+            "DETAIL_PAGE_URL"     => GetMessage( "DATA_EXPORTPRO_SSYLKA_NA_DETALQNUU" ),
+            "DATE_ACTIVE_FROM"    => GetMessage( "DATA_EXPORTPRO_DATA_NACALA_AKTIVNOS" ),
+            "DATE_ACTIVE_TO"      => GetMessage( "DATA_EXPORTPRO_DATA_OKONCANIA_AKTIV" ),
+            "PREVIEW_TEXT"        => GetMessage( "DATA_EXPORTPRO_TEKST_ANONSA" ),
+            "PREVIEW_PICTURE"     => GetMessage( "DATA_EXPORTPRO_IZOBRAJENIE_ANONSA" ),
+            "DETAIL_TEXT"         => GetMessage( "DATA_EXPORTPRO_DETALQNOE_OPISANIE" ),
+            "DETAIL_PICTURE"      => GetMessage( "DATA_EXPORTPRO_DETALQNOE_IZOBRAJENI" ),
+            "IBLOCK_ID"           => GetMessage( "DATA_EXPORTPRO_FIELD_IBLOCK_ID" ),
+            "IBLOCK_CODE"         => GetMessage( "DATA_EXPORTPRO_FIELD_IBLOCK_CODE" ),
+            "IBLOCK_SECTION_ID"   => GetMessage( "DATA_EXPORTPRO_FIELD_IBLOCK_SECTION_ID" ),
+            "IBLOCK_SECTION_NAME" => GetMessage( "DATA_EXPORTPRO_FIELD_IBLOCK_SECTION_NAME" ),
+            "SECTION.EXTERNAL_ID" => GetMessage( "DATA_EXPORTPRO_FIELD_SECTION.EXTERNAL_ID" ),
+            "CREATED_BY"          => GetMessage( "DATA_EXPORTPRO_FIELD_CREATED_BY" ),
+            "CREATED_USER_NAME"   => GetMessage( "DATA_EXPORTPRO_FIELD_CREATED_USER_NAME" ),
+            "TIMESTAMP_X"         => GetMessage( "DATA_EXPORTPRO_FIELD_TIMESTAMP_X" ),
+            "MODIFIED_BY"         => GetMessage( "DATA_EXPORTPRO_FIELD_MODIFIED_BY" ),
+            "USER_NAME"           => GetMessage( "DATA_EXPORTPRO_FIELD_USER_NAME" ),
         );
 
         if( !is_array( $IBLOCK ) ){
@@ -532,26 +532,26 @@ class CExportproProfile{
 
         if( @CModule::IncludeModule( "catalog" ) ){
             $arIBlock["CATALOG"] = array();
-            $arIBlock["CATALOG"]["QUANTITY"] = GetMessage( "KIT_EXPORTPRO_KOLICESTVO" );
-            $arIBlock["CATALOG"]["QUANTITY_RESERVED"] = GetMessage( "KIT_EXPORTPRO_QUANTITY_RESERVED" );
-            $arIBlock["CATALOG"]["WEIGHT"] = GetMessage( "KIT_EXPORTPRO_WEIGHT" );
-            $arIBlock["CATALOG"]["WIDTH"] = GetMessage( "KIT_EXPORTPRO_WIDTH" );
-            $arIBlock["CATALOG"]["LENGTH"] = GetMessage( "KIT_EXPORTPRO_LENGTH" );
-            $arIBlock["CATALOG"]["HEIGHT"] = GetMessage( "KIT_EXPORTPRO_HEIGHT" );
-            $arIBlock["CATALOG"]["PURCHASING_PRICE"] = GetMessage( "KIT_EXPORTPRO_FIELD_PURCHASING_PRICE" );
-            $arIBlock["PRICES"]["PURCHASING_PRICE"] = GetMessage( "KIT_EXPORTPRO_FIELD_PURCHASING_PRICE" );
+            $arIBlock["CATALOG"]["QUANTITY"] = GetMessage( "DATA_EXPORTPRO_KOLICESTVO" );
+            $arIBlock["CATALOG"]["QUANTITY_RESERVED"] = GetMessage( "DATA_EXPORTPRO_QUANTITY_RESERVED" );
+            $arIBlock["CATALOG"]["WEIGHT"] = GetMessage( "DATA_EXPORTPRO_WEIGHT" );
+            $arIBlock["CATALOG"]["WIDTH"] = GetMessage( "DATA_EXPORTPRO_WIDTH" );
+            $arIBlock["CATALOG"]["LENGTH"] = GetMessage( "DATA_EXPORTPRO_LENGTH" );
+            $arIBlock["CATALOG"]["HEIGHT"] = GetMessage( "DATA_EXPORTPRO_HEIGHT" );
+            $arIBlock["CATALOG"]["PURCHASING_PRICE"] = GetMessage( "DATA_EXPORTPRO_FIELD_PURCHASING_PRICE" );
+            $arIBlock["PRICES"]["PURCHASING_PRICE"] = GetMessage( "DATA_EXPORTPRO_FIELD_PURCHASING_PRICE" );
 
             $p = GetCatalogGroups( ( $b = "SORT" ), ( $o = "ASC" ) );
             while( $p1 = $p->Fetch() ){
                 if( $p1["CAN_ACCESS"] == "Y" ){
-                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_PRICE" ).")";
-                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]."_WD"] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_PRICE_WITH_DISCOUNT" ).")";
-                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]."_D"] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_PRICE_DISCOUNT" ).")";
-                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]."_CURRENCY"] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_CURRNECY" ).")";
-                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_PRICE" ).")";
-                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]."_WD"] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_PRICE_WITH_DISCOUNT" ).")";
-                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]."_D"] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_PRICE_DISCOUNT" ).")";
-                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]."_CURRENCY"] = $p1["NAME_LANG"]." (".GetMessage( "KIT_EXPORTPRO_FIELD_CURRNECY" ).")";
+                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_PRICE" ).")";
+                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]."_WD"] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_PRICE_WITH_DISCOUNT" ).")";
+                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]."_D"] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_PRICE_DISCOUNT" ).")";
+                    $arIBlock["CATALOG"]["PRICE_".$p1["ID"]."_CURRENCY"] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_CURRNECY" ).")";
+                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_PRICE" ).")";
+                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]."_WD"] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_PRICE_WITH_DISCOUNT" ).")";
+                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]."_D"] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_PRICE_DISCOUNT" ).")";
+                    $arIBlock["PRICES"]["PRICE_".$p1["ID"]."_CURRENCY"] = $p1["NAME_LANG"]." (".GetMessage( "DATA_EXPORTPRO_FIELD_CURRNECY" ).")";
                 }
             }
         }
@@ -565,7 +565,7 @@ class CExportproProfile{
         if( is_array( $arIBlock ) ){
             foreach( $arIBlock as $IB_ID => $arFields ){
                 if( is_array( $arFields["FIELDS"] ) && ( sizeof( $arFields["FIELDS"] ) > 0 ) && !$fieldsSetup ){
-                    $options[] = '<optgroup label="'.GetMessage( "KIT_EXPORTPRO_POLA" ).'">';
+                    $options[] = '<optgroup label="'.GetMessage( "DATA_EXPORTPRO_POLA" ).'">';
                     foreach( $arFields["FIELDS"] as $idf => $fields ){
                         $selected = $idf == $value ? 'selected="selected"' : '';
                         $options[] = "<option value=\"$idf\" $selected>$fields</option>";
@@ -575,7 +575,7 @@ class CExportproProfile{
                 }
                 
                 if( is_array( $arFields["PROPERTY"] ) && sizeof( $arFields["PROPERTY"] ) > 0 ){
-                    $options[] = '<optgroup label="'.GetMessage( "KIT_EXPORTPRO_SVOYSTVA" ).$arFields["NAME"].'">';
+                    $options[] = '<optgroup label="'.GetMessage( "DATA_EXPORTPRO_SVOYSTVA" ).$arFields["NAME"].'">';
                     foreach( $arFields["PROPERTY"] as $fields ){
                         $selected = $IB_ID."-PROPERTY-".$fields["ID"] == $value ? 'selected="selected"' : "";
                         $options[] = "<option value=\"$IB_ID-PROPERTY-{$fields["ID"]}\" $selected>{$fields["NAME"]} [{$fields["ID"]}]</option>";
@@ -584,7 +584,7 @@ class CExportproProfile{
                 }
                 
                 if( is_array( $arFields["OFFERS_PROPERTY"] ) && sizeof( $arFields["OFFERS_PROPERTY"] ) > 0 ){
-                    $options[] = '<optgroup label="'.GetMessage( "KIT_EXPORTPRO_SVOYSTVA1" ).$arFields["NAME"].'">';
+                    $options[] = '<optgroup label="'.GetMessage( "DATA_EXPORTPRO_SVOYSTVA1" ).$arFields["NAME"].'">';
                     foreach( $arFields["OFFERS_PROPERTY"] as $fields ){
                         $selected = $IB_ID."-PROPERTY-".$fields["ID"] == $value ? 'selected="selected"' : "";
                         $options[] = "<option value=\"$IB_ID-PROPERTY-{$fields["ID"]}\" $selected>{$fields["NAME"]} [{$fields["ID"]}]</option>";
@@ -593,7 +593,7 @@ class CExportproProfile{
                 }
                 
                 if( is_array( $arFields["LINK_S_USERID"] ) && sizeof( $arFields["LINK_S_USERID"] ) > 0 ){
-                    $options[] = "<option>".GetMessage( "KIT_EXPORTPRO_NE_VYBRANO" )."</option>";
+                    $options[] = "<option>".GetMessage( "DATA_EXPORTPRO_NE_VYBRANO" )."</option>";
 
                     foreach( $arFields["LINK_S_USERID"] as $group ){
                         $options[] = '<optgroup label="'.$group["NAME"].'">';
@@ -608,7 +608,7 @@ class CExportproProfile{
                 $ibd = $IB_ID;
             }
             if( is_array( $arIBlock["CATALOG"] ) && sizeof( $arIBlock["CATALOG"] ) > 0 ){
-                $options[] = '<optgroup label="'.GetMessage( "KIT_EXPORTPRO_SVOYSTVA_TORGOVOGO_K" ).$arFields["NAME"].'">';
+                $options[] = '<optgroup label="'.GetMessage( "DATA_EXPORTPRO_SVOYSTVA_TORGOVOGO_K" ).$arFields["NAME"].'">';
                 foreach( $arIBlock["CATALOG"] as $idf => $fields ){
                     $selected = "CATALOG-".$idf == $value ? 'selected="selected"' : "";
                     $dataProperty = ( isset( $arIBlock["PRICES"] ) && is_array( $arIBlock["PRICES"] ) && array_key_exists( $idf, $arIBlock["PRICES"] ) ) ? 'data-property="price"' : "";
@@ -628,11 +628,11 @@ class CExportproProfile{
 
     public function GetCurrencyRate(){
         $rates = array(
-            "SITE" => GetMessage( "KIT_EXPORTPRO_CURRENCYRATE_SITE" ),
-            "CBRF" => GetMessage( "KIT_EXPORTPRO_CURRENCYRATE_CBRF" ),
-            "NBU"  => GetMessage( "KIT_EXPORTPRO_CURRENCYRATE_NBU" ),
-            "NBK"  => GetMessage( "KIT_EXPORTPRO_CURRENCYRATE_NBK" ),
-            "NBB"  => GetMessage( "KIT_EXPORTPRO_CURRENCYRATE_NBB" ),
+            "SITE" => GetMessage( "DATA_EXPORTPRO_CURRENCYRATE_SITE" ),
+            "CBRF" => GetMessage( "DATA_EXPORTPRO_CURRENCYRATE_CBRF" ),
+            "NBU"  => GetMessage( "DATA_EXPORTPRO_CURRENCYRATE_NBU" ),
+            "NBK"  => GetMessage( "DATA_EXPORTPRO_CURRENCYRATE_NBK" ),
+            "NBB"  => GetMessage( "DATA_EXPORTPRO_CURRENCYRATE_NBB" ),
         );
 
         return $rates;
@@ -939,9 +939,9 @@ class CExportproProfile{
 
     public function GetSchemeName(){
         $schemes = array(
-            "NAME_SKU"       => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_NAME" ),
-            "NAME_OFFER"     => GetMessage( "KIT_EXPORTPRO_SCHEME_PRODUCT_NAME" ),
-            "NAME_OFFER_SKU" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_PRODUCT_NAME" ),
+            "NAME_SKU"       => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_NAME" ),
+            "NAME_OFFER"     => GetMessage( "DATA_EXPORTPRO_SCHEME_PRODUCT_NAME" ),
+            "NAME_OFFER_SKU" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_PRODUCT_NAME" ),
         );
 
         return $schemes;
@@ -949,10 +949,10 @@ class CExportproProfile{
 
     public function GetSchemePreviewText(){
         $schemes = array(
-            "PREVIEW_TEXT_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_PREVIEW_OFFER_NAME" ),
-            "PREVIEW_TEXT_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_PREVIEW_PRODUCT_NAME" ),
-            "PREVIEW_TEXT_OFFER_SKU"          => GetMessage( "KIT_EXPORTPRO_SCHEME_PREVIEW_OFFER_PRODUCT_NAME" ),
-            "PREVIEW_TEXT_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "PREVIEW_TEXT_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_PREVIEW_OFFER_NAME" ),
+            "PREVIEW_TEXT_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_PREVIEW_PRODUCT_NAME" ),
+            "PREVIEW_TEXT_OFFER_SKU"          => GetMessage( "DATA_EXPORTPRO_SCHEME_PREVIEW_OFFER_PRODUCT_NAME" ),
+            "PREVIEW_TEXT_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -960,10 +960,10 @@ class CExportproProfile{
 
     public function GetSchemeDetailText(){
         $schemes = array(
-            "DETAIL_TEXT_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_NAME" ),
-            "DETAIL_TEXT_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_NAME" ),
-            "DETAIL_TEXT_OFFER_SKU"          => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_PRODUCT_NAME" ),
-            "DETAIL_TEXT_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "DETAIL_TEXT_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_NAME" ),
+            "DETAIL_TEXT_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_NAME" ),
+            "DETAIL_TEXT_OFFER_SKU"          => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_PRODUCT_NAME" ),
+            "DETAIL_TEXT_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -971,9 +971,9 @@ class CExportproProfile{
 
     public function GetSchemeDetailPicture(){
         $schemes = array(
-            "DETAIL_PICTURE_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_DETAIL_PICTURE" ),
-            "DETAIL_PICTURE_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_DETAIL_PICTURE" ),
-            "DETAIL_PICTURE_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "DETAIL_PICTURE_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_DETAIL_PICTURE" ),
+            "DETAIL_PICTURE_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_DETAIL_PICTURE" ),
+            "DETAIL_PICTURE_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -981,9 +981,9 @@ class CExportproProfile{
 
     public function GetSchemeQuantity(){
         $schemes = array(
-            "CATALOG_QUANTITY_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_QUANTITY" ),
-            "CATALOG_QUANTITY_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_QUANTITY" ),
-            "CATALOG_QUANTITY_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "CATALOG_QUANTITY_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_QUANTITY" ),
+            "CATALOG_QUANTITY_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_QUANTITY" ),
+            "CATALOG_QUANTITY_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -991,9 +991,9 @@ class CExportproProfile{
 
     public function GetSchemeQuantityReserved(){
         $schemes = array(
-            "CATALOG_QUANTITY_RESERVED_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_QUANTITY_RESERVED" ),
-            "CATALOG_QUANTITY_RESERVED_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_QUANTITY_RESERVED" ),
-            "CATALOG_QUANTITY_RESERVED_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "CATALOG_QUANTITY_RESERVED_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_QUANTITY_RESERVED" ),
+            "CATALOG_QUANTITY_RESERVED_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_QUANTITY_RESERVED" ),
+            "CATALOG_QUANTITY_RESERVED_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -1001,9 +1001,9 @@ class CExportproProfile{
 
     public function GetSchemeWeight(){
         $schemes = array(
-            "CATALOG_WEIGHT_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_WEIGHT" ),
-            "CATALOG_WEIGHT_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_WEIGHT" ),
-            "CATALOG_WEIGHT_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "CATALOG_WEIGHT_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_WEIGHT" ),
+            "CATALOG_WEIGHT_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_WEIGHT" ),
+            "CATALOG_WEIGHT_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -1011,9 +1011,9 @@ class CExportproProfile{
 
     public function GetSchemeWidth(){
         $schemes = array(
-            "CATALOG_WIDTH_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_WIDTH" ),
-            "CATALOG_WIDTH_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_WIDTH" ),
-            "CATALOG_WIDTH_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "CATALOG_WIDTH_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_WIDTH" ),
+            "CATALOG_WIDTH_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_WIDTH" ),
+            "CATALOG_WIDTH_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -1021,9 +1021,9 @@ class CExportproProfile{
 
     public function GetSchemeLength(){
         $schemes = array(
-            "CATALOG_LENGTH_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_LENGTH" ),
-            "CATALOG_LENGTH_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_LENGTH" ),
-            "CATALOG_LENGTH_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "CATALOG_LENGTH_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_LENGTH" ),
+            "CATALOG_LENGTH_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_LENGTH" ),
+            "CATALOG_LENGTH_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -1031,9 +1031,9 @@ class CExportproProfile{
 
     public function GetSchemeHeight(){
         $schemes = array(
-            "CATALOG_HEIGHT_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_HEIGHT" ),
-            "CATALOG_HEIGHT_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_HEIGHT" ),
-            "CATALOG_HEIGHT_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "CATALOG_HEIGHT_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_HEIGHT" ),
+            "CATALOG_HEIGHT_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_HEIGHT" ),
+            "CATALOG_HEIGHT_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;
@@ -1041,9 +1041,9 @@ class CExportproProfile{
 
     public function GetSchemePurchasingPrice(){
         $schemes = array(
-            "CATALOG_PURCHASING_PRICE_SKU"                => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_OFFER_PURCHASING_PRICE" ),
-            "CATALOG_PURCHASING_PRICE_OFFER"              => GetMessage( "KIT_EXPORTPRO_SCHEME_DETAIL_PRODUCT_PURCHASING_PRICE" ),
-            "CATALOG_PURCHASING_PRICE_OFFER_IF_SKU_EMPTY" => GetMessage( "KIT_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
+            "CATALOG_PURCHASING_PRICE_SKU"                => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_OFFER_PURCHASING_PRICE" ),
+            "CATALOG_PURCHASING_PRICE_OFFER"              => GetMessage( "DATA_EXPORTPRO_SCHEME_DETAIL_PRODUCT_PURCHASING_PRICE" ),
+            "CATALOG_PURCHASING_PRICE_OFFER_IF_SKU_EMPTY" => GetMessage( "DATA_EXPORTPRO_SCHEME_OFFER_IF_SKU_EMPTY" ),
         );
 
         return $schemes;

@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["activizm"] = array(
 	"CODE" => "activizm",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,87 +42,87 @@ $profileTypes["activizm"] = array(
 		),
 		array(
 			"CODE" => "URL",
-			"NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_URL" ),
+			"NAME" => "URL ".GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_PRICE" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_CURRENCY" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
 		array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_PICTURE" ),
 		),
         array(
 			"CODE" => "DELIVERY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_DELIVERY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_DELIVERY" ),
 		),
         array(
 			"CODE" => "LOCAL_DELIVERY_COST",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_LOCALDELIVERYCOST" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_LOCALDELIVERYCOST" ),
 		),
         array(
 			"CODE" => "NAME",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_NAME" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_NAME" ),
 			"VALUE" => "NAME",
             "REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
 			"CODE" => "VENDOR",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_VENDOR" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_VENDOR" ),
 		),
 		array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_DESCRIPTION" ),
 		),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
@@ -154,15 +154,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["activizm"]["FIELDS"][3] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["activizm"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_ACTIVIZM_EXAMPLE" );
-$profileTypes["activizm"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_ACTIVIZM_PORTAL_REQUIREMENTS" );
+$profileTypes["activizm"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_ACTIVIZM_EXAMPLE" );
+$profileTypes["activizm"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_ACTIVIZM_PORTAL_REQUIREMENTS" );
 
 $profileTypes["activizm"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -188,7 +188,7 @@ $profileTypes["activizm"]["ITEMS_FORMAT"] = "
     
 $profileTypes["activizm"]["LOCATION"] = array(
 	"activizm" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_ACTIVIZM" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_ACTIVIZM" ),
 		"sub" => array(
 		)
 	),

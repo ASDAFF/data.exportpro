@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["tiu_standart"] = array(
 	"CODE" => "tiu_standart",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY" ),
 	"REG" => "",
 	"HELP" => "",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,101 +42,101 @@ $profileTypes["tiu_standart"] = array(
 		),
 		array(
 			"CODE" => "GROUP_ID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_GROUP_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_GROUP_ID" ),
 			"REQUIRED" => "Y",
 		),
         array(
             "CODE" => "SELLING_TYPE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_SELLINGTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_SELLINGTYPE" ),
         ),
 		array(
 			"CODE" => "NAME",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_NAME" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_NAME" ),
 			"VALUE" => "NAME",
             "TYPE" => "field",
             "REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "OLDPRICE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OLDPRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OLDPRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "DISCOUNT",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_DISCOUNT" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_DISCOUNT" ),
 		),
         array(
 			"CODE" => "OPTPRICE1",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OPTPRICE1" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OPTPRICE1" ),
 		),
         array(
 			"CODE" => "OPTQUANTITY1",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OPTQUANTITY1" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OPTQUANTITY1" ),
 		),
         array(
 			"CODE" => "MINIMUM_ORDER_QUANTITY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_MINIMUM_ORDER_QUANTITY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_MINIMUM_ORDER_QUANTITY" ),
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_CURRENCY" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
 		array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PICTURE" ),
 		),
         array(
 			"CODE" => "TYPEPREFIX",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_TYPEPREFIX" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_TYPEPREFIX" ),
 		),
         array(
 			"CODE" => "VENDOR",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_VENDOR" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_VENDOR" ),
 		),
 		array(
 			"CODE" => "VENDORCODE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_VENDORCODE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_VENDORCODE" ),
 		),
         array(
 			"CODE" => "BARCODE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_BARCODE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_BARCODE" ),
 		),
 		array(
 			"CODE" => "MODEL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_MODEL" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_MODEL" ),
 		),
 		array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "COUNTRY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_COUNTRYOFORIGIN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_COUNTRYOFORIGIN" ),
 		),
         array(
 			"CODE" => "PARAM",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PARAM" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PARAM" ),
 		),
         array(
 			"CODE" => "KEYWORDS",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_KEYWORDS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_KEYWORDS" ),
 		),
 
 	),
@@ -168,21 +168,21 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["tiu_standart"]["FIELDS"][5] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
     );
     
     $profileTypes["tiu_standart"]["FIELDS"][6] = array(
         "CODE" => "OLDPRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OLDPRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SIMPLE_FIELD_OLDPRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["tiu_standart"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_TIU_SIMPLE_PORTAL_REQUIREMENTS" );
-$profileTypes["tiu_standart"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_TIU_PORTAL_CATEGORY_SIMPLE_EXAMPLE" );
+$profileTypes["tiu_standart"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_TIU_SIMPLE_PORTAL_REQUIREMENTS" );
+$profileTypes["tiu_standart"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_TIU_PORTAL_CATEGORY_SIMPLE_EXAMPLE" );
 
 $profileTypes["tiu_standart"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -224,9 +224,9 @@ $profileTypes["tiu_standart"]["ITEMS_FORMAT"] = "
 
 $profileTypes["tiu_standart"]["LOCATION"] = array(
 	"tiu" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_TIU" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_TIU" ),
 		"sub" => array(
 		)
 	),
 );
-$profileTypes["tiu_standart"]["SCHEME_OFFER_DESCRIPTION"] = GetMessage( "KIT_EXPORTPRO_TIU_PORTAL_CATEGORY_SCHEME_OFFER_DESCRIPTION" );
+$profileTypes["tiu_standart"]["SCHEME_OFFER_DESCRIPTION"] = GetMessage( "DATA_EXPORTPRO_TIU_PORTAL_CATEGORY_SCHEME_OFFER_DESCRIPTION" );

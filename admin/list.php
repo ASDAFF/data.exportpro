@@ -1,13 +1,9 @@
 <?php
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
-$moduleID = "kit.exportpro";
+$moduleID = "data.exportpro";
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/$moduleID/include.php" );
 
-CModule::IncludeModule( "kit.exportpro" );
+CModule::IncludeModule( "data.exportpro" );
 
 $POST_RIGHT = $APPLICATION->GetGroupRight( $moduleID );
 if( $POST_RIGHT == "D" )
@@ -19,7 +15,7 @@ if( !CModule::IncludeModule( "iblock" ) ){
 
 IncludeModuleLangFile( __FILE__ );
 
-$sTableID = "tbl_kitprofile";
+$sTableID = "tbl_dataprofile";
 
 function CheckFilter(){
 	global $FilterArr, $lAdmin;
@@ -215,17 +211,17 @@ while( $arr = $rsIBlock->Fetch() ){
 while( $arRes = $rsData->NavNext( true, "f_" ) ){
 	$f_SETUP = unserialize( base64_decode( $f_SETUP ) );
 	$row = & $lAdmin->AddRow( $f_ID, $arRes );
-	$row->AddViewField( "NAME", '<a href="kit_exportpro_edit.php?ID='.$f_ID."&amp;lang=".LANG.'" title="'.GetMessage( "parser_act_edit" ).'">'.$f_NAME."</a>" );
+	$row->AddViewField( "NAME", '<a href="data_exportpro_edit.php?ID='.$f_ID."&amp;lang=".LANG.'" title="'.GetMessage( "parser_act_edit" ).'">'.$f_NAME."</a>" );
 	$row->AddInputField( "NAME", array( "size" => 20 ) );
 	$row->AddViewField( "START_LAST_TIME_X", $f_SETUP["LAST_START_EXPORT"] );
-	$row->AddViewField( "TYPE_RUN", $f_TYPE_RUN == "comp" ? GetMessage( "KIT_EXPORTPRO_RUN_TYPE_COMPONENT" ) : GetMessage( "KIT_EXPORTPRO_RUN_TYPE_CRON" ) );
+	$row->AddViewField( "TYPE_RUN", $f_TYPE_RUN == "comp" ? GetMessage( "DATA_EXPORTPRO_RUN_TYPE_COMPONENT" ) : GetMessage( "DATA_EXPORTPRO_RUN_TYPE_CRON" ) );
 	$arActions = array();
 	if( $POST_RIGHT == "W" ){
 		$arActions[] = array(
 			"ICON" => "edit",
 			"DEFAULT" => true,
 			"TEXT" => GetMessage( "parser_act_edit" ),
-			"ACTION" => $lAdmin->ActionRedirect( "kit_exportpro_edit.php?ID=".$f_ID )
+			"ACTION" => $lAdmin->ActionRedirect( "data_exportpro_edit.php?ID=".$f_ID )
 		);
 	}
 
@@ -242,7 +238,7 @@ while( $arRes = $rsData->NavNext( true, "f_" ) ){
 			"ICON" => "copy",
 			"DEFAULT" => true,
 			"TEXT" => GetMessage( "parser_act_copy" ),
-			"ACTION" => $lAdmin->ActionRedirect( "kit_exportpro_edit.php?copy=$f_ID&ID=$f_ID" )
+			"ACTION" => $lAdmin->ActionRedirect( "data_exportpro_edit.php?copy=$f_ID&ID=$f_ID" )
 		);
 	}
     
@@ -251,7 +247,7 @@ while( $arRes = $rsData->NavNext( true, "f_" ) ){
             "ICON" => "export",
             "DEFAULT" => true,
             "TEXT" => GetMessage( "parser_act_export" ),
-            "ACTION" => $lAdmin->ActionRedirect( "kit_exportpro_export.php?URL_DATA_FILE_EXPORT=/upload/kit_exportpro_dump_".time().".txt&export_import=export&step=2&ID=$f_ID" )
+            "ACTION" => $lAdmin->ActionRedirect( "data_exportpro_export.php?URL_DATA_FILE_EXPORT=/upload/data_exportpro_dump_".time().".txt&export_import=export&step=2&ID=$f_ID" )
         );
     }
 
@@ -288,7 +284,7 @@ $lAdmin->AddGroupActionTable(
 $aContext = array(
 	array(
 		"TEXT" => GetMessage( "MAIN_ADD" ),
-		"LINK" => "kit_exportpro_edit.php?lang=".LANG,
+		"LINK" => "data_exportpro_edit.php?lang=".LANG,
 		"TITLE" => GetMessage( "PARSER_ADD_TITLE" ),
 		"ICON" => "btn_new",
 	),
@@ -319,6 +315,8 @@ if( isset( $_REQUEST["parser_end"] ) && $_REQUEST["parser_end"] == 1 && isset( $
 		}
 	}
 }
+
+DataLicence::Show();
 
 $lAdmin->DisplayList();
 ?>

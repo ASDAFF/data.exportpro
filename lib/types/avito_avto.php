@@ -3,263 +3,263 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["avito_avto"] = array(
 	"CODE" => "avito_avto",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "Id",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
         array(
             "CODE" => "DateBegin",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DATEBEGIN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DATEBEGIN" ),
         ),
         array(
             "CODE" => "DateEnd",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DATEEND" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DATEEND" ),
         ),
 		array(
             "CODE" => "Description",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DESCRIPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DESCRIPTION" ),
         ),
         array(
             "CODE" => "AdStatus",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ADSTATUS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ADSTATUS" ),
         ),
         array(
             "CODE" => "EMail",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_EMAIL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_EMAIL" ),
         ),
         array(
             "CODE" => "AllowEmail",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ALLOWEMAIL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ALLOWEMAIL" ),
         ),
         array(
             "CODE" => "CompanyName",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_COMPANYNAME" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_COMPANYNAME" ),
         ),
         array(
             "CODE" => "ManagerName",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_MANAGERNAME" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_MANAGERNAME" ),
         ),
         array(
             "CODE" => "ContactPhone",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_CONTACTPHONE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_CONTACTPHONE" ),
         ),
         array(
             "CODE" => "Region",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_REGION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_REGION" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "City",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_CITY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_CITY" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "District",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DISTRICT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DISTRICT" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "Subway",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_SUBWAY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_SUBWAY" ),
         ),
         array(
             "CODE" => "Category",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_CATEGORY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_CATEGORY" ),
             "REQUIRED" => "Y",
         ),
         array(
 			"CODE" => "CarType",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_CARTYPE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_CARTYPE" ),
 		),
 		array(
 			"CODE" => "Price",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
             "CODE" => "Kilometrage",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_KILOMETRAGE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_KILOMETRAGE" ),
         ),
         array(
             "CODE" => "Accident",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ACCIDENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ACCIDENT" ),
         ),
         array(
             "CODE" => "Make",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_MAKE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_MAKE" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "Model",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_MODEL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_MODEL" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "Year",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_YEAR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_YEAR" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "VIN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_VIN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_VIN" ),
         ),
         array(
             "CODE" => "CertificationNumber",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_CERTIFICATIONNUMBER" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_CERTIFICATIONNUMBER" ),
         ),
         array(
             "CODE" => "AllowAvtokodReportLink",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ALLOWAVTOKODREPORTLINK" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ALLOWAVTOKODREPORTLINK" ),
         ),
         array(
             "CODE" => "BodyType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_BODYTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_BODYTYPE" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "Doors",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DOORS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DOORS" ),
         ),
         array(
             "CODE" => "Color",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_COLOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_COLOR" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "FuelType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_FUELTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_FUELTYPE" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "EngineSize",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ENGINESIZE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ENGINESIZE" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "Power",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_POWER" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_POWER" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "Transmission",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_TRANSMISSION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_TRANSMISSION" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "DriveType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DRIVETYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DRIVETYPE" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "WheelType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_WHEELTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_WHEELTYPE" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "PowerSteering",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_POWERSTEERING" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_POWERSTEERING" ),
         ),
         array(
             "CODE" => "ClimateControl",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_CLIMATECONTROL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_CLIMATECONTROL" ),
         ),
         array(
             "CODE" => "ClimateControlOptionsOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_CLIMATECONTROLOPTIONSOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_CLIMATECONTROLOPTIONSOPTION" ),
         ),
         array(
             "CODE" => "Interior",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_INTERIOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_INTERIOR" ),
         ),
         array(
             "CODE" => "InteriorOptionsOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_INTERIOROPTIONSOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_INTERIOROPTIONSOPTION" ),
         ),
         array(
             "CODE" => "HeatingOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_HEATINGOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_HEATINGOPTION" ),
         ),
         array(
             "CODE" => "PowerWindows",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_POWERWINDOWS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_POWERWINDOWS" ),
         ),
         array(
             "CODE" => "ElectricDriveOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ELECTRICDRIVEOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ELECTRICDRIVEOPTION" ),
         ),
         array(
             "CODE" => "MemorySettingsOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_MEMORYSETTINGSOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_MEMORYSETTINGSOPTION" ),
         ),
         array(
             "CODE" => "DrivingAssistanceOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DRIVINGASSISTANCEOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DRIVINGASSISTANCEOPTION" ),
         ),
         array(
             "CODE" => "AntitheftSystemOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ANTITHEFTSYSTEMOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ANTITHEFTSYSTEMOPTION" ),
         ),
         array(
             "CODE" => "AirbagsOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_AIRBAGSOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_AIRBAGSOPTION" ),
         ),
         array(
             "CODE" => "ActiveSafetyOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_ACTIVESAFETYOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_ACTIVESAFETYOPTION" ),
         ),
         array(
             "CODE" => "MultimediaOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_MULTIMEDIAOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_MULTIMEDIAOPTION" ),
         ),
         array(
             "CODE" => "AudioSystem",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_AUDIOSYSTEM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_AUDIOSYSTEM" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "AudioSystemOptionsOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_AUDIOSYSTEMOPTIONSOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_AUDIOSYSTEMOPTIONSOPTION" ),
         ),
         array(
             "CODE" => "Lights",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_LIGHTS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_LIGHTS" ),
         ),
         array(
             "CODE" => "LightsOptionsOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_LIGHTSOPTIONSOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_LIGHTSOPTIONSOPTION" ),
         ),
         array(
             "CODE" => "Wheels",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_WHEELS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_WHEELS" ),
         ),
         array(
             "CODE" => "WheelsOptionsOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_WHEELSOPTIONSOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_WHEELSOPTIONSOPTION" ),
         ),
         array(
             "CODE" => "Owners",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_OWNERS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_OWNERS" ),
         ),
         array(
             "CODE" => "MaintenanceOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_MAINTENANCEOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_MAINTENANCEOPTION" ),
         ),
         array(
             "CODE" => "Image",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_IMAGE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_IMAGE" ),
         ),
         array(
             "CODE" => "VideoURL",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_VIDEOURL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_VIDEOURL" ),
         ),
 	),
 	"FORMAT" => '<?xml version="1.0"?>
@@ -279,15 +279,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["avito_avto"]["FIELDS"][16] = array(
         "CODE" => "Price",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["avito_avto"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_AVTO_PORTAL_REQUIREMENTS" );
-$profileTypes["avito_avto"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_AVTO_PORTAL_VALIDATOR" );
-$profileTypes["avito_avto"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_AVTO_EXAMPLE" );
+$profileTypes["avito_avto"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_AVTO_PORTAL_REQUIREMENTS" );
+$profileTypes["avito_avto"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_AVTO_PORTAL_VALIDATOR" );
+$profileTypes["avito_avto"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_AVTO_EXAMPLE" );
 
 $profileTypes["avito_avto"]["CURRENCIES"] = "";
 
@@ -388,7 +388,7 @@ $profileTypes["avito_avto"]["ITEMS_FORMAT"] = "
     
 $profileTypes["avito_avto"]["LOCATION"] = array(
 	"yandex" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_AVITO" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_AVITO" ),
 		"sub" => array(
 		)
 	),

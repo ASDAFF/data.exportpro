@@ -1,16 +1,13 @@
 <?php
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
 
-\Bitrix\Main\Loader::includeModule( "kit.exportpro" );
+\Bitrix\Main\Loader::includeModule( "data.exportpro" );
 
 Loc::loadMessages( __FILE__ );
 
-class CKitExportproUrlRewrite{
+class CDataExportproUrlRewrite{
     private static $__instance = array();
     private $__siteId = false;
     private $__urlRewrite = array();

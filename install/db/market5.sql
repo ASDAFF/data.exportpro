@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `kit_exportpro_market_ebay` (
+CREATE TABLE IF NOT EXISTS `data_exportpro_market_ebay` (
     `id` int(10) NOT NULL,
     `name` text NOT NULL,
     `level` int(2) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `kit_exportpro_market_ebay` (
     PRIMARY KEY(`id`),
     UNIQUE KEY(`id`)
 );
-INSERT IGNORE INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT IGNORE INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (163100, 'Прочее', 3, 163091),
 (37974, 'Музыкальные инструменты (до 1930 г.)', 2, 20081),
 (156320, 'Медные инструменты', 3, 37974),
@@ -1149,7 +1149,7 @@ INSERT IGNORE INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_i
 (36350, 'Оборудование и расходные материал ', 4, 45038),
 (67065, 'Вспомогательное технологическое о', 5, 36350),
 (67066, 'Сушильные аппараты', 6, 67065);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (71420, 'Машины для сварки и герметизации п ', 6, 67065),
 (36351, 'Прочее', 6, 67065),
 (45037, 'Литьевое и выдувное формование', 5, 36350),
@@ -2374,7 +2374,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (22663, 'Гаечные ключи', 4, 22659),
 (42247, 'Запчасти и аксессуары', 4, 22659),
 (22664, 'Прочее', 4, 22659);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (20760, 'Фонарики', 3, 631),
 (33082, 'Генераторы', 3, 631),
 (3244, 'Ручные инструменты', 3, 631),
@@ -3743,7 +3743,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (117426, 'Покрытия для автокресел', 3, 20742),
 (177796, 'Одежда и обувь', 3, 20742),
 (63057, 'Воротники', 3, 20742);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (52352, 'Костюмы', 3, 20742),
 (116373, 'Подгузники и подбрюшники', 3, 20742),
 (177789, 'Миски и кормушки', 3, 20742),
@@ -5139,7 +5139,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (10554, 'Прочее', 4, 16045),
 (114271, 'Параглайдинг', 3, 159043),
 (11330, 'Скутеры', 3, 159043);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (47349, 'Электроскутеры', 4, 11330),
 (75211, 'Бензиновые скутеры', 4, 11330),
 (11331, 'Самокаты', 4, 11330),

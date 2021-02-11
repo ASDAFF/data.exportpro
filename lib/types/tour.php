@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["ym_tour"] = array(
 	"CODE" => "ym_tour",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,150 +42,150 @@ $profileTypes["ym_tour"] = array(
 		),
 		array(
 			"CODE" => "BID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_BID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_BID" ),
 		),
 		array(
 			"CODE" => "URL",
-			"NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_URL" ),
+			"NAME" => "URL ".GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_PRICE" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_CURRENCY" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
 		array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_CATEGORY" ),
 			"VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_PICTURE" ),
 		),
          array(
 			"CODE" => "STORE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_STORE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_STORE" ),
 		),
         array(
 			"CODE" => "PICKUP",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_PICKUP" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_PICKUP" ),
 		),
         array(
 			"CODE" => "DELIVERY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_DELIVERY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_DELIVERY" ),
 		),
         array(
 			"CODE" => "WORLDREGION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_WORLDREGION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_WORLDREGION" ),
 		),
         array(
 			"CODE" => "COUNTRY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_COUNTRY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_COUNTRY" ),
 		),
 		array(
 			"CODE" => "REGION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_REGION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_REGION" ),
 		),
 		array(
 			"CODE" => "DAYS",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_DAYS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_DAYS" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "DATAtOUR",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_DATATOUR" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_DATATOUR" ),
 		),
         array(
 			"CODE" => "NAME",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_NAME" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_NAME" ),
             "REQUIRED" => "Y",
             "VALUE" => "NAME",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "HOTEL_STARS",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_HOTELSTARS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_HOTELSTARS" ),
 		),
         array(
 			"CODE" => "ROOM",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_ROOM" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_ROOM" ),
 		),
         array(
 			"CODE" => "MEAL",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_MEAL" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_MEAL" ),
 		),
         array(
 			"CODE" => "INCLUDED",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_INCLUDED" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_INCLUDED" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "TRANSPORT",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_TRANSPORT" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_TRANSPORT" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "AGE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_AGE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_AGE" ),
 		),
         array(
 			"CODE" => "PRICE_MIN",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_PRICEMIN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_PRICEMIN" ),
 		),
         array(
 			"CODE" => "PRICE_MAX",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_PRICEMAX" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_PRICEMAX" ),
 		),
         array(
 			"CODE" => "OPTIONS",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_OPTIONS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_OPTIONS" ),
 		),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
@@ -217,15 +217,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["ym_tour"]["FIELDS"][4] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_MARKET_TOUR_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_MARKET_TOUR_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["ym_tour"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_TOUR_PORTAL_REQUIREMENTS" );
-$profileTypes["ym_tour"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_TOUR_PORTAL_VALIDATOR" );
-$profileTypes["ym_tour"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_MARKET_TOUR_EXAMPLE" );
+$profileTypes["ym_tour"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_MARKET_TOUR_PORTAL_REQUIREMENTS" );
+$profileTypes["ym_tour"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_MARKET_TOUR_PORTAL_VALIDATOR" );
+$profileTypes["ym_tour"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_MARKET_TOUR_EXAMPLE" );
 
 $profileTypes["ym_tour"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -265,10 +265,10 @@ $profileTypes["ym_tour"]["ITEMS_FORMAT"] = "
     
 $profileTypes["ym_tour"]["LOCATION"] = array(
 	"yandex" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_ANDEKS" ),
 		"sub" => array(
 			"market" => array(
-				"name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
+				"name" => GetMessage( "DATA_EXPORTPRO_VEBMASTER" ),
 				"sub" => "",
 			)
 		)

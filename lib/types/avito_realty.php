@@ -3,216 +3,216 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["avito_realty"] = array(
 	"CODE" => "avito_realty",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "Id",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "Category",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_CATEGORY" ),
             "TYPE" => "const",
 			"REQUIRED" => "Y",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_CATEGORY_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_CATEGORY_VALUE" )
 		),
 		array(
 			"CODE" => "DateBegin",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_DATEBEGIN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_DATEBEGIN" ),
 		),
 		array(
 			"CODE" => "DateEnd",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_DATEEND" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_DATEEND" ),
 		),
         array(
 			"CODE" => "OperationType",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_OPERATIONTYPE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_OPERATIONTYPE" ),
 			"REQUIRED" => "Y",
 		),
         array(
             "CODE" => "ObjectType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_OBJECTTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_OBJECTTYPE" ),
         ),
         array(
             "CODE" => "ObjectSubtype",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_OBJECTSUBTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_OBJECTSUBTYPE" ),
         ),
         array(
             "CODE" => "NewDevelopmentId",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_NEWDEVELOPMENTID" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_NEWDEVELOPMENTID" ),
         ),
         array(
             "CODE" => "CadastralNumber",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_CADASTRAL_NUMBER" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_CADASTRAL_NUMBER" ),
         ),
         array(
 			"CODE" => "Region",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_REGION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_REGION" ),
 			"REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "City",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_CITY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_CITY" ),
 			"REQUIRED" => "Y",
 		),
         array(
             "CODE" => "Latitude",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LATITUDE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LATITUDE" ),
         ),
         array(
             "CODE" => "Longitude",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LONGTITUDE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LONGTITUDE" ),
         ),
         array(
             "CODE" => "DistanceToCity",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_DISTANCETOCITY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_DISTANCETOCITY" ),
         ),
         array(
             "CODE" => "LandArea",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LANDAREA" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LANDAREA" ),
         ),
         array(
 			"CODE" => "Street",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_STREET" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_STREET" ),
 		),
         array(
 			"CODE" => "Rooms",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_ROOMS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_ROOMS" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "Square",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_SQUARE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_SQUARE" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "Floor",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_FLOOR" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_FLOOR" ),
 		),
         array(
 			"CODE" => "Floors",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_FLOORS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_FLOORS" ),
 		),
         array(
 			"CODE" => "HouseType",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_HOUSETYPE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_HOUSETYPE" ),
 		),
         array(
             "CODE" => "MarketType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_MARKETTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_MARKETTYPE" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "WallsType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_WALLSTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_WALLSTYPE" ),
         ),
         array(
             "CODE" => "Secured",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_SECURED" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_SECURED" ),
         ),
         array(
             "CODE" => "BuildingClass",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_BUILDINGCLASS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_BUILDINGCLASS" ),
         ),
         array(
             "CODE" => "LeaseType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASETYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASETYPE" ),
         ),
         array(
             "CODE" => "LeaseCommission",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASECOMMISSION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASECOMMISSION" ),
         ),
         array(
             "CODE" => "LeaseCommissionSize",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASECOMMISSIONSIZE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASECOMMISSIONSIZE" ),
         ),
         array(
             "CODE" => "LeaseDeposit",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASEDEPOSIT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASEDEPOSIT" ),
         ),
         array(
             "CODE" => "LeaseBeds",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASEBEDS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASEBEDS" ),
         ),
         array(
             "CODE" => "LeaseSleepingPlaces",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASESLEEPINGPLACES" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASESLEEPINGPLACES" ),
         ),
         array(
             "CODE" => "LeaseMultimediaOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASEMULTIMEDIAOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASEMULTIMEDIAOPTION" ),
         ),
         array(
             "CODE" => "LeaseAppliancesOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASEAPPLIANCESOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASEAPPLIANCESOPTION" ),
         ),
         array(
             "CODE" => "LeaseComfortOption",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASECOMFORTOPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASECOMFORTOPTION" ),
         ),
         array(
 			"CODE" => "LeaseAdditionallyOption",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_LEASEADDITIONALLYOPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_LEASEADDITIONALLYOPTION" ),
 		),
         array(
 			"CODE" => "Subway",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_SUBWAY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_SUBWAY" ),
 		),
         array(
             "CODE" => "Title",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_TITLE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_TITLE" ),
         ),
         array(
 			"CODE" => "Description",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "Price",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
             "CODE" => "PriceType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_PRICETYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_PRICETYPE" ),
         ),
         array(
             "CODE" => "CompanyName",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_COMPANYNAME" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_COMPANYNAME" ),
         ),
         array(
             "CODE" => "ManagerName",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_MANAGERNAME" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_MANAGERNAME" ),
         ),
         array(
             "CODE" => "EMail",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_EMAIL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_EMAIL" ),
         ),
         array(
             "CODE" => "AllowEmail",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_ALLOWEMAIL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_ALLOWEMAIL" ),
         ),
         array(
 			"CODE" => "ContactPhone",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_CONTACTPHONE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_CONTACTPHONE" ),
 		),
         array(
 			"CODE" => "AdStatus",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_ADSTATUS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_ADSTATUS" ),
 		),
         array(
 			"CODE" => "Image",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_IMAGE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_IMAGE" ),
 		),
         array(
             "CODE" => "VideoURL",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_VIDEOURL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_VIDEOURL" ),
         ),
 	),
 	"FORMAT" => '<?xml version="1.0"?>
@@ -232,15 +232,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["avito_realty"]["FIELDS"][38] = array(
         "CODE" => "Price",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_REALTY_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_REALTY_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["avito_realty"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_REALTY_PORTAL_REQUIREMENTS" );
-$profileTypes["avito_realty"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_REALTY_PORTAL_VALIDATOR" );
-$profileTypes["avito_realty"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_REALTY_EXAMPLE" );
+$profileTypes["avito_realty"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_REALTY_PORTAL_REQUIREMENTS" );
+$profileTypes["avito_realty"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_REALTY_PORTAL_VALIDATOR" );
+$profileTypes["avito_realty"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_REALTY_EXAMPLE" );
 
 $profileTypes["avito_realty"]["CURRENCIES"] = "";
 
@@ -311,7 +311,7 @@ $profileTypes["avito_realty"]["ITEMS_FORMAT"] = "
     
 $profileTypes["avito_realty"]["LOCATION"] = array(
 	"avito" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_AVITO" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_AVITO" ),
 		"sub" => array(
 		)
 	),

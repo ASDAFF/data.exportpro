@@ -1,17 +1,14 @@
 <?php
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
 
 use Bitrix\Main;
 use Bitrix\Main\Localization\Loc;
 
-\Bitrix\Main\Loader::includeModule( "kit.exportpro" );
+\Bitrix\Main\Loader::includeModule( "data.exportpro" );
 
 Loc::loadMessages( __FILE__ );
 
-class CKitExportproLog{
-    public $logFilename = "/upload/kit.exportpro/";
+class CDataExportproLog{
+    public $logFilename = "/upload/data.exportpro/";
     private $profileId;
     private $session;
     
@@ -24,8 +21,8 @@ class CKitExportproLog{
         $this->profileId = $profileId;
     }
     
-    public static function KitDump( $dumpData, $clear = FALSE, $depth = 0 ){
-        $fileName = "kit_exportpro_dump.txt";
+    public static function DataDump( $dumpData, $clear = FALSE, $depth = 0 ){
+        $fileName = "data_exportpro_dump.txt";
         $file = $_SERVER["DOCUMENT_ROOT"]."/upload/".$fileName;
 
         $depthSign = "----";
@@ -58,7 +55,7 @@ class CKitExportproLog{
                         file_put_contents( $file, $strResult, FILE_APPEND );
                         $strResult = "";
 
-                        self::KitDump( $value, $clear, $nextDepth );
+                        self::DataDump( $value, $clear, $nextDepth );
                     }
                     elseif( is_null( $value ) ){
                         $strResult .= $strDepth.$key." = *NULL*\n";
@@ -102,7 +99,7 @@ class CKitExportproLog{
     }
 
     public function Init( $profile ){
-        $sessionData = KitExportproSession::GetSession( $profile["ID"] );
+        $sessionData = DataExportproSession::GetSession( $profile["ID"] );
 
         $sessionData["EXPORTPRO"]["LOG"][$profile["ID"]] = array(
             "IBLOCK" => 0,
@@ -167,41 +164,41 @@ class CKitExportproLog{
         $this->logFilename = $this->logFilename."log_export_".$this->profileId.".txt";
         $sessionData["EXPORTPRO"]["LOG"][$profile["ID"]]["FILE"] = $this->logFilename;
         file_put_contents( $_SERVER["DOCUMENT_ROOT"].$this->logFilename, "" );
-        KitExportproSession::SetSession( $profile["ID"], $sessionData );
+        DataExportproSession::SetSession( $profile["ID"], $sessionData );
     }
     
     public function IncIblcok(){
-        $sessionData = KitExportproSession::GetSession( $this->profileId );
+        $sessionData = DataExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["IBLOCK"]++;
-        KitExportproSession::SetSession( $this->profileId, $sessionData );
+        DataExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncSection(){
-        $sessionData = KitExportproSession::GetSession( $this->profileId );
+        $sessionData = DataExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["SECTIONS"]++;
-        KitExportproSession::SetSession( $this->profileId, $sessionData );
+        DataExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncProduct( $cnt = 0 ){
-        $sessionData = KitExportproSession::GetSession( $this->profileId );
+        $sessionData = DataExportproSession::GetSession( $this->profileId );
         if( !intval( $cnt ) )
             $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS"]++;
         else
             $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS"] += $cnt;
         
-        KitExportproSession::SetSession( $this->profileId, $sessionData );
+        DataExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncProductExport(){
-        $sessionData = KitExportproSession::GetSession( $this->profileId );
+        $sessionData = DataExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS_EXPORT"]++;
-        KitExportproSession::SetSession( $this->profileId, $sessionData );
+        DataExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function IncProductError(){
-        $sessionData = KitExportproSession::GetSession( $this->profileId );
+        $sessionData = DataExportproSession::GetSession( $this->profileId );
         $sessionData["EXPORTPRO"]["LOG"][$this->profileId]["PRODUCTS_ERROR"]++;
-        KitExportproSession::SetSession( $this->profileId, $sessionData );
+        DataExportproSession::SetSession( $this->profileId, $sessionData );
     }
     
     public function AddMessage( $message ){
@@ -220,7 +217,7 @@ class CKitExportproLog{
         $dbProfile = new CExportproProfileDB();
         $arProfile = $dbProfile->GetByID( $profileID );
                   
-        $arSessionData = KitExportproSession::GetAllSession( $profileID );
+        $arSessionData = DataExportproSession::GetAllSession( $profileID );
         $sessionData = array();
         if( !empty( $arSessionData ) ){
             $sessionData = $arSessionData[0];
@@ -244,13 +241,13 @@ class CKitExportproLog{
             $arProfile = $dbProfile->GetByID( $profileID );
             
             if( check_email( $arProfile["SEND_LOG_EMAIL"] ) ){
-                $messageTitle = GetMessage( "KIT_LOG_SEND_TITLE" ).$arProfile["DOMAIN_NAME"];
-                $messageBlock = GetMessage( "KIT_LOG_SEND_OFFERS" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS"]."\n".
-                GetMessage( "KIT_LOG_SEND_OFFERS_TERM" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_EXPORT"]."\n".
-                GetMessage( "KIT_LOG_SEND_OFFERS_ERROR" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_ERROR"]."\n".
-                GetMessage( "KIT_LOG_SEND_DATE" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["LAST_START_EXPORT"]."\n\n".
-                GetMessage( "KIT_LOG_PROFILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"]."/bitrix/admin/kit_exportpro_edit.php?ID=".$profileID."\n".            
-                GetMessage( "KIT_LOG_SEND_FILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"].$sessionData["EXPORTPRO"]["LOG"][$profileID]["FILE"];            
+                $messageTitle = GetMessage( "DATA_LOG_SEND_TITLE" ).$arProfile["DOMAIN_NAME"];
+                $messageBlock = GetMessage( "DATA_LOG_SEND_OFFERS" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS"]."\n".
+                GetMessage( "DATA_LOG_SEND_OFFERS_TERM" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_EXPORT"]."\n".
+                GetMessage( "DATA_LOG_SEND_OFFERS_ERROR" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["PRODUCTS_ERROR"]."\n".
+                GetMessage( "DATA_LOG_SEND_DATE" ).$sessionData["EXPORTPRO"]["LOG"][$profileID]["LAST_START_EXPORT"]."\n\n".
+                GetMessage( "DATA_LOG_PROFILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"]."/bitrix/admin/data_exportpro_edit.php?ID=".$profileID."\n".
+                GetMessage( "DATA_LOG_SEND_FILE" ).$arProfile["SITE_PROTOCOL"]."://".$arProfile["DOMAIN_NAME"].$sessionData["EXPORTPRO"]["LOG"][$profileID]["FILE"];            
                 
                 $headers = "Content-type: text/plain; charset=".LANG_CHARSET;
                 bxmail( $arProfile["SEND_LOG_EMAIL"], $messageTitle, $messageBlock, $headers );
@@ -266,7 +263,7 @@ class CKitExportproLog{
         $dbProfile = new CExportproProfileDB();
         $arProfile = $dbProfile->GetByID( $profileID );
         
-        $arSessionData = KitExportproSession::GetAllSession( $profileID );
+        $arSessionData = DataExportproSession::GetAllSession( $profileID );
         $sessionData = array();
         if( !empty( $arSessionData ) ){
             $sessionData = $arSessionData[0];

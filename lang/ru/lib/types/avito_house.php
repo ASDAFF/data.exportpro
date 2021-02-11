@@ -1,49 +1,49 @@
 <?
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_NAME"] = "Экспорт в систему авито(\"Дома, дачи, коттеджи\")";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_CATEGORY"] = "Категория объявления<br><b>Возможные значения: Дома, дачи, коттеджи</b><br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_REGION"] = "Дата конца экспозиции объявления<br>(Значение из Справочника регионов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_SUBWAY"] = "Станция метро<br>(Значение из Cправочника метро)";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_DESCRIPTION"] = "Описание ";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_PRICE"] = "Цена в рублях";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_CATEGORY_VALUE"] = "Дома, дачи, коттеджи";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_OPERATIONTYPE"] = "Тип объявления<br><b>Возможные значения: Продам, Сдам<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_LOCALITY"] = "Город или населенный пункт, уточнение";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_STREET"] = "Наименование улицы, на которой<br>находится объект объявления";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_SALEROOMS"] = "Количество комнат на продажу / сдающихся<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_ROOMS"] = "Количество комнат в квартире<br>Для квартиры-студии укажите Студия.<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_SQUARE"] = "Площадь комнаты (в м.кв.)<br>Если продается/сдается несколько комнат,<br>указывается их суммарная площадь<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_FLOOR"] = "Этаж, на котором находится объект";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_FLOORS"] = "Количество этажей в доме";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_HOUSETYPE"] = "Тип дома. <br><b>Возможные значения:<ul>
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_NAME"] = "Экспорт в систему авито(\"Дома, дачи, коттеджи\")";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_ID"] = "Уникальный идентификатор объявления<br>(строка не более 100 символов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_CATEGORY"] = "Категория объявления<br><b>Возможные значения: Дома, дачи, коттеджи</b><br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_DATEBEGIN"] = "Дата начала экспозиции объявления";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_DATEEND"] = "Дата конца экспозиции объявления";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_REGION"] = "Дата конца экспозиции объявления<br>(Значение из Справочника регионов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_REGION"] = "Город или населенный пункт,<br>в котором находится объект объявления<br>(Значение из Справочника городов)<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_SUBWAY"] = "Станция метро<br>(Значение из Cправочника метро)";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_DESCRIPTION"] = "Описание ";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_PRICE"] = "Цена в рублях";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_CONTACTPHONE"] = "Контактный телефон, если не указан,<br>подставляется из данных клиента.";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_ADSTATUS"] = "Статус объявления. Возможные значения:<br><b>Free, Premium, VIP, Highlight, PushUp, QuickSale, TurboSale</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_CATEGORY_VALUE"] = "Дома, дачи, коттеджи";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_OPERATIONTYPE"] = "Тип объявления<br><b>Возможные значения: Продам, Сдам<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_LOCALITY"] = "Город или населенный пункт, уточнение";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_STREET"] = "Наименование улицы, на которой<br>находится объект объявления";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_SALEROOMS"] = "Количество комнат на продажу / сдающихся<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_ROOMS"] = "Количество комнат в квартире<br>Для квартиры-студии укажите Студия.<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_SQUARE"] = "Площадь комнаты (в м.кв.)<br>Если продается/сдается несколько комнат,<br>указывается их суммарная площадь<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_FLOOR"] = "Этаж, на котором находится объект";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_FLOORS"] = "Количество этажей в доме";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_HOUSETYPE"] = "Тип дома. <br><b>Возможные значения:<ul>
 <li>Кирпичный</li>
 <li>Панельный</li>
 <li>Блочный</li>
 <li>Монолит</li>
 <li>Деревянный</li></ul> </b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_LEASETYPE"] = "Тип аренды,только для типа 'Сдам'<br><b>Возможные значения:<ul>
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_LEASETYPE"] = "Тип аренды,только для типа 'Сдам'<br><b>Возможные значения:<ul>
 <li>Долгосрочная</li>
 <li>Посуточная</li>
 </ul></b>
 <br><b class='required'>Обязательный элемент</b>
 ";
 
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_IMAGE"] = "Изображения";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_OBJECTTYPE"] = "Вид объекта<br><b>Возможные значения:<ul>
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_IMAGE"] = "Изображения";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_OBJECTTYPE"] = "Вид объекта<br><b>Возможные значения:<ul>
 <li>Коттедж</li>
 <li>Таунхаус</li>
 <li>Дом</li>
 <li>Дача</li>
 </ul></b>
 <br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_LANDAREA"] = "Площадь земли в сотках";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_DISTANCETOCITY"] = "Расстояние до города в км.<br> Примечание: значение 0 означает,<br> что объект находится в черте города.";
-$MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_WALLSTYPE"] = "Материал стенbr><b>Возможные значения:<ul>
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_LANDAREA"] = "Площадь земли в сотках";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_DISTANCETOCITY"] = "Расстояние до города в км.<br> Примечание: значение 0 означает,<br> что объект находится в черте города.";
+$MESS["DATA_EXPORTPRO_AVITO_HOUSE_FIELD_WALLSTYPE"] = "Материал стенbr><b>Возможные значения:<ul>
 <li>Кирпич</li>
 <li>Брус</li>
 <li>Бревно</li>
@@ -56,9 +56,9 @@ $MESS["KIT_EXPORTPRO_AVITO_HOUSE_FIELD_WALLSTYPE"] = "Материал стенb
 <br>";
 
 
-$MESS["KIT_EXPORTPRO_TYPE_AVITO_HOUSE_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/realty/";
-$MESS["KIT_EXPORTPRO_TYPE_AVITO_HOUSE_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
-$MESS["KIT_EXPORTPRO_TYPE_AVITO_HOUSE_EXAMPLE"] = "
+$MESS["DATA_EXPORTPRO_TYPE_AVITO_HOUSE_PORTAL_REQUIREMENTS"] = "http://autoload.avito.ru/format/realty/";
+$MESS["DATA_EXPORTPRO_TYPE_AVITO_HOUSE_PORTAL_VALIDATOR"] = "http://autoload.avito.ru/format/xmlcheck/";
+$MESS["DATA_EXPORTPRO_TYPE_AVITO_HOUSE_EXAMPLE"] = "
 <?xml version=\"1.0\"?>
 <Ads target=\"Avito.ru\" formatVersion=\"1\">
     <Ad>

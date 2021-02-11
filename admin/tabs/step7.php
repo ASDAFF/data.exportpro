@@ -15,12 +15,12 @@ if( CModule::IncludeModule( "currency" ) ){
 }
 else{
 	$arCurrencyList = array(
-        "RUB" => GetMessage( "KIT_EXPORTPRO_CURRENCU_RUB" ),
-		"USD" => GetMessage( "KIT_EXPORTPRO_CURRENCU_USD" ),
-		"EUR" => GetMessage( "KIT_EXPORTPRO_CURRENCU_EUR" ),
-		"UAH" => GetMessage( "KIT_EXPORTPRO_CURRENCU_UAH" ),
-		"BYR" => GetMessage( "KIT_EXPORTPRO_CURRENCU_BYR" ),
-		"KZT" => GetMessage( "KIT_EXPORTPRO_CURRENCU_KZH" )
+        "RUB" => GetMessage( "DATA_EXPORTPRO_CURRENCU_RUB" ),
+		"USD" => GetMessage( "DATA_EXPORTPRO_CURRENCU_USD" ),
+		"EUR" => GetMessage( "DATA_EXPORTPRO_CURRENCU_EUR" ),
+		"UAH" => GetMessage( "DATA_EXPORTPRO_CURRENCU_UAH" ),
+		"BYR" => GetMessage( "DATA_EXPORTPRO_CURRENCU_BYR" ),
+		"KZT" => GetMessage( "DATA_EXPORTPRO_CURRENCU_KZH" )
     );
 }
 
@@ -55,14 +55,14 @@ ksort( $currencyRates );
 <tr align="center">
     <td colspan="2">
         <?=BeginNote();?>
-        <?=GetMessage( "KIT_EXPORTPRO_MARKET_CURRENCY_DESCRIPTION" )?>
+        <?=GetMessage( "DATA_EXPORTPRO_MARKET_CURRENCY_DESCRIPTION" )?>
         <?=EndNote();?>
     </td>
 </tr>
 <tr>
     <td width="50%">
-        <span id="hint_PROFILE[CURRENCY][CONVERT_CURRENCY]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[CURRENCY][CONVERT_CURRENCY]' ), '<?=GetMessage( "KIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY_HELP" )?>' );</script>
-        <label for="PROFILE[CURRENCY][CONVERT_CURRENCY]"><?=GetMessage( "KIT_EXPORTPRO_CURRENCY_CONVERT_CURRENCY" )?></label>
+        <span id="hint_PROFILE[CURRENCY][CONVERT_CURRENCY]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[CURRENCY][CONVERT_CURRENCY]' ), '<?=GetMessage( "DATA_EXPORTPRO_CURRENCY_CONVERT_CURRENCY_HELP" )?>' );</script>
+        <label for="PROFILE[CURRENCY][CONVERT_CURRENCY]"><?=GetMessage( "DATA_EXPORTPRO_CURRENCY_CONVERT_CURRENCY" )?></label>
     </td>
     <td><input type="checkbox" name="PROFILE[CURRENCY][CONVERT_CURRENCY]" value="Y" <?=$convertCurrency?> onclick="convertCurrency()" ></td>
 </tr>
@@ -71,10 +71,10 @@ ksort( $currencyRates );
         <table cellpadding="2" cellspacing="0" border="0" class="internal" align="center" width="100%">
             <thead>
                 <tr class="heading">
-                    <td colspan="3" align="left"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_CURRENCY" )?></td>
-                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_RATE" )?></td>
-                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_CONVERTTO" )?></td>
-                    <td align="center"><?=GetMessage( "KIT_EXPORTPRO_CURRENCU_HEAD_CORRECT" )?></td>
+                    <td colspan="3" align="left"><?=GetMessage( "DATA_EXPORTPRO_CURRENCU_HEAD_CURRENCY" )?></td>
+                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "DATA_EXPORTPRO_CURRENCU_HEAD_RATE" )?></td>
+                    <td align="center" class="currency_table" style="<?=$convertTable?>"><?=GetMessage( "DATA_EXPORTPRO_CURRENCU_HEAD_CONVERTTO" )?></td>
+                    <td align="center"><?=GetMessage( "DATA_EXPORTPRO_CURRENCU_HEAD_CORRECT" )?></td>
                 </tr>
             </thead>
             <tbody>

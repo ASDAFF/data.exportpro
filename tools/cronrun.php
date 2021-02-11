@@ -1,8 +1,4 @@
 <?php
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
 $profileId = intval( $argv[1] );
 $documentRoot = $argv[2];
 global $cronpage;
@@ -14,7 +10,7 @@ set_time_limit( 0 );
 $_SERVER["DOCUMENT_ROOT"] = $DOCUMENT_ROOT = $documentRoot;
 require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php" );
 
-CModule::IncludeModule( "kit.exportpro" );
-KitExportproSession::Init( 0 );
-KitExportproSession::DeleteSession( $profileId );
+CModule::IncludeModule( "data.exportpro" );
+DataExportproSession::Init( 0 );
+DataExportproSession::DeleteSession( $profileId );
 CExportproCron::StartExport( $profileId );

@@ -1,8 +1,4 @@
 <?
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
 $MESS["export_save_err"] = "Ошибка сохранения профиля";
 $MESS["export_del_err"] = "Ошибка удаления профиля";
 $MESS["profile_save_error"] = "Ошибка сохранения профиля";
@@ -23,9 +19,9 @@ $MESS["parser_act_copy"] = "Копировать";
 $MESS["parser_act_export"] = "Экспортировать";
 $MESS["PARSER_ADD_TITLE"] = "Добавить";
 $MESS["post_title"] = "Профили экспорта на торговые площадки";
-$MESS["KIT_EXPORTPRO_LIST_IMPORT_SUCCESS"] = "Профили успешно экспортированы<br><a href=\"/upload/kit_exportpro/#FILENAME#\">/upload/kit_exportpro/#FILENAME#</a>";
-$MESS["KIT_EXPORTPRO_LIST_IMPORT_FAIL"] = "Экспорт профилей завершился неудачей";
-$MESS["KIT_EXPORTPRO_PROFILE_EXPORT_SHORT"] = "экспорт";
-$MESS["KIT_EXPORTPRO_RUN_TYPE_COMPONENT"] = "Компонент";
-$MESS["KIT_EXPORTPRO_RUN_TYPE_CRON"] = "Cron";
+$MESS["DATA_EXPORTPRO_LIST_IMPORT_SUCCESS"] = "Профили успешно экспортированы<br><a href=\"/upload/data_exportpro/#FILENAME#\">/upload/data_exportpro/#FILENAME#</a>";
+$MESS["DATA_EXPORTPRO_LIST_IMPORT_FAIL"] = "Экспорт профилей завершился неудачей";
+$MESS["DATA_EXPORTPRO_PROFILE_EXPORT_SHORT"] = "экспорт";
+$MESS["DATA_EXPORTPRO_RUN_TYPE_COMPONENT"] = "Компонент";
+$MESS["DATA_EXPORTPRO_RUN_TYPE_CRON"] = "Cron";
 ?>

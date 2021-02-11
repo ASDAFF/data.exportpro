@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `kit_exportpro_market_ebay` (
+CREATE TABLE IF NOT EXISTS `data_exportpro_market_ebay` (
     `id` int(10) NOT NULL,
     `name` text NOT NULL,
     `level` int(2) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `kit_exportpro_market_ebay` (
     PRIMARY KEY(`id`),
     UNIQUE KEY(`id`)
 );
-INSERT IGNORE INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT IGNORE INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (70976, 'Маски', 5, 33795),
 (168037, 'Орнаменты', 5, 33795),
 (168038, 'Реквизит', 5, 33795),
@@ -638,7 +638,7 @@ INSERT IGNORE INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_i
 (41394, 'Назначение не указано, дата неизве ', 4, 41183),
 (156488, 'Корреспонденция', 3, 124),
 (156489, 'До 1900 г.', 4, 156488);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (156490, '1900-1949 гг.', 4, 156488),
 (156491, '1950 г. - наст. вр.', 4, 156488),
 (165661, 'Назначение не указано, дата неизве ', 4, 156488),
@@ -2082,7 +2082,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (168104, 'Защитная пленка для экранов GPS', 4, 139836),
 (139837, 'ПО и карты для GPS', 4, 139836),
 (73362, 'Устройства слежения', 4, 139836);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (58049, 'Прочее', 4, 139836),
 (73335, 'Переносные устройства, 12 В', 3, 3270),
 (48610, 'Автомобильные сигнализации и безо ', 3, 3270),
@@ -3418,7 +3418,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (60355, '1970-1979 гг.', 4, 60352),
 (60356, '1980-1989 гг.', 4, 60352),
 (60357, '1990-1999 гг.', 4, 60352);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (60358, 'С 2000 г.', 4, 60352),
 (163889, 'Текущие выпуски', 4, 60352),
 (32994, 'Программы', 3, 196),
@@ -4860,7 +4860,7 @@ INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VAL
 (37958, 'Карты, атласы и глобусы', 2, 20081),
 (63602, 'Соединенные Штаты (до 1900 г.)', 3, 37958),
 (63603, 'Аляска, Гавайи', 4, 63602);
-INSERT INTO `kit_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
+INSERT INTO `data_exportpro_market_ebay` (`id`, `name`, `level`, `parent_id`) VALUES
 (63604, 'Алабама, Флорида, Джорджия, Миссиси', 4, 63602),
 (63605, 'Арканзас, Айова, Канзас, Луизиана, М', 4, 63602),
 (63606, 'Аризона, Калифорния, Колорадо, Нью- ', 4, 63602),

@@ -1,66 +1,66 @@
 <?
-$MESS["KIT_EXPORTPRO_PODDERJIVAETSA"] = "Поддерживается Google Merchants";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_ID"] = "Идентификатор товара<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_TITLE"] = "Название<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_DESCRIPTION"] = "Описание";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_LINK"] = "URL товара (обязательно начинается с http://)";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_MOBILE_LINK"] = "Мобильная ссылка (страница товара, оптимизированная для мобильных устройств). URL товара (обязательно начинается с http://)";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_IMAGELINK"] = "URL изображения товара (Должен начинаться с http:// или https://)";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_ADDITIONAL_IMAGELINK"] = "Дополнительная ссылка на изображение. URL изображения товара (Должен начинаться с http:// или https://)";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_CONDITION"] = "Состояние товара. Возможные значения:<br>
+$MESS["DATA_EXPORTPRO_PODDERJIVAETSA"] = "Поддерживается Google Merchants";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_ID"] = "Идентификатор товара<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_TITLE"] = "Название<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_DESCRIPTION"] = "Описание";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_LINK"] = "URL товара (обязательно начинается с http://)";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_MOBILE_LINK"] = "Мобильная ссылка (страница товара, оптимизированная для мобильных устройств). URL товара (обязательно начинается с http://)";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_IMAGELINK"] = "URL изображения товара (Должен начинаться с http:// или https://)";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_ADDITIONAL_IMAGELINK"] = "Дополнительная ссылка на изображение. URL изображения товара (Должен начинаться с http:// или https://)";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_CONDITION"] = "Состояние товара. Возможные значения:<br>
 new - новый, used - б/у, refurbished - восстановленный
 <br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY"] = "Наличие. Возможные значения:
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY"] = "Наличие. Возможные значения:
 <br>in stock - в наличии, out of stock - нет в наличии, preorder - предзаказ
 <br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY_DATE"] = "Дата поступления товара";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_PRICE"] = "Цена<br><b class='required'>Обязательный элемент</b>";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE"] = "Цена со скидкой";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE_EFFECTIVE"] = "Срок действия скидки";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_COUNTRY"] = "Страна доставки";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SERVICE"] = "Служба доставки";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGPRICE"] = "Цена доставки";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGWEIGHT"] = "Вес брутто";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGLABEL"] = "Транспортная этикетка";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_MULTIPACK"] = "Мультиупаковка";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_IS_BUNDLE"] = "Набор";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_GTIN"] = "Код международной маркировки";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_BRAND"] = "Брэнд товара";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_MPN"] = "Код производителя";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_ITEM_GROUP_ID"] = "ID группы товаров";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_COLOR"] = "Цвет";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_GENDER"] = "Пол";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_AGE_GROUP"] = "Возрастная группа";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_MATERIAL"] = "Материал";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_PATTERN"] = "Узор";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SIZE"] = "Размер";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SIZE_TYPE"] = "Тип размера";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_SIZE_SYSTEM"] = "Система размеров";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_ADULT"] = "Только для взрослых";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_GROUPING"] = "Группа adwords";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_LABELS"] = "Метки adwords";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_REDIRECT"] = "Перенаправление adwords";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_0"] = "Метка продавца 0. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_1"] = "Метка продавца 1. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_2"] = "Метка продавца 2. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_3"] = "Метка продавца 4. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_5"] = "Метка продавца 5. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_MEASURE"] = "Количество товара. Сведения о цене за определенное количество товара";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_BASE_MEASURE"] = "Единица измерения товара";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_EXCLUDED_DESTINATION"] = "Исключенные службы. Рекомендуется в тех случаях, когда используются Google Покупки и вам необходимо исключить товар из этой системы";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_EXPIRATION_DATE"] = "Предложение действительно до. Используется в тех случаях, когда срок действия предложения истекает менее чем через 30 дней после загрузки фида.";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_PRODUCTCATEGORY"] = "Категория по классификации Google";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_TYPE"] = "Тип товара";
-$MESS['KIT_EXPORTPRO_GOOGLE_MERCHANT_SCHEME_DESCRIPTION'] = "<b style='color:red;'>Не забудьте заменить #GOOGLEFEED# необходимым вам значением.<br> Значение #GOOGLEFEED# прописывается вручную<br>Подробнее можно узнать в кабинете пользователя <a href='https://www.google.com/retail/merchant-center/'>Google Merchant Center</a></b>";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE"] = "UTM метка: рекламная площадка";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE_VALUE"] = "cpc_yandex_market";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM"] = "UTM метка: тип рекламы";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM_VALUE"] = "cpc";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_TERM"] = "UTM метка: ключевая фраза";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_CONTENT"] = "UTM метка: контейнер для дополнительной информации";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_UTM_CAMPAIGN"] = "UTM метка: название рекламной кампании";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_PORTAL_REQUIREMENTS"] = "https://support.google.com/merchants/?hl=ru#topic=3404818";
-$MESS["KIT_EXPORTPRO_GOOGLE_MERCHANT_EXAMPLE"] = "
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_AVAILABILITY_DATE"] = "Дата поступления товара";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_PRICE"] = "Цена<br><b class='required'>Обязательный элемент</b>";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE"] = "Цена со скидкой";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SALE_PRICE_EFFECTIVE"] = "Срок действия скидки";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_COUNTRY"] = "Страна доставки";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SERVICE"] = "Служба доставки";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGPRICE"] = "Цена доставки";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGWEIGHT"] = "Вес брутто";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SHIPPINGLABEL"] = "Транспортная этикетка";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_MULTIPACK"] = "Мультиупаковка";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_IS_BUNDLE"] = "Набор";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_GTIN"] = "Код международной маркировки";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_BRAND"] = "Брэнд товара";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_MPN"] = "Код производителя";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_ITEM_GROUP_ID"] = "ID группы товаров";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_COLOR"] = "Цвет";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_GENDER"] = "Пол";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_AGE_GROUP"] = "Возрастная группа";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_MATERIAL"] = "Материал";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_PATTERN"] = "Узор";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SIZE"] = "Размер";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SIZE_TYPE"] = "Тип размера";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_SIZE_SYSTEM"] = "Система размеров";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_ADULT"] = "Только для взрослых";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_GROUPING"] = "Группа adwords";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_LABELS"] = "Метки adwords";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_ADWORDS_REDIRECT"] = "Перенаправление adwords";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_0"] = "Метка продавца 0. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_1"] = "Метка продавца 1. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_2"] = "Метка продавца 2. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_3"] = "Метка продавца 4. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_CUSTOM_LABEL_5"] = "Метка продавца 5. Позволяет группировать товары в торговой кампании по выбранным вами значениям";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_MEASURE"] = "Количество товара. Сведения о цене за определенное количество товара";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UNIT_PRICING_BASE_MEASURE"] = "Единица измерения товара";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_EXCLUDED_DESTINATION"] = "Исключенные службы. Рекомендуется в тех случаях, когда используются Google Покупки и вам необходимо исключить товар из этой системы";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_EXPIRATION_DATE"] = "Предложение действительно до. Используется в тех случаях, когда срок действия предложения истекает менее чем через 30 дней после загрузки фида.";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_PRODUCTCATEGORY"] = "Категория по классификации Google";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_TYPE"] = "Тип товара";
+$MESS['DATA_EXPORTPRO_GOOGLE_MERCHANT_SCHEME_DESCRIPTION'] = "<b style='color:red;'>Не забудьте заменить #GOOGLEFEED# необходимым вам значением.<br> Значение #GOOGLEFEED# прописывается вручную<br>Подробнее можно узнать в кабинете пользователя <a href='https://www.google.com/retail/merchant-center/'>Google Merchant Center</a></b>";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE"] = "UTM метка: рекламная площадка";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_SOURCE_VALUE"] = "cpc_yandex_market";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM"] = "UTM метка: тип рекламы";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_MEDIUM_VALUE"] = "cpc";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_TERM"] = "UTM метка: ключевая фраза";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_CONTENT"] = "UTM метка: контейнер для дополнительной информации";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_UTM_CAMPAIGN"] = "UTM метка: название рекламной кампании";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_PORTAL_REQUIREMENTS"] = "https://support.google.com/merchants/?hl=ru#topic=3404818";
+$MESS["DATA_EXPORTPRO_GOOGLE_MERCHANT_EXAMPLE"] = "
 <item>
     <g:id>TV_123456</g:id>
     <g:item_group_id>124</g:item_group_id>

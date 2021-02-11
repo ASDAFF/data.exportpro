@@ -3,97 +3,97 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["avito_importreal"] = array(
 	"CODE" => "avito_importreal",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "Id",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "Category",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CATEGORY" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_CATEGORY_VALUE" ),
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_CATEGORY_VALUE" ),
 		),
 		array(
 			"CODE" => "DateBegin",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEBEGIN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEBEGIN" ),
 		),
 		array(
 			"CODE" => "DateEnd",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEEND" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DATEEND" ),
 		),
         array(
 			"CODE" => "OperationType",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OPERATIONTYPE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OPERATIONTYPE" ),
 			"REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "Region",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_REGION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_REGION" ),
 			"REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "City",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CITY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CITY" ),
 			"REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "Country",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_COUNTRY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_COUNTRY" ),
 			"REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "Locality",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LOCALITY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LOCALITY" ),
 		),
         array(
 			"CODE" => "ObjectType",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OBJECTTYPE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_OBJECTTYPE" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "Square",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_SQUARE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_SQUARE" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "Rooms",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ROOMS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ROOMS" ),
 		),
         array(
 			"CODE" => "LeaseType",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LEASETYPE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_LEASETYPE" ),
             "REQUIRED" => "Y",
 		),
         array(
 			"CODE" => "Description",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "Price",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
         array(
 			"CODE" => "ContactPhone",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CONTACTPHONE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_CONTACTPHONE" ),
 		),
         array(
 			"CODE" => "AdStatus",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ADSTATUS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_ADSTATUS" ),
 		),
         array(
 			"CODE" => "Image",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_IMAGE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_IMAGE" ),
 		),
 	),
 	"FORMAT" => '<?xml version="1.0"?>
@@ -113,15 +113,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["avito_importreal"]["FIELDS"][14] = array(
         "CODE" => "Price",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_IMPORTREAL_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_IMPORTREAL_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["avito_importreal"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_REQUIREMENTS" );
-$profileTypes["avito_importreal"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_VALIDATOR" );
-$profileTypes["avito_importreal"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_IMPORTREAL_EXAMPLE" );
+$profileTypes["avito_importreal"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_REQUIREMENTS" );
+$profileTypes["avito_importreal"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_IMPORTREAL_PORTAL_VALIDATOR" );
+$profileTypes["avito_importreal"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_IMPORTREAL_EXAMPLE" );
 
 $profileTypes["avito_importreal"]["CURRENCIES"] = "";
 
@@ -154,7 +154,7 @@ $profileTypes["avito_importreal"]["ITEMS_FORMAT"] = "
     
 $profileTypes["avito_importreal"]["LOCATION"] = array(
 	"avito" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_AVITO" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_AVITO" ),
 		"sub" => array(
 		)
 	),

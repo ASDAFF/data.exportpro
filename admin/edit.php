@@ -1,9 +1,6 @@
 <?php
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
 
-$moduleId = "kit.exportpro";
+$moduleId = "data.exportpro";
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php" );
 require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/$moduleId/include.php" );
 
@@ -28,7 +25,7 @@ CModule::IncludeModule( "catalog" );
 function CheckFields(){
     global $PROFILE, $APPLICATION, $ID;
     if( intval( $ID ) > 0 ){
-        $export = new CKitExportproExport( $ID );
+        $export = new CDataExportproExport( $ID );
     }
     $requiredFields = array(
         "NAME", "CODE", "SHOPNAME", "COMPANY", "DOMAIN_NAME"
@@ -36,7 +33,7 @@ function CheckFields(){
 
     foreach( $requiredFields as $field ){
         if( !$PROFILE[$field] ){
-            $APPLICATION->ThrowException( GetMessage( "KIT_EXPORTPRO_REQUIRED_FIELD_FAIL" ).'"'.GetMessage( "KIT_EXPORTPRO_STEP1_".$field ).'"' );
+            $APPLICATION->ThrowException( GetMessage( "DATA_EXPORTPRO_REQUIRED_FIELD_FAIL" ).'"'.GetMessage( "DATA_EXPORTPRO_STEP1_".$field ).'"' );
             return false;
         }
     }
@@ -44,7 +41,7 @@ function CheckFields(){
     foreach( $PROFILE["XMLDATA"] as $id => $field ){
         if( $field["REQUIRED"] == "Y" ){
             if( ( $field["TYPE"] == "field" && !$field["VALUE"] ) || ( $field["TYPE"] == "const" && !$field["CONTVALUE_TRUE"] ) || $field["TYPE"] == "none" ){
-                $APPLICATION->ThrowException( GetMessage( "KIT_EXPORTPRO_REQUIRED_FIELD_FAIL", array( "#CODE#" => $field["CODE"], "#NAME#" => $field["NAME"] ) ) );
+                $APPLICATION->ThrowException( GetMessage( "DATA_EXPORTPRO_REQUIRED_FIELD_FAIL", array( "#CODE#" => $field["CODE"], "#NAME#" => $field["NAME"] ) ) );
                 return false;
             }
         }
@@ -71,7 +68,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && ( !empty( $save ) || !empty( $apply 
     if( ( $fieldsCheck = CheckFields() ) ){
         PrepareFields();
         if( CModule::IncludeModule( "catalog" ) ){
-            $obCond = new CKitExportproCatalogCond();
+            $obCond = new CDataExportproCatalogCond();
 
             $boolCond = $obCond->Init( BT_COND_MODE_PARSE, 0, array() );
             if( !$boolCond ){
@@ -307,7 +304,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && ( !empty( $save ) || !empty( $apply 
         }
 
         if( $save ){
-            LocalRedirect( "kit_exportpro_list.php" );
+            LocalRedirect( "data_exportpro_list.php" );
             die();
         }
         else{
@@ -316,7 +313,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && ( !empty( $save ) || !empty( $apply 
 
             if( !isset( $arQuery["ID"] ) || empty( $arQuery["ID"] ) ){
                 $arQuery["ID"] = $ID;
-                LocalRedirect( "kit_exportpro_edit.php?".http_build_query( $arQuery ) );
+                LocalRedirect( "data_exportpro_edit.php?".http_build_query( $arQuery ) );
                 die();
             }
         }
@@ -337,13 +334,13 @@ else{
 
 $t = CJSCore::getExtInfo( "jquery" );
 if( !is_array( $t ) || !isset( $t["js"] ) || !file_exists( $DOCUMENT_ROOT.$t["js"] ) ){
-    $APPLICATION->ThrowException( GetMessage( "KIT_EXPORTPRO_JQUERY_REQUIRE" ) );
+    $APPLICATION->ThrowException( GetMessage( "DATA_EXPORTPRO_JQUERY_REQUIRE" ) );
 }
 
 if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUEST["ajax_start"] ) && !isset( $_REQUEST["ajax_count"] ) && !isset( $_POST["auth"] ) ){
     CUtil::InitJSCore( array( "ajax", "jquery" ) );
     $APPLICATION->AddHeadScript( "/bitrix/js/iblock/iblock_edit.js" );
-    $APPLICATION->AddHeadScript( "/bitrix/js/kit.exportpro/main.js" );
+    $APPLICATION->AddHeadScript( "/bitrix/js/data.exportpro/main.js" );
 
     if( !CModule::IncludeModule( "iblock" ) ){
         return false;
@@ -363,8 +360,8 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
     $bCopy = ( $action == "copy" );
     $message = null;
     $bVarsFromForm = false;
-    $profileTitle = GetMessage( "KIT_EXPORTPRO_EDITPROFILE" ).": #".$arProfile["ID"]." ".$arProfile["NAME"];
-    $APPLICATION->SetTitle( ( $ID > 0 ? $profileTitle : GetMessage( "KIT_EXPORTPRO_ADDPROFILE" ) ) );
+    $profileTitle = GetMessage( "DATA_EXPORTPRO_EDITPROFILE" ).": #".$arProfile["ID"]." ".$arProfile["NAME"];
+    $APPLICATION->SetTitle( ( $ID > 0 ? $profileTitle : GetMessage( "DATA_EXPORTPRO_ADDPROFILE" ) ) );
     if( $copy && $ID > 0 ){
         unset( $arProfile["ID"] );       
         $ID = $dbProfile->Add( $arProfile );
@@ -380,32 +377,33 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
     $aContext = array(
         array(
             "TEXT" => GetMessage( "MAIN_ADD" ),
-            "LINK" => "kit_exportpro_edit.php?lang=".LANG,
+            "LINK" => "data_exportpro_edit.php?lang=".LANG,
             "TITLE" => GetMessage( "PARSER_ADD_TITLE" ),
             "ICON" => "btn_new",
         ),
     );
 
     // add attach it to list
-    $sTableID = "tbl_kitprofile";
+    $sTableID = "tbl_dataprofile";
     $oSort = new CAdminSorting( $sTableID, "ID", "desc" );
     $lAdmin = new CAdminList( $sTableID, $oSort );
     $lAdmin->AddAdminContextMenu( $aContext );
     $lAdmin->CheckListMode();
 
     require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php" );
-    
+
+    DataLicence::Show();
 
     $aMenu = array(
         array(
-            "TEXT" => GetMessage( "KIT_EXPORTPRO_LIST" ),
-            "TITLE" => GetMessage( "KIT_EXPORTPRO_LIST" ),
-            "LINK" => "kit_exportpro_list.php?lang=".LANG,
+            "TEXT" => GetMessage( "DATA_EXPORTPRO_LIST" ),
+            "TITLE" => GetMessage( "DATA_EXPORTPRO_LIST" ),
+            "LINK" => "data_exportpro_list.php?lang=".LANG,
             "ICON" => "btn_list",
         ),
         array(
-            "TEXT" => GetMessage( "KIT_EXPORTPRO_INSTRUCTION" ),
-            "TITLE" => GetMessage( "KIT_EXPORTPRO_INSTRUCTION" ),
+            "TEXT" => GetMessage( "DATA_EXPORTPRO_INSTRUCTION" ),
+            "TITLE" => GetMessage( "DATA_EXPORTPRO_INSTRUCTION" ),
             "LINK" => "http://www.acrit-studio.ru/technical-support/configuring-the-module-export-on-trade-portals/",
             "LINK_PARAM" => "target='blank'",
             "ICON" => "",
@@ -415,28 +413,28 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
     if( $ID > 0 ){
         $aMenu[] = array( "SEPARATOR" => "Y" );
         $aMenu[] = array(
-            "TEXT" => GetMessage( "KIT_EXPORTPRO_ADD" ),
-            "TITLE" => GetMessage( "KIT_EXPORTPRO_ADD" ),
-            "LINK" => "kit_exportpro_edit.php?lang=".LANG,
+            "TEXT" => GetMessage( "DATA_EXPORTPRO_ADD" ),
+            "TITLE" => GetMessage( "DATA_EXPORTPRO_ADD" ),
+            "LINK" => "data_exportpro_edit.php?lang=".LANG,
             "ICON" => "btn_new",
         );
         $aMenu[] = array(
-            "TEXT" => GetMessage( "KIT_EXPORTPRO_COPY" ),
-            "TITLE" => GetMessage( "KIT_EXPORTPRO_COPY" ),
-            "LINK" => "kit_exportpro_edit.php?copy=$ID&ID=$ID&lang=".LANG,
+            "TEXT" => GetMessage( "DATA_EXPORTPRO_COPY" ),
+            "TITLE" => GetMessage( "DATA_EXPORTPRO_COPY" ),
+            "LINK" => "data_exportpro_edit.php?copy=$ID&ID=$ID&lang=".LANG,
             "ICON" => "btn_copy",
         );
         $aMenu[] = array(
-            "TEXT" => GetMessage( "KIT_EXPORTPRO_DEL" ),
-            "TITLE" => GetMessage( "KIT_EXPORTPRO_DEL" ),
-            "LINK" => "javascript:if(confirm('".GetMessage( "parser_mnu_del_conf" )."'))window.location='kit_exportpro_list.php?ID=".$ID."&action=delete&lang=".LANG."&".bitrix_sessid_get()."';",
+            "TEXT" => GetMessage( "DATA_EXPORTPRO_DEL" ),
+            "TITLE" => GetMessage( "DATA_EXPORTPRO_DEL" ),
+            "LINK" => "javascript:if(confirm('".GetMessage( "parser_mnu_del_conf" )."'))window.location='data_exportpro_list.php?ID=".$ID."&action=delete&lang=".LANG."&".bitrix_sessid_get()."';",
             "ICON" => "btn_delete",
         );
         $aMenu[] = array( "SEPARATOR" => "Y" );
         $aMenu[] = array(
-            "TEXT" => GetMessage( "KIT_EXPORTPRO_RUN" ),
-            "TITLE" => GetMessage( "KIT_EXPORTPRO_RUN" ),
-            "LINK" => "kit_exportpro.php?ID=".$ID,
+            "TEXT" => GetMessage( "DATA_EXPORTPRO_RUN" ),
+            "TITLE" => GetMessage( "DATA_EXPORTPRO_RUN" ),
+            "LINK" => "/bitrix/tools/data.exportpro/data_exportpro.php?ID=".$ID,
             "ICON" => "btn_start_catalog"
         );
     }
@@ -446,35 +444,35 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
     $aTabs = array(
         array(
             "DIV" => "step3",
-            "TAB" => GetMessage( "KIT_EXPORTPRO_TAB3" ),
+            "TAB" => GetMessage( "DATA_EXPORTPRO_TAB3" ),
             "ICON" => "main_user_edit",
-            "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB3" )
+            "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB3" )
         ),
     );
 
-    $aTabs[] = array( "DIV" => "step16", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB16" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB16" ) );
-    $aTabs[] = array( "DIV" => "step17", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB17" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB17" ) );
-    $aTabs[] = array( "DIV" => "step18", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB18" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB18" ) );
-    $aTabs[] = array( "DIV" => "step1", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB1" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB1" ) );
-    $aTabs[] = array( "DIV" => "step2", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB2" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB2" ) );
-    $aTabs[] = array( "DIV" => "step4", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB4" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB4" ) );
-    $aTabs[] = array( "DIV" => "step5", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB5" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB5" ) );
-    $aTabs[] = array( "DIV" => "step19", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB19" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB19" ) );
-    $aTabs[] = array( "DIV" => "step21", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB21" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB21" ) );
+    $aTabs[] = array( "DIV" => "step16", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB16" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB16" ) );
+    $aTabs[] = array( "DIV" => "step17", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB17" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB17" ) );
+    $aTabs[] = array( "DIV" => "step18", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB18" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB18" ) );
+    $aTabs[] = array( "DIV" => "step1", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB1" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB1" ) );
+    $aTabs[] = array( "DIV" => "step2", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB2" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB2" ) );
+    $aTabs[] = array( "DIV" => "step4", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB4" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB4" ) );
+    $aTabs[] = array( "DIV" => "step5", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB5" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB5" ) );
+    $aTabs[] = array( "DIV" => "step19", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB19" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB19" ) );
+    $aTabs[] = array( "DIV" => "step21", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB21" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB21" ) );
 
     if( CModule::IncludeModule( "catalog" ) ){
-        $aTabs[] = array( "DIV" => "step6", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB6" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB6" ) );
-        $aTabs[] = array( "DIV" => "step7", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB7" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB7" ) );
-        $aTabs[] = array( "DIV" => "step8", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB8" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB8" ) );
-        $aTabs[] = array( "DIV" => "step12", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB12" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB12" ) );
-        $aTabs[] = array( "DIV" => "step13", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB13" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB13" ) );
+        $aTabs[] = array( "DIV" => "step6", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB6" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB6" ) );
+        $aTabs[] = array( "DIV" => "step7", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB7" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB7" ) );
+        $aTabs[] = array( "DIV" => "step8", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB8" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB8" ) );
+        $aTabs[] = array( "DIV" => "step12", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB12" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB12" ) );
+        $aTabs[] = array( "DIV" => "step13", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB13" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB13" ) );
     }
 
-    $aTabs[] = array( "DIV" => "step10", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB10" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB10" ) );
-    $aTabs[] = array( "DIV" => "step9", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB9" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB9" ) );
-    $aTabs[] = array( "DIV" => "step11", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB11" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB11" ) );
-    $aTabs[] = array( "DIV" => "step14", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB14" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB14" ) );
-    $aTabs[] = array( "DIV" => "step15", "TAB" => GetMessage( "KIT_EXPORTPRO_TAB15" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "KIT_EXPORTPRO_TAB15" ) );
+    $aTabs[] = array( "DIV" => "step10", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB10" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB10" ) );
+    $aTabs[] = array( "DIV" => "step9", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB9" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB9" ) );
+    $aTabs[] = array( "DIV" => "step11", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB11" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB11" ) );
+    $aTabs[] = array( "DIV" => "step14", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB14" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB14" ) );
+    $aTabs[] = array( "DIV" => "step15", "TAB" => GetMessage( "DATA_EXPORTPRO_TAB15" ), "ICON" => "main_user_edit", "TITLE" => GetMessage( "DATA_EXPORTPRO_TAB15" ) );
 
     $tabControl = new CAdminTabControl( "tabControl", $aTabs );
 
@@ -502,14 +500,14 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
 
     $byLicenceUrl = "http://www.acrit-studio.ru/market/rabota-s-torgovymi-ploshchadkami/eksport-tovarov-na-torgovye-portaly/?action=BUY&id=8915";
     ?>
-    <div class="adm-info-message"<?if( $bDemo ){?> style="float: left;"<?}?>><?=GetMessage( "KIT_EXPORTPRO_EXPORT_CHANGE_PROFILE_INFO" );?></div>
+    <div class="adm-info-message"<?if( $bDemo ){?> style="float: left;"<?}?>><?=GetMessage( "DATA_EXPORTPRO_EXPORT_CHANGE_PROFILE_INFO" );?></div>
 
     <?if( $bDemo ){?>
         <div class="adm-info-message" style="float: right; padding-left: 20px;">
             <div style="padding-left: 20px; float: right;">
-                <a href="<?=$byLicenceUrl?>" target="_blank" class="adm-btn adm-btn-save"><?=GetMessage( "KIT_EXPORTPRO_EXPORT_BUY_LICENCE_INFO" )?></a>
+                <a href="<?=$byLicenceUrl?>" target="_blank" class="adm-btn adm-btn-save"><?=GetMessage( "DATA_EXPORTPRO_EXPORT_BUY_LICENCE_INFO" )?></a>
             </div>
-            <div style="float: left; padding-top: 5px;"><?=GetMessage( "KIT_EXPORTPRO_EXPORT_DEMO_PERIOD_INFO" )."<b>".$timeDemoOff."</b>";?></div>
+            <div style="float: left; padding-top: 5px;"><?=GetMessage( "DATA_EXPORTPRO_EXPORT_DEMO_PERIOD_INFO" )."<b>".$timeDemoOff."</b>";?></div>
             <div style="clear: both;"></div>
         </div>
     <?}?>
@@ -531,7 +529,7 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
         $tabControl->Buttons(
             array(
                 "disabled"=>($POST_RIGHT<"W"),
-                "back_url"=>"kit_exportpro_list.php?lang=".LANG,
+                "back_url"=>"data_exportpro_list.php?lang=".LANG,
             )
         );
 
@@ -547,7 +545,20 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
         <input type="hidden" name="ticket_text" value="Y">
         <input type="hidden" name="ticket_log" value="Y">
     </form>
+    <script type="text/javascript">
+        function SubmitToSupport(){
+            var frm = document.forms.fticket;
 
+            frm.ticket_text.value = BX( 'ticket_text_proxy' ).value;
+
+            if( frm.ticket_text.value == '' ){
+                alert( '<?=GetMessage( "SC_NOT_FILLED" )?>' );
+                return;
+            }
+            frm.ticket_log.value = BX( 'ticket_text_log' ).value;
+            frm.submit();
+        }
+    </script>
     <script>
         function ShowMarketCategoryList( categoryId, listContainer ){
             MarketCategoryItem = categoryId;
@@ -556,14 +567,14 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
                 MarketCategoryObject = new BX.PopupWindow( 'my_answer', null, {
                     content: BX( listContainer ),
                     closeIcon: { right: '20px', top: '10px' },
-                    titleBar: { content: BX.create( 'span', { html: '<?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_POPUP_TITLE" );?>', 'props': { 'className': 'access-title-bar' } } ) },
+                    titleBar: { content: BX.create( 'span', { html: '<?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_POPUP_TITLE" );?>', 'props': { 'className': 'access-title-bar' } } ) },
                     zIndex: 0,
                     offsetLeft: 0,
                     offsetTop: 0,
                     draggable: { restrict: false },
                     buttons: [
                         //   new BX.PopupWindowButton({
-						//	  text: '<?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_BUTTON_SEND" );?>',
+						//	  text: '<?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_BUTTON_SEND" );?>',
                         //	  className: 'popup-window-button-accept',
                         //	  events: {click: function(){
 						//		 BX.ajax.submit( BX( 'myForm' ), function( data ){ <?// send form data to action file?>
@@ -572,7 +583,7 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
                         //	  }}
                         //   }),
                         //   new BX.PopupWindowButton({
-						//	  text: '<?=GetMessage( "KIT_EXPORTPRO_MARKET_CATEGORY_BUTTON_CLOSE" );?>',
+						//	  text: '<?=GetMessage( "DATA_EXPORTPRO_MARKET_CATEGORY_BUTTON_CLOSE" );?>',
                         //	  className: 'webform-button-link-cancel',
                         //	  events: {click: function(){
 						//		 this.popupWindow.close(); // закрытие окна
@@ -591,7 +602,7 @@ if( !isset( $_REQUEST["ajax"] ) && !isset( $_REQUEST["ib"] ) && !isset( $_REQUES
                 PropertyListObject = new BX.PopupWindow( 'property_list_answer', null, {
                     content: BX( 'property_list' ),
                     closeIcon: { right: '20px', top: '10px' },
-                    titleBar: { content: BX.create( 'span', { html: '<?=GetMessage( "KIT_EXPORTPRO_VARIANT_CATEGORY_POPUP_TITLE" );?>', 'props': { 'className': 'access-title-bar' } } ) },
+                    titleBar: { content: BX.create( 'span', { html: '<?=GetMessage( "DATA_EXPORTPRO_VARIANT_CATEGORY_POPUP_TITLE" );?>', 'props': { 'className': 'access-title-bar' } } ) },
                     zIndex: 0,
                     offsetLeft: 0,
                     offsetTop: 0,

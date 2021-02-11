@@ -7,39 +7,39 @@ $use_sku1 = $arProfile["USE_SKU"] == "Y" ? 'checked="checked"' : "";
 ?>                                                    
 
 <tr class="heading" align="center">
-    <td colspan="2"><b><?=GetMessage( "KIT_EXPORTPRO_IBLOCK_SECTION_SHOW" )?></b></td>
+    <td colspan="2"><b><?=GetMessage( "DATA_EXPORTPRO_IBLOCK_SECTION_SHOW" )?></b></td>
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <span id="hint_PROFILE[VIEW_CATALOG]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VIEW_CATALOG]' ), '<?=GetMessage( "KIT_EXPORTPRO_STEP1_ONLY_CATALOG_HELP" )?>' );</script>
-        <label for="PROFILE[VIEW_CATALOG]"><?=GetMessage( "KIT_EXPORTPRO_STEP1_ONLY_CATALOG" )?></label>
+        <span id="hint_PROFILE[VIEW_CATALOG]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[VIEW_CATALOG]' ), '<?=GetMessage( "DATA_EXPORTPRO_STEP1_ONLY_CATALOG_HELP" )?>' );</script>
+        <label for="PROFILE[VIEW_CATALOG]"><?=GetMessage( "DATA_EXPORTPRO_STEP1_ONLY_CATALOG" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <input type="checkbox" name="PROFILE[VIEW_CATALOG]" <?=$view_catalog1?> value="Y" />
-        <i><?=GetMessage( "KIT_EXPORTPRO_STEP1_ONLY_CATALOG_DESC" )?></i>
+        <i><?=GetMessage( "DATA_EXPORTPRO_STEP1_ONLY_CATALOG_DESC" )?></i>
     </td>
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <span id="hint_PROFILE[CHECK_INCLUDE]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[CHECK_INCLUDE]' ), '<?=GetMessage( "KIT_EXPORTPRO_STEP1_CHECK_INCLUDE_HELP" )?>' );</script>
-        <label for="PROFILE[CHECK_INCLUDE]"><?=GetMessage( "KIT_EXPORTPRO_STEP1_CHECK_INCLUDE" )?></label>
+        <span id="hint_PROFILE[CHECK_INCLUDE]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[CHECK_INCLUDE]' ), '<?=GetMessage( "DATA_EXPORTPRO_STEP1_CHECK_INCLUDE_HELP" )?>' );</script>
+        <label for="PROFILE[CHECK_INCLUDE]"><?=GetMessage( "DATA_EXPORTPRO_STEP1_CHECK_INCLUDE" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <input type="checkbox" name="PROFILE[CHECK_INCLUDE]" <?=$check_include1?> value="Y" />
-        <i><?=GetMessage( "KIT_EP1_CHECK_INCLUDE_DESC" )?></i>
+        <i><?=GetMessage( "DATA_EP1_CHECK_INCLUDE_DESC" )?></i>
     </td>
 </tr>
 <tr>
     <td width="40%" class="adm-detail-content-cell-l">
-        <span id="hint_PROFILE[USE_SKU]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[USE_SKU]' ), '<?=GetMessage( "KIT_EXPORTPRO_STEP1_USE_SKU_HELP" )?>' );</script>
-        <label for="PROFILE[USE_SKU]"><?=GetMessage( "KIT_EXPORTPRO_STEP1_USE_SKU" )?></label>
+        <span id="hint_PROFILE[USE_SKU]"></span><script type="text/javascript">BX.hint_replace( BX( 'hint_PROFILE[USE_SKU]' ), '<?=GetMessage( "DATA_EXPORTPRO_STEP1_USE_SKU_HELP" )?>' );</script>
+        <label for="PROFILE[USE_SKU]"><?=GetMessage( "DATA_EXPORTPRO_STEP1_USE_SKU" )?></label>
     </td>
     <td width="60%" class="adm-detail-content-cell-r">
         <input type="checkbox" name="PROFILE[USE_SKU]" <?=$use_sku1?> value="Y" />
     </td>
 </tr>
 <tr class="heading" align="center">
-    <td colspan="2"><b><?=GetMessage( "KIT_EXPORTPRO_IBLOCK_SELECT" )?></b></td>
+    <td colspan="2"><b><?=GetMessage( "DATA_EXPORTPRO_IBLOCK_SELECT" )?></b></td>
 </tr>
 <tr>
 	<?$ibtypes = $profileUtils->GetIBlockTypes(

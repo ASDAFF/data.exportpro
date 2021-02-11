@@ -1,8 +1,4 @@
 <?
-/**
- * Copyright (c) 15/9/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
- */
-
 if( defined( "NO_KEEP_STATISTIC" ) )
     define( "NO_KEEP_STATISTIC", true );
 
@@ -16,8 +12,8 @@ require_once( dirname(__DIR__)."/classes/general/threads.php" );
 if( $params = Threads::getParams() ){    
     $_SERVER["DOCUMENT_ROOT"] = $DOCUMENT_ROOT = $params["documentRoot"];
     require( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php" );
-    Cmodule::IncludeModule( "kit.exportpro" );
-    $export = new CKitExportproExport( intval( $params["profileId"] ) );
+    Cmodule::IncludeModule( "data.exportpro" );
+    $export = new CDataExportproExport( intval( $params["profileId"] ) );
     $export->Export( "cron", $params["cronPage"] );
 }
 ?>

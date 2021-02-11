@@ -1,5 +1,5 @@
 <?php
-$APPLICATION->SetTitle( GetMessage( "KIT_MODULE_NAME" ) );
+$APPLICATION->SetTitle( GetMessage( "DATA_MODULE_NAME" ) );
 global $moduleID;
 ?>
 <form action="<?=$APPLICATION->GetCurPage()?>" method="get">

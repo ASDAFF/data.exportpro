@@ -3,21 +3,21 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["optional"] = array(
 	"CODE" => "optional",
-	"NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_DESCR" ),
+	"NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_DESCR" ),
 	"REG" => "/",
 	"HELP" => "/",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -42,178 +42,178 @@ $profileTypes["optional"] = array(
 		),
         array(
             "CODE" => "BASE_DELIVERY_COST",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_BASEDELIVERYCOST" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_BASEDELIVERYCOST" ),
         ),
         array(
             "CODE" => "BASE_DELIVERY_DAYS",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_BASEDELIVERYDAYS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_BASEDELIVERYDAYS" ),
         ),
 		array(
 			"CODE" => "URL",
-			"NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_URL" ),
+			"NAME" => "URL ".GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
 		array(
             "CODE" => "PRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PRICE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "OLDPRICE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_OLDPRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_OLDPRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "CURRENCYID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_CURRENCY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_CURRENCY" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
         ),
         array(
             "CODE" => "CATEGORYID",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_CATEGORY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_CATEGORY" ),
             "VALUE" => "IBLOCK_SECTION_ID",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "PICTURE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PICTURE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PICTURE" ),
         ),
         array(
             "CODE" => "STORE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_STORE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_STORE" ),
         ),
         array(
             "CODE" => "PICKUP",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PICKUP" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PICKUP" ),
         ),
         array(
             "CODE" => "DELIVERY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_DELIVERY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_DELIVERY" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_COST",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_LOCALDELIVERYCOST" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_LOCALDELIVERYCOST" ),
         ),
         array(
             "CODE" => "LOCAL_DELIVERY_DAYS",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_LOCALDELIVERYDAYS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_LOCALDELIVERYDAYS" ),
         ),
         array(
             "CODE" => "NAME",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_NAME" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_NAME" ),
             "VALUE" => "NAME",
             "REQUIRED" => "Y",
             "TYPE" => "field",
         ),
         array(
             "CODE" => "VENDOR",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_VENDOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_VENDOR" ),
         ),
         array(
             "CODE" => "VENDORCODE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_VENDORCODE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_VENDORCODE" ),
         ),
 
         array(
             "CODE" => "DESCRIPTION",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_DESCRIPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_DESCRIPTION" ),
         ),
         array(
             "CODE" => "SALES_NOTES",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_SALESNOTES" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_SALESNOTES" ),
         ),
         array(
             "CODE" => "MANUFACTURER_WARRANTY",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_MANUFACTURERWARRANTY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_MANUFACTURERWARRANTY" ),
         ),
         array(
             "CODE" => "COUNTRY_OF_ORIGIN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_COUNTRYOFORIGIN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_COUNTRYOFORIGIN" ),
         ),
         array(
             "CODE" => "ADULT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_ADULT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_ADULT" ),
         ),
         array(
             "CODE" => "AGE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_AGE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_AGE" ),
         ),
         array(
             "CODE" => "BARCODE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_BARCODE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_BARCODE" ),
         ),
         array(
             "CODE" => "CPA",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_CPA" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_CPA" ),
         ),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
         array(
             "CODE" => "PARAM1",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE_VALUE" )
         ),                   
         array(
             "CODE" => "PARAM2",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_COLOR" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_COLOR" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_COLOR_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_COLOR_VALUE" )
         ),
         array(
             "CODE" => "PARAM3",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_PANTIES_WIDTH" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_PANTIES_WIDTH" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_PANTIES_WIDTH_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_PANTIES_WIDTH_VALUE" )
         ),
         array(
             "CODE" => "PARAM4",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_HEIGHT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_HEIGHT" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_HEIGHT_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_HEIGHT_VALUE" )
         ),
         array(
             "CODE" => "PARAM5",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_WEIGHT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_WEIGHT" ),
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_WEIGHT_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_WEIGHT_VALUE" )
         ),
 	),
 	"FORMAT" => '<?xml version="1.0" encoding="#ENCODING#"?>
@@ -246,7 +246,7 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["optional"]["FIELDS"][5] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCodeWithDiscount,
@@ -254,13 +254,13 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["optional"]["FIELDS"][6] = array(
         "CODE" => "OLDPRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_OLDPRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_OLDPRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["optional"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_OPTIONAL_EXAMPLE" );
+$profileTypes["optional"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_OPTIONAL_EXAMPLE" );
 
 
 $profileTypes["optional"]["CURRENCIES"] =
@@ -295,20 +295,20 @@ $profileTypes["optional"]["ITEMS_FORMAT"] = "
     <age>#AGE#</age>
     <barcode>#BARCODE#</barcode>
     <cpa>#CPA#</cpa>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE" )."\" unit=\"".GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE_UNIT" )."\">#PARAM1#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_COLOR" )."\">#PARAM2#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_WIDTH" )."\">#PARAM3#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_HEIGHT" )."\">#PARAM4#</param>
-    <param name=\"".GetMessage( "KIT_EXPORTPRO_OPTIONAL_FIELD_PARAM_WEIGHT" )."\">#PARAM5#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE" )."\" unit=\"".GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_SIZE_UNIT" )."\">#PARAM1#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_COLOR" )."\">#PARAM2#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_WIDTH" )."\">#PARAM3#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_HEIGHT" )."\">#PARAM4#</param>
+    <param name=\"".GetMessage( "DATA_EXPORTPRO_OPTIONAL_FIELD_PARAM_WEIGHT" )."\">#PARAM5#</param>
 </offer>
 ";
     
 $profileTypes["optional"]["LOCATION"] = array(
     "yandex" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_ANDEKS" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_ANDEKS" ),
 		"sub" => array(
 			"market" => array(
-				"name" => GetMessage( "KIT_EXPORTPRO_VEBMASTER" ),
+				"name" => GetMessage( "DATA_EXPORTPRO_VEBMASTER" ),
 				"sub" => "",
 			)
 		)

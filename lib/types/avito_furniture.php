@@ -3,85 +3,85 @@ IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["avito_furniture"] = array(
 	"CODE" => "avito_furniture",
-    "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+    "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "Id",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
             "CODE" => "DateBegin",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEBEGIN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEBEGIN" ),
         ),
         array(
             "CODE" => "DateEnd",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEEND" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_DATEEND" ),
         ),
         array(
             "CODE" => "AdStatus",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ADSTATUS" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_ADSTATUS" ),
         ),
         array(
             "CODE" => "AllowEmail",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_ALLOWEMAIL" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_ALLOWEMAIL" ),
         ),
         array(
             "CODE" => "ManagerName",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_MANAGERNAME" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_MANAGERNAME" ),
         ),
         array(
             "CODE" => "ContactPhone",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CONTACTPHONE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_CONTACTPHONE" ),
         ),
         array(
             "CODE" => "Region",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_REGION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_REGION" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "City",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CITY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_CITY" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "District",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_AVTO_FIELD_DISTRICT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_AVTO_FIELD_DISTRICT" ),
             "REQUIRED" => "Y",
         ),
         array(
             "CODE" => "Category",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_CATEGORY" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_CATEGORY" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_CATEGORY_VALUE" ),
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_CATEGORY_VALUE" ),
         ),
         array(
             "CODE" => "GoodsType",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_GOODSTYPE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_GOODSTYPE" ),
         ),
         array(
 			"CODE" => "Title",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_TITLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_TITLE" ),
 		),
         array(
             "CODE" => "Description",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_DESCRIPTION" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_DESCRIPTION" ),
         ),
         array(
             "CODE" => "Price",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_PRICE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_PRICE" ),
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
         ),
         array(
             "CODE" => "Image",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_IMAGE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_IMAGE" ),
         ),
 	),
 	"FORMAT" => '<?xml version="1.0"?>
@@ -101,15 +101,15 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["avito_furniture"]["FIELDS"][14] = array(
         "CODE" => "Price",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_AVITO_FURNITURE_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_AVITO_FURNITURE_FIELD_PRICE" ),
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["avito_furniture"]["PORTAL_REQUIREMENTS"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_REQUIREMENTS" );
-$profileTypes["avito_furniture"]["PORTAL_VALIDATOR"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_VALIDATOR" );
-$profileTypes["avito_furniture"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_AVITO_FURNITURE_EXAMPLE" );
+$profileTypes["avito_furniture"]["PORTAL_REQUIREMENTS"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_REQUIREMENTS" );
+$profileTypes["avito_furniture"]["PORTAL_VALIDATOR"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_FURNITURE_PORTAL_VALIDATOR" );
+$profileTypes["avito_furniture"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_AVITO_FURNITURE_EXAMPLE" );
 
 $profileTypes["avito_furniture"]["CURRENCIES"] = "";
 
@@ -140,7 +140,7 @@ $profileTypes["avito_furniture"]["ITEMS_FORMAT"] = "
     
 $profileTypes["avito_furniture"]["LOCATION"] = array(
 	"avito" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_AVITO" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_AVITO" ),
 		"sub" => array(
 		)
 	),

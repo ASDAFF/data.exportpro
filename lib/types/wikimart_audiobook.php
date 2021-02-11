@@ -2,21 +2,21 @@
 IncludeModuleLangFile( __FILE__ );
 
 $profileTypes["wikimart_audiobook"] = array(
-	"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_NAME" ),
-	"DESCRIPTION" => GetMessage( "KIT_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
+	"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_NAME" ),
+	"DESCRIPTION" => GetMessage( "DATA_EXPORTPRO_PODDERJIVAETSA_ANDEK" ),
 	"REG" => "http://market.yandex.ru/",
 	"HELP" => "http://help.yandex.ru/partnermarket/export/feed.xml",
 	"FIELDS" => array(
 		array(
 			"CODE" => "ID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_ID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_ID" ),
             "VALUE" => "ID",
 			"REQUIRED" => "Y",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "AVAILABLE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_AVAILABLE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_AVAILABLE" ),
 			"VALUE" => "",
             "TYPE" => "const",
             "CONDITION" => array(
@@ -41,139 +41,139 @@ $profileTypes["wikimart_audiobook"] = array(
 		),
 		array(
 			"CODE" => "BID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_BID" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_BID" ),
 		),
 		array(
 			"CODE" => "URL",
-			"NAME" => "URL ".GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_URL" ),
+			"NAME" => "URL ".GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_URL" ),
 			"VALUE" => "DETAIL_PAGE_URL",
             "TYPE" => "field",
 		),
 		array(
 			"CODE" => "PRICE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PRICE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PRICE" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "0",
 		),
 		array(
 			"CODE" => "CURRENCYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_CURRENCY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_CURRENCY" ),
 			"REQUIRED" => "Y",
             "TYPE" => "const",
             "CONTVALUE_TRUE" => "RUB",
 		),
 		array(
 			"CODE" => "CATEGORYID",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_CATEGORY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_CATEGORY" ),
 			"TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
 			"REQUIRED" => "Y",
 		),
 		array(
 			"CODE" => "PICTURE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PICTURE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PICTURE" ),
 		),
         array(
 			"CODE" => "AUTHOR",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_AUTHOR" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_AUTHOR" ),
 		),
 		array(
 			"CODE" => "NAME",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_NAME" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_NAME" ),
 			"TYPE" => "field",
             "VALUE" => "NAME",
 		),
         array(
 			"CODE" => "PUBLISHER",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PUBLISHER" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PUBLISHER" ),
 		),
 		array(
 			"CODE" => "SERIES",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_SERIES" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_SERIES" ),
 		),
 		
 		array(
 			"CODE" => "YEAR",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_YEAR" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_YEAR" ),
 		),
 		array(
 			"CODE" => "ISBN",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_ISBN" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_ISBN" ),
 		),
         array(
 			"CODE" => "VOLUME",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_VOLUME" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_VOLUME" ),
 		),
         array(
 			"CODE" => "PART",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PART" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PART" ),
 		),
 		array(
 			"CODE" => "LANGUAGE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_LANGUAGE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_LANGUAGE" ),
 		),
         array(
 			"CODE" => "TABLE_OF_CONTENTS",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_TABLEOFCONTENTS" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_TABLEOFCONTENTS" ),
 		),
 		array(
 			"CODE" => "PERFORMED_BY",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PERFORMEDBY" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PERFORMEDBY" ),
 		),
 		array(
 			"CODE" => "PERFORMANCE_TYPE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PERFORMANCETYPE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PERFORMANCETYPE" ),
 		),
         array(
 			"CODE" => "STORAGE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_STORAGE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_STORAGE" ),
 		),
 		array(
 			"CODE" => "FORMAT",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_FORMAT" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_FORMAT" ),
 		),
         array(
 			"CODE" => "RECORDING_LENGTH",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_RECORDINGLENGTH" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_RECORDINGLENGTH" ),
 		),
         array(
 			"CODE" => "DESCRIPTION",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_DESCRIPTION" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_DESCRIPTION" ),
 		),
         array(
 			"CODE" => "AGE",
-			"NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_AGE" ),
+			"NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_AGE" ),
 		),
         array(
             "CODE" => "UTM_SOURCE",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_SOURCE" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_SOURCE" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_SOURCE_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_SOURCE_VALUE" )
         ),
         array(
             "CODE" => "UTM_MEDIUM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_MEDIUM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_MEDIUM" ),
             "REQUIRED" => "Y",
             "TYPE" => "const",
-            "CONTVALUE_TRUE" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_MEDIUM_VALUE" )
+            "CONTVALUE_TRUE" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_MEDIUM_VALUE" )
         ),
         array(
             "CODE" => "UTM_TERM",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_TERM" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_TERM" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CONTENT",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_CONTENT" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_CONTENT" ),
             "TYPE" => "field",
             "VALUE" => "ID",
         ),
         array(
             "CODE" => "UTM_CAMPAIGN",
-            "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_CAMPAIGN" ),
+            "NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_UTM_CAMPAIGN" ),
             "TYPE" => "field",
             "VALUE" => "IBLOCK_SECTION_ID",
         ),
@@ -205,14 +205,14 @@ if( CModule::IncludeModule( "catalog" ) ){
     
     $profileTypes["wikimart_audiobook"]["FIELDS"][4] = array(
         "CODE" => "PRICE",
-        "NAME" => GetMessage( "KIT_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PRICE" ),
+        "NAME" => GetMessage( "DATA_EXPORTPRO_WIKIMART_AUDIOBOOK_FIELD_PRICE" ),
         "REQUIRED" => "Y",
         "TYPE" => "field",
         "VALUE" => $basePriceCode,
     );
 }
 
-$profileTypes["wikimart_audiobook"]["EXAMPLE"] = GetMessage( "KIT_EXPORTPRO_TYPE_WIKIMART_AUDIOBOOK_EXAMPLE" );
+$profileTypes["wikimart_audiobook"]["EXAMPLE"] = GetMessage( "DATA_EXPORTPRO_TYPE_WIKIMART_AUDIOBOOK_EXAMPLE" );
 
 $profileTypes["wikimart_audiobook"]["CURRENCIES"] =
     "<currency id='#CURRENCY#' rate='#RATE#' plus='#PLUS#'></currency>" . PHP_EOL;
@@ -250,7 +250,7 @@ $profileTypes["wikimart_audiobook"]["ITEMS_FORMAT"] = "
     
 $profileTypes["wikimart_audiobook"]["LOCATION"] = array(
 	"wikimart" => array(
-		"name" => GetMessage( "KIT_EXPORTPRO_WIKIMART" ),
+		"name" => GetMessage( "DATA_EXPORTPRO_WIKIMART" ),
 		"sub" => array(
 		)
 	),
