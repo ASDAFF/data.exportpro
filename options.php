@@ -53,33 +53,8 @@ if( $POST_RIGHT >= "R" ){
 	    require_once( $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/admin/group_rights.php" );
 	    
 	    $tabControl->BeginNextTab();?>
-		<tr>
-            <td class="heading" colspan="2"><?=GetMessage( "SC_FRM_1" );?></td>
-        </tr>
-        <tr>
-            <td valign="top" class="adm-detail-content-cell-l">
-                <span class="required">*</span><?=GetMessage( "SC_FRM_2" );?><br>
-                <small><?=GetMessage( "SC_FRM_3" );?></small>
-            </td>
-            <td valign="top" class="adm-detail-content-cell-r">
-                <textarea cols="60" rows="6" name="ticket_text_proxy" id="ticket_text_proxy"><?=htmlspecialcharsbx( implode( "\n", $arAutoProblemsToSupportMessage ) );?></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td class="adm-detail-content-cell-l"></td>
-            <td class="adm-detail-content-cell-r">
-                <input type="button" value="<?=GetMessage( "SC_FRM_4" );?>" onclick="SubmitToSupport()" name="submit_button">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <?=BeginNote();?>
-                    <?=GetMessage( "SC_TXT_1" );?> <a href="<?=GetMessage( "A_SUPPORT_URL" );?>"><?=GetMessage( "A_SUPPORT_URL" );?></a>
-                <?=EndNote();?>
-            </td>
-        </tr>
-        
-        <tr>
+
+       <tr>
 			<td colspan="2">
 				<?=GetMessage( "DATA_EXPORTPRO_RECOMMENDS" );?>
 			</td>
@@ -97,24 +72,4 @@ if( $POST_RIGHT >= "R" ){
 		<?$tabControl->End();?>
 	</form>
     
-    <form target="_blank" name="fticket" action="<?=GetMessage( "A_SUPPORT_URL" );?>" method="POST">
-        <input type="hidden" name="send_ticket" value="Y">
-        <input type="hidden" name="ticket_title" value="<?=GetMessage( "SC_RUS_L1" )." ".htmlspecialcharsbx( $_SERVER["HTTP_HOST"] );?>">
-        <input type="hidden" name="ticket_text" value="Y">
-    </form>
 <?}?>
-
-<script type="text/javascript">
-    function SubmitToSupport(){
-        var frm = document.forms.fticket;
-
-        frm.ticket_text.value = BX( 'ticket_text_proxy' ).value;
-
-        if( frm.ticket_text.value == '' ){
-            alert( '<?=GetMessage( "SC_NOT_FILLED" )?>' );
-            return;
-        }
-
-        frm.submit();
-    }
-</script>
